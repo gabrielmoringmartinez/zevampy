@@ -70,12 +70,19 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             .sum()
             .rename(columns={registrations_by_powertrain_dim: new_registrations_dim})
         )
+    registrations_for_survival=data[historical_registrations_label]
+    data[stock_by_age_label].to_csv(f'outputs/TEST_stock_by_age.csv', sep=';', index=False, decimal=',')
+    registrations_for_survival.to_csv(f'outputs/TEST_registrations_for_survival.csv', sep=';', index=False, decimal=',')
     empirical_survival_rates = calculate_empirical_survival_rates(data[stock_by_age_label], registrations_for_survival,
                                                                   data[stock_year_label],
                                                                   inputs[countries_selected_label],
                                                                   inputs[output_path_label],
                                                                   inputs[survival_grouping_label])
-    registration_powertrains = set(registrations[powertrain_dim].dropna().unique())
+
+    if powertrain_dim in inputs[survival_grouping_label] and powertrain_dim in registrations.columns:
+        registration_powertrains = set(registrations[powertrain_dim].dropna().unique())
+    else:
+        registration_powertrains = set()
 
     survival_powertrains = (
         set(empirical_survival_rates[powertrain_dim].dropna().unique())

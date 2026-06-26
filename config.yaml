@@ -8,8 +8,8 @@ data:
 model:
   start_new_registration_year: 1970
   first_stock_year: 2014
-  end_year: 2050
-  csp_reference_year: 2021
+  end_year: 2025 # We do not project stock now
+  csp_reference_year: 2025
   csp_available_years: 45
   historical_validation: false
   sensitivity_analysis: false
@@ -18,11 +18,21 @@ model:
 
 geography:
   countries:
-  use_clusters: true
+    - Denmark
+    - Finland
+    - Great Britain
+    - Netherlands
+    - Norway
+    - Switzerland
+  use_clusters: false
 
 
 powertrains:
+  - BEV
+  - Gasoline
+  - Total
 
 survival_rates:
   grouping:
     - geo country
+    - powertrain

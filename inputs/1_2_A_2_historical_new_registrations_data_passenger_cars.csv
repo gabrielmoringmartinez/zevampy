@@ -1,1667 +1,2549 @@
-geo country;time;new vehicle registrations
-Austria;1970;277954
-Austria;1971;278845
-Austria;1972;280444
-Austria;1973;282105
-Austria;1974;283570
-Austria;1975;283068
-Austria;1976;282068
-Austria;1977;282071
-Austria;1978;282285
-Austria;1979;281614
-Austria;1980;281324
-Austria;1981;281615
-Austria;1982;282762
-Austria;1983;282020
-Austria;1984;281850
-Austria;1985;281984
-Austria;1986;282115
-Austria;1987;282343
-Austria;1988;282472
-Austria;1989;276065
-Austria;1990;288636
-Austria;1991;303723
-Austria;1992;320094
-Austria;1993;285162
-Austria;1994;273663
-Austria;1995;279610
-Austria;1996;307671
-Austria;1997;275001
-Austria;1998;295865
-Austria;1999;314182
-Austria;2000;309427
-Austria;2001;293528
-Austria;2002;279493
-Austria;2003;300121
-Austria;2004;311292
-Austria;2005;309943
-Austria;2006;308594
-Austria;2007;298182
-Austria;2008;293697
-Austria;2009;319403
-Austria;2010;328563
-Austria;2011;356145
-Austria;2012;336010
-Austria;2013;319035
-Austria;2014;303318
-Austria;2015;308555
-Austria;2016;329604
-Austria;2017;353320
-Austria;2018;341068
-Austria;2019;329363
-Austria;2020;248740
-Austria;2021;239803
-Belgium;1970;295701
-Belgium;1971;308140
-Belgium;1972;320579
-Belgium;1973;333018
-Belgium;1974;345457
-Belgium;1975;357897
-Belgium;1976;374340
-Belgium;1977;390783
-Belgium;1978;407226
-Belgium;1979;423668
-Belgium;1980;401611
-Belgium;1981;352613
-Belgium;1982;346303
-Belgium;1983;341243
-Belgium;1984;354051
-Belgium;1985;361948
-Belgium;1986;397156
-Belgium;1987;408879
-Belgium;1988;430520
-Belgium;1989;443963
-Belgium;1990;478219
-Belgium;1991;462125
-Belgium;1992;466195
-Belgium;1993;375409
-Belgium;1994;387348
-Belgium;1995;358868
-Belgium;1996;397359
-Belgium;1997;396240
-Belgium;1998;452129
-Belgium;1999;489621
-Belgium;2000;515204
-Belgium;2001;488683
-Belgium;2002;467569
-Belgium;2003;458796
-Belgium;2004;484757
-Belgium;2005;480088
-Belgium;2006;526141
-Belgium;2007;524795
-Belgium;2008;535947
-Belgium;2009;476164
-Belgium;2010;547347
-Belgium;2011;572211
-Belgium;2012;486737
-Belgium;2013;486065
-Belgium;2014;482939
-Belgium;2015;501066
-Belgium;2016;539519
-Belgium;2017;546558
-Belgium;2018;549632
-Belgium;2019;550003
-Belgium;2020;431491
-Belgium;2021;383123
-Bulgaria;1970;30399
-Bulgaria;1971;30581
-Bulgaria;1972;30735
-Bulgaria;1973;30867
-Bulgaria;1974;31057
-Bulgaria;1975;31282
-Bulgaria;1976;31359
-Bulgaria;1977;31554
-Bulgaria;1978;31686
-Bulgaria;1979;31624
-Bulgaria;1980;31771
-Bulgaria;1981;31880
-Bulgaria;1982;31984
-Bulgaria;1983;32069
-Bulgaria;1984;32144
-Bulgaria;1985;32220
-Bulgaria;1986;32143
-Bulgaria;1987;32203
-Bulgaria;1988;32238
-Bulgaria;1989;32275
-Bulgaria;1990;31487
-Bulgaria;1991;31135
-Bulgaria;1992;30870
-Bulgaria;1993;30473
-Bulgaria;1994;30383
-Bulgaria;1995;30267
-Bulgaria;1996;30113
-Bulgaria;1997;29956
-Bulgaria;1998;29749
-Bulgaria;1999;29559
-Bulgaria;2000;29417
-Bulgaria;2001;29268
-Bulgaria;2002;28260
-Bulgaria;2003;28033
-Bulgaria;2004;27816
-Bulgaria;2005;27613
-Bulgaria;2006;32481
-Bulgaria;2007;41042
-Bulgaria;2008;43758
-Bulgaria;2009;24972
-Bulgaria;2010;15646
-Bulgaria;2011;19252
-Bulgaria;2012;20986
-Bulgaria;2013;20718
-Bulgaria;2014;21186
-Bulgaria;2015;24256
-Bulgaria;2016;28216
-Bulgaria;2017;33265
-Bulgaria;2018;37506
-Bulgaria;2019;39419
-Bulgaria;2020;27214
-Bulgaria;2021;24631
-Switzerland;1970;281833
-Switzerland;1971;282945
-Switzerland;1972;284804
-Switzerland;1973;287291
-Switzerland;1974;289043
-Switzerland;1975;290403
-Switzerland;1976;288790
-Switzerland;1977;287102
-Switzerland;1978;286841
-Switzerland;1979;287153
-Switzerland;1980;280452
-Switzerland;1981;291066
-Switzerland;1982;290890
-Switzerland;1983;273886
-Switzerland;1984;267488
-Switzerland;1985;265467
-Switzerland;1986;300170
-Switzerland;1987;303302
-Switzerland;1988;319406
-Switzerland;1989;338969
-Switzerland;1990;322974
-Switzerland;1991;310193
-Switzerland;1992;286289
-Switzerland;1993;256917
-Switzerland;1994;265892
-Switzerland;1995;267975
-Switzerland;1996;272214
-Switzerland;1997;270625
-Switzerland;1998;295165
-Switzerland;1999;314691
-Switzerland;2000;314482
-Switzerland;2001;314580
-Switzerland;2002;293034
-Switzerland;2003;269711
-Switzerland;2004;267476
-Switzerland;2005;260682
-Switzerland;2006;269748
-Switzerland;2007;283972
-Switzerland;2008;287971
-Switzerland;2009;266478
-Switzerland;2010;296597
-Switzerland;2011;327955
-Switzerland;2012;334045
-Switzerland;2013;310154
-Switzerland;2014;304083
-Switzerland;2015;327143
-Switzerland;2016;319331
-Switzerland;2017;315032
-Switzerland;2018;300887
-Switzerland;2019;312902
-Switzerland;2020;238664
-Switzerland;2021;242263
-Cyprus;1970;13051
-Cyprus;1971;13155
-Cyprus;1972;13287
-Cyprus;1973;13472
-Cyprus;1974;13601
-Cyprus;1975;10784
-Cyprus;1976;10617
-Cyprus;1977;10611
-Cyprus;1978;10620
-Cyprus;1979;10690
-Cyprus;1980;10786
-Cyprus;1981;10925
-Cyprus;1982;11149
-Cyprus;1983;11187
-Cyprus;1984;11334
-Cyprus;1985;11481
-Cyprus;1986;11613
-Cyprus;1987;11747
-Cyprus;1988;11869
-Cyprus;1989;11999
-Cyprus;1990;12212
-Cyprus;1991;12521
-Cyprus;1992;12860
-Cyprus;1993;13205
-Cyprus;1994;13497
-Cyprus;1995;13763
-Cyprus;1996;13996
-Cyprus;1997;14209
-Cyprus;1998;14399
-Cyprus;1999;14562
-Cyprus;2000;14725
-Cyprus;2001;14875
-Cyprus;2002;15045
-Cyprus;2003;9145
-Cyprus;2004;19650
-Cyprus;2005;19210
-Cyprus;2006;20344
-Cyprus;2007;25107
-Cyprus;2008;24213
-Cyprus;2009;15945
-Cyprus;2010;15062
-Cyprus;2011;14665
-Cyprus;2012;10967
-Cyprus;2013;7047
-Cyprus;2014;8271
-Cyprus;2015;10078
-Cyprus;2016;12468
-Cyprus;2017;13118
-Cyprus;2018;13126
-Cyprus;2019;12601
-Cyprus;2020;9995
-Cyprus;2021;10611
-Czech Republic;1970;131276
-Czech Republic;1971;129993
-Czech Republic;1972;130448
-Czech Republic;1973;131075
-Czech Republic;1974;131896
-Czech Republic;1975;132829
-Czech Republic;1976;133755
-Czech Republic;1977;134614
-Czech Republic;1978;135367
-Czech Republic;1979;136080
-Czech Republic;1980;136699
-Czech Republic;1981;136395
-Czech Republic;1982;136603
-Czech Republic;1983;136772
-Czech Republic;1984;136843
-Czech Republic;1985;136940
-Czech Republic;1986;137026
-Czech Republic;1987;137076
-Czech Republic;1988;137161
-Czech Republic;1989;137287
-Czech Republic;1990;137314
-Czech Republic;1991;136552
-Czech Republic;1992;136657
-Czech Republic;1993;84423
-Czech Republic;1994;90765
-Czech Republic;1995;112104
-Czech Republic;1996;153962
-Czech Republic;1997;171548
-Czech Republic;1998;141155
-Czech Republic;1999;146170
-Czech Republic;2000;148685
-Czech Republic;2001;152141
-Czech Republic;2002;147754
-Czech Republic;2003;149546
-Czech Republic;2004;125768
-Czech Republic;2005;127376
-Czech Republic;2006;123987
-Czech Republic;2007;132542
-Czech Republic;2008;143661
-Czech Republic;2009;161659
-Czech Republic;2010;169236
-Czech Republic;2011;173282
-Czech Republic;2012;174009
-Czech Republic;2013;164736
-Czech Republic;2014;192314
-Czech Republic;2015;230857
-Czech Republic;2016;259693
-Czech Republic;2017;271595
-Czech Republic;2018;261437
-Czech Republic;2019;249915
-Czech Republic;2020;202971
-Czech Republic;2021;206876
-Germany;1970;2107123
-Germany;1971;2106908
-Germany;1972;2106693
-Germany;1973;2106478
-Germany;1974;2106263
-Germany;1975;2106048
-Germany;1976;2170076
-Germany;1977;2234104
-Germany;1978;2298132
-Germany;1979;2623400
-Germany;1980;2426187
-Germany;1981;2330335
-Germany;1982;2155537
-Germany;1983;2426774
-Germany;1984;2393939
-Germany;1985;2379261
-Germany;1986;2829438
-Germany;1987;2915654
-Germany;1988;2807939
-Germany;1989;2831740
-Germany;1990;3040783
-Germany;1991;3485171
-Germany;1992;3929558
-Germany;1993;3194204
-Germany;1994;3209224
-Germany;1995;3314061
-Germany;1996;3496320
-Germany;1997;3528179
-Germany;1998;3735987
-Germany;1999;3802176
-Germany;2000;3378343
-Germany;2001;3341718
-Germany;2002;3252898
-Germany;2003;3236938
-Germany;2004;3266826
-Germany;2005;3342122
-Germany;2006;3467961
-Germany;2007;3148163
-Germany;2008;3090040
-Germany;2009;3807175
-Germany;2010;2916260
-Germany;2011;3173634
-Germany;2012;3082504
-Germany;2013;2952431
-Germany;2014;3036773
-Germany;2015;3206042
-Germany;2016;3351607
-Germany;2017;3441262
-Germany;2018;3435778
-Germany;2019;3607258
-Germany;2020;2917678
-Germany;2021;2622132
-Denmark;1970;108634
-Denmark;1971;110054
-Denmark;1972;111474
-Denmark;1973;112894
-Denmark;1974;114314
-Denmark;1975;115733
-Denmark;1976;118578
-Denmark;1977;121423
-Denmark;1978;124268
-Denmark;1979;127114
-Denmark;1980;73961
-Denmark;1981;71778
-Denmark;1982;85512
-Denmark;1983;116346
-Denmark;1984;134478
-Denmark;1985;157632
-Denmark;1986;169492
-Denmark;1987;124324
-Denmark;1988;88770
-Denmark;1989;78453
-Denmark;1990;80837
-Denmark;1991;83828
-Denmark;1992;84518
-Denmark;1993;82084
-Denmark;1994;138994
-Denmark;1995;135712
-Denmark;1996;141926
-Denmark;1997;152607
-Denmark;1998;162238
-Denmark;1999;144232
-Denmark;2000;113633
-Denmark;2001;96114
-Denmark;2002;111598
-Denmark;2003;96501
-Denmark;2004;122543
-Denmark;2005;148578
-Denmark;2006;156719
-Denmark;2007;162481
-Denmark;2008;150663
-Denmark;2009;112249
-Denmark;2010;153614
-Denmark;2011;169794
-Denmark;2012;168936
-Denmark;2013;180643
-Denmark;2014;188409
-Denmark;2015;206652
-Denmark;2016;222473
-Denmark;2017;221471
-Denmark;2018;218476
-Denmark;2019;225619
-Denmark;2020;198979
-Denmark;2021;186592
-Spain;1970;865587
-Spain;1971;877262
-Spain;1972;886738
-Spain;1973;896847
-Spain;1974;906555
-Spain;1975;916659
-Spain;1976;926376
-Spain;1977;936241
-Spain;1978;945644
-Spain;1979;954448
-Spain;1980;962469
-Spain;1981;969903
-Spain;1982;976255
-Spain;1983;981622
-Spain;1984;985816
-Spain;1985;989809
-Spain;1986;992988
-Spain;1987;995742
-Spain;1988;998152
-Spain;1989;999975
-Spain;1990;988170
-Spain;1991;886983
-Spain;1992;982044
-Spain;1993;743901
-Spain;1994;909682
-Spain;1995;834369
-Spain;1996;910928
-Spain;1997;1016383
-Spain;1998;1192530
-Spain;1999;1406246
-Spain;2000;1381256
-Spain;2001;1425573
-Spain;2002;1331877
-Spain;2003;1382109
-Spain;2004;1517286
-Spain;2005;1528877
-Spain;2006;1634608
-Spain;2007;1614835
-Spain;2008;1161176
-Spain;2009;952772
-Spain;2010;982015
-Spain;2011;808051
-Spain;2012;699589
-Spain;2013;722689
-Spain;2014;855308
-Spain;2015;1034232
-Spain;2016;1147009
-Spain;2017;1234932
-Spain;2018;1321437
-Spain;2019;1258249
-Spain;2020;851210
-Spain;2021;859482
-Estonia;1970;12886
-Estonia;1971;13047
-Estonia;1972;13208
-Estonia;1973;13344
-Estonia;1974;13464
-Estonia;1975;13577
-Estonia;1976;13678
-Estonia;1977;13772
-Estonia;1978;13880
-Estonia;1979;13962
-Estonia;1980;14036
-Estonia;1981;14132
-Estonia;1982;14235
-Estonia;1983;14337
-Estonia;1984;14432
-Estonia;1985;14525
-Estonia;1986;14626
-Estonia;1987;14742
-Estonia;1988;14855
-Estonia;1989;14927
-Estonia;1990;14974
-Estonia;1991;14947
-Estonia;1992;14824
-Estonia;1993;14409
-Estonia;1994;14081
-Estonia;1995;13806
-Estonia;1996;4528
-Estonia;1997;9448
-Estonia;1998;8400
-Estonia;1999;6864
-Estonia;2000;10240
-Estonia;2001;12822
-Estonia;2002;14701
-Estonia;2003;15824
-Estonia;2004;16514
-Estonia;2005;19643
-Estonia;2006;25372
-Estonia;2007;30916
-Estonia;2008;24590
-Estonia;2009;9948
-Estonia;2010;10299
-Estonia;2011;17071
-Estonia;2012;19426
-Estonia;2013;19695
-Estonia;2014;21135
-Estonia;2015;21064
-Estonia;2016;23078
-Estonia;2017;25625
-Estonia;2018;26310
-Estonia;2019;27584
-Estonia;2020;19285
-Estonia;2021;22626
-Finland;1970;91772
-Finland;1971;74997
-Finland;1972;100914
-Finland;1973;118078
-Finland;1974;96163
-Finland;1975;116995
-Finland;1976;92240
-Finland;1977;90058
-Finland;1978;80699
-Finland;1979;99546
-Finland;1980;103140
-Finland;1981;104946
-Finland;1982;127976
-Finland;1983;119444
-Finland;1984;126996
-Finland;1985;138286
-Finland;1986;143183
-Finland;1987;151432
-Finland;1988;173519
-Finland;1989;176767
-Finland;1990;139041
-Finland;1991;92485
-Finland;1992;68547
-Finland;1993;55836
-Finland;1994;67201
-Finland;1995;79890
-Finland;1996;95830
-Finland;1997;104507
-Finland;1998;125751
-Finland;1999;136324
-Finland;2000;134603
-Finland;2001;109428
-Finland;2002;117034
-Finland;2003;147405
-Finland;2004;142642
-Finland;2005;148161
-Finland;2006;145700
-Finland;2007;125608
-Finland;2008;139669
-Finland;2009;90574
-Finland;2010;111968
-Finland;2011;126123
-Finland;2012;111251
-Finland;2013;103450
-Finland;2014;106236
-Finland;2015;108812
-Finland;2016;119000
-Finland;2017;118999
-Finland;2018;120881
-Finland;2019;114578
-Finland;2020;96740
-Finland;2021;98826
-France;1970;1296240
-France;1971;1333454
-France;1972;1370668
-France;1973;1407882
-France;1974;1445096
-France;1975;1482310
-France;1976;1605830
-France;1977;1729350
-France;1978;1852870
-France;1979;1976391
-France;1980;1873202
-France;1981;1834646
-France;1982;2056490
-France;1983;2017617
-France;1984;1757673
-France;1985;1766328
-France;1986;1911521
-France;1987;2105180
-France;1988;2217149
-France;1989;2274307
-France;1990;2309130
-France;1991;2031274
-France;1992;2105700
-France;1993;1721222
-France;1994;1972919
-France;1995;1930504
-France;1996;2132091
-France;1997;1713030
-France;1998;1943553
-France;1999;2148423
-France;2000;2133884
-France;2001;2254732
-France;2002;2145071
-France;2003;2009246
-France;2004;2013709
-France;2005;2067789
-France;2006;2000549
-France;2007;2064543
-France;2008;2050283
-France;2009;2269011
-France;2010;2210186
-France;2011;2160928
-France;2012;1857013
-France;2013;1756952
-France;2014;1765855
-France;2015;1886229
-France;2016;1984471
-France;2017;2079515
-France;2018;2138600
-France;2019;2172967
-France;2020;1631178
-France;2021;1633180
-Greece;1970;94012
-Greece;1971;94275
-Greece;1972;94830
-Greece;1973;95508
-Greece;1974;95697
-Greece;1975;96213
-Greece;1976;97507
-Greece;1977;99246
-Greece;1978;100083
-Greece;1979;101847
-Greece;1980;102617
-Greece;1981;103865
-Greece;1982;104476
-Greece;1983;105154
-Greece;1984;105699
-Greece;1985;78534
-Greece;1986;65166
-Greece;1987;50501
-Greece;1988;57666
-Greece;1989;85645
-Greece;1990;115396
-Greece;1991;167655
-Greece;1992;199004
-Greece;1993;147789
-Greece;1994;112567
-Greece;1995;128137
-Greece;1996;136856
-Greece;1997;162030
-Greece;1998;180046
-Greece;1999;261573
-Greece;2000;288502
-Greece;2001;279521
-Greece;2002;267440
-Greece;2003;256489
-Greece;2004;288483
-Greece;2005;268984
-Greece;2006;267480
-Greece;2007;279723
-Greece;2008;266887
-Greece;2009;220192
-Greece;2010;140722
-Greece;2011;97539
-Greece;2012;58299
-Greece;2013;58659
-Greece;2014;70810
-Greece;2015;75497
-Greece;2016;78790
-Greece;2017;88001
-Greece;2018;103322
-Greece;2019;114007
-Greece;2020;79597
-Greece;2021;100274
-Croatia;1970;44219
-Croatia;1971;44397
-Croatia;1972;44601
-Croatia;1973;44785
-Croatia;1974;44994
-Croatia;1975;45197
-Croatia;1976;45425
-Croatia;1977;45676
-Croatia;1978;45899
-Croatia;1979;46108
-Croatia;1980;46174
-Croatia;1981;46208
-Croatia;1982;46410
-Croatia;1983;46665
-Croatia;1984;46892
-Croatia;1985;47107
-Croatia;1986;47317
-Croatia;1987;47509
-Croatia;1988;47684
-Croatia;1989;47820
-Croatia;1990;47926
-Croatia;1991;48023
-Croatia;1992;46152
-Croatia;1993;45749
-Croatia;1994;46647
-Croatia;1995;46785
-Croatia;1996;46004
-Croatia;1997;45521
-Croatia;1998;45559
-Croatia;1999;45465
-Croatia;2000;45167
-Croatia;2001;43135
-Croatia;2002;43236
-Croatia;2003;43235
-Croatia;2004;43238
-Croatia;2005;43290
-Croatia;2006;43306
-Croatia;2007;43317
-Croatia;2008;88265
-Croatia;2009;44918
-Croatia;2010;38587
-Croatia;2011;41561
-Croatia;2012;31360
-Croatia;2013;27802
-Croatia;2014;33962
-Croatia;2015;35715
-Croatia;2016;44106
-Croatia;2017;50769
-Croatia;2018;60041
-Croatia;2019;62938
-Croatia;2020;36084
-Croatia;2021;45289
-Hungary;1970;163952
-Hungary;1971;164454
-Hungary;1972;164893
-Hungary;1973;165438
-Hungary;1974;165960
-Hungary;1975;166920
-Hungary;1976;167923
-Hungary;1977;168767
-Hungary;1978;169491
-Hungary;1979;169936
-Hungary;1980;170105
-Hungary;1981;170158
-Hungary;1982;170128
-Hungary;1983;169957
-Hungary;1984;169617
-Hungary;1985;169278
-Hungary;1986;169002
-Hungary;1987;168702
-Hungary;1988;168435
-Hungary;1989;168185
-Hungary;1990;164790
-Hungary;1991;164763
-Hungary;1992;164771
-Hungary;1993;164634
-Hungary;1994;164395
-Hungary;1995;164184
-Hungary;1996;163938
-Hungary;1997;163621
-Hungary;1998;163279
-Hungary;1999;129204
-Hungary;2000;134246
-Hungary;2001;146870
-Hungary;2002;171307
-Hungary;2003;206202
-Hungary;2004;212076
-Hungary;2005;202303
-Hungary;2006;182099
-Hungary;2007;171793
-Hungary;2008;153346
-Hungary;2009;60376
-Hungary;2010;43496
-Hungary;2011;45106
-Hungary;2012;53057
-Hungary;2013;56157
-Hungary;2014;67746
-Hungary;2015;77179
-Hungary;2016;96594
-Hungary;2017;116265
-Hungary;2018;136601
-Hungary;2019;157906
-Hungary;2020;128031
-Hungary;2021;121920
-Ireland;1970;52947
-Ireland;1971;51803
-Ireland;1972;62603
-Ireland;1973;74789
-Ireland;1974;61022
-Ireland;1975;53066
-Ireland;1976;69514
-Ireland;1977;82310
-Ireland;1978;105582
-Ireland;1979;95910
-Ireland;1980;91728
-Ireland;1981;104645
-Ireland;1982;73330
-Ireland;1983;61094
-Ireland;1984;55893
-Ireland;1985;59592
-Ireland;1986;58760
-Ireland;1987;54341
-Ireland;1988;61888
-Ireland;1989;78383
-Ireland;1990;83420
-Ireland;1991;68533
-Ireland;1992;67861
-Ireland;1993;60792
-Ireland;1994;77773
-Ireland;1995;82730
-Ireland;1996;109333
-Ireland;1997;125818
-Ireland;1998;138538
-Ireland;1999;170322
-Ireland;2000;225269
-Ireland;2001;160908
-Ireland;2002;150485
-Ireland;2003;142992
-Ireland;2004;149635
-Ireland;2005;166270
-Ireland;2006;173273
-Ireland;2007;180754
-Ireland;2008;146470
-Ireland;2009;54432
-Ireland;2010;84907
-Ireland;2011;86932
-Ireland;2012;76256
-Ireland;2013;71348
-Ireland;2014;92361
-Ireland;2015;121110
-Ireland;2016;141931
-Ireland;2017;127045
-Ireland;2018;121157
-Ireland;2019;113305
-Ireland;2020;84309
-Ireland;2021;101853
-Iceland;1970;8029
-Iceland;1971;8060
-Iceland;1972;8159
-Iceland;1973;8299
-Iceland;1974;8410
-Iceland;1975;8527
-Iceland;1976;8628
-Iceland;1977;8698
-Iceland;1978;8757
-Iceland;1979;8835
-Iceland;1980;8930
-Iceland;1981;9024
-Iceland;1982;9136
-Iceland;1983;9268
-Iceland;1984;9382
-Iceland;1985;9468
-Iceland;1986;9531
-Iceland;1987;9607
-Iceland;1988;9741
-Iceland;1989;9913
-Iceland;1990;9986
-Iceland;1991;10068
-Iceland;1992;10220
-Iceland;1993;10325
-Iceland;1994;10430
-Iceland;1995;6458
-Iceland;1996;8042
-Iceland;1997;10146
-Iceland;1998;13593
-Iceland;1999;15377
-Iceland;2000;13569
-Iceland;2001;7245
-Iceland;2002;6943
-Iceland;2003;9885
-Iceland;2004;11968
-Iceland;2005;18060
-Iceland;2006;17129
-Iceland;2007;15942
-Iceland;2008;9033
-Iceland;2009;2113
-Iceland;2010;3106
-Iceland;2011;5038
-Iceland;2012;7930
-Iceland;2013;7274
-Iceland;2014;9520
-Iceland;2015;14008
-Iceland;2016;18473
-Iceland;2017;21324
-Iceland;2018;17976
-Iceland;2019;11719
-Iceland;2020;9369
-Iceland;2021;12798
-Italy;1970;1363594
-Italy;1971;1434529
-Italy;1972;1470394
-Italy;1973;1449100
-Italy;1974;1280710
-Italy;1975;1050947
-Italy;1976;1187621
-Italy;1977;1219172
-Italy;1978;1194424
-Italy;1979;1397039
-Italy;1980;1530488
-Italy;1981;1808476
-Italy;1982;1851174
-Italy;1983;1451512
-Italy;1984;1572402
-Italy;1985;1653217
-Italy;1986;1769191
-Italy;1987;1929568
-Italy;1988;2119193
-Italy;1989;2296784
-Italy;1990;2283362
-Italy;1991;2220321
-Italy;1992;2389395
-Italy;1993;1695264
-Italy;1994;1683652
-Italy;1995;1737108
-Italy;1996;1723117
-Italy;1997;2393607
-Italy;1998;2363995
-Italy;1999;2322430
-Italy;2000;2411990
-Italy;2001;2418226
-Italy;2002;2302870
-Italy;2003;2254317
-Italy;2004;2272807
-Italy;2005;2244108
-Italy;2006;2335462
-Italy;2007;2494115
-Italy;2008;2161359
-Italy;2009;2159924
-Italy;2010;1962042
-Italy;2011;1749469
-Italy;2012;1403263
-Italy;2013;1304842
-Italy;2014;1360777
-Italy;2015;1575954
-Italy;2016;1826131
-Italy;2017;1971646
-Italy;2018;1911056
-Italy;2019;1917106
-Italy;2020;1381855
-Italy;2021;1458313
-Liechtenstein;1970;1150
-Liechtenstein;1971;1173
-Liechtenstein;1972;1201
-Liechtenstein;1973;1232
-Liechtenstein;1974;1272
-Liechtenstein;1975;1305
-Liechtenstein;1976;1316
-Liechtenstein;1977;1328
-Liechtenstein;1978;1358
-Liechtenstein;1979;1392
-Liechtenstein;1980;1418
-Liechtenstein;1981;1386
-Liechtenstein;1982;1436
-Liechtenstein;1983;1450
-Liechtenstein;1984;1457
-Liechtenstein;1985;1466
-Liechtenstein;1986;1488
-Liechtenstein;1987;1506
-Liechtenstein;1988;1523
-Liechtenstein;1989;1549
-Liechtenstein;1990;1564
-Liechtenstein;1991;1595
-Liechtenstein;1992;1615
-Liechtenstein;1993;1641
-Liechtenstein;1994;1666
-Liechtenstein;1995;1683
-Liechtenstein;1996;1699
-Liechtenstein;1997;1711
-Liechtenstein;1998;1721
-Liechtenstein;1999;1759
-Liechtenstein;2000;1937
-Liechtenstein;2001;2065
-Liechtenstein;2002;2074
-Liechtenstein;2003;1770
-Liechtenstein;2004;1790
-Liechtenstein;2005;1840
-Liechtenstein;2006;1890
-Liechtenstein;2007;1990
-Liechtenstein;2008;2005
-Liechtenstein;2009;1620
-Liechtenstein;2010;1782
-Liechtenstein;2011;2029
-Liechtenstein;2012;2108
-Liechtenstein;2013;1920
-Liechtenstein;2014;1800
-Liechtenstein;2015;2049
-Liechtenstein;2016;1984
-Liechtenstein;2017;2024
-Liechtenstein;2018;1849
-Liechtenstein;2019;1953
-Liechtenstein;2020;1510
-Liechtenstein;2021;1627
-Lithuania;1970;12298
-Lithuania;1971;12462
-Lithuania;1972;12609
-Lithuania;1973;12735
-Lithuania;1974;12852
-Lithuania;1975;12967
-Lithuania;1976;13071
-Lithuania;1977;13180
-Lithuania;1978;13279
-Lithuania;1979;13373
-Lithuania;1980;13423
-Lithuania;1981;13494
-Lithuania;1982;13579
-Lithuania;1983;13685
-Lithuania;1984;13800
-Lithuania;1985;13914
-Lithuania;1986;14039
-Lithuania;1987;14185
-Lithuania;1988;14334
-Lithuania;1989;14490
-Lithuania;1990;14565
-Lithuania;1991;14597
-Lithuania;1992;14614
-Lithuania;1993;14566
-Lithuania;1994;14476
-Lithuania;1995;14365
-Lithuania;1996;14255
-Lithuania;1997;14148
-Lithuania;1998;14046
-Lithuania;1999;13945
-Lithuania;2000;13849
-Lithuania;2001;13750
-Lithuania;2002;13622
-Lithuania;2003;7543
-Lithuania;2004;9493
-Lithuania;2005;10467
-Lithuania;2006;14234
-Lithuania;2007;21606
-Lithuania;2008;22217
-Lithuania;2009;7515
-Lithuania;2010;7970
-Lithuania;2011;13234
-Lithuania;2012;12165
-Lithuania;2013;12163
-Lithuania;2014;14461
-Lithuania;2015;17071
-Lithuania;2016;20284
-Lithuania;2017;25836
-Lithuania;2018;32382
-Lithuania;2019;46388
-Lithuania;2020;40338
-Lithuania;2021;31454
-Lithuania;2022;25541
-Luxembourg;1970;11633
-Luxembourg;1971;13794
-Luxembourg;1972;14988
-Luxembourg;1973;15948
-Luxembourg;1974;16581
-Luxembourg;1975;17356
-Luxembourg;1976;19036
-Luxembourg;1977;20715
-Luxembourg;1978;22395
-Luxembourg;1979;22796
-Luxembourg;1980;22440
-Luxembourg;1981;23008
-Luxembourg;1982;25796
-Luxembourg;1983;26482
-Luxembourg;1984;28597
-Luxembourg;1985;29235
-Luxembourg;1986;32960
-Luxembourg;1987;32660
-Luxembourg;1988;33847
-Luxembourg;1989;34382
-Luxembourg;1990;38648
-Luxembourg;1991;44055
-Luxembourg;1992;37334
-Luxembourg;1993;30723
-Luxembourg;1994;29054
-Luxembourg;1995;28029
-Luxembourg;1996;30001
-Luxembourg;1997;31418
-Luxembourg;1998;35928
-Luxembourg;1999;40476
-Luxembourg;2000;41896
-Luxembourg;2001;42833
-Luxembourg;2002;43403
-Luxembourg;2003;43620
-Luxembourg;2004;48234
-Luxembourg;2005;48517
-Luxembourg;2006;50837
-Luxembourg;2007;51332
-Luxembourg;2008;52359
-Luxembourg;2009;47264
-Luxembourg;2010;49726
-Luxembourg;2011;49881
-Luxembourg;2012;50398
-Luxembourg;2013;46624
-Luxembourg;2014;49793
-Luxembourg;2015;46473
-Luxembourg;2016;50561
-Luxembourg;2017;52775
-Luxembourg;2018;52811
-Luxembourg;2019;55008
-Luxembourg;2020;45189
-Luxembourg;2021;44372
-Latvia;1970;11870
-Latvia;1971;11944
-Latvia;1972;12044
-Latvia;1973;12138
-Latvia;1974;12247
-Latvia;1975;12354
-Latvia;1976;12439
-Latvia;1977;12504
-Latvia;1978;12581
-Latvia;1979;12634
-Latvia;1980;12662
-Latvia;1981;12692
-Latvia;1982;12740
-Latvia;1983;12809
-Latvia;1984;12891
-Latvia;1985;12971
-Latvia;1986;13060
-Latvia;1987;13183
-Latvia;1988;13330
-Latvia;1989;13454
-Latvia;1990;13466
-Latvia;1991;13416
-Latvia;1992;13339
-Latvia;1993;13050
-Latvia;1994;12824
-Latvia;1995;12621
-Latvia;1996;12464
-Latvia;1997;4491
-Latvia;1998;6826
-Latvia;1999;5618
-Latvia;2000;5959
-Latvia;2001;6090
-Latvia;2002;6489
-Latvia;2003;6634
-Latvia;2004;9161
-Latvia;2005;15949
-Latvia;2006;26148
-Latvia;2007;32914
-Latvia;2008;19836
-Latvia;2009;5326
-Latvia;2010;6507
-Latvia;2011;11412
-Latvia;2012;11149
-Latvia;2013;11234
-Latvia;2014;13173
-Latvia;2015;14291
-Latvia;2016;16768
-Latvia;2017;17055
-Latvia;2018;17185
-Latvia;2019;18529
-Latvia;2020;13720
-Latvia;2021;14652
-Malta;1970;4078
-Malta;1971;4082
-Malta;1972;4079
-Malta;1973;4076
-Malta;1974;4073
-Malta;1975;4070
-Malta;1976;4133
-Malta;1977;4112
-Malta;1978;4165
-Malta;1979;4198
-Malta;1980;4250
-Malta;1981;4287
-Malta;1982;4313
-Malta;1983;4474
-Malta;1984;4438
-Malta;1985;4476
-Malta;1986;4596
-Malta;1987;4629
-Malta;1988;4660
-Malta;1989;4705
-Malta;1990;4751
-Malta;1991;4879
-Malta;1992;4931
-Malta;1993;4981
-Malta;1994;5031
-Malta;1995;5075
-Malta;1996;5101
-Malta;1997;5142
-Malta;1998;5179
-Malta;1999;5209
-Malta;2000;5241
-Malta;2001;5277
-Malta;2002;5320
-Malta;2003;5356
-Malta;2004;5398
-Malta;2005;5675
-Malta;2006;5862
-Malta;2007;5334
-Malta;2008;4424
-Malta;2009;5404
-Malta;2010;4572
-Malta;2011;6362
-Malta;2012;5884
-Malta;2013;5749
-Malta;2014;6451
-Malta;2015;7132
-Malta;2016;7306
-Malta;2017;7776
-Malta;2018;8175
-Malta;2019;7698
-Malta;2020;4602
-Malta;2021;5250
-Netherlands;1970;432231
-Netherlands;1971;402708
-Netherlands;1972;432083
-Netherlands;1973;429931
-Netherlands;1974;404312
-Netherlands;1975;480000
-Netherlands;1976;508451
-Netherlands;1977;551102
-Netherlands;1978;581458
-Netherlands;1979;575059
-Netherlands;1980;451587
-Netherlands;1981;390990
-Netherlands;1982;406991
-Netherlands;1983;459129
-Netherlands;1984;461391
-Netherlands;1985;495682
-Netherlands;1986;560510
-Netherlands;1987;555743
-Netherlands;1988;482616
-Netherlands;1989;496115
-Netherlands;1990;502704
-Netherlands;1991;490755
-Netherlands;1992;491970
-Netherlands;1993;391934
-Netherlands;1994;433913
-Netherlands;1995;446388
-Netherlands;1996;473474
-Netherlands;1997;478318
-Netherlands;1998;543110
-Netherlands;1999;611776
-Netherlands;2000;597623
-Netherlands;2001;530287
-Netherlands;2002;510744
-Netherlands;2003;488977
-Netherlands;2004;483885
-Netherlands;2005;465196
-Netherlands;2006;483999
-Netherlands;2007;504300
-Netherlands;2008;499980
-Netherlands;2009;387699
-Netherlands;2010;482531
-Netherlands;2011;555812
-Netherlands;2012;502454
-Netherlands;2013;417036
-Netherlands;2014;387553
-Netherlands;2015;448931
-Netherlands;2016;382516
-Netherlands;2017;414306
-Netherlands;2018;443530
-Netherlands;2019;445217
-Netherlands;2020;355431
-Netherlands;2021;322831
-Norway;1970;78958
-Norway;1971;79471
-Norway;1972;80073
-Norway;1973;80696
-Norway;1974;81202
-Norway;1975;81703
-Norway;1976;82103
-Norway;1977;82473
-Norway;1978;82800
-Norway;1979;83105
-Norway;1980;83366
-Norway;1981;83641
-Norway;1982;83942
-Norway;1983;84258
-Norway;1984;84500
-Norway;1985;84735
-Norway;1986;85007
-Norway;1987;85341
-Norway;1988;85806
-Norway;1989;86264
-Norway;1990;61901
-Norway;1991;54254
-Norway;1992;59364
-Norway;1993;60822
-Norway;1994;85067
-Norway;1995;90502
-Norway;1996;124994
-Norway;1997;127737
-Norway;1998;117977
-Norway;1999;101278
-Norway;2000;97376
-Norway;2001;91916
-Norway;2002;88721
-Norway;2003;89921
-Norway;2004;115645
-Norway;2005;109907
-Norway;2006;109164
-Norway;2007;129195
-Norway;2008;110617
-Norway;2009;98675
-Norway;2010;127754
-Norway;2011;138345
-Norway;2012;137967
-Norway;2013;142151
-Norway;2014;144202
-Norway;2015;150686
-Norway;2016;154603
-Norway;2017;158650
-Norway;2018;147929
-Norway;2019;142381
-Norway;2020;141405
-Norway;2021;176276
-Poland;1970;245158
-Poland;1971;245063
-Poland;1972;246947
-Poland;1973;249148
-Poland;1974;251473
-Poland;1975;253976
-Poland;1976;256520
-Poland;1977;259095
-Poland;1978;261514
-Poland;1979;263245
-Poland;1980;265740
-Poland;1981;268152
-Poland;1982;270609
-Poland;1983;273133
-Poland;1984;275732
-Poland;1985;278121
-Poland;1986;280200
-Poland;1987;281936
-Poland;1988;283381
-Poland;1989;284284
-Poland;1990;285438
-Poland;1991;286524
-Poland;1992;287470
-Poland;1993;288287
-Poland;1994;288937
-Poland;1995;289506
-Poland;1996;289722
-Poland;1997;289947
-Poland;1998;290102
-Poland;1999;290154
-Poland;2000;287125
-Poland;2001;287055
-Poland;2002;286967
-Poland;2003;286789
-Poland;2004;286580
-Poland;2005;207007
-Poland;2006;224728
-Poland;2007;277427
-Poland;2008;319190
-Poland;2009;276220
-Poland;2010;315855
-Poland;2011;277427
-Poland;2012;272719
-Poland;2013;289913
-Poland;2014;327709
-Poland;2015;354975
-Poland;2016;416123
-Poland;2017;486352
-Poland;2018;531889
-Poland;2019;555598
-Poland;2020;428347
-Poland;2021;446647
-Portugal;1970;204834
-Portugal;1971;204025
-Portugal;1972;203106
-Portugal;1973;203397
-Portugal;1974;203232
-Portugal;1975;209109
-Portugal;1976;219204
-Portugal;1977;221465
-Portugal;1978;223908
-Portugal;1979;226297
-Portugal;1980;228760
-Portugal;1981;231245
-Portugal;1982;232766
-Portugal;1983;234090
-Portugal;1984;234937
-Portugal;1985;235897
-Portugal;1986;236227
-Portugal;1987;236327
-Portugal;1988;236100
-Portugal;1989;235836
-Portugal;1990;210924
-Portugal;1991;228554
-Portugal;1992;276972
-Portugal;1993;242671
-Portugal;1994;232916
-Portugal;1995;201471
-Portugal;1996;217910
-Portugal;1997;213636
-Portugal;1998;248398
-Portugal;1999;272883
-Portugal;2000;257836
-Portugal;2001;255210
-Portugal;2002;226092
-Portugal;2003;189792
-Portugal;2004;197645
-Portugal;2005;206488
-Portugal;2006;194702
-Portugal;2007;201816
-Portugal;2008;213389
-Portugal;2009;161013
-Portugal;2010;223464
-Portugal;2011;153404
-Portugal;2012;95309
-Portugal;2013;105921
-Portugal;2014;142826
-Portugal;2015;178503
-Portugal;2016;207330
-Portugal;2017;222129
-Portugal;2018;228327
-Portugal;2019;223799
-Portugal;2020;145417
-Portugal;2021;146637
-Romania;1970;146774
-Romania;1971;148389
-Romania;1972;149852
-Romania;1973;151252
-Romania;1974;152443
-Romania;1975;154076
-Romania;1976;156293
-Romania;1977;157837
-Romania;1978;159273
-Romania;1979;160685
-Romania;1980;161300
-Romania;1981;162387
-Romania;1982;163425
-Romania;1983;164175
-Romania;1984;164660
-Romania;1985;165342
-Romania;1986;166007
-Romania;1987;166856
-Romania;1988;167648
-Romania;1989;168433
-Romania;1990;169161
-Romania;1991;169022
-Romania;1992;166236
-Romania;1993;166007
-Romania;1994;165784
-Romania;1995;165525
-Romania;1996;165115
-Romania;1997;164573
-Romania;1998;164167
-Romania;1999;163893
-Romania;2000;70236
-Romania;2001;86785
-Romania;2002;88840
-Romania;2003;115761
-Romania;2004;149290
-Romania;2005;179531
-Romania;2006;200136
-Romania;2007;312585
-Romania;2008;285558
-Romania;2009;116030
-Romania;2010;95228
-Romania;2011;81853
-Romania;2012;66423
-Romania;2013;57700
-Romania;2014;70175
-Romania;2015;81175
-Romania;2016;95181
-Romania;2017;106873
-Romania;2018;130921
-Romania;2019;161564
-Romania;2020;126329
-Romania;2021;121210
-Slovakia;1970;53655
-Slovakia;1971;53695
-Slovakia;1972;54110
-Slovakia;1973;54621
-Slovakia;1974;55170
-Slovakia;1975;55761
-Slovakia;1976;56341
-Slovakia;1977;56953
-Slovakia;1978;57547
-Slovakia;1979;58127
-Slovakia;1980;58703
-Slovakia;1981;59093
-Slovakia;1982;59561
-Slovakia;1983;60016
-Slovakia;1984;60433
-Slovakia;1985;60847
-Slovakia;1986;61254
-Slovakia;1987;61605
-Slovakia;1988;61940
-Slovakia;1989;62262
-Slovakia;1990;62539
-Slovakia;1991;62812
-Slovakia;1992;62636
-Slovakia;1993;62852
-Slovakia;1994;63116
-Slovakia;1995;63350
-Slovakia;1996;63487
-Slovakia;1997;63619
-Slovakia;1998;63722
-Slovakia;1999;63789
-Slovakia;2000;63852
-Slovakia;2001;63617
-Slovakia;2002;63619
-Slovakia;2003;57784
-Slovakia;2004;57630
-Slovakia;2005;59361
-Slovakia;2006;65698
-Slovakia;2007;60031
-Slovakia;2008;56608
-Slovakia;2009;74830
-Slovakia;2010;64744
-Slovakia;2011;68861
-Slovakia;2012;69512
-Slovakia;2013;65466
-Slovakia;2014;71693
-Slovakia;2015;78180
-Slovakia;2016;88504
-Slovakia;2017;96312
-Slovakia;2018;98602
-Slovakia;2019;101743
-Slovakia;2020;76300
-Slovakia;2021;75608
-Slovakia;2022;78179
-Slovenia;1970;53929
-Slovenia;1971;54362
-Slovenia;1972;54773
-Slovenia;1973;55235
-Slovenia;1974;55681
-Slovenia;1975;55827
-Slovenia;1976;56777
-Slovenia;1977;57501
-Slovenia;1978;58166
-Slovenia;1979;58768
-Slovenia;1980;59425
-Slovenia;1981;59943
-Slovenia;1982;59752
-Slovenia;1983;60182
-Slovenia;1984;60505
-Slovenia;1985;60799
-Slovenia;1986;61101
-Slovenia;1987;62326
-Slovenia;1988;62596
-Slovenia;1989;62666
-Slovenia;1990;62668
-Slovenia;1991;62780
-Slovenia;1992;62748
-Slovenia;1993;62596
-Slovenia;1994;62449
-Slovenia;1995;62451
-Slovenia;1996;62476
-Slovenia;1997;62373
-Slovenia;1998;67228
-Slovenia;1999;77331
-Slovenia;2000;55258
-Slovenia;2001;52532
-Slovenia;2002;51121
-Slovenia;2003;60347
-Slovenia;2004;63114
-Slovenia;2005;61108
-Slovenia;2006;60566
-Slovenia;2007;68630
-Slovenia;2008;71743
-Slovenia;2009;57916
-Slovenia;2010;61142
-Slovenia;2011;60193
-Slovenia;2012;50091
-Slovenia;2013;52268
-Slovenia;2014;54699
-Slovenia;2015;60976
-Slovenia;2016;65446
-Slovenia;2017;73320
-Slovenia;2018;75071
-Slovenia;2019;73471
-Slovenia;2020;53880
-Slovenia;2021;54224
-Sweden;1970;188625
-Sweden;1971;190436
-Sweden;1972;191242
-Sweden;1973;191565
-Sweden;1974;191902
-Sweden;1975;192680
-Sweden;1976;193433
-Sweden;1977;194086
-Sweden;1978;194812
-Sweden;1979;195220
-Sweden;1980;195664
-Sweden;1981;196015
-Sweden;1982;196134
-Sweden;1983;196239
-Sweden;1984;196312
-Sweden;1985;196596
-Sweden;1986;196961
-Sweden;1987;197512
-Sweden;1988;198280
-Sweden;1989;199335
-Sweden;1990;229941
-Sweden;1991;188308
-Sweden;1992;154173
-Sweden;1993;124434
-Sweden;1994;156375
-Sweden;1995;169756
-Sweden;1996;183820
-Sweden;1997;225263
-Sweden;1998;253430
-Sweden;1999;295249
-Sweden;2000;290529
-Sweden;2001;246581
-Sweden;2002;254589
-Sweden;2003;261206
-Sweden;2004;264246
-Sweden;2005;274301
-Sweden;2006;282766
-Sweden;2007;306799
-Sweden;2008;253982
-Sweden;2009;213408
-Sweden;2010;289684
-Sweden;2011;304984
-Sweden;2012;279899
-Sweden;2013;269558
-Sweden;2014;303948
-Sweden;2015;345108
-Sweden;2016;372318
-Sweden;2017;379393
-Sweden;2018;353729
-Sweden;2019;356036
-Sweden;2020;292024
-Sweden;2021;301008
-United Kingdom;1970;1141119
-United Kingdom;1971;1157683
-United Kingdom;1972;1174246
-United Kingdom;1973;1190810
-United Kingdom;1974;1207374
-United Kingdom;1975;1223938
-United Kingdom;1976;1368912
-United Kingdom;1977;1513886
-United Kingdom;1978;1658861
-United Kingdom;1979;1803834
-United Kingdom;1980;1601435
-United Kingdom;1981;1573962
-United Kingdom;1982;1714426
-United Kingdom;1983;1981445
-United Kingdom;1984;1935588
-United Kingdom;1985;2027375
-United Kingdom;1986;2070207
-United Kingdom;1987;2214569
-United Kingdom;1988;2435677
-United Kingdom;1989;2535423
-United Kingdom;1990;2053790
-United Kingdom;1991;1627880
-United Kingdom;1992;1629182
-United Kingdom;1993;1818135
-United Kingdom;1994;1953601
-United Kingdom;1995;1988803
-United Kingdom;1996;2070675
-United Kingdom;1997;2219194
-United Kingdom;1998;2297584
-United Kingdom;1999;2246684
-United Kingdom;2000;2271276
-United Kingdom;2001;2643723
-United Kingdom;2002;2742018
-United Kingdom;2003;2705138
-United Kingdom;2004;2657112
-United Kingdom;2005;2498013
-United Kingdom;2006;2392292
-United Kingdom;2007;2443446
-United Kingdom;2008;2159155
-United Kingdom;2009;2012200
-United Kingdom;2010;2040899
-United Kingdom;2011;1950000
-United Kingdom;2012;2055723
-United Kingdom;2013;2274764
-United Kingdom;2014;2492784
-United Kingdom;2015;2661020
-United Kingdom;2016;2723774
-United Kingdom;2017;2564330
-United Kingdom;2018;2394042
-United Kingdom;2019;2346576
-United Kingdom;2020;1656403
-United Kingdom;2021;1677245
+geo country;time;powertrain;new vehicle registrations
+Norway;1970;BEV;0
+Norway;1971;BEV;0
+Norway;1972;BEV;0
+Norway;1973;BEV;0
+Norway;1974;BEV;0
+Norway;1975;BEV;0
+Norway;1976;BEV;0
+Norway;1977;BEV;0
+Norway;1978;BEV;0
+Norway;1979;BEV;0
+Norway;1980;BEV;0
+Norway;1981;BEV;0
+Norway;1982;BEV;0
+Norway;1983;BEV;0
+Norway;1984;BEV;0
+Norway;1985;BEV;0
+Norway;1986;BEV;0
+Norway;1987;BEV;0
+Norway;1988;BEV;0
+Norway;1989;BEV;0
+Norway;1990;BEV;0
+Norway;1991;BEV;0
+Norway;1992;BEV;0
+Norway;1993;BEV;0
+Norway;1994;BEV;0
+Norway;1995;BEV;7
+Norway;1996;BEV;48
+Norway;1997;BEV;26
+Norway;1998;BEV;40
+Norway;1999;BEV;85
+Norway;2000;BEV;198
+Norway;2001;BEV;151
+Norway;2002;BEV;220
+Norway;2003;BEV;100
+Norway;2004;BEV;73
+Norway;2005;BEV;31
+Norway;2006;BEV;17
+Norway;2007;BEV;16
+Norway;2008;BEV;178
+Norway;2009;BEV;119
+Norway;2010;BEV;357
+Norway;2011;BEV;2010
+Norway;2012;BEV;3938
+Norway;2013;BEV;7888
+Norway;2014;BEV;18089
+Norway;2015;BEV;25783
+Norway;2016;BEV;24234
+Norway;2017;BEV;33073
+Norway;2018;BEV;46129
+Norway;2019;BEV;60246
+Norway;2020;BEV;76791
+Norway;2021;BEV;113715
+Norway;2022;BEV;138283
+Norway;2023;BEV;104576
+Norway;2024;BEV;114377
+Norway;2025;BEV;172217
+Norway;2019;CNG;16
+Norway;2020;CNG;5
+Norway;2021;CNG;0
+Norway;2022;CNG;0
+Norway;2023;CNG;0
+Norway;2024;CNG;0
+Norway;2025;CNG;0
+Norway;2019;D-HEV;544
+Norway;2020;D-HEV;763
+Norway;2021;D-HEV;797
+Norway;2022;D-HEV;633
+Norway;2023;D-HEV;256
+Norway;2024;D-HEV;170
+Norway;2025;D-HEV;120
+Norway;1970;Diesel;1592
+Norway;1971;Diesel;1602
+Norway;1972;Diesel;1614
+Norway;1973;Diesel;1627
+Norway;1974;Diesel;1637
+Norway;1975;Diesel;1647
+Norway;1976;Diesel;1655
+Norway;1977;Diesel;1663
+Norway;1978;Diesel;1669
+Norway;1979;Diesel;1675
+Norway;1980;Diesel;1681
+Norway;1981;Diesel;1686
+Norway;1982;Diesel;1692
+Norway;1983;Diesel;1699
+Norway;1984;Diesel;1704
+Norway;1985;Diesel;1708
+Norway;1986;Diesel;1714
+Norway;1987;Diesel;1720
+Norway;1988;Diesel;1730
+Norway;1989;Diesel;1739
+Norway;1990;Diesel;2358
+Norway;1991;Diesel;3454
+Norway;1992;Diesel;5663
+Norway;1993;Diesel;8657
+Norway;1994;Diesel;12108
+Norway;1995;Diesel;6505
+Norway;1996;Diesel;11757
+Norway;1997;Diesel;11962
+Norway;1998;Diesel;11522
+Norway;1999;Diesel;11937
+Norway;2000;Diesel;11895
+Norway;2001;Diesel;11393
+Norway;2002;Diesel;10711
+Norway;2003;Diesel;10831
+Norway;2004;Diesel;43269
+Norway;2005;Diesel;40846
+Norway;2006;Diesel;62415
+Norway;2007;Diesel;104433
+Norway;2008;Diesel;84572
+Norway;2009;Diesel;75578
+Norway;2010;Diesel;99668
+Norway;2011;Diesel;106747
+Norway;2012;Diesel;89370
+Norway;2013;Diesel;74137
+Norway;2014;Diesel;66754
+Norway;2015;Diesel;61749
+Norway;2016;Diesel;36282
+Norway;2017;Diesel;25130
+Norway;2018;Diesel;17876
+Norway;2019;Diesel;22245
+Norway;2020;Diesel;11353
+Norway;2021;Diesel;6210
+Norway;2022;Diesel;4716
+Norway;2023;Diesel;2830
+Norway;2024;Diesel;2697
+Norway;2025;Diesel;1514
+Norway;2019;D-PHEV;531
+Norway;2020;D-PHEV;1412
+Norway;2021;D-PHEV;1572
+Norway;2022;D-PHEV;528
+Norway;2023;D-PHEV;200
+Norway;2024;D-PHEV;17
+Norway;2025;D-PHEV;142
+Norway;2019;FCEV;28
+Norway;2020;FCEV;15
+Norway;2021;FCEV;36
+Norway;2022;FCEV;27
+Norway;2023;FCEV;2
+Norway;2024;FCEV;9
+Norway;2025;FCEV;0
+Norway;1970;Gasoline;77366
+Norway;1971;Gasoline;77869
+Norway;1972;Gasoline;78459
+Norway;1973;Gasoline;79069
+Norway;1974;Gasoline;79565
+Norway;1975;Gasoline;80056
+Norway;1976;Gasoline;80448
+Norway;1977;Gasoline;80810
+Norway;1978;Gasoline;81131
+Norway;1979;Gasoline;81430
+Norway;1980;Gasoline;81685
+Norway;1981;Gasoline;81955
+Norway;1982;Gasoline;82250
+Norway;1983;Gasoline;82559
+Norway;1984;Gasoline;82796
+Norway;1985;Gasoline;83027
+Norway;1986;Gasoline;83293
+Norway;1987;Gasoline;83621
+Norway;1988;Gasoline;84076
+Norway;1989;Gasoline;84525
+Norway;1990;Gasoline;59543
+Norway;1991;Gasoline;50800
+Norway;1992;Gasoline;53701
+Norway;1993;Gasoline;52165
+Norway;1994;Gasoline;72959
+Norway;1995;Gasoline;99116
+Norway;1996;Gasoline;132950
+Norway;1997;Gasoline;136304
+Norway;1998;Gasoline;124778
+Norway;1999;Gasoline;108087
+Norway;2000;Gasoline;107708
+Norway;2001;Gasoline;103162
+Norway;2002;Gasoline;96986
+Norway;2003;Gasoline;98075
+Norway;2004;Gasoline;93133
+Norway;2005;Gasoline;87916
+Norway;2006;Gasoline;57707
+Norway;2007;Gasoline;33976
+Norway;2008;Gasoline;31745
+Norway;2009;Gasoline;26240
+Norway;2010;Gasoline;31215
+Norway;2011;Gasoline;31489
+Norway;2012;Gasoline;41917
+Norway;2013;Gasoline;51498
+Norway;2014;Gasoline;47931
+Norway;2015;Gasoline;44629
+Norway;2016;Gasoline;56211
+Norway;2017;Gasoline;50869
+Norway;2018;Gasoline;40814
+Norway;2019;Gasoline;21203
+Norway;2020;Gasoline;8377
+Norway;2021;Gasoline;3724
+Norway;2022;Gasoline;2257
+Norway;2023;Gasoline;806
+Norway;2024;Gasoline;325
+Norway;2025;Gasoline;187
+Norway;2019;G-HEV;18697
+Norway;2020;G-HEV;15156
+Norway;2021;G-HEV;13545
+Norway;2022;G-HEV;12244
+Norway;2023;G-HEV;8270
+Norway;2024;G-HEV;7525
+Norway;2025;G-HEV;2607
+Norway;2019;G-PHEV;18768
+Norway;2020;G-PHEV;27497
+Norway;2021;G-PHEV;36602
+Norway;2022;G-PHEV;15603
+Norway;2023;G-PHEV;9970
+Norway;2024;G-PHEV;3470
+Norway;2025;G-PHEV;2610
+Norway;1970;PHEV;0
+Norway;1971;PHEV;0
+Norway;1972;PHEV;0
+Norway;1973;PHEV;0
+Norway;1974;PHEV;0
+Norway;1975;PHEV;0
+Norway;1976;PHEV;0
+Norway;1977;PHEV;0
+Norway;1978;PHEV;0
+Norway;1979;PHEV;0
+Norway;1980;PHEV;0
+Norway;1981;PHEV;0
+Norway;1982;PHEV;0
+Norway;1983;PHEV;0
+Norway;1984;PHEV;0
+Norway;1985;PHEV;0
+Norway;1986;PHEV;0
+Norway;1987;PHEV;0
+Norway;1988;PHEV;0
+Norway;1989;PHEV;0
+Norway;1990;PHEV;0
+Norway;1991;PHEV;0
+Norway;1992;PHEV;0
+Norway;1993;PHEV;0
+Norway;1994;PHEV;0
+Norway;1995;PHEV;0
+Norway;1996;PHEV;0
+Norway;1997;PHEV;0
+Norway;1998;PHEV;0
+Norway;1999;PHEV;0
+Norway;2000;PHEV;0
+Norway;2001;PHEV;0
+Norway;2002;PHEV;0
+Norway;2003;PHEV;0
+Norway;2004;PHEV;0
+Norway;2005;PHEV;0
+Norway;2006;PHEV;0
+Norway;2007;PHEV;0
+Norway;2008;PHEV;0
+Norway;2009;PHEV;0
+Norway;2010;PHEV;0
+Norway;2011;PHEV;354
+Norway;2012;PHEV;462
+Norway;2013;PHEV;1617
+Norway;2014;PHEV;7151
+Norway;2015;PHEV;19423
+Norway;2016;PHEV;26919
+Norway;2017;PHEV;26546
+Norway;2018;PHEV;19043
+Norway;2019;PHEV;19299
+Norway;2020;PHEV;28909
+Norway;2021;PHEV;38174
+Norway;2022;PHEV;16131
+Norway;2023;PHEV;10170
+Norway;2024;PHEV;3487
+Norway;2025;PHEV;2752
+Norway;1970;Total;78958
+Norway;1971;Total;79471
+Norway;1972;Total;80073
+Norway;1973;Total;80696
+Norway;1974;Total;81202
+Norway;1975;Total;81703
+Norway;1976;Total;82103
+Norway;1977;Total;82473
+Norway;1978;Total;82800
+Norway;1979;Total;83105
+Norway;1980;Total;83366
+Norway;1981;Total;83641
+Norway;1982;Total;83942
+Norway;1983;Total;84258
+Norway;1984;Total;84500
+Norway;1985;Total;84735
+Norway;1986;Total;85007
+Norway;1987;Total;85341
+Norway;1988;Total;85806
+Norway;1989;Total;86264
+Norway;1990;Total;61901
+Norway;1991;Total;54254
+Norway;1992;Total;59364
+Norway;1993;Total;60822
+Norway;1994;Total;85067
+Norway;1995;Total;105628
+Norway;1996;Total;144755
+Norway;1997;Total;148292
+Norway;1998;Total;136340
+Norway;1999;Total;120109
+Norway;2000;Total;119801
+Norway;2001;Total;114706
+Norway;2002;Total;107917
+Norway;2003;Total;109006
+Norway;2004;Total;136475
+Norway;2005;Total;128793
+Norway;2006;Total;120139
+Norway;2007;Total;138426
+Norway;2008;Total;116497
+Norway;2009;Total;101939
+Norway;2010;Total;131386
+Norway;2011;Total;141742
+Norway;2012;Total;140115
+Norway;2013;Total;143085
+Norway;2014;Total;144457
+Norway;2015;Total;150917
+Norway;2016;Total;154883
+Norway;2017;Total;158864
+Norway;2018;Total;148083
+Norway;2019;Total;142278
+Norway;2020;Total;141369
+Norway;2021;Total;176201
+Norway;2022;Total;174291
+Norway;2023;Total;126910
+Norway;2024;Total;128590
+Norway;2025;Total;179397
+Denmark;1970;BEV;0
+Denmark;1971;BEV;0
+Denmark;1972;BEV;0
+Denmark;1973;BEV;0
+Denmark;1974;BEV;0
+Denmark;1975;BEV;0
+Denmark;1976;BEV;0
+Denmark;1977;BEV;0
+Denmark;1978;BEV;0
+Denmark;1979;BEV;0
+Denmark;1980;BEV;0
+Denmark;1981;BEV;0
+Denmark;1982;BEV;0
+Denmark;1983;BEV;0
+Denmark;1984;BEV;0
+Denmark;1985;BEV;0
+Denmark;1986;BEV;0
+Denmark;1987;BEV;0
+Denmark;1988;BEV;0
+Denmark;1989;BEV;0
+Denmark;1990;BEV;0
+Denmark;1991;BEV;0
+Denmark;1992;BEV;0
+Denmark;1993;BEV;0
+Denmark;1994;BEV;0
+Denmark;1995;BEV;0
+Denmark;1996;BEV;0
+Denmark;1997;BEV;0
+Denmark;1998;BEV;0
+Denmark;1999;BEV;0
+Denmark;2000;BEV;0
+Denmark;2001;BEV;0
+Denmark;2002;BEV;0
+Denmark;2003;BEV;0
+Denmark;2004;BEV;0
+Denmark;2005;BEV;0
+Denmark;2006;BEV;0
+Denmark;2007;BEV;0
+Denmark;2008;BEV;0
+Denmark;2009;BEV;22
+Denmark;2010;BEV;15
+Denmark;2011;BEV;465
+Denmark;2012;BEV;530
+Denmark;2013;BEV;533
+Denmark;2014;BEV;1564
+Denmark;2015;BEV;4301
+Denmark;2016;BEV;1265
+Denmark;2017;BEV;691
+Denmark;2018;BEV;1544
+Denmark;2019;BEV;5501
+Denmark;2020;BEV;14218
+Denmark;2021;BEV;24872
+Denmark;2022;BEV;30793
+Denmark;2023;BEV;62579
+Denmark;2024;BEV;89043
+Denmark;2025;BEV;126444
+Denmark;2011;CNG;2
+Denmark;2012;CNG;0
+Denmark;2013;CNG;15
+Denmark;2014;CNG;43
+Denmark;2015;CNG;7
+Denmark;2016;CNG;36
+Denmark;2017;CNG;47
+Denmark;2018;CNG;7
+Denmark;2019;CNG;6
+Denmark;2020;CNG;0
+Denmark;2021;CNG;0
+Denmark;2022;CNG;0
+Denmark;2023;CNG;0
+Denmark;2024;CNG;0
+Denmark;2025;CNG;0
+Denmark;2011;D-HEV;0
+Denmark;2012;D-HEV;0
+Denmark;2013;D-HEV;0
+Denmark;2014;D-HEV;1
+Denmark;2015;D-HEV;0
+Denmark;2016;D-HEV;5
+Denmark;2017;D-HEV;1
+Denmark;2018;D-HEV;1
+Denmark;2019;D-HEV;113
+Denmark;2020;D-HEV;488
+Denmark;2021;D-HEV;1128
+Denmark;2022;D-HEV;849
+Denmark;2023;D-HEV;273
+Denmark;2024;D-HEV;110
+Denmark;2025;D-HEV;31
+Denmark;1970;Diesel;19554
+Denmark;1971;Diesel;19810
+Denmark;1972;Diesel;20065
+Denmark;1973;Diesel;20321
+Denmark;1974;Diesel;20577
+Denmark;1975;Diesel;20832
+Denmark;1976;Diesel;21344
+Denmark;1977;Diesel;21856
+Denmark;1978;Diesel;22368
+Denmark;1979;Diesel;22881
+Denmark;1980;Diesel;13313
+Denmark;1981;Diesel;12920
+Denmark;1982;Diesel;15392
+Denmark;1983;Diesel;20942
+Denmark;1984;Diesel;24206
+Denmark;1985;Diesel;28374
+Denmark;1986;Diesel;30509
+Denmark;1987;Diesel;22378
+Denmark;1988;Diesel;15979
+Denmark;1989;Diesel;14122
+Denmark;1990;Diesel;14551
+Denmark;1991;Diesel;15089
+Denmark;1992;Diesel;15213
+Denmark;1993;Diesel;14775
+Denmark;1994;Diesel;25019
+Denmark;1995;Diesel;24428
+Denmark;1996;Diesel;25547
+Denmark;1997;Diesel;27469
+Denmark;1998;Diesel;29203
+Denmark;1999;Diesel;25962
+Denmark;2000;Diesel;20454
+Denmark;2001;Diesel;17301
+Denmark;2002;Diesel;22320
+Denmark;2003;Diesel;22195
+Denmark;2004;Diesel;30636
+Denmark;2005;Diesel;37145
+Denmark;2006;Diesel;43881
+Denmark;2007;Diesel;64992
+Denmark;2008;Diesel;70812
+Denmark;2009;Diesel;50512
+Denmark;2010;Diesel;70662
+Denmark;2011;Diesel;81561
+Denmark;2012;Diesel;67946
+Denmark;2013;Diesel;57435
+Denmark;2014;Diesel;59544
+Denmark;2015;Diesel;64203
+Denmark;2016;Diesel;80211
+Denmark;2017;Diesel;77492
+Denmark;2018;Diesel;72474
+Denmark;2019;Diesel;60362
+Denmark;2020;Diesel;45809
+Denmark;2021;Diesel;25519
+Denmark;2022;Diesel;16591
+Denmark;2023;Diesel;14986
+Denmark;2024;Diesel;12197
+Denmark;2025;Diesel;9708
+Denmark;2011;FCEV;0
+Denmark;2012;FCEV;0
+Denmark;2013;FCEV;15
+Denmark;2014;FCEV;1
+Denmark;2015;FCEV;38
+Denmark;2016;FCEV;14
+Denmark;2017;FCEV;15
+Denmark;2018;FCEV;6
+Denmark;2019;FCEV;8
+Denmark;2020;FCEV;45
+Denmark;2021;FCEV;75
+Denmark;2022;FCEV;6
+Denmark;2023;FCEV;1
+Denmark;2024;FCEV;0
+Denmark;2025;FCEV;28
+Denmark;1970;Gasoline;89080
+Denmark;1971;Gasoline;90244
+Denmark;1972;Gasoline;91409
+Denmark;1973;Gasoline;92573
+Denmark;1974;Gasoline;93737
+Denmark;1975;Gasoline;94901
+Denmark;1976;Gasoline;97234
+Denmark;1977;Gasoline;99567
+Denmark;1978;Gasoline;101900
+Denmark;1979;Gasoline;104233
+Denmark;1980;Gasoline;60648
+Denmark;1981;Gasoline;58858
+Denmark;1982;Gasoline;70120
+Denmark;1983;Gasoline;95404
+Denmark;1984;Gasoline;110272
+Denmark;1985;Gasoline;129258
+Denmark;1986;Gasoline;138983
+Denmark;1987;Gasoline;101946
+Denmark;1988;Gasoline;72791
+Denmark;1989;Gasoline;64331
+Denmark;1990;Gasoline;66286
+Denmark;1991;Gasoline;68739
+Denmark;1992;Gasoline;69305
+Denmark;1993;Gasoline;67309
+Denmark;1994;Gasoline;113975
+Denmark;1995;Gasoline;111284
+Denmark;1996;Gasoline;116379
+Denmark;1997;Gasoline;125138
+Denmark;1998;Gasoline;133035
+Denmark;1999;Gasoline;118270
+Denmark;2000;Gasoline;93179
+Denmark;2001;Gasoline;78813
+Denmark;2002;Gasoline;89278
+Denmark;2003;Gasoline;74306
+Denmark;2004;Gasoline;91907
+Denmark;2005;Gasoline;111434
+Denmark;2006;Gasoline;112838
+Denmark;2007;Gasoline;97489
+Denmark;2008;Gasoline;79851
+Denmark;2009;Gasoline;61715
+Denmark;2010;Gasoline;82936
+Denmark;2011;Gasoline;87672
+Denmark;2012;Gasoline;101374
+Denmark;2013;Gasoline;122644
+Denmark;2014;Gasoline;127172
+Denmark;2015;Gasoline;137698
+Denmark;2016;Gasoline;140371
+Denmark;2017;Gasoline;142607
+Denmark;2018;Gasoline;141318
+Denmark;2019;Gasoline;155863
+Denmark;2020;Gasoline;120674
+Denmark;2021;Gasoline;95676
+Denmark;2022;Gasoline;75444
+Denmark;2023;Gasoline;78594
+Denmark;2024;Gasoline;65136
+Denmark;2025;Gasoline;44426
+Denmark;2011;G-HEV;0
+Denmark;2012;G-HEV;0
+Denmark;2013;G-HEV;0
+Denmark;2014;G-HEV;81
+Denmark;2015;G-HEV;406
+Denmark;2016;G-HEV;567
+Denmark;2017;G-HEV;620
+Denmark;2018;G-HEV;3125
+Denmark;2019;G-HEV;3767
+Denmark;2020;G-HEV;17747
+Denmark;2021;G-HEV;39314
+Denmark;2022;G-HEV;25590
+Denmark;2023;G-HEV;16945
+Denmark;2024;G-HEV;6957
+Denmark;2025;G-HEV;4796
+Denmark;1970;Total;108634
+Denmark;1971;Total;110054
+Denmark;1972;Total;111474
+Denmark;1973;Total;112894
+Denmark;1974;Total;114314
+Denmark;1975;Total;115733
+Denmark;1976;Total;118578
+Denmark;1977;Total;121423
+Denmark;1978;Total;124268
+Denmark;1979;Total;127114
+Denmark;1980;Total;73961
+Denmark;1981;Total;71778
+Denmark;1982;Total;85512
+Denmark;1983;Total;116346
+Denmark;1984;Total;134478
+Denmark;1985;Total;157632
+Denmark;1986;Total;169492
+Denmark;1987;Total;124324
+Denmark;1988;Total;88770
+Denmark;1989;Total;78453
+Denmark;1990;Total;80837
+Denmark;1991;Total;83828
+Denmark;1992;Total;84518
+Denmark;1993;Total;82084
+Denmark;1994;Total;138994
+Denmark;1995;Total;135712
+Denmark;1996;Total;141926
+Denmark;1997;Total;152607
+Denmark;1998;Total;162238
+Denmark;1999;Total;144232
+Denmark;2000;Total;113633
+Denmark;2001;Total;96114
+Denmark;2002;Total;111598
+Denmark;2003;Total;96501
+Denmark;2004;Total;122543
+Denmark;2005;Total;148578
+Denmark;2006;Total;156719
+Denmark;2007;Total;162481
+Denmark;2008;Total;150663
+Denmark;2009;Total;112249
+Denmark;2010;Total;153614
+Denmark;2011;Total;169700
+Denmark;2012;Total;169851
+Denmark;2013;Total;180642
+Denmark;2014;Total;188406
+Denmark;2015;Total;206653
+Denmark;2016;Total;222469
+Denmark;2017;Total;221473
+Denmark;2018;Total;218475
+Denmark;2019;Total;225620
+Denmark;2020;Total;198981
+Denmark;2021;Total;186584
+Denmark;2022;Total;149273
+Denmark;2023;Total;173378
+Denmark;2024;Total;173443
+Denmark;2025;Total;185433
+Switzerland;1970;BEV;0
+Switzerland;1971;BEV;0
+Switzerland;1972;BEV;0
+Switzerland;1973;BEV;0
+Switzerland;1974;BEV;0
+Switzerland;1975;BEV;0
+Switzerland;1976;BEV;0
+Switzerland;1977;BEV;0
+Switzerland;1978;BEV;0
+Switzerland;1979;BEV;0
+Switzerland;1980;BEV;0
+Switzerland;1981;BEV;0
+Switzerland;1982;BEV;0
+Switzerland;1983;BEV;0
+Switzerland;1984;BEV;0
+Switzerland;1985;BEV;0
+Switzerland;1986;BEV;0
+Switzerland;1987;BEV;0
+Switzerland;1988;BEV;0
+Switzerland;1989;BEV;0
+Switzerland;1990;BEV;0
+Switzerland;1991;BEV;0
+Switzerland;1992;BEV;0
+Switzerland;1993;BEV;0
+Switzerland;1994;BEV;0
+Switzerland;1995;BEV;0
+Switzerland;1996;BEV;0
+Switzerland;1997;BEV;61
+Switzerland;1998;BEV;57
+Switzerland;1999;BEV;69
+Switzerland;2000;BEV;64
+Switzerland;2001;BEV;16
+Switzerland;2002;BEV;75
+Switzerland;2003;BEV;18
+Switzerland;2004;BEV;20
+Switzerland;2005;BEV;13
+Switzerland;2006;BEV;9
+Switzerland;2007;BEV;19
+Switzerland;2008;BEV;24
+Switzerland;2009;BEV;57
+Switzerland;2010;BEV;201
+Switzerland;2011;BEV;452
+Switzerland;2012;BEV;924
+Switzerland;2013;BEV;1392
+Switzerland;2014;BEV;1948
+Switzerland;2015;BEV;3882
+Switzerland;2016;BEV;3525
+Switzerland;2017;BEV;4929
+Switzerland;2018;BEV;5411
+Switzerland;2019;BEV;13177
+Switzerland;2020;BEV;19752
+Switzerland;2021;BEV;32017
+Switzerland;2022;BEV;40507
+Switzerland;2023;BEV;52929
+Switzerland;2024;BEV;46581
+Switzerland;1990;CNG;0
+Switzerland;1991;CNG;0
+Switzerland;1992;CNG;0
+Switzerland;1993;CNG;0
+Switzerland;1994;CNG;0
+Switzerland;1995;CNG;0
+Switzerland;1996;CNG;0
+Switzerland;1997;CNG;0
+Switzerland;1998;CNG;0
+Switzerland;1999;CNG;0
+Switzerland;2000;CNG;0
+Switzerland;2001;CNG;0
+Switzerland;2002;CNG;0
+Switzerland;2003;CNG;0
+Switzerland;2004;CNG;0
+Switzerland;2005;CNG;442
+Switzerland;2006;CNG;1064
+Switzerland;2007;CNG;1653
+Switzerland;2008;CNG;1136
+Switzerland;2009;CNG;1063
+Switzerland;2010;CNG;721
+Switzerland;2011;CNG;651
+Switzerland;2012;CNG;519
+Switzerland;2013;CNG;791
+Switzerland;2014;CNG;1041
+Switzerland;2015;CNG;1080
+Switzerland;2016;CNG;944
+Switzerland;2017;CNG;769
+Switzerland;2018;CNG;805
+Switzerland;2019;CNG;1250
+Switzerland;2020;CNG;571
+Switzerland;2021;CNG;296
+Switzerland;2022;CNG;132
+Switzerland;2023;CNG;53
+Switzerland;2024;CNG;7
+Switzerland;1990;D-HEV;0
+Switzerland;1991;D-HEV;0
+Switzerland;1992;D-HEV;0
+Switzerland;1993;D-HEV;0
+Switzerland;1994;D-HEV;0
+Switzerland;1995;D-HEV;0
+Switzerland;1996;D-HEV;0
+Switzerland;1997;D-HEV;0
+Switzerland;1998;D-HEV;0
+Switzerland;1999;D-HEV;0
+Switzerland;2000;D-HEV;0
+Switzerland;2001;D-HEV;0
+Switzerland;2002;D-HEV;0
+Switzerland;2003;D-HEV;0
+Switzerland;2004;D-HEV;0
+Switzerland;2005;D-HEV;0
+Switzerland;2006;D-HEV;1
+Switzerland;2007;D-HEV;0
+Switzerland;2008;D-HEV;0
+Switzerland;2009;D-HEV;0
+Switzerland;2010;D-HEV;4
+Switzerland;2011;D-HEV;17
+Switzerland;2012;D-HEV;956
+Switzerland;2013;D-HEV;684
+Switzerland;2014;D-HEV;516
+Switzerland;2015;D-HEV;835
+Switzerland;2016;D-HEV;490
+Switzerland;2017;D-HEV;181
+Switzerland;2018;D-HEV;794
+Switzerland;2019;D-HEV;3847
+Switzerland;2020;D-HEV;5363
+Switzerland;2021;D-HEV;9692
+Switzerland;2022;D-HEV;10941
+Switzerland;2023;D-HEV;12653
+Switzerland;2024;D-HEV;12786
+Switzerland;1970;Diesel;7586
+Switzerland;1971;Diesel;7616
+Switzerland;1972;Diesel;7666
+Switzerland;1973;Diesel;7733
+Switzerland;1974;Diesel;7780
+Switzerland;1975;Diesel;7816
+Switzerland;1976;Diesel;7773
+Switzerland;1977;Diesel;7727
+Switzerland;1978;Diesel;7720
+Switzerland;1979;Diesel;7729
+Switzerland;1980;Diesel;7548
+Switzerland;1981;Diesel;7834
+Switzerland;1982;Diesel;7829
+Switzerland;1983;Diesel;7372
+Switzerland;1984;Diesel;7200
+Switzerland;1985;Diesel;7145
+Switzerland;1986;Diesel;8079
+Switzerland;1987;Diesel;8164
+Switzerland;1988;Diesel;8597
+Switzerland;1989;Diesel;9124
+Switzerland;1990;Diesel;8479
+Switzerland;1991;Diesel;7170
+Switzerland;1992;Diesel;7997
+Switzerland;1993;Diesel;8375
+Switzerland;1994;Diesel;11786
+Switzerland;1995;Diesel;10696
+Switzerland;1996;Diesel;12601
+Switzerland;1997;Diesel;13428
+Switzerland;1998;Diesel;16632
+Switzerland;1999;Diesel;20719
+Switzerland;2000;Diesel;28983
+Switzerland;2001;Diesel;41716
+Switzerland;2002;Diesel;52097
+Switzerland;2003;Diesel;57912
+Switzerland;2004;Diesel;69280
+Switzerland;2005;Diesel;74114
+Switzerland;2006;Diesel;80857
+Switzerland;2007;Diesel;92333
+Switzerland;2008;Diesel;93366
+Switzerland;2009;Diesel;78755
+Switzerland;2010;Diesel;90547
+Switzerland;2011;Diesel;109324
+Switzerland;2012;Diesel;124911
+Switzerland;2013;Diesel;115656
+Switzerland;2014;Diesel;113304
+Switzerland;2015;Diesel;127899
+Switzerland;2016;Diesel;125595
+Switzerland;2017;Diesel;113848
+Switzerland;2018;Diesel;90360
+Switzerland;2019;Diesel;79461
+Switzerland;2020;Diesel;51951
+Switzerland;2021;Diesel;32639
+Switzerland;2022;Diesel;26608
+Switzerland;2023;Diesel;23940
+Switzerland;2024;Diesel;23009
+Switzerland;1990;D-PHEV;0
+Switzerland;1991;D-PHEV;0
+Switzerland;1992;D-PHEV;0
+Switzerland;1993;D-PHEV;0
+Switzerland;1994;D-PHEV;0
+Switzerland;1995;D-PHEV;0
+Switzerland;1996;D-PHEV;0
+Switzerland;1997;D-PHEV;0
+Switzerland;1998;D-PHEV;0
+Switzerland;1999;D-PHEV;0
+Switzerland;2000;D-PHEV;0
+Switzerland;2001;D-PHEV;0
+Switzerland;2002;D-PHEV;0
+Switzerland;2003;D-PHEV;0
+Switzerland;2004;D-PHEV;0
+Switzerland;2005;D-PHEV;0
+Switzerland;2006;D-PHEV;0
+Switzerland;2007;D-PHEV;0
+Switzerland;2008;D-PHEV;1
+Switzerland;2009;D-PHEV;1
+Switzerland;2010;D-PHEV;0
+Switzerland;2011;D-PHEV;1
+Switzerland;2012;D-PHEV;31
+Switzerland;2013;D-PHEV;281
+Switzerland;2014;D-PHEV;212
+Switzerland;2015;D-PHEV;274
+Switzerland;2016;D-PHEV;148
+Switzerland;2017;D-PHEV;101
+Switzerland;2018;D-PHEV;75
+Switzerland;2019;D-PHEV;10
+Switzerland;2020;D-PHEV;161
+Switzerland;2021;D-PHEV;572
+Switzerland;2022;D-PHEV;272
+Switzerland;2023;D-PHEV;457
+Switzerland;2024;D-PHEV;520
+Switzerland;1990;FCEV;0
+Switzerland;1991;FCEV;0
+Switzerland;1992;FCEV;0
+Switzerland;1993;FCEV;0
+Switzerland;1994;FCEV;0
+Switzerland;1995;FCEV;0
+Switzerland;1996;FCEV;0
+Switzerland;1997;FCEV;0
+Switzerland;1998;FCEV;0
+Switzerland;1999;FCEV;0
+Switzerland;2000;FCEV;0
+Switzerland;2001;FCEV;0
+Switzerland;2002;FCEV;0
+Switzerland;2003;FCEV;0
+Switzerland;2004;FCEV;0
+Switzerland;2005;FCEV;0
+Switzerland;2006;FCEV;0
+Switzerland;2007;FCEV;0
+Switzerland;2008;FCEV;0
+Switzerland;2009;FCEV;0
+Switzerland;2010;FCEV;0
+Switzerland;2011;FCEV;0
+Switzerland;2012;FCEV;1
+Switzerland;2013;FCEV;0
+Switzerland;2014;FCEV;0
+Switzerland;2015;FCEV;15
+Switzerland;2016;FCEV;10
+Switzerland;2017;FCEV;2
+Switzerland;2018;FCEV;27
+Switzerland;2019;FCEV;27
+Switzerland;2020;FCEV;48
+Switzerland;2021;FCEV;66
+Switzerland;2022;FCEV;72
+Switzerland;2023;FCEV;28
+Switzerland;2024;FCEV;13
+Switzerland;1970;Gasoline;274247
+Switzerland;1971;Gasoline;275329
+Switzerland;1972;Gasoline;277138
+Switzerland;1973;Gasoline;279558
+Switzerland;1974;Gasoline;281263
+Switzerland;1975;Gasoline;282587
+Switzerland;1976;Gasoline;281017
+Switzerland;1977;Gasoline;279375
+Switzerland;1978;Gasoline;279121
+Switzerland;1979;Gasoline;279424
+Switzerland;1980;Gasoline;272904
+Switzerland;1981;Gasoline;283232
+Switzerland;1982;Gasoline;283061
+Switzerland;1983;Gasoline;266514
+Switzerland;1984;Gasoline;260288
+Switzerland;1985;Gasoline;258322
+Switzerland;1986;Gasoline;292091
+Switzerland;1987;Gasoline;295138
+Switzerland;1988;Gasoline;310809
+Switzerland;1989;Gasoline;329845
+Switzerland;1990;Gasoline;314281
+Switzerland;1991;Gasoline;302764
+Switzerland;1992;Gasoline;278165
+Switzerland;1993;Gasoline;248454
+Switzerland;1994;Gasoline;254027
+Switzerland;1995;Gasoline;257210
+Switzerland;1996;Gasoline;259507
+Switzerland;1997;Gasoline;257127
+Switzerland;1998;Gasoline;278426
+Switzerland;1999;Gasoline;293896
+Switzerland;2000;Gasoline;285407
+Switzerland;2001;Gasoline;272734
+Switzerland;2002;Gasoline;240771
+Switzerland;2003;Gasoline;211547
+Switzerland;2004;Gasoline;197776
+Switzerland;2005;Gasoline;185120
+Switzerland;2006;Gasoline;185807
+Switzerland;2007;Gasoline;185055
+Switzerland;2008;Gasoline;189151
+Switzerland;2009;Gasoline;182174
+Switzerland;2010;Gasoline;200576
+Switzerland;2011;Gasoline;211540
+Switzerland;2012;Gasoline;200576
+Switzerland;2013;Gasoline;185070
+Switzerland;2014;Gasoline;180875
+Switzerland;2015;Gasoline;185469
+Switzerland;2016;Gasoline;178666
+Switzerland;2017;Gasoline;183637
+Switzerland;2018;Gasoline;188847
+Switzerland;2019;Gasoline;192119
+Switzerland;2020;Gasoline;118987
+Switzerland;2021;Gasoline;100768
+Switzerland;2022;Gasoline;86231
+Switzerland;2023;Gasoline;85205
+Switzerland;2024;Gasoline;71479
+Switzerland;1970;G-HEV;0
+Switzerland;1971;G-HEV;0
+Switzerland;1972;G-HEV;0
+Switzerland;1973;G-HEV;0
+Switzerland;1974;G-HEV;0
+Switzerland;1975;G-HEV;0
+Switzerland;1976;G-HEV;0
+Switzerland;1977;G-HEV;0
+Switzerland;1978;G-HEV;0
+Switzerland;1979;G-HEV;0
+Switzerland;1980;G-HEV;0
+Switzerland;1981;G-HEV;0
+Switzerland;1982;G-HEV;0
+Switzerland;1983;G-HEV;0
+Switzerland;1984;G-HEV;0
+Switzerland;1985;G-HEV;0
+Switzerland;1986;G-HEV;0
+Switzerland;1987;G-HEV;0
+Switzerland;1988;G-HEV;0
+Switzerland;1989;G-HEV;0
+Switzerland;1990;G-HEV;0
+Switzerland;1991;G-HEV;0
+Switzerland;1992;G-HEV;0
+Switzerland;1993;G-HEV;0
+Switzerland;1994;G-HEV;0
+Switzerland;1995;G-HEV;0
+Switzerland;1996;G-HEV;0
+Switzerland;1997;G-HEV;0
+Switzerland;1998;G-HEV;0
+Switzerland;1999;G-HEV;0
+Switzerland;2000;G-HEV;0
+Switzerland;2001;G-HEV;0
+Switzerland;2002;G-HEV;0
+Switzerland;2003;G-HEV;0
+Switzerland;2004;G-HEV;0
+Switzerland;2005;G-HEV;604
+Switzerland;2006;G-HEV;1569
+Switzerland;2007;G-HEV;3219
+Switzerland;2008;G-HEV;3064
+Switzerland;2009;G-HEV;3875
+Switzerland;2010;G-HEV;4213
+Switzerland;2011;G-HEV;5325
+Switzerland;2012;G-HEV;5530
+Switzerland;2013;G-HEV;5966
+Switzerland;2014;G-HEV;5569
+Switzerland;2015;G-HEV;5458
+Switzerland;2016;G-HEV;7150
+Switzerland;2017;G-HEV;8186
+Switzerland;2018;G-HEV;10434
+Switzerland;2019;G-HEV;18285
+Switzerland;2020;G-HEV;27510
+Switzerland;2021;G-HEV;44738
+Switzerland;2022;G-HEV;47100
+Switzerland;2023;G-HEV;58079
+Switzerland;2024;G-HEV;70535
+Switzerland;1970;G-PHEV;0
+Switzerland;1971;G-PHEV;0
+Switzerland;1972;G-PHEV;0
+Switzerland;1973;G-PHEV;0
+Switzerland;1974;G-PHEV;0
+Switzerland;1975;G-PHEV;0
+Switzerland;1976;G-PHEV;0
+Switzerland;1977;G-PHEV;0
+Switzerland;1978;G-PHEV;0
+Switzerland;1979;G-PHEV;0
+Switzerland;1980;G-PHEV;0
+Switzerland;1981;G-PHEV;0
+Switzerland;1982;G-PHEV;0
+Switzerland;1983;G-PHEV;0
+Switzerland;1984;G-PHEV;0
+Switzerland;1985;G-PHEV;0
+Switzerland;1986;G-PHEV;0
+Switzerland;1987;G-PHEV;0
+Switzerland;1988;G-PHEV;0
+Switzerland;1989;G-PHEV;0
+Switzerland;1990;G-PHEV;0
+Switzerland;1991;G-PHEV;0
+Switzerland;1992;G-PHEV;0
+Switzerland;1993;G-PHEV;0
+Switzerland;1994;G-PHEV;0
+Switzerland;1995;G-PHEV;0
+Switzerland;1996;G-PHEV;0
+Switzerland;1997;G-PHEV;0
+Switzerland;1998;G-PHEV;0
+Switzerland;1999;G-PHEV;0
+Switzerland;2000;G-PHEV;0
+Switzerland;2001;G-PHEV;0
+Switzerland;2002;G-PHEV;0
+Switzerland;2003;G-PHEV;0
+Switzerland;2004;G-PHEV;0
+Switzerland;2005;G-PHEV;0
+Switzerland;2006;G-PHEV;0
+Switzerland;2007;G-PHEV;1
+Switzerland;2008;G-PHEV;28
+Switzerland;2009;G-PHEV;24
+Switzerland;2010;G-PHEV;33
+Switzerland;2011;G-PHEV;119
+Switzerland;2012;G-PHEV;191
+Switzerland;2013;G-PHEV;227
+Switzerland;2014;G-PHEV;596
+Switzerland;2015;G-PHEV;2218
+Switzerland;2016;G-PHEV;2799
+Switzerland;2017;G-PHEV;3378
+Switzerland;2018;G-PHEV;4129
+Switzerland;2019;G-PHEV;4199
+Switzerland;2020;G-PHEV;14132
+Switzerland;2021;G-PHEV;21231
+Switzerland;2022;G-PHEV;17540
+Switzerland;2023;G-PHEV;22637
+Switzerland;2024;G-PHEV;20621
+Switzerland;1990;Other;214
+Switzerland;1991;Other;259
+Switzerland;1992;Other;127
+Switzerland;1993;Other;88
+Switzerland;1994;Other;79
+Switzerland;1995;Other;69
+Switzerland;1996;Other;106
+Switzerland;1997;Other;9
+Switzerland;1998;Other;50
+Switzerland;1999;Other;7
+Switzerland;2000;Other;28
+Switzerland;2001;Other;114
+Switzerland;2002;Other;91
+Switzerland;2003;Other;234
+Switzerland;2004;Other;400
+Switzerland;2005;Other;389
+Switzerland;2006;Other;441
+Switzerland;2007;Other;1692
+Switzerland;2008;Other;1201
+Switzerland;2009;Other;529
+Switzerland;2010;Other;302
+Switzerland;2011;Other;526
+Switzerland;2012;Other;406
+Switzerland;2013;Other;87
+Switzerland;2014;Other;22
+Switzerland;2015;Other;13
+Switzerland;2016;Other;4
+Switzerland;2017;Other;1
+Switzerland;2018;Other;5
+Switzerland;2019;Other;2
+Switzerland;2020;Other;0
+Switzerland;2021;Other;3
+Switzerland;2022;Other;0
+Switzerland;2023;Other;0
+Switzerland;2024;Other;1
+Switzerland;1970;Total;281833
+Switzerland;1971;Total;282945
+Switzerland;1972;Total;284804
+Switzerland;1973;Total;287291
+Switzerland;1974;Total;289043
+Switzerland;1975;Total;290403
+Switzerland;1976;Total;288790
+Switzerland;1977;Total;287102
+Switzerland;1978;Total;286841
+Switzerland;1979;Total;287153
+Switzerland;1980;Total;280452
+Switzerland;1981;Total;291066
+Switzerland;1982;Total;290890
+Switzerland;1983;Total;273886
+Switzerland;1984;Total;267488
+Switzerland;1985;Total;265467
+Switzerland;1986;Total;300170
+Switzerland;1987;Total;303302
+Switzerland;1988;Total;319406
+Switzerland;1989;Total;338969
+Switzerland;1990;Total;322974
+Switzerland;1991;Total;310193
+Switzerland;1992;Total;286289
+Switzerland;1993;Total;256917
+Switzerland;1994;Total;265892
+Switzerland;1995;Total;267975
+Switzerland;1996;Total;272214
+Switzerland;1997;Total;270625
+Switzerland;1998;Total;295165
+Switzerland;1999;Total;314691
+Switzerland;2000;Total;314482
+Switzerland;2001;Total;314580
+Switzerland;2002;Total;293034
+Switzerland;2003;Total;269711
+Switzerland;2004;Total;267476
+Switzerland;2005;Total;260682
+Switzerland;2006;Total;269748
+Switzerland;2007;Total;283972
+Switzerland;2008;Total;287971
+Switzerland;2009;Total;266478
+Switzerland;2010;Total;296597
+Switzerland;2011;Total;327955
+Switzerland;2012;Total;334045
+Switzerland;2013;Total;310154
+Switzerland;2014;Total;304083
+Switzerland;2015;Total;327143
+Switzerland;2016;Total;319331
+Switzerland;2017;Total;315032
+Switzerland;2018;Total;300887
+Switzerland;2019;Total;312377
+Switzerland;2020;Total;238475
+Switzerland;2021;Total;242022
+Switzerland;2022;Total;229403
+Switzerland;2023;Total;255981
+Switzerland;2024;Total;245552
+Great Britain;1970;BEV;0
+Great Britain;1971;BEV;0
+Great Britain;1972;BEV;0
+Great Britain;1973;BEV;0
+Great Britain;1974;BEV;0
+Great Britain;1975;BEV;0
+Great Britain;1976;BEV;0
+Great Britain;1977;BEV;0
+Great Britain;1978;BEV;0
+Great Britain;1979;BEV;0
+Great Britain;1980;BEV;0
+Great Britain;1981;BEV;0
+Great Britain;1982;BEV;0
+Great Britain;1983;BEV;0
+Great Britain;1984;BEV;0
+Great Britain;1985;BEV;0
+Great Britain;1986;BEV;0
+Great Britain;1987;BEV;0
+Great Britain;1988;BEV;0
+Great Britain;1989;BEV;0
+Great Britain;1990;BEV;0
+Great Britain;1991;BEV;0
+Great Britain;1992;BEV;0
+Great Britain;1993;BEV;0
+Great Britain;1994;BEV;0
+Great Britain;1995;BEV;0
+Great Britain;1996;BEV;0
+Great Britain;1997;BEV;0
+Great Britain;1998;BEV;0
+Great Britain;1999;BEV;0
+Great Britain;2000;BEV;0
+Great Britain;2001;BEV;82
+Great Britain;2002;BEV;64
+Great Britain;2003;BEV;40
+Great Britain;2004;BEV;90
+Great Britain;2005;BEV;226
+Great Britain;2006;BEV;323
+Great Britain;2007;BEV;450
+Great Britain;2008;BEV;220
+Great Britain;2009;BEV;182
+Great Britain;2010;BEV;256
+Great Britain;2011;BEV;1204
+Great Britain;2012;BEV;1680
+Great Britain;2013;BEV;2619
+Great Britain;2014;BEV;6655
+Great Britain;2015;BEV;9833
+Great Britain;2016;BEV;10272
+Great Britain;2017;BEV;13692
+Great Britain;2018;BEV;15579
+Great Britain;2019;BEV;37605
+Great Britain;2020;BEV;106682
+Great Britain;2021;BEV;188143
+Great Britain;2022;BEV;263197
+Great Britain;2023;BEV;308941
+Great Britain;2024;BEV;375191
+Great Britain;2025;BEV;465293
+Great Britain;2001;CNG;2103
+Great Britain;2002;CNG;2498
+Great Britain;2003;CNG;3228
+Great Britain;2004;CNG;1842
+Great Britain;2005;CNG;528
+Great Britain;2006;CNG;70
+Great Britain;2007;CNG;67
+Great Britain;2008;CNG;164
+Great Britain;2009;CNG;254
+Great Britain;2010;CNG;149
+Great Britain;2011;CNG;105
+Great Britain;2012;CNG;73
+Great Britain;2013;CNG;24
+Great Britain;2014;CNG;28
+Great Britain;2015;CNG;42
+Great Britain;2016;CNG;32
+Great Britain;2017;CNG;14
+Great Britain;2018;CNG;96
+Great Britain;2019;CNG;34
+Great Britain;2020;CNG;770
+Great Britain;2021;CNG;2313
+Great Britain;2022;CNG;3588
+Great Britain;2023;CNG;2661
+Great Britain;2024;CNG;1212
+Great Britain;2025;CNG;203
+Great Britain;1970;D-HEV;0
+Great Britain;1971;D-HEV;0
+Great Britain;1972;D-HEV;0
+Great Britain;1973;D-HEV;0
+Great Britain;1974;D-HEV;0
+Great Britain;1975;D-HEV;0
+Great Britain;1976;D-HEV;0
+Great Britain;1977;D-HEV;0
+Great Britain;1978;D-HEV;0
+Great Britain;1979;D-HEV;0
+Great Britain;1980;D-HEV;0
+Great Britain;1981;D-HEV;0
+Great Britain;1982;D-HEV;0
+Great Britain;1983;D-HEV;0
+Great Britain;1984;D-HEV;0
+Great Britain;1985;D-HEV;0
+Great Britain;1986;D-HEV;0
+Great Britain;1987;D-HEV;0
+Great Britain;1988;D-HEV;0
+Great Britain;1989;D-HEV;0
+Great Britain;1990;D-HEV;0
+Great Britain;1991;D-HEV;0
+Great Britain;1992;D-HEV;0
+Great Britain;1993;D-HEV;0
+Great Britain;1994;D-HEV;0
+Great Britain;1995;D-HEV;0
+Great Britain;1996;D-HEV;0
+Great Britain;1997;D-HEV;0
+Great Britain;1998;D-HEV;0
+Great Britain;1999;D-HEV;0
+Great Britain;2000;D-HEV;0
+Great Britain;2001;D-HEV;3
+Great Britain;2002;D-HEV;0
+Great Britain;2003;D-HEV;1
+Great Britain;2004;D-HEV;0
+Great Britain;2005;D-HEV;4
+Great Britain;2006;D-HEV;4
+Great Britain;2007;D-HEV;1
+Great Britain;2008;D-HEV;3
+Great Britain;2009;D-HEV;1
+Great Britain;2010;D-HEV;0
+Great Britain;2011;D-HEV;29
+Great Britain;2012;D-HEV;1281
+Great Britain;2013;D-HEV;3274
+Great Britain;2014;D-HEV;3092
+Great Britain;2015;D-HEV;3926
+Great Britain;2016;D-HEV;1539
+Great Britain;2017;D-HEV;787
+Great Britain;2018;D-HEV;224
+Great Britain;2019;D-HEV;1481
+Great Britain;2020;D-HEV;17413
+Great Britain;2021;D-HEV;30899
+Great Britain;2022;D-HEV;26643
+Great Britain;2023;D-HEV;18731
+Great Britain;2024;D-HEV;17139
+Great Britain;2025;D-HEV;5002
+Great Britain;1970;Diesel;915301
+Great Britain;1971;Diesel;928588
+Great Britain;1972;Diesel;941873
+Great Britain;1973;Diesel;955159
+Great Britain;1974;Diesel;968445
+Great Britain;1975;Diesel;981731
+Great Britain;1976;Diesel;1098016
+Great Britain;1977;Diesel;1214301
+Great Britain;1978;Diesel;1330587
+Great Britain;1979;Diesel;1446871
+Great Britain;1980;Diesel;1284525
+Great Britain;1981;Diesel;1262489
+Great Britain;1982;Diesel;1375156
+Great Britain;1983;Diesel;1589334
+Great Britain;1984;Diesel;1552552
+Great Britain;1985;Diesel;1626175
+Great Britain;1986;Diesel;1660531
+Great Britain;1987;Diesel;1776325
+Great Britain;1988;Diesel;1953678
+Great Britain;1989;Diesel;2033685
+Great Britain;1990;Diesel;1647363
+Great Britain;1991;Diesel;1305737
+Great Britain;1992;Diesel;1306781
+Great Britain;1993;Diesel;1458342
+Great Britain;1994;Diesel;1487144
+Great Britain;1995;Diesel;1547381
+Great Britain;1996;Diesel;1665259
+Great Britain;1997;Diesel;1828208
+Great Britain;1998;Diesel;1909298
+Great Britain;1999;Diesel;1892309
+Great Britain;2000;Diesel;1906080
+Great Britain;2001;Diesel;460644
+Great Britain;2002;Diesel;636793
+Great Britain;2003;Diesel;728256
+Great Britain;2004;Diesel;847024
+Great Britain;2005;Diesel;893661
+Great Britain;2006;Diesel;892665
+Great Britain;2007;Diesel;955962
+Great Britain;2008;Diesel;913235
+Great Britain;2009;Diesel;815456
+Great Britain;2010;Diesel;913139
+Great Britain;2011;Diesel;958536
+Great Britain;2012;Diesel;1015948
+Great Britain;2013;Diesel;1102230
+Great Britain;2014;Diesel;1213562
+Great Britain;2015;Diesel;1253180
+Great Britain;2016;Diesel;1262497
+Great Britain;2017;Diesel;1047682
+Great Britain;2018;Diesel;735720
+Great Britain;2019;Diesel;604443
+Great Britain;2020;Diesel;295190
+Great Britain;2021;Diesel;188492
+Great Britain;2022;Diesel;122987
+Great Britain;2023;Diesel;122159
+Great Britain;2024;Diesel;107138
+Great Britain;2025;Diesel;93118
+Great Britain;1970;D-PHEV;0
+Great Britain;1971;D-PHEV;0
+Great Britain;1972;D-PHEV;0
+Great Britain;1973;D-PHEV;0
+Great Britain;1974;D-PHEV;0
+Great Britain;1975;D-PHEV;0
+Great Britain;1976;D-PHEV;0
+Great Britain;1977;D-PHEV;0
+Great Britain;1978;D-PHEV;0
+Great Britain;1979;D-PHEV;0
+Great Britain;1980;D-PHEV;0
+Great Britain;1981;D-PHEV;0
+Great Britain;1982;D-PHEV;0
+Great Britain;1983;D-PHEV;0
+Great Britain;1984;D-PHEV;0
+Great Britain;1985;D-PHEV;0
+Great Britain;1986;D-PHEV;0
+Great Britain;1987;D-PHEV;0
+Great Britain;1988;D-PHEV;0
+Great Britain;1989;D-PHEV;0
+Great Britain;1990;D-PHEV;0
+Great Britain;1991;D-PHEV;0
+Great Britain;1992;D-PHEV;0
+Great Britain;1993;D-PHEV;0
+Great Britain;1994;D-PHEV;0
+Great Britain;1995;D-PHEV;0
+Great Britain;1996;D-PHEV;0
+Great Britain;1997;D-PHEV;0
+Great Britain;1998;D-PHEV;0
+Great Britain;1999;D-PHEV;0
+Great Britain;2000;D-PHEV;0
+Great Britain;2001;D-PHEV;0
+Great Britain;2002;D-PHEV;0
+Great Britain;2003;D-PHEV;0
+Great Britain;2004;D-PHEV;0
+Great Britain;2005;D-PHEV;0
+Great Britain;2006;D-PHEV;0
+Great Britain;2007;D-PHEV;0
+Great Britain;2008;D-PHEV;0
+Great Britain;2009;D-PHEV;0
+Great Britain;2010;D-PHEV;0
+Great Britain;2011;D-PHEV;0
+Great Britain;2012;D-PHEV;0
+Great Britain;2013;D-PHEV;75
+Great Britain;2014;D-PHEV;163
+Great Britain;2015;D-PHEV;159
+Great Britain;2016;D-PHEV;500
+Great Britain;2017;D-PHEV;618
+Great Britain;2018;D-PHEV;229
+Great Britain;2019;D-PHEV;1053
+Great Britain;2020;D-PHEV;2865
+Great Britain;2021;D-PHEV;4070
+Great Britain;2022;D-PHEV;2306
+Great Britain;2023;D-PHEV;548
+Great Britain;2024;D-PHEV;257
+Great Britain;2025;D-PHEV;501
+Great Britain;2001;FCEV;0
+Great Britain;2002;FCEV;1
+Great Britain;2003;FCEV;3
+Great Britain;2004;FCEV;3
+Great Britain;2005;FCEV;5
+Great Britain;2006;FCEV;1
+Great Britain;2007;FCEV;0
+Great Britain;2008;FCEV;1
+Great Britain;2009;FCEV;0
+Great Britain;2010;FCEV;0
+Great Britain;2011;FCEV;1
+Great Britain;2012;FCEV;7
+Great Britain;2013;FCEV;0
+Great Britain;2014;FCEV;6
+Great Britain;2015;FCEV;13
+Great Britain;2016;FCEV;17
+Great Britain;2017;FCEV;35
+Great Britain;2018;FCEV;37
+Great Britain;2019;FCEV;80
+Great Britain;2020;FCEV;59
+Great Britain;2021;FCEV;12
+Great Britain;2022;FCEV;8
+Great Britain;2023;FCEV;26
+Great Britain;2024;FCEV;0
+Great Britain;2025;FCEV;1
+Great Britain;1970;Gasoline;200713
+Great Britain;1971;Gasoline;203626
+Great Britain;1972;Gasoline;206540
+Great Britain;1973;Gasoline;209453
+Great Britain;1974;Gasoline;212367
+Great Britain;1975;Gasoline;215280
+Great Britain;1976;Gasoline;240780
+Great Britain;1977;Gasoline;266280
+Great Britain;1978;Gasoline;291779
+Great Britain;1979;Gasoline;317279
+Great Britain;1980;Gasoline;281678
+Great Britain;1981;Gasoline;276846
+Great Britain;1982;Gasoline;301553
+Great Britain;1983;Gasoline;348519
+Great Britain;1984;Gasoline;340453
+Great Britain;1985;Gasoline;356598
+Great Britain;1986;Gasoline;364131
+Great Britain;1987;Gasoline;389523
+Great Britain;1988;Gasoline;428414
+Great Britain;1989;Gasoline;445959
+Great Britain;1990;Gasoline;361244
+Great Britain;1991;Gasoline;286330
+Great Britain;1992;Gasoline;286559
+Great Britain;1993;Gasoline;319794
+Great Britain;1994;Gasoline;423478
+Great Britain;1995;Gasoline;397668
+Great Britain;1996;Gasoline;359861
+Great Britain;1997;Gasoline;342164
+Great Britain;1998;Gasoline;337739
+Great Britain;1999;Gasoline;304948
+Great Britain;2000;Gasoline;315228
+Great Britain;2001;Gasoline;2122502
+Great Britain;2002;Gasoline;2042483
+Great Britain;2003;Gasoline;1914145
+Great Britain;2004;Gasoline;1748557
+Great Britain;2005;Gasoline;1543643
+Great Britain;2006;Gasoline;1438068
+Great Britain;2007;Gasoline;1417510
+Great Britain;2008;Gasoline;1183054
+Great Britain;2009;Gasoline;1137885
+Great Britain;2010;Gasoline;1060876
+Great Britain;2011;Gasoline;924497
+Great Britain;2012;Gasoline;967642
+Great Britain;2013;Gasoline;1090405
+Great Britain;2014;Gasoline;1173604
+Great Britain;2015;Gasoline;1275931
+Great Britain;2016;Gasoline;1313328
+Great Britain;2017;Gasoline;1342150
+Great Britain;2018;Gasoline;1459788
+Great Britain;2019;Gasoline;1509951
+Great Britain;2020;Gasoline;986852
+Great Britain;2021;Gasoline;891229
+Great Britain;2022;Gasoline;801434
+Great Britain;2023;Gasoline;875971
+Great Britain;2024;Gasoline;727886
+Great Britain;2025;Gasoline;593927
+Great Britain;1970;G-HEV;0
+Great Britain;1971;G-HEV;0
+Great Britain;1972;G-HEV;0
+Great Britain;1973;G-HEV;0
+Great Britain;1974;G-HEV;0
+Great Britain;1975;G-HEV;0
+Great Britain;1976;G-HEV;0
+Great Britain;1977;G-HEV;0
+Great Britain;1978;G-HEV;0
+Great Britain;1979;G-HEV;0
+Great Britain;1980;G-HEV;0
+Great Britain;1981;G-HEV;0
+Great Britain;1982;G-HEV;0
+Great Britain;1983;G-HEV;0
+Great Britain;1984;G-HEV;0
+Great Britain;1985;G-HEV;0
+Great Britain;1986;G-HEV;0
+Great Britain;1987;G-HEV;0
+Great Britain;1988;G-HEV;0
+Great Britain;1989;G-HEV;0
+Great Britain;1990;G-HEV;0
+Great Britain;1991;G-HEV;0
+Great Britain;1992;G-HEV;0
+Great Britain;1993;G-HEV;0
+Great Britain;1994;G-HEV;0
+Great Britain;1995;G-HEV;0
+Great Britain;1996;G-HEV;0
+Great Britain;1997;G-HEV;0
+Great Britain;1998;G-HEV;0
+Great Britain;1999;G-HEV;0
+Great Britain;2000;G-HEV;0
+Great Britain;2001;G-HEV;632
+Great Britain;2002;G-HEV;285
+Great Britain;2003;G-HEV;377
+Great Britain;2004;G-HEV;1555
+Great Britain;2005;G-HEV;5374
+Great Britain;2006;G-HEV;8843
+Great Britain;2007;G-HEV;15892
+Great Britain;2008;G-HEV;15273
+Great Britain;2009;G-HEV;14462
+Great Britain;2010;G-HEV;21799
+Great Britain;2011;G-HEV;23014
+Great Britain;2012;G-HEV;23118
+Great Britain;2013;G-HEV;25466
+Great Britain;2014;G-HEV;33553
+Great Britain;2015;G-HEV;40231
+Great Britain;2016;G-HEV;49338
+Great Britain;2017;G-HEV;70123
+Great Britain;2018;G-HEV;86207
+Great Britain;2019;G-HEV;106938
+Great Britain;2020;G-HEV;146628
+Great Britain;2021;G-HEV;226411
+Great Britain;2022;G-HEV;296033
+Great Britain;2023;G-HEV;432352
+Great Britain;2024;G-HEV;556585
+Great Britain;2025;G-HEV;643466
+Great Britain;1970;G-PHEV;0
+Great Britain;1971;G-PHEV;0
+Great Britain;1972;G-PHEV;0
+Great Britain;1973;G-PHEV;0
+Great Britain;1974;G-PHEV;0
+Great Britain;1975;G-PHEV;0
+Great Britain;1976;G-PHEV;0
+Great Britain;1977;G-PHEV;0
+Great Britain;1978;G-PHEV;0
+Great Britain;1979;G-PHEV;0
+Great Britain;1980;G-PHEV;0
+Great Britain;1981;G-PHEV;0
+Great Britain;1982;G-PHEV;0
+Great Britain;1983;G-PHEV;0
+Great Britain;1984;G-PHEV;0
+Great Britain;1985;G-PHEV;0
+Great Britain;1986;G-PHEV;0
+Great Britain;1987;G-PHEV;0
+Great Britain;1988;G-PHEV;0
+Great Britain;1989;G-PHEV;0
+Great Britain;1990;G-PHEV;0
+Great Britain;1991;G-PHEV;0
+Great Britain;1992;G-PHEV;0
+Great Britain;1993;G-PHEV;0
+Great Britain;1994;G-PHEV;0
+Great Britain;1995;G-PHEV;0
+Great Britain;1996;G-PHEV;0
+Great Britain;1997;G-PHEV;0
+Great Britain;1998;G-PHEV;0
+Great Britain;1999;G-PHEV;0
+Great Britain;2000;G-PHEV;0
+Great Britain;2001;G-PHEV;4
+Great Britain;2002;G-PHEV;1
+Great Britain;2003;G-PHEV;0
+Great Britain;2004;G-PHEV;0
+Great Britain;2005;G-PHEV;0
+Great Britain;2006;G-PHEV;0
+Great Britain;2007;G-PHEV;0
+Great Britain;2008;G-PHEV;0
+Great Britain;2009;G-PHEV;1
+Great Britain;2010;G-PHEV;22
+Great Britain;2011;G-PHEV;13
+Great Britain;2012;G-PHEV;558
+Great Britain;2013;G-PHEV;593
+Great Britain;2014;G-PHEV;6333
+Great Britain;2015;G-PHEV;17126
+Great Britain;2016;G-PHEV;25827
+Great Britain;2017;G-PHEV;31758
+Great Britain;2018;G-PHEV;41472
+Great Britain;2019;G-PHEV;33572
+Great Britain;2020;G-PHEV;63439
+Great Britain;2021;G-PHEV;108625
+Great Britain;2022;G-PHEV;96874
+Great Britain;2023;G-PHEV;138336
+Great Britain;2024;G-PHEV;164928
+Great Britain;2025;G-PHEV;222644
+Great Britain;2001;Other;9
+Great Britain;2002;Other;3
+Great Britain;2003;Other;6
+Great Britain;2004;Other;8
+Great Britain;2005;Other;14
+Great Britain;2006;Other;69
+Great Britain;2007;Other;198
+Great Britain;2008;Other;48
+Great Britain;2009;Other;11
+Great Britain;2010;Other;83
+Great Britain;2011;Other;8
+Great Britain;2012;Other;7
+Great Britain;2013;Other;4
+Great Britain;2014;Other;2
+Great Britain;2015;Other;8
+Great Britain;2016;Other;2
+Great Britain;2017;Other;3
+Great Britain;2018;Other;3
+Great Britain;2019;Other;4
+Great Britain;2020;Other;6
+Great Britain;2021;Other;3
+Great Britain;2022;Other;3
+Great Britain;2023;Other;2
+Great Britain;2024;Other;3
+Great Britain;2025;Other;1509
+Great Britain;2001;REEV;0
+Great Britain;2002;REEV;0
+Great Britain;2003;REEV;0
+Great Britain;2004;REEV;0
+Great Britain;2005;REEV;0
+Great Britain;2006;REEV;0
+Great Britain;2007;REEV;0
+Great Britain;2008;REEV;0
+Great Britain;2009;REEV;0
+Great Britain;2010;REEV;0
+Great Britain;2011;REEV;4
+Great Britain;2012;REEV;511
+Great Britain;2013;REEV;392
+Great Britain;2014;REEV;1342
+Great Britain;2015;REEV;1697
+Great Britain;2016;REEV;1899
+Great Britain;2017;REEV;2468
+Great Britain;2018;REEV;2150
+Great Britain;2019;REEV;248
+Great Britain;2020;REEV;53
+Great Britain;2021;REEV;27
+Great Britain;2022;REEV;68
+Great Britain;2023;REEV;10
+Great Britain;2024;REEV;2
+Great Britain;2025;REEV;1
+Great Britain;1970;Total;1116014
+Great Britain;1971;Total;1132214
+Great Britain;1972;Total;1148413
+Great Britain;1973;Total;1164612
+Great Britain;1974;Total;1180812
+Great Britain;1975;Total;1197011
+Great Britain;1976;Total;1338796
+Great Britain;1977;Total;1480581
+Great Britain;1978;Total;1622366
+Great Britain;1979;Total;1764150
+Great Britain;1980;Total;1566203
+Great Britain;1981;Total;1539335
+Great Britain;1982;Total;1676709
+Great Britain;1983;Total;1937853
+Great Britain;1984;Total;1893005
+Great Britain;1985;Total;1982773
+Great Britain;1986;Total;2024662
+Great Britain;1987;Total;2165848
+Great Britain;1988;Total;2382092
+Great Britain;1989;Total;2479644
+Great Britain;1990;Total;2008607
+Great Britain;1991;Total;1592067
+Great Britain;1992;Total;1593340
+Great Britain;1993;Total;1778136
+Great Britain;1994;Total;1910622
+Great Britain;1995;Total;1945049
+Great Britain;1996;Total;2025120
+Great Britain;1997;Total;2170372
+Great Britain;1998;Total;2247037
+Great Britain;1999;Total;2197257
+Great Britain;2000;Total;2221308
+Great Britain;2001;Total;2585979
+Great Britain;2002;Total;2682128
+Great Britain;2003;Total;2646056
+Great Britain;2004;Total;2599079
+Great Britain;2005;Total;2443455
+Great Britain;2006;Total;2340043
+Great Britain;2007;Total;2390080
+Great Britain;2008;Total;2111998
+Great Britain;2009;Total;1968252
+Great Britain;2010;Total;1996324
+Great Britain;2011;Total;1907411
+Great Britain;2012;Total;2010825
+Great Britain;2013;Total;2225082
+Great Britain;2014;Total;2438340
+Great Britain;2015;Total;2602146
+Great Britain;2016;Total;2665251
+Great Britain;2017;Total;2509330
+Great Britain;2018;Total;2341505
+Great Britain;2019;Total;2295409
+Great Britain;2020;Total;1619957
+Great Britain;2021;Total;1640224
+Great Britain;2022;Total;1613141
+Great Britain;2023;Total;1899737
+Great Britain;2024;Total;1950341
+Great Britain;2025;Total;2025665
+Finland;1970;BEV;0
+Finland;1971;BEV;0
+Finland;1972;BEV;0
+Finland;1973;BEV;0
+Finland;1974;BEV;0
+Finland;1975;BEV;0
+Finland;1976;BEV;0
+Finland;1977;BEV;0
+Finland;1978;BEV;0
+Finland;1979;BEV;0
+Finland;1980;BEV;0
+Finland;1981;BEV;0
+Finland;1982;BEV;0
+Finland;1983;BEV;0
+Finland;1984;BEV;0
+Finland;1985;BEV;0
+Finland;1986;BEV;0
+Finland;1987;BEV;0
+Finland;1988;BEV;0
+Finland;1989;BEV;0
+Finland;1990;BEV;0
+Finland;1991;BEV;0
+Finland;1992;BEV;0
+Finland;1993;BEV;0
+Finland;1994;BEV;0
+Finland;1995;BEV;0
+Finland;1996;BEV;0
+Finland;1997;BEV;0
+Finland;1998;BEV;0
+Finland;1999;BEV;0
+Finland;2000;BEV;0
+Finland;2001;BEV;0
+Finland;2002;BEV;0
+Finland;2003;BEV;0
+Finland;2004;BEV;0
+Finland;2005;BEV;0
+Finland;2006;BEV;0
+Finland;2007;BEV;0
+Finland;2008;BEV;5
+Finland;2009;BEV;1
+Finland;2010;BEV;15
+Finland;2011;BEV;30
+Finland;2012;BEV;51
+Finland;2013;BEV;50
+Finland;2014;BEV;183
+Finland;2015;BEV;243
+Finland;2016;BEV;223
+Finland;2017;BEV;502
+Finland;2018;BEV;776
+Finland;2019;BEV;1897
+Finland;2020;BEV;4245
+Finland;2021;BEV;10153
+Finland;2022;BEV;14531
+Finland;2023;BEV;29537
+Finland;2024;BEV;21871
+Finland;2025;BEV;26748
+Finland;2001;CNG;0
+Finland;2002;CNG;0
+Finland;2003;CNG;0
+Finland;2004;CNG;0
+Finland;2005;CNG;0
+Finland;2006;CNG;3
+Finland;2007;CNG;14
+Finland;2008;CNG;26
+Finland;2009;CNG;22
+Finland;2010;CNG;10
+Finland;2011;CNG;6
+Finland;2012;CNG;18
+Finland;2013;CNG;21
+Finland;2014;CNG;37
+Finland;2015;CNG;18
+Finland;2016;CNG;38
+Finland;2017;CNG;65
+Finland;2018;CNG;182
+Finland;2019;CNG;2135
+Finland;2020;CNG;1841
+Finland;2021;CNG;909
+Finland;2022;CNG;595
+Finland;2023;CNG;453
+Finland;2024;CNG;114
+Finland;2025;CNG;1
+Finland;1970;Diesel;4760
+Finland;1971;Diesel;3890
+Finland;1972;Diesel;5234
+Finland;1973;Diesel;6124
+Finland;1974;Diesel;4987
+Finland;1975;Diesel;6068
+Finland;1976;Diesel;4784
+Finland;1977;Diesel;4671
+Finland;1978;Diesel;4185
+Finland;1979;Diesel;5163
+Finland;1980;Diesel;5349
+Finland;1981;Diesel;5443
+Finland;1982;Diesel;6637
+Finland;1983;Diesel;6195
+Finland;1984;Diesel;6586
+Finland;1985;Diesel;7172
+Finland;1986;Diesel;7426
+Finland;1987;Diesel;7854
+Finland;1988;Diesel;8999
+Finland;1989;Diesel;9168
+Finland;1990;Diesel;7211
+Finland;1991;Diesel;4048
+Finland;1992;Diesel;3451
+Finland;1993;Diesel;4370
+Finland;1994;Diesel;3745
+Finland;1995;Diesel;5504
+Finland;1996;Diesel;12949
+Finland;1997;Diesel;15280
+Finland;1998;Diesel;19725
+Finland;1999;Diesel;22026
+Finland;2000;Diesel;26330
+Finland;2001;Diesel;18016
+Finland;2002;Diesel;18196
+Finland;2003;Diesel;22362
+Finland;2004;Diesel;22103
+Finland;2005;Diesel;25138
+Finland;2006;Diesel;29512
+Finland;2007;Diesel;35784
+Finland;2008;Diesel;69308
+Finland;2009;Diesel;41970
+Finland;2010;Diesel;46760
+Finland;2011;Diesel;53147
+Finland;2012;Diesel;43039
+Finland;2013;Diesel;38635
+Finland;2014;Diesel;41353
+Finland;2015;Diesel;38829
+Finland;2016;Diesel;39463
+Finland;2017;Diesel;36064
+Finland;2018;Diesel;28936
+Finland;2019;Diesel;21863
+Finland;2020;Diesel;14133
+Finland;2021;Diesel;10632
+Finland;2022;Diesel;7046
+Finland;2023;Diesel;5057
+Finland;2024;Diesel;3812
+Finland;2025;Diesel;3103
+Finland;1970;D-PHEV;0
+Finland;1971;D-PHEV;0
+Finland;1972;D-PHEV;0
+Finland;1973;D-PHEV;0
+Finland;1974;D-PHEV;0
+Finland;1975;D-PHEV;0
+Finland;1976;D-PHEV;0
+Finland;1977;D-PHEV;0
+Finland;1978;D-PHEV;0
+Finland;1979;D-PHEV;0
+Finland;1980;D-PHEV;0
+Finland;1981;D-PHEV;0
+Finland;1982;D-PHEV;0
+Finland;1983;D-PHEV;0
+Finland;1984;D-PHEV;0
+Finland;1985;D-PHEV;0
+Finland;1986;D-PHEV;0
+Finland;1987;D-PHEV;0
+Finland;1988;D-PHEV;0
+Finland;1989;D-PHEV;0
+Finland;1990;D-PHEV;0
+Finland;1991;D-PHEV;0
+Finland;1992;D-PHEV;0
+Finland;1993;D-PHEV;0
+Finland;1994;D-PHEV;0
+Finland;1995;D-PHEV;0
+Finland;1996;D-PHEV;0
+Finland;1997;D-PHEV;0
+Finland;1998;D-PHEV;0
+Finland;1999;D-PHEV;0
+Finland;2000;D-PHEV;0
+Finland;2001;D-PHEV;0
+Finland;2002;D-PHEV;0
+Finland;2003;D-PHEV;0
+Finland;2004;D-PHEV;0
+Finland;2005;D-PHEV;0
+Finland;2006;D-PHEV;0
+Finland;2007;D-PHEV;0
+Finland;2008;D-PHEV;0
+Finland;2009;D-PHEV;0
+Finland;2010;D-PHEV;0
+Finland;2011;D-PHEV;0
+Finland;2012;D-PHEV;2
+Finland;2013;D-PHEV;66
+Finland;2014;D-PHEV;51
+Finland;2015;D-PHEV;15
+Finland;2016;D-PHEV;93
+Finland;2017;D-PHEV;152
+Finland;2018;D-PHEV;135
+Finland;2019;D-PHEV;159
+Finland;2020;D-PHEV;435
+Finland;2021;D-PHEV;620
+Finland;2022;D-PHEV;401
+Finland;2023;D-PHEV;220
+Finland;2024;D-PHEV;196
+Finland;2025;D-PHEV;159
+Finland;2001;FCEV;0
+Finland;2002;FCEV;0
+Finland;2003;FCEV;0
+Finland;2004;FCEV;0
+Finland;2005;FCEV;0
+Finland;2006;FCEV;0
+Finland;2007;FCEV;0
+Finland;2008;FCEV;0
+Finland;2009;FCEV;0
+Finland;2010;FCEV;0
+Finland;2011;FCEV;0
+Finland;2012;FCEV;0
+Finland;2013;FCEV;1
+Finland;2014;FCEV;0
+Finland;2015;FCEV;0
+Finland;2016;FCEV;0
+Finland;2017;FCEV;0
+Finland;2018;FCEV;0
+Finland;2019;FCEV;0
+Finland;2020;FCEV;0
+Finland;2021;FCEV;1
+Finland;2022;FCEV;0
+Finland;2023;FCEV;0
+Finland;2024;FCEV;0
+Finland;2025;FCEV;4
+Finland;1970;Gasoline;87012
+Finland;1971;Gasoline;71107
+Finland;1972;Gasoline;95680
+Finland;1973;Gasoline;111954
+Finland;1974;Gasoline;91176
+Finland;1975;Gasoline;110927
+Finland;1976;Gasoline;87456
+Finland;1977;Gasoline;85387
+Finland;1978;Gasoline;76514
+Finland;1979;Gasoline;94383
+Finland;1980;Gasoline;97791
+Finland;1981;Gasoline;99503
+Finland;1982;Gasoline;121339
+Finland;1983;Gasoline;113249
+Finland;1984;Gasoline;120410
+Finland;1985;Gasoline;131114
+Finland;1986;Gasoline;135757
+Finland;1987;Gasoline;143578
+Finland;1988;Gasoline;164520
+Finland;1989;Gasoline;167599
+Finland;1990;Gasoline;131830
+Finland;1991;Gasoline;88437
+Finland;1992;Gasoline;65096
+Finland;1993;Gasoline;51466
+Finland;1994;Gasoline;63456
+Finland;1995;Gasoline;74386
+Finland;1996;Gasoline;82881
+Finland;1997;Gasoline;89227
+Finland;1998;Gasoline;106026
+Finland;1999;Gasoline;114298
+Finland;2000;Gasoline;108273
+Finland;2001;Gasoline;91412
+Finland;2002;Gasoline;98837
+Finland;2003;Gasoline;125042
+Finland;2004;Gasoline;120536
+Finland;2005;Gasoline;123020
+Finland;2006;Gasoline;116128
+Finland;2007;Gasoline;89797
+Finland;2008;Gasoline;70316
+Finland;2009;Gasoline;48531
+Finland;2010;Gasoline;64822
+Finland;2011;Gasoline;72128
+Finland;2012;Gasoline;66759
+Finland;2013;Gasoline;64094
+Finland;2014;Gasoline;63969
+Finland;2015;Gasoline;69070
+Finland;2016;Gasoline;77927
+Finland;2017;Gasoline;79034
+Finland;2018;Gasoline;84700
+Finland;2019;Gasoline;82334
+Finland;2020;Gasoline;62967
+Finland;2021;Gasoline;56634
+Finland;2022;Gasoline;43330
+Finland;2023;Gasoline;34358
+Finland;2024;Gasoline;33372
+Finland;2025;Gasoline;27511
+Finland;1970;G-PHEV;0
+Finland;1971;G-PHEV;0
+Finland;1972;G-PHEV;0
+Finland;1973;G-PHEV;0
+Finland;1974;G-PHEV;0
+Finland;1975;G-PHEV;0
+Finland;1976;G-PHEV;0
+Finland;1977;G-PHEV;0
+Finland;1978;G-PHEV;0
+Finland;1979;G-PHEV;0
+Finland;1980;G-PHEV;0
+Finland;1981;G-PHEV;0
+Finland;1982;G-PHEV;0
+Finland;1983;G-PHEV;0
+Finland;1984;G-PHEV;0
+Finland;1985;G-PHEV;0
+Finland;1986;G-PHEV;0
+Finland;1987;G-PHEV;0
+Finland;1988;G-PHEV;0
+Finland;1989;G-PHEV;0
+Finland;1990;G-PHEV;0
+Finland;1991;G-PHEV;0
+Finland;1992;G-PHEV;0
+Finland;1993;G-PHEV;0
+Finland;1994;G-PHEV;0
+Finland;1995;G-PHEV;0
+Finland;1996;G-PHEV;0
+Finland;1997;G-PHEV;0
+Finland;1998;G-PHEV;0
+Finland;1999;G-PHEV;0
+Finland;2000;G-PHEV;0
+Finland;2001;G-PHEV;0
+Finland;2002;G-PHEV;0
+Finland;2003;G-PHEV;0
+Finland;2004;G-PHEV;0
+Finland;2005;G-PHEV;0
+Finland;2006;G-PHEV;0
+Finland;2007;G-PHEV;0
+Finland;2008;G-PHEV;0
+Finland;2009;G-PHEV;0
+Finland;2010;G-PHEV;4
+Finland;2011;G-PHEV;0
+Finland;2012;G-PHEV;63
+Finland;2013;G-PHEV;101
+Finland;2014;G-PHEV;212
+Finland;2015;G-PHEV;399
+Finland;2016;G-PHEV;1115
+Finland;2017;G-PHEV;2401
+Finland;2018;G-PHEV;4797
+Finland;2019;G-PHEV;5808
+Finland;2020;G-PHEV;12797
+Finland;2021;G-PHEV;19524
+Finland;2022;G-PHEV;15770
+Finland;2023;G-PHEV;17867
+Finland;2024;G-PHEV;14667
+Finland;2025;G-PHEV;14361
+Finland;2001;Other;0
+Finland;2002;Other;0
+Finland;2003;Other;1
+Finland;2004;Other;3
+Finland;2005;Other;1
+Finland;2006;Other;0
+Finland;2007;Other;2
+Finland;2008;Other;0
+Finland;2009;Other;0
+Finland;2010;Other;0
+Finland;2011;Other;0
+Finland;2012;Other;0
+Finland;2013;Other;0
+Finland;2014;Other;0
+Finland;2015;Other;0
+Finland;2016;Other;0
+Finland;2017;Other;0
+Finland;2018;Other;0
+Finland;2019;Other;0
+Finland;2020;Other;0
+Finland;2021;Other;0
+Finland;2022;Other;0
+Finland;2023;Other;0
+Finland;2024;Other;0
+Finland;2025;Other;0
+Finland;1970;Total;91772
+Finland;1971;Total;74997
+Finland;1972;Total;100914
+Finland;1973;Total;118078
+Finland;1974;Total;96163
+Finland;1975;Total;116995
+Finland;1976;Total;92240
+Finland;1977;Total;90058
+Finland;1978;Total;80699
+Finland;1979;Total;99546
+Finland;1980;Total;103140
+Finland;1981;Total;104946
+Finland;1982;Total;127976
+Finland;1983;Total;119444
+Finland;1984;Total;126996
+Finland;1985;Total;138286
+Finland;1986;Total;143183
+Finland;1987;Total;151432
+Finland;1988;Total;173519
+Finland;1989;Total;176767
+Finland;1990;Total;139041
+Finland;1991;Total;92485
+Finland;1992;Total;68547
+Finland;1993;Total;55836
+Finland;1994;Total;67201
+Finland;1995;Total;79890
+Finland;1996;Total;95830
+Finland;1997;Total;104507
+Finland;1998;Total;125751
+Finland;1999;Total;136324
+Finland;2000;Total;134603
+Finland;2001;Total;109428
+Finland;2002;Total;117034
+Finland;2003;Total;147405
+Finland;2004;Total;142642
+Finland;2005;Total;148161
+Finland;2006;Total;145700
+Finland;2007;Total;125617
+Finland;2008;Total;139669
+Finland;2009;Total;90575
+Finland;2010;Total;111989
+Finland;2011;Total;126130
+Finland;2012;Total;111258
+Finland;2013;Total;103455
+Finland;2014;Total;106235
+Finland;2015;Total;108819
+Finland;2016;Total;119000
+Finland;2017;Total;118587
+Finland;2018;Total;120505
+Finland;2019;Total;114203
+Finland;2020;Total;96418
+Finland;2021;Total;98485
+Finland;2022;Total;81700
+Finland;2023;Total;87509
+Finland;2024;Total;74075
+Finland;2025;Total;71891
+Netherlands;1970;BEV;0
+Netherlands;1971;BEV;0
+Netherlands;1972;BEV;0
+Netherlands;1973;BEV;0
+Netherlands;1974;BEV;0
+Netherlands;1975;BEV;0
+Netherlands;1976;BEV;0
+Netherlands;1977;BEV;0
+Netherlands;1978;BEV;0
+Netherlands;1979;BEV;0
+Netherlands;1980;BEV;0
+Netherlands;1981;BEV;0
+Netherlands;1982;BEV;0
+Netherlands;1983;BEV;0
+Netherlands;1984;BEV;0
+Netherlands;1985;BEV;0
+Netherlands;1986;BEV;0
+Netherlands;1987;BEV;0
+Netherlands;1988;BEV;0
+Netherlands;1989;BEV;0
+Netherlands;1990;BEV;0
+Netherlands;1991;BEV;0
+Netherlands;1992;BEV;0
+Netherlands;1993;BEV;0
+Netherlands;1994;BEV;0
+Netherlands;1995;BEV;0
+Netherlands;1996;BEV;0
+Netherlands;1997;BEV;0
+Netherlands;1998;BEV;0
+Netherlands;1999;BEV;0
+Netherlands;2000;BEV;0
+Netherlands;2001;BEV;0
+Netherlands;2002;BEV;0
+Netherlands;2003;BEV;0
+Netherlands;2004;BEV;0
+Netherlands;2005;BEV;0
+Netherlands;2006;BEV;0
+Netherlands;2007;BEV;6
+Netherlands;2008;BEV;7
+Netherlands;2009;BEV;68
+Netherlands;2010;BEV;122
+Netherlands;2011;BEV;861
+Netherlands;2012;BEV;828
+Netherlands;2013;BEV;2619
+Netherlands;2014;BEV;2911
+Netherlands;2015;BEV;3193
+Netherlands;2016;BEV;3988
+Netherlands;2017;BEV;7958
+Netherlands;2018;BEV;23985
+Netherlands;2019;BEV;61547
+Netherlands;2020;BEV;72859
+Netherlands;2021;BEV;63658
+Netherlands;2022;BEV;73250
+Netherlands;2023;BEV;113968
+Netherlands;2024;BEV;132167
+Netherlands;2025;BEV;155964
+Netherlands;1970;Diesel;60032
+Netherlands;1971;Diesel;55932
+Netherlands;1972;Diesel;60012
+Netherlands;1973;Diesel;59713
+Netherlands;1974;Diesel;56154
+Netherlands;1975;Diesel;66667
+Netherlands;1976;Diesel;70618
+Netherlands;1977;Diesel;76542
+Netherlands;1978;Diesel;80758
+Netherlands;1979;Diesel;79869
+Netherlands;1980;Diesel;62720
+Netherlands;1981;Diesel;54304
+Netherlands;1982;Diesel;56527
+Netherlands;1983;Diesel;63768
+Netherlands;1984;Diesel;64082
+Netherlands;1985;Diesel;68845
+Netherlands;1986;Diesel;77849
+Netherlands;1987;Diesel;77187
+Netherlands;1988;Diesel;67030
+Netherlands;1989;Diesel;68905
+Netherlands;1990;Diesel;69820
+Netherlands;1991;Diesel;68160
+Netherlands;1992;Diesel;68329
+Netherlands;1993;Diesel;54435
+Netherlands;1994;Diesel;60266
+Netherlands;1995;Diesel;61998
+Netherlands;1996;Diesel;72928
+Netherlands;1997;Diesel;81610
+Netherlands;1998;Diesel;110318
+Netherlands;1999;Diesel;139581
+Netherlands;2000;Diesel;134418
+Netherlands;2001;Diesel;120944
+Netherlands;2002;Diesel;136700
+Netherlands;2003;Diesel;130874
+Netherlands;2004;Diesel;129511
+Netherlands;2005;Diesel;124509
+Netherlands;2006;Diesel;130040
+Netherlands;2007;Diesel;143357
+Netherlands;2008;Diesel;125996
+Netherlands;2009;Diesel;78332
+Netherlands;2010;Diesel;98675
+Netherlands;2011;Diesel;156834
+Netherlands;2012;Diesel;142807
+Netherlands;2013;Diesel;103557
+Netherlands;2014;Diesel;105014
+Netherlands;2015;Diesel;129768
+Netherlands;2016;Diesel;72355
+Netherlands;2017;Diesel;72265
+Netherlands;2018;Diesel;56996
+Netherlands;2019;Diesel;32685
+Netherlands;2020;Diesel;12963
+Netherlands;2021;Diesel;6920
+Netherlands;2022;Diesel;4638
+Netherlands;2023;Diesel;3966
+Netherlands;2024;Diesel;3765
+Netherlands;2025;Diesel;3993
+Netherlands;1970;Gasoline;371812
+Netherlands;1971;Gasoline;346415
+Netherlands;1972;Gasoline;371684
+Netherlands;1973;Gasoline;369833
+Netherlands;1974;Gasoline;347795
+Netherlands;1975;Gasoline;412903
+Netherlands;1976;Gasoline;437377
+Netherlands;1977;Gasoline;474066
+Netherlands;1978;Gasoline;500179
+Netherlands;1979;Gasoline;494674
+Netherlands;1980;Gasoline;388462
+Netherlands;1981;Gasoline;336335
+Netherlands;1982;Gasoline;350100
+Netherlands;1983;Gasoline;394950
+Netherlands;1984;Gasoline;396895
+Netherlands;1985;Gasoline;426393
+Netherlands;1986;Gasoline;482159
+Netherlands;1987;Gasoline;478058
+Netherlands;1988;Gasoline;415154
+Netherlands;1989;Gasoline;426766
+Netherlands;1990;Gasoline;432434
+Netherlands;1991;Gasoline;422155
+Netherlands;1992;Gasoline;423200
+Netherlands;1993;Gasoline;337148
+Netherlands;1994;Gasoline;373258
+Netherlands;1995;Gasoline;383990
+Netherlands;1996;Gasoline;399607
+Netherlands;1997;Gasoline;396257
+Netherlands;1998;Gasoline;432059
+Netherlands;1999;Gasoline;471274
+Netherlands;2000;Gasoline;462412
+Netherlands;2001;Gasoline;408305
+Netherlands;2002;Gasoline;363438
+Netherlands;2003;Gasoline;347949
+Netherlands;2004;Gasoline;344326
+Netherlands;2005;Gasoline;331027
+Netherlands;2006;Gasoline;342397
+Netherlands;2007;Gasoline;351671
+Netherlands;2008;Gasoline;352478
+Netherlands;2009;Gasoline;288019
+Netherlands;2010;Gasoline;364054
+Netherlands;2011;Gasoline;374811
+Netherlands;2012;Gasoline;323370
+Netherlands;2013;Gasoline;264586
+Netherlands;2014;Gasoline;248692
+Netherlands;2015;Gasoline;258663
+Netherlands;2016;Gasoline;274727
+Netherlands;2017;Gasoline;310876
+Netherlands;2018;Gasoline;334400
+Netherlands;2019;Gasoline;316274
+Netherlands;2020;Gasoline;205008
+Netherlands;2021;Gasoline;146821
+Netherlands;2022;Gasoline;119401
+Netherlands;2023;Gasoline;112216
+Netherlands;2024;Gasoline;83235
+Netherlands;2025;Gasoline;50720
+Netherlands;1970;HEV;0
+Netherlands;1971;HEV;0
+Netherlands;1972;HEV;0
+Netherlands;1973;HEV;0
+Netherlands;1974;HEV;0
+Netherlands;1975;HEV;0
+Netherlands;1976;HEV;0
+Netherlands;1977;HEV;0
+Netherlands;1978;HEV;0
+Netherlands;1979;HEV;0
+Netherlands;1980;HEV;0
+Netherlands;1981;HEV;0
+Netherlands;1982;HEV;0
+Netherlands;1983;HEV;0
+Netherlands;1984;HEV;0
+Netherlands;1985;HEV;0
+Netherlands;1986;HEV;0
+Netherlands;1987;HEV;0
+Netherlands;1988;HEV;0
+Netherlands;1989;HEV;0
+Netherlands;1990;HEV;0
+Netherlands;1991;HEV;0
+Netherlands;1992;HEV;0
+Netherlands;1993;HEV;0
+Netherlands;1994;HEV;0
+Netherlands;1995;HEV;0
+Netherlands;1996;HEV;0
+Netherlands;1997;HEV;0
+Netherlands;1998;HEV;0
+Netherlands;1999;HEV;0
+Netherlands;2000;HEV;0
+Netherlands;2001;HEV;0
+Netherlands;2002;HEV;0
+Netherlands;2003;HEV;0
+Netherlands;2004;HEV;0
+Netherlands;2005;HEV;0
+Netherlands;2006;HEV;0
+Netherlands;2007;HEV;3124
+Netherlands;2008;HEV;11811
+Netherlands;2009;HEV;16283
+Netherlands;2010;HEV;16074
+Netherlands;2011;HEV;14811
+Netherlands;2012;HEV;21145
+Netherlands;2013;HEV;23329
+Netherlands;2014;HEV;14477
+Netherlands;2015;HEV;14969
+Netherlands;2016;HEV;11033
+Netherlands;2017;HEV;17743
+Netherlands;2018;HEV;20706
+Netherlands;2019;HEV;23187
+Netherlands;2020;HEV;24776
+Netherlands;2021;HEV;27785
+Netherlands;2022;HEV;34853
+Netherlands;2023;HEV;40229
+Netherlands;2024;HEV;52223
+Netherlands;2025;HEV;51871
+Netherlands;1970;LPG;387
+Netherlands;1971;LPG;361
+Netherlands;1972;LPG;387
+Netherlands;1973;LPG;385
+Netherlands;1974;LPG;362
+Netherlands;1975;LPG;430
+Netherlands;1976;LPG;456
+Netherlands;1977;LPG;494
+Netherlands;1978;LPG;521
+Netherlands;1979;LPG;515
+Netherlands;1980;LPG;405
+Netherlands;1981;LPG;350
+Netherlands;1982;LPG;365
+Netherlands;1983;LPG;411
+Netherlands;1984;LPG;413
+Netherlands;1985;LPG;444
+Netherlands;1986;LPG;502
+Netherlands;1987;LPG;498
+Netherlands;1988;LPG;432
+Netherlands;1989;LPG;445
+Netherlands;1990;LPG;450
+Netherlands;1991;LPG;440
+Netherlands;1992;LPG;441
+Netherlands;1993;LPG;351
+Netherlands;1994;LPG;389
+Netherlands;1995;LPG;400
+Netherlands;1996;LPG;939
+Netherlands;1997;LPG;451
+Netherlands;1998;LPG;733
+Netherlands;1999;LPG;921
+Netherlands;2000;LPG;793
+Netherlands;2001;LPG;1038
+Netherlands;2002;LPG;10606
+Netherlands;2003;LPG;10154
+Netherlands;2004;LPG;10048
+Netherlands;2005;LPG;9660
+Netherlands;2006;LPG;11562
+Netherlands;2007;LPG;7505
+Netherlands;2008;LPG;9628
+Netherlands;2009;LPG;3382
+Netherlands;2010;LPG;3064
+Netherlands;2011;LPG;7140
+Netherlands;2012;LPG;8779
+Netherlands;2013;LPG;2081
+Netherlands;2014;LPG;998
+Netherlands;2015;LPG;362
+Netherlands;2016;LPG;860
+Netherlands;2017;LPG;1200
+Netherlands;2018;LPG;969
+Netherlands;2019;LPG;520
+Netherlands;2020;LPG;1921
+Netherlands;2021;LPG;2229
+Netherlands;2022;LPG;2285
+Netherlands;2023;LPG;2362
+Netherlands;2024;LPG;2189
+Netherlands;2025;LPG;1366
+Netherlands;1970;M-HEV;0
+Netherlands;1971;M-HEV;0
+Netherlands;1972;M-HEV;0
+Netherlands;1973;M-HEV;0
+Netherlands;1974;M-HEV;0
+Netherlands;1975;M-HEV;0
+Netherlands;1976;M-HEV;0
+Netherlands;1977;M-HEV;0
+Netherlands;1978;M-HEV;0
+Netherlands;1979;M-HEV;0
+Netherlands;1980;M-HEV;0
+Netherlands;1981;M-HEV;0
+Netherlands;1982;M-HEV;0
+Netherlands;1983;M-HEV;0
+Netherlands;1984;M-HEV;0
+Netherlands;1985;M-HEV;0
+Netherlands;1986;M-HEV;0
+Netherlands;1987;M-HEV;0
+Netherlands;1988;M-HEV;0
+Netherlands;1989;M-HEV;0
+Netherlands;1990;M-HEV;0
+Netherlands;1991;M-HEV;0
+Netherlands;1992;M-HEV;0
+Netherlands;1993;M-HEV;0
+Netherlands;1994;M-HEV;0
+Netherlands;1995;M-HEV;0
+Netherlands;1996;M-HEV;0
+Netherlands;1997;M-HEV;0
+Netherlands;1998;M-HEV;0
+Netherlands;1999;M-HEV;0
+Netherlands;2000;M-HEV;0
+Netherlands;2001;M-HEV;0
+Netherlands;2002;M-HEV;0
+Netherlands;2003;M-HEV;0
+Netherlands;2004;M-HEV;0
+Netherlands;2005;M-HEV;0
+Netherlands;2006;M-HEV;0
+Netherlands;2007;M-HEV;0
+Netherlands;2008;M-HEV;0
+Netherlands;2009;M-HEV;0
+Netherlands;2010;M-HEV;0
+Netherlands;2011;M-HEV;0
+Netherlands;2012;M-HEV;2
+Netherlands;2013;M-HEV;2
+Netherlands;2014;M-HEV;5
+Netherlands;2015;M-HEV;955
+Netherlands;2016;M-HEV;280
+Netherlands;2017;M-HEV;1816
+Netherlands;2018;M-HEV;2265
+Netherlands;2019;M-HEV;5642
+Netherlands;2020;M-HEV;22772
+Netherlands;2021;M-HEV;43575
+Netherlands;2022;M-HEV;42727
+Netherlands;2023;M-HEV;49722
+Netherlands;2024;M-HEV;55104
+Netherlands;2025;M-HEV;50240
+Netherlands;1970;PHEV;0
+Netherlands;1971;PHEV;0
+Netherlands;1972;PHEV;0
+Netherlands;1973;PHEV;0
+Netherlands;1974;PHEV;0
+Netherlands;1975;PHEV;0
+Netherlands;1976;PHEV;0
+Netherlands;1977;PHEV;0
+Netherlands;1978;PHEV;0
+Netherlands;1979;PHEV;0
+Netherlands;1980;PHEV;0
+Netherlands;1981;PHEV;0
+Netherlands;1982;PHEV;0
+Netherlands;1983;PHEV;0
+Netherlands;1984;PHEV;0
+Netherlands;1985;PHEV;0
+Netherlands;1986;PHEV;0
+Netherlands;1987;PHEV;0
+Netherlands;1988;PHEV;0
+Netherlands;1989;PHEV;0
+Netherlands;1990;PHEV;0
+Netherlands;1991;PHEV;0
+Netherlands;1992;PHEV;0
+Netherlands;1993;PHEV;0
+Netherlands;1994;PHEV;0
+Netherlands;1995;PHEV;0
+Netherlands;1996;PHEV;0
+Netherlands;1997;PHEV;0
+Netherlands;1998;PHEV;0
+Netherlands;1999;PHEV;0
+Netherlands;2000;PHEV;0
+Netherlands;2001;PHEV;0
+Netherlands;2002;PHEV;0
+Netherlands;2003;PHEV;0
+Netherlands;2004;PHEV;0
+Netherlands;2005;PHEV;0
+Netherlands;2006;PHEV;0
+Netherlands;2007;Other;111
+Netherlands;2008;Other;152
+Netherlands;2009;Other;1318
+Netherlands;2010;Other;606
+Netherlands;2011;Other;1328
+Netherlands;2012;Other;1187
+Netherlands;2013;Other;548
+Netherlands;2014;Other;3226
+Netherlands;2015;Other;701
+Netherlands;2016;Other;666
+Netherlands;2017;Other;1275
+Netherlands;2018;Other;1006
+Netherlands;2019;Other;451
+Netherlands;2020;Other;207
+Netherlands;2021;Other;161
+Netherlands;2022;Other;106
+Netherlands;2023;Other;45
+Netherlands;2024;Other;0
+Netherlands;2025;Other;1
+Netherlands;2007;PHEV;0
+Netherlands;2008;PHEV;0
+Netherlands;2009;PHEV;0
+Netherlands;2010;PHEV;21
+Netherlands;2011;PHEV;36
+Netherlands;2012;PHEV;1217
+Netherlands;2013;PHEV;16952
+Netherlands;2014;PHEV;11833
+Netherlands;2015;PHEV;39763
+Netherlands;2016;PHEV;18563
+Netherlands;2017;PHEV;1152
+Netherlands;2018;PHEV;3150
+Netherlands;2019;PHEV;4904
+Netherlands;2020;PHEV;14890
+Netherlands;2021;PHEV;31114
+Netherlands;2022;PHEV;34734
+Netherlands;2023;PHEV;47099
+Netherlands;2024;PHEV;52754
+Netherlands;2025;PHEV;73201
+Netherlands;1970;Total;432231
+Netherlands;1971;Total;402708
+Netherlands;1972;Total;432083
+Netherlands;1973;Total;429931
+Netherlands;1974;Total;404312
+Netherlands;1975;Total;480000
+Netherlands;1976;Total;508451
+Netherlands;1977;Total;551102
+Netherlands;1978;Total;581458
+Netherlands;1979;Total;575059
+Netherlands;1980;Total;451587
+Netherlands;1981;Total;390990
+Netherlands;1982;Total;406991
+Netherlands;1983;Total;459129
+Netherlands;1984;Total;461391
+Netherlands;1985;Total;495682
+Netherlands;1986;Total;560510
+Netherlands;1987;Total;555743
+Netherlands;1988;Total;482616
+Netherlands;1989;Total;496115
+Netherlands;1990;Total;502704
+Netherlands;1991;Total;490755
+Netherlands;1992;Total;491970
+Netherlands;1993;Total;391934
+Netherlands;1994;Total;433913
+Netherlands;1995;Total;446388
+Netherlands;1996;Total;473474
+Netherlands;1997;Total;478318
+Netherlands;1998;Total;543110
+Netherlands;1999;Total;611776
+Netherlands;2000;Total;597623
+Netherlands;2001;Total;530287
+Netherlands;2002;Total;510744
+Netherlands;2003;Total;488977
+Netherlands;2004;Total;483885
+Netherlands;2005;Total;465196
+Netherlands;2006;Total;483999
+Netherlands;2007;Total;505779
+Netherlands;2008;Total;500098
+Netherlands;2009;Total;387408
+Netherlands;2010;Total;482633
+Netherlands;2011;Total;555846
+Netherlands;2012;Total;502479
+Netherlands;2013;Total;416717
+Netherlands;2014;Total;387568
+Netherlands;2015;Total;448906
+Netherlands;2016;Total;382512
+Netherlands;2017;Total;414306
+Netherlands;2018;Total;443529
+Netherlands;2019;Total;445218
+Netherlands;2020;Total;355432
+Netherlands;2021;Total;322318
+Netherlands;2022;Total;312070
+Netherlands;2023;Total;369635
+Netherlands;2024;Total;381463
+Netherlands;2025;Total;387583
+Switzerland;2025;BEV;52843
+Switzerland;2025;CNG;7
+Switzerland;2025;D-HEV;10471
+Switzerland;2025;Diesel;15752
+Switzerland;2025;D-PHEV;520
+Switzerland;2025;FCEV;4
+Switzerland;2025;Gasoline;55832
+Switzerland;2025;G-HEV;71674
+Switzerland;2025;G-PHEV;25499
+Switzerland;2025;Other;0
+Switzerland;2025;Total;232602

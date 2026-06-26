@@ -52,6 +52,8 @@ def calculate_empirical_survival_rates(stock, registrations, stock_year, countri
     # Prepare registrations data and calculate survival rates
     registrations = prepare_registrations_data(registrations, stock_year)
     registrations = registrations[registrations[country_dim].isin(countries_to_keep)]
+    stock.to_csv(f'outputs/TEST_STOCK.csv', sep=';', index=False, decimal=',')
+    registrations.to_csv(f'outputs/TEST_REGISTRATIONS.csv', sep=';', index=False, decimal=',')
     survival_rates = obtain_survival_rates(stock, registrations, survival_grouping)
     # Save outputs
     save_dataframes(survival_rates, output_path)

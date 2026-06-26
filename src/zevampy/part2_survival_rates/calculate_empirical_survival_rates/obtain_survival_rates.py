@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 import pandas as pd
+import numpy as np
 from zevampy.load_data_and_prepare_inputs.dimension_names import age_dim, country_dim, new_registrations_dim, \
     survival_rate_dim, number_registered_vehicles_dim
 
@@ -36,8 +37,10 @@ def obtain_survival_rates(stock, registrations, survival_grouping):
                               on=merge_cols, how='left')
     # Divide stock of a certain vehicle age at a certain stock year by the new registrations at the vehicle age's year
     # to obtain the survival rate
-    survival_rates[survival_rate_dim] = survival_rates[number_registered_vehicles_dim] / \
-                                        survival_rates[new_registrations_dim]
+    survival_rates[survival_rate_dim] = np.divide(survival_rates[number_registered_vehicles_dim],
+                                                  survival_rates[new_registrations_dim],
+                                                  out=np.zeros(len(survival_rates), dtype=float),
+                                                  where=survival_rates[new_registrations_dim] != 0, )
 
     survival_rates = survival_rates[
         merge_cols + [survival_rate_dim]

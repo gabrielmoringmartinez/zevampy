@@ -146,12 +146,6 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
             "registration shares by cluster"
         )
 
-        registration_shares_by_cluster = add_rest_of_powertrains_from_selected_shares(
-            registration_shares_by_cluster,
-            powertrains,
-            relative_sales_dim,
-            "registration shares by cluster",
-        )
     historical_registrations = pd.read_csv(
         input_dir / "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
         sep=";", decimal=","
@@ -487,6 +481,64 @@ def add_rest_of_powertrains_from_selected_shares(
     result = pd.concat([selected_df, rest_df], ignore_index=True)
 
     return result
+
+
+def add_rest_of_powertrains_from_total(
+        df,
+        selected_powertrains,
+        value_column,
+        dataset_name,
+):
+    df = df.copy()
+    selected_powertrains = list(selected_powertrains)
+
+    available_powertrains = set(df[powertrain_dim].dropna().unique())
+    required_powertrains = set(selected_powertrains + ["Total"])
+    missing_powertrains = required_powertrains - available_powertrains
+
+    if missing_powertrains:
+        raise ValueError(
+            f"Invalid powertrain configuration for {dataset_name}.\n\n"
+            f"Required powertrains not found in input data: {sorted(missing_powertrains)}\n"
+            f"Available powertrains are: {sorted(available_powertrains)}"
+        )
+
+    selected_df = df[df[powertrain_dim].isin(selected_powertrains)].copy()
+
+    group_cols = [
+        col for col in df.columns
+        if col not in [powertrain_dim, value_column]
+    ]
+
+    selected_sum = (
+        selected_df
+        .groupby(group_cols, as_index=False)[value_column]
+        .sum()
+        .rename(columns={value_column: "_selected_sum"})
+    )
+
+    total_df = (
+        df[df[powertrain_dim] == "Total"]
+        [group_cols + [value_column]]
+        .rename(columns={value_column: "_total"})
+    )
+
+    rest_df = total_df.merge(selected_sum, on=group_cols, how="left")
+    rest_df["_selected_sum"] = rest_df["_selected_sum"].fillna(0)
+
+    rest_df[powertrain_dim] = REST_POWERTRAIN
+    rest_df[value_column] = rest_df["_total"] - rest_df["_selected_sum"]
+
+    if (rest_df[value_column] < -SHARE_TOLERANCE).any():
+        raise ValueError(
+            f"Invalid values in {dataset_name}.\n\n"
+            "Selected powertrain values exceed Total for at least one group."
+        )
+
+    rest_df[value_column] = rest_df[value_column].clip(lower=0)
+    rest_df = rest_df[group_cols + [powertrain_dim, value_column]]
+
+    return pd.concat([selected_df, rest_df], ignore_index=True)
 
 
 """
