@@ -6,45 +6,44 @@
 import pandas as pd
 import numpy as np
 from zevampy.load_data_and_prepare_inputs.dimension_names import age_dim, country_dim, new_registrations_dim, \
-    survival_rate_dim, number_registered_vehicles_dim
+    survival_rate_dim, number_registered_vehicles_dim, stock_year_dim, time_dim
 
 
 def obtain_survival_rates(stock, registrations, survival_grouping):
     """
-    Calculate empirical vehicle survival rates.
-
-    This function estimates survival rates by dividing the number of registered vehicles in the stock dataset by the
-    corresponding historical vehicle registrations.
-
-    Parameters:
-        stock (pandas.DataFrame):
-            DataFrame containing vehicle stock data.
-
-        registrations (pandas.DataFrame):
-            DataFrame containing historical vehicle registrations.
-
-        survival_grouping (list[str]):
-            Column names defining the grouping used for survival-rate estimation.
-
-    Returns:
-        pandas.DataFrame:
-            DataFrame containing empirical survival rates by survival group and vehicle age.
+    Calculate empirical vehicle survival rates for all available stock years.
     """
-    # Merge with selected columns and calculate survival rate
+    stock = stock.copy()
+    registrations = registrations.copy()
 
-    merge_cols = survival_grouping + [age_dim]
-    survival_rates = pd.merge(stock, registrations[merge_cols + [new_registrations_dim]],
-                              on=merge_cols, how='left')
-    # Divide stock of a certain vehicle age at a certain stock year by the new registrations at the vehicle age's year
-    # to obtain the survival rate
-    survival_rates[survival_rate_dim] = np.divide(survival_rates[number_registered_vehicles_dim],
-                                                  survival_rates[new_registrations_dim],
-                                                  out=np.zeros(len(survival_rates), dtype=float),
-                                                  where=survival_rates[new_registrations_dim] != 0, )
+    stock["_registration_year"] = stock[stock_year_dim] - stock[age_dim]
 
-    survival_rates = survival_rates[
-        merge_cols + [survival_rate_dim]
-        ]
+    registrations = registrations.rename(
+        columns={time_dim: "_registration_year"}
+    )
 
-    return survival_rates
+    join_cols = survival_grouping + ["_registration_year"]
+    output_cols = survival_grouping + [age_dim, stock_year_dim]
 
+    registrations = (
+        registrations
+        .groupby(join_cols, as_index=False)[new_registrations_dim]
+        .sum()
+    )
+
+    survival_rates = pd.merge(
+        stock,
+        registrations,
+        on=join_cols,
+        how="left",
+        validate="many_to_one",
+    )
+
+    survival_rates[survival_rate_dim] = np.divide(
+        survival_rates[number_registered_vehicles_dim],
+        survival_rates[new_registrations_dim],
+        out=np.zeros(len(survival_rates), dtype=float),
+        where=survival_rates[new_registrations_dim] != 0,
+    )
+
+    return survival_rates[output_cols + [survival_rate_dim]]

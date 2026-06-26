@@ -50,7 +50,7 @@ def calculate_empirical_survival_rates(stock, registrations, stock_year, countri
     stock = filter_vehicle_age(stock)
     stock = stock[stock[country_dim].isin(countries_to_keep)]
     # Prepare registrations data and calculate survival rates
-    registrations = prepare_registrations_data(registrations, stock_year)
+    registrations = prepare_registrations_data(registrations, stock)
     registrations = registrations[registrations[country_dim].isin(countries_to_keep)]
     stock.to_csv(f'outputs/TEST_STOCK.csv', sep=';', index=False, decimal=',')
     registrations.to_csv(f'outputs/TEST_REGISTRATIONS.csv', sep=';', index=False, decimal=',')
