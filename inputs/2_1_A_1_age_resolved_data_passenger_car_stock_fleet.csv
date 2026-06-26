@@ -1,0 +1,5614 @@
+﻿geo country;vehicle age;powertrain;number of registered vehicles
+Switzerland;1;CNG;3
+Switzerland;1;Diesel;20433
+Switzerland;1;D-HEV;9659
+Switzerland;1;D-HEV;493
+Switzerland;1;D-HEV;670
+Switzerland;1;FCEV;4
+Switzerland;1;CNG;1
+Switzerland;1;Gasoline;54976
+Switzerland;1;G-HEV;36968
+Switzerland;1;G-HEV;18192
+Switzerland;1;G-HEV;40458
+Switzerland;1;LPG;10
+Switzerland;1;REEV;213
+Switzerland;2;CNG;16
+Switzerland;2;Diesel;1
+Switzerland;2;Diesel;29173
+Switzerland;2;D-HEV;10672
+Switzerland;2;D-HEV;476
+Switzerland;2;D-HEV;2423
+Switzerland;2;FCEV;6
+Switzerland;2;Gasoline;72976
+Switzerland;2;G-HEV;29443
+Switzerland;2;G-HEV;9648
+Switzerland;2;G-HEV;50215
+Switzerland;2;LPG;18
+Switzerland;2;Other;2
+Switzerland;2;REEV;7
+Switzerland;3;CNG;45
+Switzerland;3;Diesel;31315
+Switzerland;3;D-HEV;4945
+Switzerland;3;D-HEV;430
+Switzerland;3;D-HEV;8479
+Switzerland;3;FCEV;25
+Switzerland;3;Gasoline;89524
+Switzerland;3;G-HEV;12310
+Switzerland;3;G-HEV;5166
+Switzerland;3;G-HEV;64011
+Switzerland;3;LPG;42
+Switzerland;3;Other;4
+Switzerland;4;CNG;132
+Switzerland;4;Diesel;33726
+Switzerland;4;D-HEV;850
+Switzerland;4;D-HEV;200
+Switzerland;4;D-HEV;10633
+Switzerland;4;FCEV;52
+Switzerland;4;CNG;2
+Switzerland;4;Gasoline;1
+Switzerland;4;Gasoline;90581
+Switzerland;4;G-HEV;1291
+Switzerland;4;G-HEV;756
+Switzerland;4;G-HEV;63031
+Switzerland;4;LPG;30
+Switzerland;4;Other;2
+Switzerland;4;REEV;13
+Switzerland;5;CNG;280
+Switzerland;5;Diesel;40761
+Switzerland;5;D-HEV;55
+Switzerland;5;D-HEV;3
+Switzerland;5;D-HEV;10309
+Switzerland;5;FCEV;51
+Switzerland;5;Gasoline;102922
+Switzerland;5;G-HEV;73
+Switzerland;5;G-HEV;151
+Switzerland;5;G-HEV;65719
+Switzerland;5;LPG;57
+Switzerland;5;Other;3
+Switzerland;5;REEV;19
+Switzerland;6;CNG;522
+Switzerland;6;Diesel;58493
+Switzerland;6;D-HEV;19
+Switzerland;6;D-HEV;2
+Switzerland;6;D-HEV;5691
+Switzerland;6;FCEV;32
+Switzerland;6;Gasoline;120027
+Switzerland;6;G-HEV;36
+Switzerland;6;G-HEV;25
+Switzerland;6;G-HEV;43602
+Switzerland;6;LPG;36
+Switzerland;6;Other;4
+Switzerland;6;REEV;67
+Switzerland;7;CNG;1068
+Switzerland;7;Diesel;81948
+Switzerland;7;D-HEV;2
+Switzerland;7;D-HEV;4088
+Switzerland;7;FCEV;19
+Switzerland;7;CNG;4
+Switzerland;7;Gasoline;192681
+Switzerland;7;G-HEV;23359
+Switzerland;7;LPG;48
+Switzerland;7;Other;6
+Switzerland;7;REEV;12
+Switzerland;8;CNG;733
+Switzerland;8;Diesel;88155
+Switzerland;8;D-HEV;904
+Switzerland;8;FCEV;11
+Switzerland;8;CNG;2
+Switzerland;8;Gasoline;181162
+Switzerland;8;G-HEV;14135
+Switzerland;8;LPG;53
+Switzerland;8;Other;6
+Switzerland;8;REEV;275
+Switzerland;9;CNG;688
+Switzerland;9;Diesel;105421
+Switzerland;9;D-HEV;258
+Switzerland;9;Gasoline;171200
+Switzerland;9;G-HEV;10833
+Switzerland;9;LPG;30
+Switzerland;9;Other;5
+Switzerland;9;REEV;180
+Switzerland;10;CNG;810
+Switzerland;10;Diesel;110344
+Switzerland;10;D-HEV;508
+Switzerland;10;FCEV;5
+Switzerland;10;Gasoline;161191
+Switzerland;10;G-HEV;8931
+Switzerland;10;LPG;39
+Switzerland;10;REEV;193
+Switzerland;11;CNG;841
+Switzerland;11;Diesel;104883
+Switzerland;11;D-HEV;776
+Switzerland;11;FCEV;1
+Switzerland;11;Gasoline;160820
+Switzerland;11;G-HEV;1
+Switzerland;11;G-HEV;6516
+Switzerland;11;LPG;67
+Switzerland;11;Other;6
+Switzerland;11;REEV;408
+Switzerland;12;CNG;650
+Switzerland;12;Diesel;87000
+Switzerland;12;D-HEV;470
+Switzerland;12;FCEV;1
+Switzerland;12;CNG;1
+Switzerland;12;Gasoline;150247
+Switzerland;12;G-HEV;5316
+Switzerland;12;LPG;40
+Switzerland;12;Other;2
+Switzerland;12;REEV;204
+Switzerland;13;CNG;521
+Switzerland;13;Diesel;81073
+Switzerland;13;D-HEV;505
+Switzerland;13;Gasoline;144330
+Switzerland;13;G-HEV;1
+Switzerland;13;G-HEV;5186
+Switzerland;13;LPG;39
+Switzerland;13;Other;3
+Switzerland;13;REEV;122
+Switzerland;14;CNG;259
+Switzerland;14;Diesel;79857
+Switzerland;14;D-HEV;520
+Switzerland;14;CNG;2
+Switzerland;14;Gasoline;144395
+Switzerland;14;G-HEV;1
+Switzerland;14;G-HEV;4477
+Switzerland;14;LPG;41
+Switzerland;14;Other;1
+Switzerland;14;REEV;231
+Switzerland;15;CNG;247
+Switzerland;15;Diesel;63318
+Switzerland;15;D-HEV;8
+Switzerland;15;CNG;4
+Switzerland;15;Gasoline;138929
+Switzerland;15;G-HEV;3959
+Switzerland;15;LPG;19
+Switzerland;15;Other;4
+Switzerland;15;REEV;19
+Switzerland;16;CNG;267
+Switzerland;16;Diesel;44940
+Switzerland;16;D-HEV;2
+Switzerland;16;CNG;2
+Switzerland;16;Gasoline;118332
+Switzerland;16;G-HEV;2643
+Switzerland;16;LPG;39
+Switzerland;16;Other;1
+Switzerland;17;CNG;304
+Switzerland;17;Diesel;33030
+Switzerland;17;D-HEV;3
+Switzerland;17;CNG;2
+Switzerland;17;Gasoline;95478
+Switzerland;17;G-HEV;2080
+Switzerland;17;LPG;33
+Switzerland;17;Other;4
+Switzerland;18;CNG;258
+Switzerland;18;Diesel;32650
+Switzerland;18;D-HEV;4
+Switzerland;18;CNG;3
+Switzerland;18;Gasoline;87607
+Switzerland;18;G-HEV;1384
+Switzerland;18;LPG;21
+Switzerland;19;CNG;294
+Switzerland;19;Diesel;26990
+Switzerland;19;CNG;1
+Switzerland;19;Gasoline;75587
+Switzerland;19;G-HEV;1240
+Switzerland;19;LPG;15
+Switzerland;19;Other;1
+Switzerland;20;CNG;154
+Switzerland;20;Diesel;19283
+Switzerland;20;CNG;1
+Switzerland;20;Gasoline;64581
+Switzerland;20;G-HEV;763
+Switzerland;20;LPG;14
+Switzerland;20;Other;3
+Switzerland;21;CNG;32
+Switzerland;21;Diesel;14440
+Switzerland;21;D-HEV;1
+Switzerland;21;Gasoline;50949
+Switzerland;21;G-HEV;1
+Switzerland;21;G-HEV;439
+Switzerland;21;LPG;10
+Switzerland;21;Other;6
+Switzerland;22;CNG;26
+Switzerland;22;Diesel;11432
+Switzerland;22;D-HEV;1
+Switzerland;22;CNG;2
+Switzerland;22;Gasoline;43552
+Switzerland;22;G-HEV;1
+Switzerland;22;G-HEV;103
+Switzerland;22;LPG;7
+Switzerland;22;Other;2
+Switzerland;23;CNG;13
+Switzerland;23;Diesel;8102
+Switzerland;23;D-HEV;1
+Switzerland;23;CNG;1
+Switzerland;23;Gasoline;36096
+Switzerland;23;G-HEV;7
+Switzerland;23;LPG;4
+Switzerland;23;Other;3
+Switzerland;24;CNG;19
+Switzerland;24;Diesel;6301
+Switzerland;24;Gasoline;31257
+Switzerland;24;G-HEV;6
+Switzerland;24;LPG;4
+Switzerland;24;Other;1
+Switzerland;25;CNG;2
+Switzerland;25;Diesel;4525
+Switzerland;25;Gasoline;27154
+Switzerland;25;G-HEV;10
+Switzerland;25;LPG;1
+Switzerland;25;Other;5
+Switzerland;26;Diesel;3034
+Switzerland;26;Gasoline;22871
+Switzerland;26;G-HEV;12
+Switzerland;26;LPG;1
+Switzerland;26;Other;13
+Switzerland;27;CNG;1
+Switzerland;27;Diesel;2106
+Switzerland;27;Gasoline;17857
+Switzerland;27;LPG;2
+Switzerland;27;Other;21
+Switzerland;28;CNG;4
+Switzerland;28;Diesel;1458
+Switzerland;28;Gasoline;13701
+Switzerland;28;LPG;4
+Switzerland;28;Other;18
+Switzerland;29;CNG;1
+Switzerland;29;Diesel;952
+Switzerland;29;Gasoline;9803
+Switzerland;29;LPG;1
+Switzerland;29;Other;16
+Switzerland;30;Diesel;657
+Switzerland;30;Gasoline;5563
+Switzerland;30;Other;19
+Switzerland;31;Diesel;328
+Switzerland;31;Gasoline;3234
+Switzerland;31;G-HEV;1
+Switzerland;31;Other;15
+Switzerland;32;Diesel;308
+Switzerland;32;Gasoline;2725
+Switzerland;32;G-HEV;1
+Switzerland;32;Other;7
+Switzerland;33;Diesel;234
+Switzerland;33;Gasoline;2417
+Switzerland;33;LPG;1
+Switzerland;33;Other;7
+Switzerland;34;Diesel;249
+Switzerland;34;Gasoline;2774
+Switzerland;34;G-HEV;1
+Switzerland;34;LPG;1
+Switzerland;34;Other;5
+Switzerland;35;Diesel;268
+Switzerland;35;Gasoline;3166
+Switzerland;35;LPG;1
+Switzerland;35;Other;8
+Switzerland;36;Diesel;289
+Switzerland;36;Gasoline;2876
+Switzerland;36;G-HEV;1
+Switzerland;36;LPG;1
+Switzerland;36;Other;10
+Switzerland;37;Diesel;194
+Switzerland;37;Gasoline;2325
+Switzerland;37;LPG;1
+Switzerland;37;Other;6
+Switzerland;38;Diesel;202
+Switzerland;38;Gasoline;1950
+Switzerland;38;Other;4
+Switzerland;39;Diesel;186
+Switzerland;39;Gasoline;2206
+Switzerland;39;G-HEV;1
+Switzerland;39;Other;4
+Switzerland;40;Diesel;132
+Switzerland;40;Gasoline;2671
+Switzerland;40;Other;6
+Switzerland;41;Diesel;68
+Switzerland;41;Gasoline;2158
+Switzerland;41;G-HEV;1
+Switzerland;41;Other;7
+Switzerland;42;Diesel;68
+Switzerland;42;Gasoline;1946
+Switzerland;43;Diesel;71
+Switzerland;43;Gasoline;2160
+Switzerland;43;G-HEV;1
+Switzerland;43;LPG;1
+Switzerland;43;Other;3
+Switzerland;44;Diesel;69
+Switzerland;44;Gasoline;2392
+Switzerland;44;Other;2
+Switzerland;45;Diesel;30
+Switzerland;45;Gasoline;1932
+Switzerland;45;Other;4
+Switzerland;46;Diesel;16
+Switzerland;46;Gasoline;1733
+Switzerland;46;Other;6
+Switzerland;47;Diesel;17
+Switzerland;47;Gasoline;1988
+Switzerland;47;Other;4
+Switzerland;48;Diesel;17
+Switzerland;48;CNG;1
+Switzerland;48;Gasoline;1832
+Switzerland;48;G-HEV;1
+Switzerland;48;LPG;1
+Switzerland;48;Other;10
+Switzerland;49;Diesel;11
+Switzerland;49;Gasoline;1448
+Switzerland;49;Other;3
+Switzerland;50;Diesel;6
+Switzerland;50;Gasoline;1404
+Switzerland;50;Other;5
+Switzerland;51;Diesel;12
+Switzerland;51;Gasoline;1543
+Switzerland;51;Other;9
+Switzerland;52;CNG;1
+Switzerland;52;Diesel;14
+Switzerland;52;Gasoline;2124
+Switzerland;52;Other;11
+Switzerland;53;Diesel;5
+Switzerland;53;Gasoline;2991
+Switzerland;53;G-HEV;1
+Switzerland;53;Other;17
+Switzerland;54;Diesel;16
+Switzerland;54;Gasoline;3245
+Switzerland;54;Other;15
+Switzerland;55;Diesel;13
+Switzerland;55;Gasoline;3006
+Switzerland;55;Other;18
+Switzerland;56;Diesel;19
+Switzerland;56;Gasoline;2991
+Switzerland;56;G-HEV;1
+Switzerland;56;Other;22
+Switzerland;57;Diesel;28
+Switzerland;57;Gasoline;2750
+Switzerland;57;Other;15
+Switzerland;58;Diesel;23
+Switzerland;58;Gasoline;2511
+Switzerland;58;Other;14
+Switzerland;59;Diesel;34
+Switzerland;59;Gasoline;2571
+Switzerland;59;G-HEV;1
+Switzerland;59;Other;22
+Switzerland;60;Diesel;52
+Switzerland;60;Gasoline;2227
+Switzerland;60;G-HEV;1
+Switzerland;60;Other;20
+Switzerland;61;Diesel;71
+Switzerland;61;Gasoline;1916
+Switzerland;61;G-HEV;1
+Switzerland;61;Other;16
+Switzerland;62;Diesel;76
+Switzerland;62;Gasoline;1438
+Switzerland;62;Other;17
+Switzerland;63;Diesel;62
+Switzerland;63;Gasoline;1333
+Switzerland;63;G-HEV;1
+Switzerland;63;Other;9
+Switzerland;64;Diesel;43
+Switzerland;64;Gasoline;1194
+Switzerland;64;Other;15
+Switzerland;65;Diesel;48
+Switzerland;65;Gasoline;1099
+Switzerland;65;Other;9
+Switzerland;66;Diesel;29
+Switzerland;66;Gasoline;972
+Switzerland;66;Other;10
+Switzerland;67;Diesel;39
+Switzerland;67;Gasoline;1043
+Switzerland;67;Other;22
+Switzerland;68;Diesel;32
+Switzerland;68;Gasoline;886
+Switzerland;68;G-HEV;1
+Switzerland;68;Other;10
+Switzerland;69;Diesel;20
+Switzerland;69;Gasoline;715
+Switzerland;69;Other;6
+Switzerland;70;Diesel;9
+Switzerland;70;Gasoline;765
+Switzerland;70;G-HEV;1
+Switzerland;70;Other;6
+Switzerland;71;Diesel;10
+Switzerland;71;Gasoline;751
+Switzerland;71;Other;15
+Switzerland;72;Diesel;9
+Switzerland;72;Gasoline;589
+Switzerland;72;Other;10
+Switzerland;73;Diesel;6
+Switzerland;73;Gasoline;598
+Switzerland;73;Other;6
+Switzerland;74;CNG;1
+Switzerland;74;Diesel;15
+Switzerland;74;Gasoline;443
+Switzerland;74;Other;8
+Switzerland;75;Diesel;10
+Switzerland;75;Gasoline;396
+Switzerland;75;Other;10
+Switzerland;76;Diesel;15
+Switzerland;76;Gasoline;419
+Switzerland;76;Other;5
+Switzerland;77;Diesel;8
+Switzerland;77;Gasoline;321
+Switzerland;77;Other;5
+Switzerland;78;Diesel;13
+Switzerland;78;Gasoline;330
+Switzerland;78;Other;10
+Switzerland;79;Diesel;6
+Switzerland;79;Gasoline;220
+Switzerland;79;Other;5
+Switzerland;80;Diesel;2
+Switzerland;80;Gasoline;96
+Switzerland;80;Other;1
+Switzerland;81;Gasoline;30
+Switzerland;82;Diesel;2
+Switzerland;82;Gasoline;168
+Switzerland;82;Other;6
+Switzerland;83;Diesel;1
+Switzerland;83;Gasoline;80
+Switzerland;83;Other;2
+Switzerland;84;Gasoline;76
+Switzerland;84;Other;3
+Switzerland;85;Gasoline;39
+Switzerland;85;Other;1
+Switzerland;86;Gasoline;42
+Switzerland;87;Gasoline;106
+Switzerland;87;Other;3
+Switzerland;88;Gasoline;137
+Switzerland;88;Other;4
+Switzerland;89;Diesel;1
+Switzerland;89;Gasoline;130
+Switzerland;89;Other;6
+Switzerland;90;Diesel;1
+Switzerland;90;Gasoline;119
+Switzerland;90;Other;3
+Switzerland;91;Gasoline;137
+Switzerland;91;G-HEV;1
+Switzerland;91;Other;4
+Switzerland;92;Diesel;1
+Switzerland;92;Gasoline;149
+Switzerland;92;G-HEV;1
+Switzerland;92;Other;3
+Switzerland;93;Gasoline;116
+Switzerland;93;Other;5
+Switzerland;94;Diesel;1
+Switzerland;94;Gasoline;158
+Switzerland;94;Other;3
+Switzerland;95;Diesel;1
+Switzerland;95;Gasoline;129
+Switzerland;95;Other;6
+Switzerland;96;Diesel;1
+Switzerland;96;Gasoline;139
+Switzerland;96;Other;6
+Switzerland;97;Gasoline;135
+Switzerland;97;Other;7
+Switzerland;98;Diesel;3
+Switzerland;98;Gasoline;104
+Switzerland;98;Other;1
+Switzerland;99;Gasoline;59
+Switzerland;99;Other;2
+Switzerland;100;Gasoline;66
+Switzerland;100;G-HEV;1
+Switzerland;100;Other;2
+Switzerland;101;Diesel;1
+Switzerland;101;Gasoline;52
+Switzerland;101;Other;3
+Switzerland;102;Gasoline;30
+Switzerland;102;Other;1
+Switzerland;103;Gasoline;29
+Switzerland;104;Gasoline;15
+Switzerland;105;Gasoline;9
+Switzerland;106;Gasoline;5
+Switzerland;107;Gasoline;4
+Switzerland;108;Gasoline;2
+Switzerland;109;Gasoline;7
+Switzerland;110;Gasoline;7
+Switzerland;111;Gasoline;9
+Switzerland;112;Gasoline;11
+Switzerland;112;Other;1
+Switzerland;113;Gasoline;10
+Switzerland;114;Gasoline;11
+Switzerland;115;Gasoline;5
+Switzerland;115;Other;1
+Switzerland;116;Gasoline;6
+Switzerland;117;Gasoline;3
+Switzerland;118;Gasoline;5
+Switzerland;119;Gasoline;1
+Switzerland;120;Gasoline;1
+Switzerland;123;Diesel;1
+Switzerland;123;Gasoline;6
+Switzerland;124;Gasoline;1
+Switzerland;125;Gasoline;2
+Switzerland;126;Gasoline;6
+Switzerland;128;Gasoline;1
+Switzerland;1;Total;234588
+Switzerland;2;Total;250278
+Switzerland;3;Total;268193
+Switzerland;4;Total;241149
+Switzerland;5;Total;250633
+Switzerland;6;Total;247386
+Switzerland;7;Total;315572
+Switzerland;8;Total;289977
+Switzerland;9;Total;292729
+Switzerland;10;Total;284746
+Switzerland;11;Total;276836
+Switzerland;12;Total;245200
+Switzerland;13;Total;232625
+Switzerland;14;Total;230266
+Switzerland;15;Total;206982
+Switzerland;16;Total;166444
+Switzerland;17;Total;131229
+Switzerland;18;Total;122457
+Switzerland;19;Total;104613
+Switzerland;20;Total;84824
+Switzerland;21;Total;65889
+Switzerland;22;Total;55136
+Switzerland;23;Total;44237
+Switzerland;24;Total;37602
+Switzerland;25;Total;31706
+Switzerland;26;Total;25935
+Switzerland;27;Total;19996
+Switzerland;28;Total;15195
+Switzerland;29;Total;10777
+Switzerland;30;Total;6247
+Switzerland;31;Total;3589
+Switzerland;32;Total;3045
+Switzerland;33;Total;2662
+Switzerland;34;Total;3038
+Switzerland;35;Total;3447
+Switzerland;36;Total;3182
+Switzerland;37;Total;2528
+Switzerland;38;Total;2156
+Switzerland;39;Total;2399
+Switzerland;40;Total;2810
+Switzerland;41;Total;2238
+Switzerland;42;Total;2016
+Switzerland;43;Total;2236
+Switzerland;44;Total;2464
+Switzerland;45;Total;1967
+Switzerland;46;Total;1755
+Switzerland;47;Total;2010
+Switzerland;48;Total;1865
+Switzerland;49;Total;1464
+Switzerland;50;Total;1416
+Switzerland;51;Total;1564
+Switzerland;52;Total;2150
+Switzerland;53;Total;3016
+Switzerland;54;Total;3277
+Switzerland;55;Total;3038
+Switzerland;56;Total;3036
+Switzerland;57;Total;2797
+Switzerland;58;Total;2549
+Switzerland;59;Total;2629
+Switzerland;60;Total;2300
+Switzerland;61;Total;2004
+Switzerland;62;Total;1531
+Switzerland;63;Total;1405
+Switzerland;64;Total;1253
+Switzerland;65;Total;1156
+Switzerland;66;Total;1012
+Switzerland;67;Total;1104
+Switzerland;68;Total;929
+Switzerland;69;Total;741
+Switzerland;70;Total;781
+Switzerland;71;Total;776
+Switzerland;72;Total;608
+Switzerland;73;Total;610
+Switzerland;74;Total;467
+Switzerland;75;Total;416
+Switzerland;76;Total;439
+Switzerland;77;Total;334
+Switzerland;78;Total;353
+Switzerland;79;Total;231
+Switzerland;80;Total;99
+Switzerland;81;Total;30
+Switzerland;82;Total;176
+Switzerland;83;Total;83
+Switzerland;84;Total;79
+Switzerland;85;Total;40
+Switzerland;86;Total;42
+Switzerland;87;Total;109
+Switzerland;88;Total;141
+Switzerland;89;Total;137
+Switzerland;90;Total;123
+Switzerland;91;Total;143
+Switzerland;92;Total;154
+Switzerland;93;Total;121
+Switzerland;94;Total;164
+Switzerland;95;Total;137
+Switzerland;96;Total;146
+Switzerland;97;Total;142
+Switzerland;98;Total;108
+Switzerland;99;Total;61
+Switzerland;100;Total;69
+Switzerland;101;Total;56
+Switzerland;102;Total;31
+Switzerland;103;Total;29
+Switzerland;104;Total;16
+Switzerland;105;Total;9
+Switzerland;106;Total;5
+Switzerland;107;Total;4
+Switzerland;108;Total;2
+Switzerland;109;Total;7
+Switzerland;110;Total;7
+Switzerland;111;Total;9
+Switzerland;112;Total;12
+Switzerland;113;Total;10
+Switzerland;114;Total;11
+Switzerland;115;Total;6
+Switzerland;116;Total;6
+Switzerland;117;Total;4
+Switzerland;118;Total;5
+Switzerland;119;Total;1
+Switzerland;120;Total;1
+Switzerland;121;Total;1
+Switzerland;123;Total;7
+Switzerland;124;Total;1
+Switzerland;125;Total;2
+Switzerland;126;Total;6
+Switzerland;128;Total;1
+Norway;1;BEV;170767
+Norway;2;BEV;113986
+Norway;3;BEV;103980
+Norway;4;BEV;140135
+Norway;5;BEV;120504
+Norway;6;BEV;82779
+Norway;7;BEV;61245
+Norway;8;BEV;48129
+Norway;9;BEV;32734
+Norway;10;BEV;21846
+Norway;11;BEV;24405
+Norway;12;BEV;15410
+Norway;13;BEV;5925
+Norway;14;BEV;2407
+Norway;15;BEV;832
+Norway;16;BEV;49
+Norway;17;BEV;10
+Norway;18;BEV;8
+Norway;19;BEV;0
+Norway;20;BEV;1
+Norway;21;BEV;1
+Norway;22;BEV;1
+Norway;23;BEV;0
+Norway;24;BEV;5
+Norway;25;BEV;8
+Norway;26;BEV;6
+Norway;27;BEV;1
+Norway;28;BEV;0
+Norway;29;BEV;1
+Norway;30;BEV;1
+Norway;31;BEV;0
+Norway;32;BEV;1
+Norway;33;BEV;0
+Norway;34;BEV;0
+Norway;35;BEV;0
+Norway;36;BEV;0
+Norway;37;BEV;0
+Norway;38;BEV;0
+Norway;39;BEV;0
+Norway;40;BEV;1
+Norway;41;BEV;0
+Norway;42;BEV;0
+Norway;43;BEV;0
+Norway;44;BEV;0
+Norway;45;BEV;0
+Norway;46;BEV;0
+Norway;47;BEV;0
+Norway;48;BEV;0
+Norway;49;BEV;0
+Norway;50;BEV;0
+Norway;51;BEV;0
+Norway;52;BEV;1
+Norway;53;BEV;0
+Norway;54;BEV;0
+Norway;55;BEV;0
+Norway;56;BEV;0
+Norway;57;BEV;1
+Norway;58;BEV;0
+Norway;59;BEV;0
+Norway;60;BEV;0
+Norway;61;BEV;0
+Norway;62;BEV;0
+Norway;63;BEV;0
+Norway;64;BEV;0
+Norway;65;BEV;0
+Norway;66;BEV;0
+Norway;67;BEV;0
+Norway;68;BEV;0
+Norway;69;BEV;0
+Norway;70;BEV;0
+Norway;71;BEV;0
+Norway;72;BEV;0
+Norway;73;BEV;0
+Norway;74;BEV;0
+Norway;75;BEV;0
+Norway;76;BEV;0
+Norway;77;BEV;0
+Norway;78;BEV;0
+Norway;79;BEV;0
+Norway;80;BEV;0
+Norway;81;BEV;0
+Norway;82;BEV;0
+Norway;83;BEV;0
+Norway;84;BEV;0
+Norway;85;BEV;0
+Norway;86;BEV;0
+Norway;87;BEV;0
+Norway;88;BEV;0
+Norway;89;BEV;0
+Norway;90;BEV;0
+Norway;91;BEV;0
+Norway;92;BEV;0
+Norway;93;BEV;0
+Norway;94;BEV;0
+Norway;95;BEV;0
+Norway;96;BEV;0
+Norway;97;BEV;0
+Norway;98;BEV;0
+Norway;99;BEV;0
+Norway;100;BEV;0
+Norway;101;BEV;0
+Norway;102;BEV;0
+Norway;103;BEV;0
+Norway;104;BEV;0
+Norway;105;BEV;0
+Norway;106;BEV;0
+Norway;107;BEV;0
+Norway;108;BEV;0
+Norway;109;BEV;1
+Norway;110;BEV;0
+Norway;111;BEV;0
+Norway;112;BEV;0
+Norway;113;BEV;0
+Norway;114;BEV;0
+Norway;115;BEV;0
+Norway;116;BEV;0
+Norway;117;BEV;0
+Norway;118;BEV;0
+Norway;119;BEV;0
+Norway;120;BEV;0
+Norway;121;BEV;1
+Norway;1;PHEV;2608
+Norway;2;PHEV;3102
+Norway;3;PHEV;9123
+Norway;4;PHEV;14596
+Norway;5;PHEV;36079
+Norway;6;PHEV;28893
+Norway;7;PHEV;20033
+Norway;8;PHEV;27298
+Norway;9;PHEV;30142
+Norway;10;PHEV;22271
+Norway;11;PHEV;10226
+Norway;12;PHEV;3133
+Norway;13;PHEV;661
+Norway;14;PHEV;294
+Norway;15;PHEV;8
+Norway;16;PHEV;0
+Norway;17;PHEV;0
+Norway;18;PHEV;0
+Norway;19;PHEV;0
+Norway;20;PHEV;0
+Norway;21;PHEV;0
+Norway;22;PHEV;0
+Norway;23;PHEV;0
+Norway;24;PHEV;0
+Norway;25;PHEV;0
+Norway;26;PHEV;0
+Norway;27;PHEV;0
+Norway;28;PHEV;0
+Norway;29;PHEV;0
+Norway;30;PHEV;0
+Norway;31;PHEV;0
+Norway;32;PHEV;0
+Norway;33;PHEV;0
+Norway;34;PHEV;0
+Norway;35;PHEV;0
+Norway;36;PHEV;0
+Norway;37;PHEV;0
+Norway;38;PHEV;0
+Norway;39;PHEV;0
+Norway;40;PHEV;0
+Norway;41;PHEV;0
+Norway;42;PHEV;0
+Norway;43;PHEV;0
+Norway;44;PHEV;0
+Norway;45;PHEV;0
+Norway;46;PHEV;0
+Norway;47;PHEV;0
+Norway;48;PHEV;0
+Norway;49;PHEV;0
+Norway;50;PHEV;0
+Norway;51;PHEV;0
+Norway;52;PHEV;0
+Norway;53;PHEV;0
+Norway;54;PHEV;0
+Norway;55;PHEV;0
+Norway;56;PHEV;0
+Norway;57;PHEV;0
+Norway;58;PHEV;0
+Norway;59;PHEV;0
+Norway;60;PHEV;0
+Norway;61;PHEV;0
+Norway;62;PHEV;0
+Norway;63;PHEV;0
+Norway;64;PHEV;0
+Norway;65;PHEV;0
+Norway;66;PHEV;0
+Norway;67;PHEV;0
+Norway;68;PHEV;0
+Norway;69;PHEV;0
+Norway;70;PHEV;0
+Norway;71;PHEV;0
+Norway;72;PHEV;0
+Norway;73;PHEV;0
+Norway;74;PHEV;0
+Norway;75;PHEV;0
+Norway;76;PHEV;0
+Norway;77;PHEV;0
+Norway;78;PHEV;0
+Norway;79;PHEV;0
+Norway;80;PHEV;0
+Norway;81;PHEV;0
+Norway;82;PHEV;0
+Norway;83;PHEV;0
+Norway;84;PHEV;0
+Norway;85;PHEV;0
+Norway;86;PHEV;0
+Norway;87;PHEV;0
+Norway;88;PHEV;0
+Norway;89;PHEV;0
+Norway;90;PHEV;0
+Norway;91;PHEV;0
+Norway;92;PHEV;0
+Norway;93;PHEV;0
+Norway;94;PHEV;0
+Norway;95;PHEV;0
+Norway;96;PHEV;0
+Norway;97;PHEV;0
+Norway;98;PHEV;0
+Norway;99;PHEV;0
+Norway;100;PHEV;0
+Norway;101;PHEV;0
+Norway;102;PHEV;0
+Norway;103;PHEV;0
+Norway;104;PHEV;0
+Norway;105;PHEV;0
+Norway;106;PHEV;0
+Norway;107;PHEV;0
+Norway;108;PHEV;0
+Norway;109;PHEV;0
+Norway;110;PHEV;0
+Norway;111;PHEV;0
+Norway;112;PHEV;0
+Norway;113;PHEV;0
+Norway;114;PHEV;0
+Norway;115;PHEV;0
+Norway;116;PHEV;0
+Norway;117;PHEV;0
+Norway;118;PHEV;0
+Norway;119;PHEV;0
+Norway;120;PHEV;0
+Norway;121;PHEV;0
+Norway;1;Gasoline;170
+Norway;2;Gasoline;362
+Norway;3;Gasoline;745
+Norway;4;Gasoline;2011
+Norway;5;Gasoline;3450
+Norway;6;Gasoline;7641
+Norway;7;Gasoline;19354
+Norway;8;Gasoline;29558
+Norway;9;Gasoline;35657
+Norway;10;Gasoline;40773
+Norway;11;Gasoline;40621
+Norway;12;Gasoline;40551
+Norway;13;Gasoline;47685
+Norway;14;Gasoline;39342
+Norway;15;Gasoline;28775
+Norway;16;Gasoline;27231
+Norway;17;Gasoline;21313
+Norway;18;Gasoline;20863
+Norway;19;Gasoline;19357
+Norway;20;Gasoline;26063
+Norway;21;Gasoline;22391
+Norway;22;Gasoline;22821
+Norway;23;Gasoline;14802
+Norway;24;Gasoline;12446
+Norway;25;Gasoline;10544
+Norway;26;Gasoline;9867
+Norway;27;Gasoline;7604
+Norway;28;Gasoline;7246
+Norway;29;Gasoline;5848
+Norway;30;Gasoline;4969
+Norway;31;Gasoline;4082
+Norway;32;Gasoline;3681
+Norway;33;Gasoline;3153
+Norway;34;Gasoline;3571
+Norway;35;Gasoline;3495
+Norway;36;Gasoline;3340
+Norway;37;Gasoline;2441
+Norway;38;Gasoline;2555
+Norway;39;Gasoline;3275
+Norway;40;Gasoline;3984
+Norway;41;Gasoline;3234
+Norway;42;Gasoline;2287
+Norway;43;Gasoline;2306
+Norway;44;Gasoline;2017
+Norway;45;Gasoline;1605
+Norway;46;Gasoline;1623
+Norway;47;Gasoline;2206
+Norway;48;Gasoline;2319
+Norway;49;Gasoline;2466
+Norway;50;Gasoline;2033
+Norway;51;Gasoline;1914
+Norway;52;Gasoline;2141
+Norway;53;Gasoline;2962
+Norway;54;Gasoline;2706
+Norway;55;Gasoline;2459
+Norway;56;Gasoline;2886
+Norway;57;Gasoline;4029
+Norway;58;Gasoline;3209
+Norway;59;Gasoline;3183
+Norway;60;Gasoline;3062
+Norway;61;Gasoline;2802
+Norway;62;Gasoline;2036
+Norway;63;Gasoline;1469
+Norway;64;Gasoline;1232
+Norway;65;Gasoline;1052
+Norway;66;Gasoline;918
+Norway;67;Gasoline;1175
+Norway;68;Gasoline;1159
+Norway;69;Gasoline;1389
+Norway;70;Gasoline;938
+Norway;71;Gasoline;871
+Norway;72;Gasoline;546
+Norway;73;Gasoline;485
+Norway;74;Gasoline;413
+Norway;75;Gasoline;260
+Norway;76;Gasoline;217
+Norway;77;Gasoline;204
+Norway;78;Gasoline;155
+Norway;79;Gasoline;144
+Norway;80;Gasoline;106
+Norway;81;Gasoline;121
+Norway;82;Gasoline;252
+Norway;83;Gasoline;370
+Norway;84;Gasoline;187
+Norway;85;Gasoline;87
+Norway;86;Gasoline;133
+Norway;87;Gasoline;219
+Norway;88;Gasoline;235
+Norway;89;Gasoline;243
+Norway;90;Gasoline;176
+Norway;91;Gasoline;137
+Norway;92;Gasoline;220
+Norway;93;Gasoline;153
+Norway;94;Gasoline;238
+Norway;95;Gasoline;423
+Norway;96;Gasoline;387
+Norway;97;Gasoline;303
+Norway;98;Gasoline;209
+Norway;99;Gasoline;128
+Norway;100;Gasoline;94
+Norway;101;Gasoline;65
+Norway;102;Gasoline;50
+Norway;103;Gasoline;53
+Norway;104;Gasoline;45
+Norway;105;Gasoline;10
+Norway;106;Gasoline;22
+Norway;107;Gasoline;24
+Norway;108;Gasoline;3
+Norway;109;Gasoline;14
+Norway;110;Gasoline;11
+Norway;111;Gasoline;12
+Norway;112;Gasoline;17
+Norway;113;Gasoline;15
+Norway;114;Gasoline;11
+Norway;115;Gasoline;7
+Norway;116;Gasoline;14
+Norway;117;Gasoline;3
+Norway;118;Gasoline;6
+Norway;119;Gasoline;3
+Norway;120;Gasoline;4
+Norway;121;Gasoline;11
+Norway;1;Diesel;170
+Norway;2;Diesel;362
+Norway;3;Diesel;745
+Norway;4;Diesel;2011
+Norway;5;Diesel;3450
+Norway;6;Diesel;7641
+Norway;7;Diesel;19354
+Norway;8;Diesel;29558
+Norway;9;Diesel;35657
+Norway;10;Diesel;40773
+Norway;11;Diesel;40621
+Norway;12;Diesel;40551
+Norway;13;Diesel;47685
+Norway;14;Diesel;39342
+Norway;15;Diesel;28775
+Norway;16;Diesel;27231
+Norway;17;Diesel;21313
+Norway;18;Diesel;20863
+Norway;19;Diesel;19357
+Norway;20;Diesel;26063
+Norway;21;Diesel;22391
+Norway;22;Diesel;22821
+Norway;23;Diesel;14802
+Norway;24;Diesel;12446
+Norway;25;Diesel;10544
+Norway;26;Diesel;9867
+Norway;27;Diesel;7604
+Norway;28;Diesel;7246
+Norway;29;Diesel;5848
+Norway;30;Diesel;4969
+Norway;31;Diesel;4082
+Norway;32;Diesel;3681
+Norway;33;Diesel;3153
+Norway;34;Diesel;3571
+Norway;35;Diesel;3495
+Norway;36;Diesel;3340
+Norway;37;Diesel;2441
+Norway;38;Diesel;2555
+Norway;39;Diesel;3275
+Norway;40;Diesel;3984
+Norway;41;Diesel;3234
+Norway;42;Diesel;2287
+Norway;43;Diesel;2306
+Norway;44;Diesel;2017
+Norway;45;Diesel;1605
+Norway;46;Diesel;1623
+Norway;47;Diesel;2206
+Norway;48;Diesel;2319
+Norway;49;Diesel;2466
+Norway;50;Diesel;2033
+Norway;51;Diesel;1914
+Norway;52;Diesel;2141
+Norway;53;Diesel;2962
+Norway;54;Diesel;2706
+Norway;55;Diesel;2459
+Norway;56;Diesel;2886
+Norway;57;Diesel;4029
+Norway;58;Diesel;3209
+Norway;59;Diesel;3183
+Norway;60;Diesel;3062
+Norway;61;Diesel;2802
+Norway;62;Diesel;2036
+Norway;63;Diesel;1469
+Norway;64;Diesel;1232
+Norway;65;Diesel;1052
+Norway;66;Diesel;918
+Norway;67;Diesel;1175
+Norway;68;Diesel;1159
+Norway;69;Diesel;1389
+Norway;70;Diesel;938
+Norway;71;Diesel;871
+Norway;72;Diesel;546
+Norway;73;Diesel;485
+Norway;74;Diesel;413
+Norway;75;Diesel;260
+Norway;76;Diesel;217
+Norway;77;Diesel;204
+Norway;78;Diesel;155
+Norway;79;Diesel;144
+Norway;80;Diesel;106
+Norway;81;Diesel;121
+Norway;82;Diesel;252
+Norway;83;Diesel;370
+Norway;84;Diesel;187
+Norway;85;Diesel;87
+Norway;86;Diesel;133
+Norway;87;Diesel;219
+Norway;88;Diesel;235
+Norway;89;Diesel;243
+Norway;90;Diesel;176
+Norway;91;Diesel;137
+Norway;92;Diesel;220
+Norway;93;Diesel;153
+Norway;94;Diesel;238
+Norway;95;Diesel;423
+Norway;96;Diesel;387
+Norway;97;Diesel;303
+Norway;98;Diesel;209
+Norway;99;Diesel;128
+Norway;100;Diesel;94
+Norway;101;Diesel;65
+Norway;102;Diesel;50
+Norway;103;Diesel;53
+Norway;104;Diesel;45
+Norway;105;Diesel;10
+Norway;106;Diesel;22
+Norway;107;Diesel;24
+Norway;108;Diesel;3
+Norway;109;Diesel;14
+Norway;110;Diesel;11
+Norway;111;Diesel;12
+Norway;112;Diesel;17
+Norway;113;Diesel;15
+Norway;114;Diesel;11
+Norway;115;Diesel;7
+Norway;116;Diesel;14
+Norway;117;Diesel;3
+Norway;118;Diesel;6
+Norway;119;Diesel;3
+Norway;120;Diesel;4
+Norway;121;Diesel;11
+Norway;1;HEV;2683
+Norway;2;HEV;6781
+Norway;3;HEV;7847
+Norway;4;HEV;12012
+Norway;5;HEV;13372
+Norway;6;HEV;14719
+Norway;7;HEV;17961
+Norway;8;HEV;15672
+Norway;9;HEV;19491
+Norway;10;HEV;16646
+Norway;11;HEV;10426
+Norway;12;HEV;9890
+Norway;13;HEV;9085
+Norway;14;HEV;4332
+Norway;15;HEV;1233
+Norway;16;HEV;223
+Norway;17;HEV;27
+Norway;18;HEV;11
+Norway;19;HEV;5
+Norway;20;HEV;3
+Norway;21;HEV;3
+Norway;22;HEV;0
+Norway;23;HEV;0
+Norway;24;HEV;0
+Norway;25;HEV;0
+Norway;26;HEV;0
+Norway;27;HEV;0
+Norway;28;HEV;0
+Norway;29;HEV;0
+Norway;30;HEV;0
+Norway;31;HEV;0
+Norway;32;HEV;0
+Norway;33;HEV;0
+Norway;34;HEV;0
+Norway;35;HEV;0
+Norway;36;HEV;0
+Norway;37;HEV;0
+Norway;38;HEV;0
+Norway;39;HEV;0
+Norway;40;HEV;0
+Norway;41;HEV;0
+Norway;42;HEV;0
+Norway;43;HEV;0
+Norway;44;HEV;0
+Norway;45;HEV;0
+Norway;46;HEV;0
+Norway;47;HEV;0
+Norway;48;HEV;0
+Norway;49;HEV;0
+Norway;50;HEV;0
+Norway;51;HEV;0
+Norway;52;HEV;0
+Norway;53;HEV;0
+Norway;54;HEV;0
+Norway;55;HEV;0
+Norway;56;HEV;0
+Norway;57;HEV;0
+Norway;58;HEV;0
+Norway;59;HEV;0
+Norway;60;HEV;0
+Norway;61;HEV;0
+Norway;62;HEV;0
+Norway;63;HEV;0
+Norway;64;HEV;0
+Norway;65;HEV;0
+Norway;66;HEV;0
+Norway;67;HEV;0
+Norway;68;HEV;0
+Norway;69;HEV;0
+Norway;70;HEV;0
+Norway;71;HEV;0
+Norway;72;HEV;0
+Norway;73;HEV;0
+Norway;74;HEV;0
+Norway;75;HEV;0
+Norway;76;HEV;0
+Norway;77;HEV;0
+Norway;78;HEV;0
+Norway;79;HEV;0
+Norway;80;HEV;0
+Norway;81;HEV;0
+Norway;82;HEV;0
+Norway;83;HEV;0
+Norway;84;HEV;0
+Norway;85;HEV;0
+Norway;86;HEV;0
+Norway;87;HEV;0
+Norway;88;HEV;0
+Norway;89;HEV;0
+Norway;90;HEV;0
+Norway;91;HEV;0
+Norway;92;HEV;0
+Norway;93;HEV;0
+Norway;94;HEV;0
+Norway;95;HEV;0
+Norway;96;HEV;0
+Norway;97;HEV;0
+Norway;98;HEV;0
+Norway;99;HEV;0
+Norway;100;HEV;0
+Norway;101;HEV;0
+Norway;102;HEV;0
+Norway;103;HEV;0
+Norway;104;HEV;0
+Norway;105;HEV;0
+Norway;106;HEV;0
+Norway;107;HEV;0
+Norway;108;HEV;0
+Norway;109;HEV;0
+Norway;110;HEV;0
+Norway;111;HEV;0
+Norway;112;HEV;0
+Norway;113;HEV;0
+Norway;114;HEV;0
+Norway;115;HEV;0
+Norway;116;HEV;0
+Norway;117;HEV;0
+Norway;118;HEV;0
+Norway;119;HEV;0
+Norway;120;HEV;0
+Norway;121;HEV;0
+Norway;1;Total;177505
+Norway;2;Total;126838
+Norway;3;Total;124392
+Norway;4;Total;173221
+Norway;5;Total;179164
+Norway;6;Total;144254
+Norway;7;Total;138489
+Norway;8;Total;145254
+Norway;9;Total;152728
+Norway;10;Total;145953
+Norway;11;Total;142326
+Norway;12;Total;134740
+Norway;13;Total;138962
+Norway;14;Total;133973
+Norway;15;Total;128339
+Norway;16;Total;111369
+Norway;17;Total;79324
+Norway;18;Total;78324
+Norway;19;Total;77535
+Norway;20;Total;60567
+Norway;21;Total;46264
+Norway;22;Total;39504
+Norway;23;Total;24757
+Norway;24;Total;18558
+Norway;25;Total;14644
+Norway;26;Total;13235
+Norway;27;Total;10196
+Norway;28;Total;9286
+Norway;29;Total;7382
+Norway;30;Total;6232
+Norway;31;Total;5088
+Norway;32;Total;4589
+Norway;33;Total;3923
+Norway;34;Total;4331
+Norway;35;Total;4197
+Norway;36;Total;3864
+Norway;37;Total;2798
+Norway;38;Total;2918
+Norway;39;Total;3623
+Norway;40;Total;4470
+Norway;41;Total;3749
+Norway;42;Total;2630
+Norway;43;Total;2641
+Norway;44;Total;2320
+Norway;45;Total;1839
+Norway;46;Total;1766
+Norway;47;Total;2314
+Norway;48;Total;2395
+Norway;49;Total;2525
+Norway;50;Total;2089
+Norway;51;Total;1985
+Norway;52;Total;2199
+Norway;53;Total;2991
+Norway;54;Total;2726
+Norway;55;Total;2471
+Norway;56;Total;2895
+Norway;57;Total;4047
+Norway;58;Total;3221
+Norway;59;Total;3193
+Norway;60;Total;3068
+Norway;61;Total;2808
+Norway;62;Total;2041
+Norway;63;Total;1478
+Norway;64;Total;1239
+Norway;65;Total;1061
+Norway;66;Total;918
+Norway;67;Total;1186
+Norway;68;Total;1163
+Norway;69;Total;1394
+Norway;70;Total;941
+Norway;71;Total;873
+Norway;72;Total;548
+Norway;73;Total;485
+Norway;74;Total;414
+Norway;75;Total;261
+Norway;76;Total;218
+Norway;77;Total;204
+Norway;78;Total;156
+Norway;79;Total;144
+Norway;80;Total;106
+Norway;81;Total;122
+Norway;82;Total;253
+Norway;83;Total;373
+Norway;84;Total;187
+Norway;85;Total;87
+Norway;86;Total;133
+Norway;87;Total;220
+Norway;88;Total;236
+Norway;89;Total;243
+Norway;90;Total;176
+Norway;91;Total;137
+Norway;92;Total;220
+Norway;93;Total;153
+Norway;94;Total;238
+Norway;95;Total;425
+Norway;96;Total;387
+Norway;97;Total;303
+Norway;98;Total;209
+Norway;99;Total;128
+Norway;100;Total;94
+Norway;101;Total;65
+Norway;102;Total;50
+Norway;103;Total;53
+Norway;104;Total;45
+Norway;105;Total;10
+Norway;106;Total;23
+Norway;107;Total;24
+Norway;108;Total;3
+Norway;109;Total;15
+Norway;110;Total;11
+Norway;111;Total;12
+Norway;112;Total;17
+Norway;113;Total;15
+Norway;114;Total;11
+Norway;115;Total;7
+Norway;116;Total;14
+Norway;117;Total;3
+Norway;118;Total;6
+Norway;119;Total;3
+Norway;120;Total;4
+Norway;121;Total;4
+Norway;122;Total;3
+Norway;123;Total;2
+Norway;124;Total;2
+Norway;125;Total;2
+Finland;1;BEV;27571
+Finland;2;BEV;25445
+Finland;3;BEV;37331
+Finland;4;BEV;31658
+Finland;5;BEV;23064
+Finland;6;BEV;11758
+Finland;7;BEV;6210
+Finland;8;BEV;2783
+Finland;9;BEV;1567
+Finland;10;BEV;1016
+Finland;11;BEV;740
+Finland;12;BEV;432
+Finland;13;BEV;163
+Finland;14;BEV;73
+Finland;15;BEV;29
+Finland;16;BEV;5
+Finland;17;BEV;0
+Finland;18;BEV;0
+Finland;19;BEV;0
+Finland;20;BEV;0
+Finland;21;BEV;0
+Finland;22;BEV;0
+Finland;23;BEV;0
+Finland;24;BEV;0
+Finland;25;BEV;2
+Finland;26;BEV;1
+Finland;27;BEV;0
+Finland;28;BEV;0
+Finland;29;BEV;1
+Finland;30;BEV;0
+Finland;31;BEV;1
+Finland;32;BEV;0
+Finland;33;BEV;0
+Finland;34;BEV;0
+Finland;35;BEV;1
+Finland;36;BEV;0
+Finland;37;BEV;1
+Finland;38;BEV;0
+Finland;39;BEV;1
+Finland;40;BEV;0
+Finland;41;BEV;0
+Finland;42;BEV;0
+Finland;43;BEV;1
+Finland;44;BEV;0
+Finland;45;BEV;0
+Finland;46;BEV;0
+Finland;47;BEV;0
+Finland;48;BEV;0
+Finland;49;BEV;0
+Finland;50;BEV;0
+Finland;51;BEV;0
+Finland;52;BEV;1
+Finland;53;BEV;0
+Finland;54;BEV;0
+Finland;55;BEV;1
+Finland;56;BEV;0
+Finland;57;BEV;0
+Finland;58;BEV;0
+Finland;59;BEV;1
+Finland;60;BEV;0
+Finland;61;BEV;0
+Finland;62;BEV;0
+Finland;63;BEV;0
+Finland;64;BEV;0
+Finland;65;BEV;0
+Finland;66;BEV;0
+Finland;67;BEV;0
+Finland;68;BEV;0
+Finland;69;BEV;0
+Finland;70;BEV;0
+Finland;71;BEV;0
+Finland;72;BEV;0
+Finland;73;BEV;0
+Finland;74;BEV;0
+Finland;1;CNG;1
+Finland;2;CNG;118
+Finland;3;CNG;475
+Finland;4;CNG;657
+Finland;5;CNG;1021
+Finland;6;CNG;2178
+Finland;7;CNG;2650
+Finland;8;CNG;1693
+Finland;9;CNG;1137
+Finland;10;CNG;808
+Finland;11;CNG;1081
+Finland;12;CNG;847
+Finland;13;CNG;469
+Finland;14;CNG;574
+Finland;15;CNG;639
+Finland;16;CNG;501
+Finland;17;CNG;339
+Finland;18;CNG;172
+Finland;19;CNG;219
+Finland;20;CNG;408
+Finland;21;CNG;176
+Finland;22;CNG;81
+Finland;23;CNG;54
+Finland;24;CNG;39
+Finland;25;CNG;12
+Finland;26;CNG;13
+Finland;27;CNG;10
+Finland;28;CNG;6
+Finland;29;CNG;4
+Finland;30;CNG;5
+Finland;31;CNG;2
+Finland;32;CNG;0
+Finland;33;CNG;5
+Finland;34;CNG;0
+Finland;35;CNG;3
+Finland;36;CNG;1
+Finland;37;CNG;2
+Finland;38;CNG;0
+Finland;39;CNG;1
+Finland;40;CNG;0
+Finland;41;CNG;0
+Finland;42;CNG;0
+Finland;43;CNG;0
+Finland;44;CNG;0
+Finland;45;CNG;0
+Finland;46;CNG;0
+Finland;47;CNG;0
+Finland;48;CNG;0
+Finland;49;CNG;0
+Finland;50;CNG;1
+Finland;51;CNG;0
+Finland;52;CNG;0
+Finland;53;CNG;0
+Finland;54;CNG;1
+Finland;55;CNG;0
+Finland;56;CNG;0
+Finland;57;CNG;0
+Finland;58;CNG;1
+Finland;59;CNG;0
+Finland;60;CNG;0
+Finland;61;CNG;0
+Finland;62;CNG;1
+Finland;63;CNG;0
+Finland;64;CNG;0
+Finland;65;CNG;0
+Finland;66;CNG;0
+Finland;67;CNG;0
+Finland;68;CNG;0
+Finland;69;CNG;0
+Finland;70;CNG;0
+Finland;71;CNG;0
+Finland;72;CNG;0
+Finland;73;CNG;0
+Finland;74;CNG;0
+Finland;1;Diesel;2750
+Finland;2;Diesel;3352
+Finland;3;Diesel;4623
+Finland;4;Diesel;6513
+Finland;5;Diesel;9319
+Finland;6;Diesel;13014
+Finland;7;Diesel;22127
+Finland;8;Diesel;31677
+Finland;9;Diesel;44012
+Finland;10;Diesel;46956
+Finland;11;Diesel;46519
+Finland;12;Diesel;45148
+Finland;13;Diesel;40845
+Finland;14;Diesel;42989
+Finland;15;Diesel;50415
+Finland;16;Diesel;39707
+Finland;17;Diesel;32048
+Finland;18;Diesel;44404
+Finland;19;Diesel;25413
+Finland;20;Diesel;17966
+Finland;21;Diesel;12470
+Finland;22;Diesel;10000
+Finland;23;Diesel;8407
+Finland;24;Diesel;5072
+Finland;25;Diesel;2866
+Finland;26;Diesel;2732
+Finland;27;Diesel;1719
+Finland;28;Diesel;1224
+Finland;29;Diesel;729
+Finland;30;Diesel;558
+Finland;31;Diesel;414
+Finland;32;Diesel;350
+Finland;33;Diesel;416
+Finland;34;Diesel;620
+Finland;35;Diesel;638
+Finland;36;Diesel;712
+Finland;37;Diesel;566
+Finland;38;Diesel;445
+Finland;39;Diesel;369
+Finland;40;Diesel;351
+Finland;41;Diesel;329
+Finland;42;Diesel;433
+Finland;43;Diesel;406
+Finland;44;Diesel;342
+Finland;45;Diesel;231
+Finland;46;Diesel;177
+Finland;47;Diesel;118
+Finland;48;Diesel;85
+Finland;49;Diesel;89
+Finland;50;Diesel;64
+Finland;51;Diesel;70
+Finland;52;Diesel;36
+Finland;53;Diesel;30
+Finland;54;Diesel;27
+Finland;55;Diesel;16
+Finland;56;Diesel;15
+Finland;57;Diesel;11
+Finland;58;Diesel;14
+Finland;59;Diesel;37
+Finland;60;Diesel;27
+Finland;61;Diesel;19
+Finland;62;Diesel;19
+Finland;63;Diesel;12
+Finland;64;Diesel;8
+Finland;65;Diesel;11
+Finland;66;Diesel;13
+Finland;67;Diesel;0
+Finland;68;Diesel;0
+Finland;69;Diesel;0
+Finland;70;Diesel;0
+Finland;71;Diesel;0
+Finland;72;Diesel;0
+Finland;73;Diesel;0
+Finland;74;Diesel;0
+Finland;1;D-PHEV;174
+Finland;2;D-PHEV;393
+Finland;3;D-PHEV;322
+Finland;4;D-PHEV;658
+Finland;5;D-PHEV;1452
+Finland;6;D-PHEV;1655
+Finland;7;D-PHEV;601
+Finland;8;D-PHEV;324
+Finland;9;D-PHEV;463
+Finland;10;D-PHEV;473
+Finland;11;D-PHEV;397
+Finland;12;D-PHEV;410
+Finland;13;D-PHEV;606
+Finland;14;D-PHEV;4
+Finland;15;D-PHEV;0
+Finland;16;D-PHEV;0
+Finland;17;D-PHEV;0
+Finland;18;D-PHEV;0
+Finland;19;D-PHEV;0
+Finland;20;D-PHEV;0
+Finland;21;D-PHEV;0
+Finland;22;D-PHEV;0
+Finland;23;D-PHEV;0
+Finland;24;D-PHEV;0
+Finland;25;D-PHEV;0
+Finland;26;D-PHEV;0
+Finland;27;D-PHEV;0
+Finland;28;D-PHEV;0
+Finland;29;D-PHEV;0
+Finland;30;D-PHEV;0
+Finland;31;D-PHEV;0
+Finland;32;D-PHEV;0
+Finland;33;D-PHEV;0
+Finland;34;D-PHEV;0
+Finland;35;D-PHEV;0
+Finland;36;D-PHEV;0
+Finland;37;D-PHEV;0
+Finland;38;D-PHEV;0
+Finland;39;D-PHEV;0
+Finland;40;D-PHEV;0
+Finland;41;D-PHEV;0
+Finland;42;D-PHEV;0
+Finland;43;D-PHEV;0
+Finland;44;D-PHEV;0
+Finland;45;D-PHEV;0
+Finland;46;D-PHEV;0
+Finland;47;D-PHEV;0
+Finland;48;D-PHEV;0
+Finland;49;D-PHEV;0
+Finland;50;D-PHEV;0
+Finland;51;D-PHEV;0
+Finland;52;D-PHEV;0
+Finland;53;D-PHEV;0
+Finland;54;D-PHEV;0
+Finland;55;D-PHEV;0
+Finland;56;D-PHEV;0
+Finland;57;D-PHEV;0
+Finland;58;D-PHEV;0
+Finland;59;D-PHEV;0
+Finland;60;D-PHEV;0
+Finland;61;D-PHEV;0
+Finland;62;D-PHEV;0
+Finland;63;D-PHEV;0
+Finland;64;D-PHEV;0
+Finland;65;D-PHEV;0
+Finland;66;D-PHEV;0
+Finland;67;D-PHEV;0
+Finland;68;D-PHEV;0
+Finland;69;D-PHEV;0
+Finland;70;D-PHEV;0
+Finland;71;D-PHEV;0
+Finland;72;D-PHEV;0
+Finland;73;D-PHEV;0
+Finland;74;D-PHEV;0
+Finland;1;FCEV;4
+Finland;2;FCEV;0
+Finland;3;FCEV;1
+Finland;4;FCEV;6
+Finland;5;FCEV;5
+Finland;6;FCEV;1
+Finland;7;FCEV;0
+Finland;8;FCEV;0
+Finland;9;FCEV;0
+Finland;10;FCEV;0
+Finland;11;FCEV;0
+Finland;12;FCEV;0
+Finland;13;FCEV;0
+Finland;14;FCEV;0
+Finland;15;FCEV;0
+Finland;16;FCEV;0
+Finland;17;FCEV;0
+Finland;18;FCEV;0
+Finland;19;FCEV;0
+Finland;20;FCEV;0
+Finland;21;FCEV;0
+Finland;22;FCEV;0
+Finland;23;FCEV;0
+Finland;24;FCEV;0
+Finland;25;FCEV;0
+Finland;26;FCEV;0
+Finland;27;FCEV;0
+Finland;28;FCEV;0
+Finland;29;FCEV;0
+Finland;30;FCEV;0
+Finland;31;FCEV;0
+Finland;32;FCEV;0
+Finland;33;FCEV;0
+Finland;34;FCEV;0
+Finland;35;FCEV;0
+Finland;36;FCEV;0
+Finland;37;FCEV;0
+Finland;38;FCEV;0
+Finland;39;FCEV;0
+Finland;40;FCEV;0
+Finland;41;FCEV;0
+Finland;42;FCEV;0
+Finland;43;FCEV;0
+Finland;44;FCEV;0
+Finland;45;FCEV;0
+Finland;46;FCEV;0
+Finland;47;FCEV;0
+Finland;48;FCEV;0
+Finland;49;FCEV;0
+Finland;50;FCEV;0
+Finland;51;FCEV;0
+Finland;52;FCEV;0
+Finland;53;FCEV;0
+Finland;54;FCEV;0
+Finland;55;FCEV;0
+Finland;56;FCEV;0
+Finland;57;FCEV;0
+Finland;58;FCEV;0
+Finland;59;FCEV;0
+Finland;60;FCEV;0
+Finland;61;FCEV;0
+Finland;62;FCEV;0
+Finland;63;FCEV;0
+Finland;64;FCEV;0
+Finland;65;FCEV;0
+Finland;66;FCEV;0
+Finland;67;FCEV;0
+Finland;68;FCEV;0
+Finland;69;FCEV;0
+Finland;70;FCEV;0
+Finland;71;FCEV;0
+Finland;72;FCEV;0
+Finland;73;FCEV;0
+Finland;74;FCEV;0
+Finland;1;Gasoline;27105
+Finland;2;Gasoline;33000
+Finland;3;Gasoline;33763
+Finland;4;Gasoline;43170
+Finland;5;Gasoline;55104
+Finland;6;Gasoline;61736
+Finland;7;Gasoline;83340
+Finland;8;Gasoline;85502
+Finland;9;Gasoline;80803
+Finland;10;Gasoline;79598
+Finland;11;Gasoline;69277
+Finland;12;Gasoline;63580
+Finland;13;Gasoline;63296
+Finland;14;Gasoline;64341
+Finland;15;Gasoline;69063
+Finland;16;Gasoline;61129
+Finland;17;Gasoline;46641
+Finland;18;Gasoline;62693
+Finland;19;Gasoline;73775
+Finland;20;Gasoline;83470
+Finland;21;Gasoline;77550
+Finland;22;Gasoline;65862
+Finland;23;Gasoline;59166
+Finland;24;Gasoline;39931
+Finland;25;Gasoline;29834
+Finland;26;Gasoline;29875
+Finland;27;Gasoline;25585
+Finland;28;Gasoline;19362
+Finland;29;Gasoline;12678
+Finland;30;Gasoline;8637
+Finland;31;Gasoline;6835
+Finland;32;Gasoline;4804
+Finland;33;Gasoline;3708
+Finland;34;Gasoline;4108
+Finland;35;Gasoline;4492
+Finland;36;Gasoline;5042
+Finland;37;Gasoline;4667
+Finland;38;Gasoline;3563
+Finland;39;Gasoline;2411
+Finland;40;Gasoline;1906
+Finland;41;Gasoline;1526
+Finland;42;Gasoline;1272
+Finland;43;Gasoline;1149
+Finland;44;Gasoline;980
+Finland;45;Gasoline;832
+Finland;46;Gasoline;891
+Finland;47;Gasoline;992
+Finland;48;Gasoline;870
+Finland;49;Gasoline;947
+Finland;50;Gasoline;893
+Finland;51;Gasoline;1089
+Finland;52;Gasoline;1167
+Finland;53;Gasoline;1721
+Finland;54;Gasoline;1721
+Finland;55;Gasoline;1564
+Finland;56;Gasoline;1759
+Finland;57;Gasoline;1636
+Finland;58;Gasoline;1013
+Finland;59;Gasoline;1463
+Finland;60;Gasoline;1711
+Finland;61;Gasoline;1997
+Finland;62;Gasoline;1491
+Finland;63;Gasoline;938
+Finland;64;Gasoline;939
+Finland;65;Gasoline;633
+Finland;66;Gasoline;599
+Finland;67;Gasoline;612
+Finland;68;Gasoline;612
+Finland;69;Gasoline;612
+Finland;70;Gasoline;612
+Finland;71;Gasoline;612
+Finland;72;Gasoline;612
+Finland;73;Gasoline;612
+Finland;74;Gasoline;600
+Finland;1;G-PHEV;14310
+Finland;2;G-PHEV;15717
+Finland;3;G-PHEV;19991
+Finland;4;G-PHEV;21051
+Finland;5;G-PHEV;31957
+Finland;6;G-PHEV;29005
+Finland;7;G-PHEV;12973
+Finland;8;G-PHEV;11548
+Finland;9;G-PHEV;9420
+Finland;10;G-PHEV;6388
+Finland;11;G-PHEV;3862
+Finland;12;G-PHEV;1440
+Finland;13;G-PHEV;1133
+Finland;14;G-PHEV;543
+Finland;15;G-PHEV;25
+Finland;16;G-PHEV;0
+Finland;17;G-PHEV;1
+Finland;18;G-PHEV;0
+Finland;19;G-PHEV;0
+Finland;20;G-PHEV;0
+Finland;21;G-PHEV;0
+Finland;22;G-PHEV;0
+Finland;23;G-PHEV;0
+Finland;24;G-PHEV;0
+Finland;25;G-PHEV;0
+Finland;26;G-PHEV;0
+Finland;27;G-PHEV;0
+Finland;28;G-PHEV;0
+Finland;29;G-PHEV;0
+Finland;30;G-PHEV;0
+Finland;31;G-PHEV;0
+Finland;32;G-PHEV;0
+Finland;33;G-PHEV;0
+Finland;34;G-PHEV;0
+Finland;35;G-PHEV;0
+Finland;36;G-PHEV;1
+Finland;37;G-PHEV;0
+Finland;38;G-PHEV;0
+Finland;39;G-PHEV;0
+Finland;40;G-PHEV;0
+Finland;41;G-PHEV;0
+Finland;42;G-PHEV;0
+Finland;43;G-PHEV;0
+Finland;44;G-PHEV;0
+Finland;45;G-PHEV;0
+Finland;46;G-PHEV;0
+Finland;47;G-PHEV;0
+Finland;48;G-PHEV;0
+Finland;49;G-PHEV;0
+Finland;50;G-PHEV;0
+Finland;51;G-PHEV;0
+Finland;52;G-PHEV;0
+Finland;53;G-PHEV;0
+Finland;54;G-PHEV;0
+Finland;55;G-PHEV;0
+Finland;56;G-PHEV;0
+Finland;57;G-PHEV;0
+Finland;58;G-PHEV;0
+Finland;59;G-PHEV;0
+Finland;60;G-PHEV;0
+Finland;61;G-PHEV;0
+Finland;62;G-PHEV;0
+Finland;63;G-PHEV;0
+Finland;64;G-PHEV;0
+Finland;65;G-PHEV;0
+Finland;66;G-PHEV;0
+Finland;67;G-PHEV;0
+Finland;68;G-PHEV;0
+Finland;69;G-PHEV;0
+Finland;70;G-PHEV;0
+Finland;71;G-PHEV;0
+Finland;72;G-PHEV;0
+Finland;73;G-PHEV;0
+Finland;74;G-PHEV;0
+Finland;1;Other;4
+Finland;2;Other;41
+Finland;3;Other;35
+Finland;4;Other;33
+Finland;5;Other;13
+Finland;6;Other;0
+Finland;7;Other;2
+Finland;8;Other;5
+Finland;9;Other;8
+Finland;10;Other;26
+Finland;11;Other;125
+Finland;12;Other;401
+Finland;13;Other;443
+Finland;14;Other;1269
+Finland;15;Other;977
+Finland;16;Other;492
+Finland;17;Other;112
+Finland;18;Other;224
+Finland;19;Other;131
+Finland;20;Other;64
+Finland;21;Other;24
+Finland;22;Other;11
+Finland;23;Other;6
+Finland;24;Other;5
+Finland;25;Other;2
+Finland;26;Other;9
+Finland;27;Other;4
+Finland;28;Other;5
+Finland;29;Other;2
+Finland;30;Other;2
+Finland;31;Other;0
+Finland;32;Other;3
+Finland;33;Other;0
+Finland;34;Other;0
+Finland;35;Other;0
+Finland;36;Other;0
+Finland;37;Other;2
+Finland;38;Other;2
+Finland;39;Other;0
+Finland;40;Other;1
+Finland;41;Other;0
+Finland;42;Other;1
+Finland;43;Other;0
+Finland;44;Other;1
+Finland;45;Other;0
+Finland;46;Other;0
+Finland;47;Other;0
+Finland;48;Other;1
+Finland;49;Other;0
+Finland;50;Other;0
+Finland;51;Other;0
+Finland;52;Other;0
+Finland;53;Other;0
+Finland;54;Other;0
+Finland;55;Other;0
+Finland;56;Other;0
+Finland;57;Other;0
+Finland;58;Other;0
+Finland;59;Other;0
+Finland;60;Other;0
+Finland;61;Other;0
+Finland;62;Other;0
+Finland;63;Other;0
+Finland;64;Other;0
+Finland;65;Other;0
+Finland;66;Other;0
+Finland;67;Other;0
+Finland;68;Other;0
+Finland;69;Other;0
+Finland;70;Other;0
+Finland;71;Other;0
+Finland;72;Other;0
+Finland;73;Other;0
+Finland;74;Other;0
+Finland;1;Total;71919
+Finland;2;Total;78066
+Finland;3;Total;96541
+Finland;4;Total;103746
+Finland;5;Total;121935
+Finland;6;Total;119347
+Finland;7;Total;127903
+Finland;8;Total;133532
+Finland;9;Total;137410
+Finland;10;Total;135265
+Finland;11;Total;122001
+Finland;12;Total;112258
+Finland;13;Total;106955
+Finland;14;Total;109793
+Finland;15;Total;121148
+Finland;16;Total;101834
+Finland;17;Total;79141
+Finland;18;Total;107493
+Finland;19;Total;99538
+Finland;20;Total;101908
+Finland;21;Total;90220
+Finland;22;Total;75954
+Finland;23;Total;67633
+Finland;24;Total;45047
+Finland;25;Total;32716
+Finland;26;Total;32630
+Finland;27;Total;27318
+Finland;28;Total;20597
+Finland;29;Total;13414
+Finland;30;Total;9202
+Finland;31;Total;7252
+Finland;32;Total;5157
+Finland;33;Total;4129
+Finland;34;Total;4728
+Finland;35;Total;5134
+Finland;36;Total;5756
+Finland;37;Total;5238
+Finland;38;Total;4010
+Finland;39;Total;2782
+Finland;40;Total;2258
+Finland;41;Total;1855
+Finland;42;Total;1706
+Finland;43;Total;1556
+Finland;44;Total;1323
+Finland;45;Total;1063
+Finland;46;Total;1068
+Finland;47;Total;1110
+Finland;48;Total;956
+Finland;49;Total;1036
+Finland;50;Total;958
+Finland;51;Total;1159
+Finland;52;Total;1204
+Finland;53;Total;1751
+Finland;54;Total;1749
+Finland;55;Total;1581
+Finland;56;Total;1774
+Finland;57;Total;1647
+Finland;58;Total;1028
+Finland;59;Total;1501
+Finland;60;Total;1738
+Finland;61;Total;2016
+Finland;62;Total;1511
+Finland;63;Total;950
+Finland;64;Total;947
+Finland;65;Total;644
+Finland;66;Total;612
+Finland;67;Total;612
+Finland;68;Total;612
+Finland;69;Total;612
+Finland;70;Total;612
+Finland;71;Total;612
+Finland;72;Total;612
+Finland;73;Total;612
+Finland;74;Total;600
+Great Britain;1;BEV;455000
+Great Britain;2;BEV;364000
+Great Britain;3;BEV;297000
+Great Britain;4;BEV;241000
+Great Britain;5;BEV;171000
+Great Britain;6;BEV;97000
+Great Britain;7;BEV;34000
+Great Britain;8;BEV;13000
+Great Britain;9;BEV;12000
+Great Britain;10;BEV;8000
+Great Britain;11;BEV;7000
+Great Britain;12;BEV;5000
+Great Britain;13;BEV;2000
+Great Britain;14;BEV;1000
+Great Britain;15;BEV;1000
+Great Britain;16;BEV;0
+Great Britain;17;BEV;0
+Great Britain;18;BEV;0
+Great Britain;19;BEV;0
+Great Britain;20;BEV;0
+Great Britain;21;BEV;0
+Great Britain;22;BEV;0
+Great Britain;23;BEV;0
+Great Britain;24;BEV;0
+Great Britain;25;BEV;0
+Great Britain;26;BEV;0
+Great Britain;27;BEV;0
+Great Britain;28;BEV;0
+Great Britain;29;BEV;0
+Great Britain;30;BEV;0
+Great Britain;31;BEV;0
+Great Britain;32;BEV;0
+Great Britain;33;BEV;0
+Great Britain;34;BEV;0
+Great Britain;35;BEV;0
+Great Britain;36;BEV;0
+Great Britain;37;BEV;0
+Great Britain;38;BEV;0
+Great Britain;39;BEV;0
+Great Britain;40;BEV;0
+Great Britain;41;BEV;0
+Great Britain;42;BEV;0
+Great Britain;43;BEV;0
+Great Britain;44;BEV;0
+Great Britain;45;BEV;0
+Great Britain;46;BEV;0
+Great Britain;47;BEV;0
+Great Britain;48;BEV;0
+Great Britain;49;BEV;0
+Great Britain;50;BEV;0
+Great Britain;51;BEV;0
+Great Britain;52;BEV;0
+Great Britain;53;BEV;0
+Great Britain;54;BEV;0
+Great Britain;55;BEV;0
+Great Britain;56;BEV;0
+Great Britain;57;BEV;0
+Great Britain;58;BEV;0
+Great Britain;59;BEV;0
+Great Britain;60;BEV;0
+Great Britain;61;BEV;0
+Great Britain;62;BEV;0
+Great Britain;63;BEV;0
+Great Britain;64;BEV;0
+Great Britain;65;BEV;0
+Great Britain;66;BEV;0
+Great Britain;67;BEV;0
+Great Britain;68;BEV;0
+Great Britain;69;BEV;0
+Great Britain;70;BEV;0
+Great Britain;71;BEV;0
+Great Britain;72;BEV;0
+Great Britain;73;BEV;0
+Great Britain;74;BEV;0
+Great Britain;75;BEV;0
+Great Britain;76;BEV;0
+Great Britain;77;BEV;0
+Great Britain;78;BEV;0
+Great Britain;79;BEV;0
+Great Britain;80;BEV;0
+Great Britain;81;BEV;0
+Great Britain;82;BEV;0
+Great Britain;83;BEV;0
+Great Britain;84;BEV;0
+Great Britain;85;BEV;0
+Great Britain;86;BEV;0
+Great Britain;87;BEV;0
+Great Britain;88;BEV;0
+Great Britain;89;BEV;0
+Great Britain;90;BEV;0
+Great Britain;91;BEV;0
+Great Britain;92;BEV;0
+Great Britain;93;BEV;0
+Great Britain;94;BEV;0
+Great Britain;95;BEV;0
+Great Britain;96;BEV;0
+Great Britain;97;BEV;0
+Great Britain;98;BEV;0
+Great Britain;99;BEV;0
+Great Britain;100;BEV;0
+Great Britain;101;BEV;0
+Great Britain;102;BEV;0
+Great Britain;103;BEV;0
+Great Britain;104;BEV;0
+Great Britain;105;BEV;0
+Great Britain;106;BEV;0
+Great Britain;107;BEV;0
+Great Britain;108;BEV;0
+Great Britain;109;BEV;0
+Great Britain;110;BEV;0
+Great Britain;111;BEV;0
+Great Britain;112;BEV;0
+Great Britain;113;BEV;0
+Great Britain;114;BEV;0
+Great Britain;115;BEV;0
+Great Britain;116;BEV;0
+Great Britain;117;BEV;0
+Great Britain;118;BEV;0
+Great Britain;119;BEV;0
+Great Britain;120;BEV;0
+Great Britain;121;BEV;0
+Great Britain;122;BEV;0
+Great Britain;123;BEV;0
+Great Britain;124;BEV;0
+Great Britain;125;BEV;0
+Great Britain;126;BEV;0
+Great Britain;1;CNG;0
+Great Britain;2;CNG;1000
+Great Britain;3;CNG;3000
+Great Britain;4;CNG;3000
+Great Britain;5;CNG;2000
+Great Britain;6;CNG;1000
+Great Britain;7;CNG;0
+Great Britain;8;CNG;0
+Great Britain;9;CNG;0
+Great Britain;10;CNG;0
+Great Britain;11;CNG;0
+Great Britain;12;CNG;0
+Great Britain;13;CNG;0
+Great Britain;14;CNG;0
+Great Britain;15;CNG;0
+Great Britain;16;CNG;0
+Great Britain;17;CNG;0
+Great Britain;18;CNG;0
+Great Britain;19;CNG;0
+Great Britain;20;CNG;1000
+Great Britain;21;CNG;1000
+Great Britain;22;CNG;1000
+Great Britain;23;CNG;0
+Great Britain;24;CNG;0
+Great Britain;25;CNG;1000
+Great Britain;26;CNG;2000
+Great Britain;27;CNG;2000
+Great Britain;28;CNG;1000
+Great Britain;29;CNG;1000
+Great Britain;30;CNG;1000
+Great Britain;31;CNG;0
+Great Britain;32;CNG;0
+Great Britain;33;CNG;0
+Great Britain;34;CNG;0
+Great Britain;35;CNG;0
+Great Britain;36;CNG;0
+Great Britain;37;CNG;0
+Great Britain;38;CNG;0
+Great Britain;39;CNG;0
+Great Britain;40;CNG;0
+Great Britain;41;CNG;0
+Great Britain;42;CNG;0
+Great Britain;43;CNG;0
+Great Britain;44;CNG;0
+Great Britain;45;CNG;0
+Great Britain;46;CNG;0
+Great Britain;47;CNG;0
+Great Britain;48;CNG;0
+Great Britain;49;CNG;0
+Great Britain;50;CNG;0
+Great Britain;51;CNG;0
+Great Britain;52;CNG;0
+Great Britain;53;CNG;0
+Great Britain;54;CNG;0
+Great Britain;55;CNG;0
+Great Britain;56;CNG;0
+Great Britain;57;CNG;0
+Great Britain;58;CNG;0
+Great Britain;59;CNG;0
+Great Britain;60;CNG;0
+Great Britain;61;CNG;0
+Great Britain;62;CNG;0
+Great Britain;63;CNG;0
+Great Britain;64;CNG;0
+Great Britain;65;CNG;0
+Great Britain;66;CNG;0
+Great Britain;67;CNG;0
+Great Britain;68;CNG;0
+Great Britain;69;CNG;0
+Great Britain;70;CNG;0
+Great Britain;71;CNG;0
+Great Britain;72;CNG;0
+Great Britain;73;CNG;0
+Great Britain;74;CNG;0
+Great Britain;75;CNG;0
+Great Britain;76;CNG;0
+Great Britain;77;CNG;0
+Great Britain;78;CNG;0
+Great Britain;79;CNG;0
+Great Britain;80;CNG;0
+Great Britain;81;CNG;0
+Great Britain;82;CNG;0
+Great Britain;83;CNG;0
+Great Britain;84;CNG;0
+Great Britain;85;CNG;0
+Great Britain;86;CNG;0
+Great Britain;87;CNG;0
+Great Britain;88;CNG;0
+Great Britain;89;CNG;0
+Great Britain;90;CNG;0
+Great Britain;91;CNG;0
+Great Britain;92;CNG;0
+Great Britain;93;CNG;0
+Great Britain;94;CNG;0
+Great Britain;95;CNG;0
+Great Britain;96;CNG;0
+Great Britain;97;CNG;0
+Great Britain;98;CNG;0
+Great Britain;99;CNG;0
+Great Britain;100;CNG;0
+Great Britain;101;CNG;0
+Great Britain;102;CNG;0
+Great Britain;103;CNG;0
+Great Britain;104;CNG;0
+Great Britain;105;CNG;0
+Great Britain;106;CNG;0
+Great Britain;107;CNG;0
+Great Britain;108;CNG;0
+Great Britain;109;CNG;0
+Great Britain;110;CNG;0
+Great Britain;111;CNG;0
+Great Britain;112;CNG;0
+Great Britain;113;CNG;0
+Great Britain;114;CNG;0
+Great Britain;115;CNG;0
+Great Britain;116;CNG;0
+Great Britain;117;CNG;0
+Great Britain;118;CNG;0
+Great Britain;119;CNG;0
+Great Britain;120;CNG;0
+Great Britain;121;CNG;0
+Great Britain;122;CNG;0
+Great Britain;123;CNG;0
+Great Britain;124;CNG;0
+Great Britain;125;CNG;0
+Great Britain;126;CNG;0
+Great Britain;1;D-HEV;6000
+Great Britain;2;D-HEV;16000
+Great Britain;3;D-HEV;17000
+Great Britain;4;D-HEV;23000
+Great Britain;5;D-HEV;27000
+Great Britain;6;D-HEV;15000
+Great Britain;7;D-HEV;1000
+Great Britain;8;D-HEV;0
+Great Britain;9;D-HEV;1000
+Great Britain;10;D-HEV;1000
+Great Britain;11;D-HEV;3000
+Great Britain;12;D-HEV;1000
+Great Britain;13;D-HEV;1000
+Great Britain;14;D-HEV;1000
+Great Britain;15;D-HEV;0
+Great Britain;16;D-HEV;0
+Great Britain;17;D-HEV;0
+Great Britain;18;D-HEV;0
+Great Britain;19;D-HEV;0
+Great Britain;20;D-HEV;0
+Great Britain;21;D-HEV;0
+Great Britain;22;D-HEV;0
+Great Britain;23;D-HEV;0
+Great Britain;24;D-HEV;0
+Great Britain;25;D-HEV;0
+Great Britain;26;D-HEV;0
+Great Britain;27;D-HEV;0
+Great Britain;28;D-HEV;0
+Great Britain;29;D-HEV;0
+Great Britain;30;D-HEV;0
+Great Britain;31;D-HEV;0
+Great Britain;32;D-HEV;0
+Great Britain;33;D-HEV;0
+Great Britain;34;D-HEV;0
+Great Britain;35;D-HEV;0
+Great Britain;36;D-HEV;0
+Great Britain;37;D-HEV;0
+Great Britain;38;D-HEV;0
+Great Britain;39;D-HEV;0
+Great Britain;40;D-HEV;0
+Great Britain;41;D-HEV;0
+Great Britain;42;D-HEV;0
+Great Britain;43;D-HEV;0
+Great Britain;44;D-HEV;0
+Great Britain;45;D-HEV;0
+Great Britain;46;D-HEV;0
+Great Britain;47;D-HEV;0
+Great Britain;48;D-HEV;0
+Great Britain;49;D-HEV;0
+Great Britain;50;D-HEV;0
+Great Britain;51;D-HEV;0
+Great Britain;52;D-HEV;0
+Great Britain;53;D-HEV;0
+Great Britain;54;D-HEV;0
+Great Britain;55;D-HEV;0
+Great Britain;56;D-HEV;0
+Great Britain;57;D-HEV;0
+Great Britain;58;D-HEV;0
+Great Britain;59;D-HEV;0
+Great Britain;60;D-HEV;0
+Great Britain;61;D-HEV;0
+Great Britain;62;D-HEV;0
+Great Britain;63;D-HEV;0
+Great Britain;64;D-HEV;0
+Great Britain;65;D-HEV;0
+Great Britain;66;D-HEV;0
+Great Britain;67;D-HEV;0
+Great Britain;68;D-HEV;0
+Great Britain;69;D-HEV;0
+Great Britain;70;D-HEV;0
+Great Britain;71;D-HEV;0
+Great Britain;72;D-HEV;0
+Great Britain;73;D-HEV;0
+Great Britain;74;D-HEV;0
+Great Britain;75;D-HEV;0
+Great Britain;76;D-HEV;0
+Great Britain;77;D-HEV;0
+Great Britain;78;D-HEV;0
+Great Britain;79;D-HEV;0
+Great Britain;80;D-HEV;0
+Great Britain;81;D-HEV;0
+Great Britain;82;D-HEV;0
+Great Britain;83;D-HEV;0
+Great Britain;84;D-HEV;0
+Great Britain;85;D-HEV;0
+Great Britain;86;D-HEV;0
+Great Britain;87;D-HEV;0
+Great Britain;88;D-HEV;0
+Great Britain;89;D-HEV;0
+Great Britain;90;D-HEV;0
+Great Britain;91;D-HEV;0
+Great Britain;92;D-HEV;0
+Great Britain;93;D-HEV;0
+Great Britain;94;D-HEV;0
+Great Britain;95;D-HEV;0
+Great Britain;96;D-HEV;0
+Great Britain;97;D-HEV;0
+Great Britain;98;D-HEV;0
+Great Britain;99;D-HEV;0
+Great Britain;100;D-HEV;0
+Great Britain;101;D-HEV;0
+Great Britain;102;D-HEV;0
+Great Britain;103;D-HEV;0
+Great Britain;104;D-HEV;0
+Great Britain;105;D-HEV;0
+Great Britain;106;D-HEV;0
+Great Britain;107;D-HEV;0
+Great Britain;108;D-HEV;0
+Great Britain;109;D-HEV;0
+Great Britain;110;D-HEV;0
+Great Britain;111;D-HEV;0
+Great Britain;112;D-HEV;0
+Great Britain;113;D-HEV;0
+Great Britain;114;D-HEV;0
+Great Britain;115;D-HEV;0
+Great Britain;116;D-HEV;0
+Great Britain;117;D-HEV;0
+Great Britain;118;D-HEV;0
+Great Britain;119;D-HEV;0
+Great Britain;120;D-HEV;0
+Great Britain;121;D-HEV;0
+Great Britain;122;D-HEV;0
+Great Britain;123;D-HEV;0
+Great Britain;124;D-HEV;0
+Great Britain;125;D-HEV;0
+Great Britain;126;D-HEV;0
+Great Britain;1;Diesel;86000
+Great Britain;2;Diesel;96000
+Great Britain;3;Diesel;111000
+Great Britain;4;Diesel;107000
+Great Britain;5;Diesel;165000
+Great Britain;6;Diesel;257000
+Great Britain;7;Diesel;522000
+Great Britain;8;Diesel;622000
+Great Britain;9;Diesel;875000
+Great Britain;10;Diesel;1050000
+Great Britain;11;Diesel;1014000
+Great Britain;12;Diesel;941000
+Great Britain;13;Diesel;806000
+Great Britain;14;Diesel;672000
+Great Britain;15;Diesel;553000
+Great Britain;16;Diesel;454000
+Great Britain;17;Diesel;334000
+Great Britain;18;Diesel;262000
+Great Britain;19;Diesel;210000
+Great Britain;20;Diesel;137000
+Great Britain;21;Diesel;96000
+Great Britain;22;Diesel;61000
+Great Britain;23;Diesel;42000
+Great Britain;24;Diesel;26000
+Great Britain;25;Diesel;12000
+Great Britain;26;Diesel;6000
+Great Britain;27;Diesel;5000
+Great Britain;28;Diesel;3000
+Great Britain;29;Diesel;3000
+Great Britain;30;Diesel;2000
+Great Britain;31;Diesel;2000
+Great Britain;32;Diesel;1000
+Great Britain;33;Diesel;1000
+Great Britain;34;Diesel;700
+Great Britain;35;Diesel;600
+Great Britain;36;Diesel;500
+Great Britain;37;Diesel;500
+Great Britain;38;Diesel;400
+Great Britain;39;Diesel;300
+Great Britain;40;Diesel;200
+Great Britain;41;Diesel;200
+Great Britain;42;Diesel;300
+Great Britain;43;Diesel;200
+Great Britain;44;Diesel;100
+Great Britain;45;Diesel;100
+Great Britain;46;Diesel;0
+Great Britain;47;Diesel;100
+Great Britain;48;Diesel;0
+Great Britain;49;Diesel;0
+Great Britain;50;Diesel;100
+Great Britain;51;Diesel;0
+Great Britain;52;Diesel;0
+Great Britain;53;Diesel;100
+Great Britain;54;Diesel;100
+Great Britain;55;Diesel;100
+Great Britain;56;Diesel;0
+Great Britain;57;Diesel;0
+Great Britain;58;Diesel;0
+Great Britain;59;Diesel;0
+Great Britain;60;Diesel;0
+Great Britain;61;Diesel;0
+Great Britain;62;Diesel;0
+Great Britain;63;Diesel;0
+Great Britain;64;Diesel;0
+Great Britain;65;Diesel;0
+Great Britain;66;Diesel;0
+Great Britain;67;Diesel;0
+Great Britain;68;Diesel;0
+Great Britain;69;Diesel;0
+Great Britain;70;Diesel;0
+Great Britain;71;Diesel;0
+Great Britain;72;Diesel;0
+Great Britain;73;Diesel;0
+Great Britain;74;Diesel;0
+Great Britain;75;Diesel;0
+Great Britain;76;Diesel;0
+Great Britain;77;Diesel;0
+Great Britain;78;Diesel;0
+Great Britain;79;Diesel;0
+Great Britain;80;Diesel;0
+Great Britain;81;Diesel;0
+Great Britain;82;Diesel;0
+Great Britain;83;Diesel;0
+Great Britain;84;Diesel;0
+Great Britain;85;Diesel;0
+Great Britain;86;Diesel;0
+Great Britain;87;Diesel;0
+Great Britain;88;Diesel;0
+Great Britain;89;Diesel;0
+Great Britain;90;Diesel;0
+Great Britain;91;Diesel;0
+Great Britain;92;Diesel;0
+Great Britain;93;Diesel;0
+Great Britain;94;Diesel;0
+Great Britain;95;Diesel;0
+Great Britain;96;Diesel;0
+Great Britain;97;Diesel;0
+Great Britain;98;Diesel;0
+Great Britain;99;Diesel;0
+Great Britain;100;Diesel;0
+Great Britain;101;Diesel;0
+Great Britain;102;Diesel;0
+Great Britain;103;Diesel;0
+Great Britain;104;Diesel;0
+Great Britain;105;Diesel;0
+Great Britain;106;Diesel;0
+Great Britain;107;Diesel;0
+Great Britain;108;Diesel;0
+Great Britain;109;Diesel;0
+Great Britain;110;Diesel;0
+Great Britain;111;Diesel;0
+Great Britain;112;Diesel;0
+Great Britain;113;Diesel;0
+Great Britain;114;Diesel;0
+Great Britain;115;Diesel;0
+Great Britain;116;Diesel;0
+Great Britain;117;Diesel;0
+Great Britain;118;Diesel;0
+Great Britain;119;Diesel;0
+Great Britain;120;Diesel;0
+Great Britain;121;Diesel;0
+Great Britain;122;Diesel;0
+Great Britain;123;Diesel;0
+Great Britain;124;Diesel;0
+Great Britain;125;Diesel;0
+Great Britain;126;Diesel;0
+Great Britain;1;D-PHEV;1000
+Great Britain;2;D-PHEV;0
+Great Britain;3;D-PHEV;0
+Great Britain;4;D-PHEV;2000
+Great Britain;5;D-PHEV;3000
+Great Britain;6;D-PHEV;2000
+Great Britain;7;D-PHEV;1000
+Great Britain;8;D-PHEV;0
+Great Britain;9;D-PHEV;0
+Great Britain;10;D-PHEV;0
+Great Britain;11;D-PHEV;0
+Great Britain;12;D-PHEV;0
+Great Britain;13;D-PHEV;0
+Great Britain;14;D-PHEV;0
+Great Britain;15;D-PHEV;0
+Great Britain;16;D-PHEV;0
+Great Britain;17;D-PHEV;0
+Great Britain;18;D-PHEV;0
+Great Britain;19;D-PHEV;0
+Great Britain;20;D-PHEV;0
+Great Britain;21;D-PHEV;0
+Great Britain;22;D-PHEV;0
+Great Britain;23;D-PHEV;0
+Great Britain;24;D-PHEV;0
+Great Britain;25;D-PHEV;0
+Great Britain;26;D-PHEV;0
+Great Britain;27;D-PHEV;0
+Great Britain;28;D-PHEV;0
+Great Britain;29;D-PHEV;0
+Great Britain;30;D-PHEV;0
+Great Britain;31;D-PHEV;0
+Great Britain;32;D-PHEV;0
+Great Britain;33;D-PHEV;0
+Great Britain;34;D-PHEV;0
+Great Britain;35;D-PHEV;0
+Great Britain;36;D-PHEV;0
+Great Britain;37;D-PHEV;0
+Great Britain;38;D-PHEV;0
+Great Britain;39;D-PHEV;0
+Great Britain;40;D-PHEV;0
+Great Britain;41;D-PHEV;0
+Great Britain;42;D-PHEV;0
+Great Britain;43;D-PHEV;0
+Great Britain;44;D-PHEV;0
+Great Britain;45;D-PHEV;0
+Great Britain;46;D-PHEV;0
+Great Britain;47;D-PHEV;0
+Great Britain;48;D-PHEV;0
+Great Britain;49;D-PHEV;0
+Great Britain;50;D-PHEV;0
+Great Britain;51;D-PHEV;0
+Great Britain;52;D-PHEV;0
+Great Britain;53;D-PHEV;0
+Great Britain;54;D-PHEV;0
+Great Britain;55;D-PHEV;0
+Great Britain;56;D-PHEV;0
+Great Britain;57;D-PHEV;0
+Great Britain;58;D-PHEV;0
+Great Britain;59;D-PHEV;0
+Great Britain;60;D-PHEV;0
+Great Britain;61;D-PHEV;0
+Great Britain;62;D-PHEV;0
+Great Britain;63;D-PHEV;0
+Great Britain;64;D-PHEV;0
+Great Britain;65;D-PHEV;0
+Great Britain;66;D-PHEV;0
+Great Britain;67;D-PHEV;0
+Great Britain;68;D-PHEV;0
+Great Britain;69;D-PHEV;0
+Great Britain;70;D-PHEV;0
+Great Britain;71;D-PHEV;0
+Great Britain;72;D-PHEV;0
+Great Britain;73;D-PHEV;0
+Great Britain;74;D-PHEV;0
+Great Britain;75;D-PHEV;0
+Great Britain;76;D-PHEV;0
+Great Britain;77;D-PHEV;0
+Great Britain;78;D-PHEV;0
+Great Britain;79;D-PHEV;0
+Great Britain;80;D-PHEV;0
+Great Britain;81;D-PHEV;0
+Great Britain;82;D-PHEV;0
+Great Britain;83;D-PHEV;0
+Great Britain;84;D-PHEV;0
+Great Britain;85;D-PHEV;0
+Great Britain;86;D-PHEV;0
+Great Britain;87;D-PHEV;0
+Great Britain;88;D-PHEV;0
+Great Britain;89;D-PHEV;0
+Great Britain;90;D-PHEV;0
+Great Britain;91;D-PHEV;0
+Great Britain;92;D-PHEV;0
+Great Britain;93;D-PHEV;0
+Great Britain;94;D-PHEV;0
+Great Britain;95;D-PHEV;0
+Great Britain;96;D-PHEV;0
+Great Britain;97;D-PHEV;0
+Great Britain;98;D-PHEV;0
+Great Britain;99;D-PHEV;0
+Great Britain;100;D-PHEV;0
+Great Britain;101;D-PHEV;0
+Great Britain;102;D-PHEV;0
+Great Britain;103;D-PHEV;0
+Great Britain;104;D-PHEV;0
+Great Britain;105;D-PHEV;0
+Great Britain;106;D-PHEV;0
+Great Britain;107;D-PHEV;0
+Great Britain;108;D-PHEV;0
+Great Britain;109;D-PHEV;0
+Great Britain;110;D-PHEV;0
+Great Britain;111;D-PHEV;0
+Great Britain;112;D-PHEV;0
+Great Britain;113;D-PHEV;0
+Great Britain;114;D-PHEV;0
+Great Britain;115;D-PHEV;0
+Great Britain;116;D-PHEV;0
+Great Britain;117;D-PHEV;0
+Great Britain;118;D-PHEV;0
+Great Britain;119;D-PHEV;0
+Great Britain;120;D-PHEV;0
+Great Britain;121;D-PHEV;0
+Great Britain;122;D-PHEV;0
+Great Britain;123;D-PHEV;0
+Great Britain;124;D-PHEV;0
+Great Britain;125;D-PHEV;0
+Great Britain;126;D-PHEV;0
+Great Britain;1;FCEV;0
+Great Britain;2;FCEV;0
+Great Britain;3;FCEV;0
+Great Britain;4;FCEV;0
+Great Britain;5;FCEV;0
+Great Britain;6;FCEV;0
+Great Britain;7;FCEV;0
+Great Britain;8;FCEV;0
+Great Britain;9;FCEV;0
+Great Britain;10;FCEV;0
+Great Britain;11;FCEV;0
+Great Britain;12;FCEV;0
+Great Britain;13;FCEV;0
+Great Britain;14;FCEV;0
+Great Britain;15;FCEV;0
+Great Britain;16;FCEV;0
+Great Britain;17;FCEV;0
+Great Britain;18;FCEV;0
+Great Britain;19;FCEV;0
+Great Britain;20;FCEV;0
+Great Britain;21;FCEV;0
+Great Britain;22;FCEV;0
+Great Britain;23;FCEV;0
+Great Britain;24;FCEV;0
+Great Britain;25;FCEV;0
+Great Britain;26;FCEV;0
+Great Britain;27;FCEV;0
+Great Britain;28;FCEV;0
+Great Britain;29;FCEV;0
+Great Britain;30;FCEV;0
+Great Britain;31;FCEV;0
+Great Britain;32;FCEV;0
+Great Britain;33;FCEV;0
+Great Britain;34;FCEV;0
+Great Britain;35;FCEV;0
+Great Britain;36;FCEV;0
+Great Britain;37;FCEV;0
+Great Britain;38;FCEV;0
+Great Britain;39;FCEV;0
+Great Britain;40;FCEV;0
+Great Britain;41;FCEV;0
+Great Britain;42;FCEV;0
+Great Britain;43;FCEV;0
+Great Britain;44;FCEV;0
+Great Britain;45;FCEV;0
+Great Britain;46;FCEV;0
+Great Britain;47;FCEV;0
+Great Britain;48;FCEV;0
+Great Britain;49;FCEV;0
+Great Britain;50;FCEV;0
+Great Britain;51;FCEV;0
+Great Britain;52;FCEV;0
+Great Britain;53;FCEV;0
+Great Britain;54;FCEV;0
+Great Britain;55;FCEV;0
+Great Britain;56;FCEV;0
+Great Britain;57;FCEV;0
+Great Britain;58;FCEV;0
+Great Britain;59;FCEV;0
+Great Britain;60;FCEV;0
+Great Britain;61;FCEV;0
+Great Britain;62;FCEV;0
+Great Britain;63;FCEV;0
+Great Britain;64;FCEV;0
+Great Britain;65;FCEV;0
+Great Britain;66;FCEV;0
+Great Britain;67;FCEV;0
+Great Britain;68;FCEV;0
+Great Britain;69;FCEV;0
+Great Britain;70;FCEV;0
+Great Britain;71;FCEV;0
+Great Britain;72;FCEV;0
+Great Britain;73;FCEV;0
+Great Britain;74;FCEV;0
+Great Britain;75;FCEV;0
+Great Britain;76;FCEV;0
+Great Britain;77;FCEV;0
+Great Britain;78;FCEV;0
+Great Britain;79;FCEV;0
+Great Britain;80;FCEV;0
+Great Britain;81;FCEV;0
+Great Britain;82;FCEV;0
+Great Britain;83;FCEV;0
+Great Britain;84;FCEV;0
+Great Britain;85;FCEV;0
+Great Britain;86;FCEV;0
+Great Britain;87;FCEV;0
+Great Britain;88;FCEV;0
+Great Britain;89;FCEV;0
+Great Britain;90;FCEV;0
+Great Britain;91;FCEV;0
+Great Britain;92;FCEV;0
+Great Britain;93;FCEV;0
+Great Britain;94;FCEV;0
+Great Britain;95;FCEV;0
+Great Britain;96;FCEV;0
+Great Britain;97;FCEV;0
+Great Britain;98;FCEV;0
+Great Britain;99;FCEV;0
+Great Britain;100;FCEV;0
+Great Britain;101;FCEV;0
+Great Britain;102;FCEV;0
+Great Britain;103;FCEV;0
+Great Britain;104;FCEV;0
+Great Britain;105;FCEV;0
+Great Britain;106;FCEV;0
+Great Britain;107;FCEV;0
+Great Britain;108;FCEV;0
+Great Britain;109;FCEV;0
+Great Britain;110;FCEV;0
+Great Britain;111;FCEV;0
+Great Britain;112;FCEV;0
+Great Britain;113;FCEV;0
+Great Britain;114;FCEV;0
+Great Britain;115;FCEV;0
+Great Britain;116;FCEV;0
+Great Britain;117;FCEV;0
+Great Britain;118;FCEV;0
+Great Britain;119;FCEV;0
+Great Britain;120;FCEV;0
+Great Britain;121;FCEV;0
+Great Britain;122;FCEV;0
+Great Britain;123;FCEV;0
+Great Britain;124;FCEV;0
+Great Britain;125;FCEV;0
+Great Britain;126;FCEV;0
+Great Britain;1;Gasoline;540000
+Great Britain;2;Gasoline;672000
+Great Britain;3;Gasoline;810000
+Great Britain;4;Gasoline;719000
+Great Britain;5;Gasoline;808000
+Great Britain;6;Gasoline;910000
+Great Britain;7;Gasoline;1392000
+Great Britain;8;Gasoline;1340000
+Great Britain;9;Gasoline;1222000
+Great Britain;10;Gasoline;1179000
+Great Britain;11;Gasoline;1129000
+Great Britain;12;Gasoline;1013000
+Great Britain;13;Gasoline;910000
+Great Britain;14;Gasoline;766000
+Great Britain;15;Gasoline;674000
+Great Britain;16;Gasoline;689000
+Great Britain;17;Gasoline;656000
+Great Britain;18;Gasoline;508000
+Great Britain;19;Gasoline;472000
+Great Britain;20;Gasoline;366000
+Great Britain;21;Gasoline;279000
+Great Britain;22;Gasoline;221000
+Great Britain;23;Gasoline;170000
+Great Britain;24;Gasoline;119000
+Great Britain;25;Gasoline;79000
+Great Britain;26;Gasoline;47000
+Great Britain;27;Gasoline;33000
+Great Britain;28;Gasoline;26000
+Great Britain;29;Gasoline;19000
+Great Britain;30;Gasoline;13000
+Great Britain;31;Gasoline;10000
+Great Britain;32;Gasoline;7000
+Great Britain;33;Gasoline;6800
+Great Britain;34;Gasoline;6400
+Great Britain;35;Gasoline;7400
+Great Britain;36;Gasoline;8500
+Great Britain;37;Gasoline;8100
+Great Britain;38;Gasoline;5900
+Great Britain;39;Gasoline;4600
+Great Britain;40;Gasoline;3800
+Great Britain;41;Gasoline;3500
+Great Britain;42;Gasoline;5500
+Great Britain;43;Gasoline;6700
+Great Britain;44;Gasoline;5200
+Great Britain;45;Gasoline;5500
+Great Britain;46;Gasoline;7100
+Great Britain;47;Gasoline;7600
+Great Britain;48;Gasoline;7500
+Great Britain;49;Gasoline;6400
+Great Britain;50;Gasoline;5700
+Great Britain;51;Gasoline;6100
+Great Britain;52;Gasoline;8600
+Great Britain;53;Gasoline;13700
+Great Britain;54;Gasoline;15800
+Great Britain;55;Gasoline;11400
+Great Britain;56;Gasoline;10700
+Great Britain;57;Gasoline;9500
+Great Britain;58;Gasoline;10500
+Great Britain;59;Gasoline;9300
+Great Britain;60;Gasoline;8000
+Great Britain;61;Gasoline;7100
+Great Britain;62;Gasoline;7200
+Great Britain;63;Gasoline;6600
+Great Britain;64;Gasoline;5200
+Great Britain;65;Gasoline;5300
+Great Britain;66;Gasoline;5600
+Great Britain;67;Gasoline;4900
+Great Britain;68;Gasoline;3800
+Great Britain;69;Gasoline;3000
+Great Britain;70;Gasoline;3000
+Great Britain;71;Gasoline;3800
+Great Britain;72;Gasoline;3300
+Great Britain;73;Gasoline;2800
+Great Britain;74;Gasoline;1800
+Great Britain;75;Gasoline;1600
+Great Britain;76;Gasoline;1400
+Great Britain;77;Gasoline;1400
+Great Britain;78;Gasoline;1300
+Great Britain;79;Gasoline;1200
+Great Britain;80;Gasoline;800
+Great Britain;81;Gasoline;0
+Great Britain;82;Gasoline;0
+Great Britain;83;Gasoline;0
+Great Britain;84;Gasoline;0
+Great Britain;85;Gasoline;0
+Great Britain;86;Gasoline;200
+Great Britain;87;Gasoline;1300
+Great Britain;88;Gasoline;2100
+Great Britain;89;Gasoline;2800
+Great Britain;90;Gasoline;2800
+Great Britain;91;Gasoline;2800
+Great Britain;92;Gasoline;2900
+Great Britain;93;Gasoline;2300
+Great Britain;94;Gasoline;1600
+Great Britain;95;Gasoline;1200
+Great Britain;96;Gasoline;1200
+Great Britain;97;Gasoline;1100
+Great Britain;98;Gasoline;1000
+Great Britain;99;Gasoline;800
+Great Britain;100;Gasoline;600
+Great Britain;101;Gasoline;500
+Great Britain;102;Gasoline;400
+Great Britain;103;Gasoline;200
+Great Britain;104;Gasoline;100
+Great Britain;105;Gasoline;400
+Great Britain;106;Gasoline;0
+Great Britain;107;Gasoline;0
+Great Britain;108;Gasoline;0
+Great Britain;109;Gasoline;0
+Great Britain;110;Gasoline;0
+Great Britain;111;Gasoline;0
+Great Britain;112;Gasoline;0
+Great Britain;113;Gasoline;0
+Great Britain;114;Gasoline;0
+Great Britain;115;Gasoline;0
+Great Britain;116;Gasoline;0
+Great Britain;117;Gasoline;0
+Great Britain;118;Gasoline;0
+Great Britain;119;Gasoline;0
+Great Britain;120;Gasoline;0
+Great Britain;121;Gasoline;0
+Great Britain;122;Gasoline;0
+Great Britain;123;Gasoline;0
+Great Britain;124;Gasoline;0
+Great Britain;125;Gasoline;0
+Great Britain;126;Gasoline;0
+Great Britain;1;G-HEV;606000
+Great Britain;2;G-HEV;521000
+Great Britain;3;G-HEV;402000
+Great Britain;4;G-HEV;272000
+Great Britain;5;G-HEV;224000
+Great Britain;6;G-HEV;139000
+Great Britain;7;G-HEV;100000
+Great Britain;8;G-HEV;77000
+Great Britain;9;G-HEV;63000
+Great Britain;10;G-HEV;43000
+Great Britain;11;G-HEV;35000
+Great Britain;12;G-HEV;30000
+Great Britain;13;G-HEV;22000
+Great Britain;14;G-HEV;20000
+Great Britain;15;G-HEV;19000
+Great Britain;16;G-HEV;17000
+Great Britain;17;G-HEV;11000
+Great Britain;18;G-HEV;10000
+Great Britain;19;G-HEV;10000
+Great Britain;20;G-HEV;5000
+Great Britain;21;G-HEV;3000
+Great Britain;22;G-HEV;1000
+Great Britain;23;G-HEV;0
+Great Britain;24;G-HEV;0
+Great Britain;25;G-HEV;0
+Great Britain;26;G-HEV;0
+Great Britain;27;G-HEV;0
+Great Britain;28;G-HEV;0
+Great Britain;29;G-HEV;0
+Great Britain;30;G-HEV;0
+Great Britain;31;G-HEV;0
+Great Britain;32;G-HEV;0
+Great Britain;33;G-HEV;0
+Great Britain;34;G-HEV;0
+Great Britain;35;G-HEV;0
+Great Britain;36;G-HEV;0
+Great Britain;37;G-HEV;0
+Great Britain;38;G-HEV;0
+Great Britain;39;G-HEV;0
+Great Britain;40;G-HEV;0
+Great Britain;41;G-HEV;0
+Great Britain;42;G-HEV;0
+Great Britain;43;G-HEV;0
+Great Britain;44;G-HEV;0
+Great Britain;45;G-HEV;0
+Great Britain;46;G-HEV;0
+Great Britain;47;G-HEV;0
+Great Britain;48;G-HEV;0
+Great Britain;49;G-HEV;0
+Great Britain;50;G-HEV;0
+Great Britain;51;G-HEV;0
+Great Britain;52;G-HEV;0
+Great Britain;53;G-HEV;0
+Great Britain;54;G-HEV;0
+Great Britain;55;G-HEV;0
+Great Britain;56;G-HEV;0
+Great Britain;57;G-HEV;0
+Great Britain;58;G-HEV;0
+Great Britain;59;G-HEV;0
+Great Britain;60;G-HEV;0
+Great Britain;61;G-HEV;0
+Great Britain;62;G-HEV;0
+Great Britain;63;G-HEV;0
+Great Britain;64;G-HEV;0
+Great Britain;65;G-HEV;0
+Great Britain;66;G-HEV;0
+Great Britain;67;G-HEV;0
+Great Britain;68;G-HEV;0
+Great Britain;69;G-HEV;0
+Great Britain;70;G-HEV;0
+Great Britain;71;G-HEV;0
+Great Britain;72;G-HEV;0
+Great Britain;73;G-HEV;0
+Great Britain;74;G-HEV;0
+Great Britain;75;G-HEV;0
+Great Britain;76;G-HEV;0
+Great Britain;77;G-HEV;0
+Great Britain;78;G-HEV;0
+Great Britain;79;G-HEV;0
+Great Britain;80;G-HEV;0
+Great Britain;81;G-HEV;0
+Great Britain;82;G-HEV;0
+Great Britain;83;G-HEV;0
+Great Britain;84;G-HEV;0
+Great Britain;85;G-HEV;0
+Great Britain;86;G-HEV;0
+Great Britain;87;G-HEV;0
+Great Britain;88;G-HEV;0
+Great Britain;89;G-HEV;0
+Great Britain;90;G-HEV;0
+Great Britain;91;G-HEV;0
+Great Britain;92;G-HEV;0
+Great Britain;93;G-HEV;0
+Great Britain;94;G-HEV;0
+Great Britain;95;G-HEV;0
+Great Britain;96;G-HEV;0
+Great Britain;97;G-HEV;0
+Great Britain;98;G-HEV;0
+Great Britain;99;G-HEV;0
+Great Britain;100;G-HEV;0
+Great Britain;101;G-HEV;0
+Great Britain;102;G-HEV;0
+Great Britain;103;G-HEV;0
+Great Britain;104;G-HEV;0
+Great Britain;105;G-HEV;0
+Great Britain;106;G-HEV;0
+Great Britain;107;G-HEV;0
+Great Britain;108;G-HEV;0
+Great Britain;109;G-HEV;0
+Great Britain;110;G-HEV;0
+Great Britain;111;G-HEV;0
+Great Britain;112;G-HEV;0
+Great Britain;113;G-HEV;0
+Great Britain;114;G-HEV;0
+Great Britain;115;G-HEV;0
+Great Britain;116;G-HEV;0
+Great Britain;117;G-HEV;0
+Great Britain;118;G-HEV;0
+Great Britain;119;G-HEV;0
+Great Britain;120;G-HEV;0
+Great Britain;121;G-HEV;0
+Great Britain;122;G-HEV;0
+Great Britain;123;G-HEV;0
+Great Britain;124;G-HEV;0
+Great Britain;125;G-HEV;0
+Great Britain;126;G-HEV;0
+Great Britain;1;G-PHEV;212000
+Great Britain;2;G-PHEV;154000
+Great Britain;3;G-PHEV;129000
+Great Britain;4;G-PHEV;85000
+Great Britain;5;G-PHEV;94000
+Great Britain;6;G-PHEV;55000
+Great Britain;7;G-PHEV;28000
+Great Britain;8;G-PHEV;33000
+Great Britain;9;G-PHEV;24000
+Great Britain;10;G-PHEV;20000
+Great Britain;11;G-PHEV;14000
+Great Britain;12;G-PHEV;5000
+Great Britain;13;G-PHEV;1000
+Great Britain;14;G-PHEV;1000
+Great Britain;15;G-PHEV;0
+Great Britain;16;G-PHEV;0
+Great Britain;17;G-PHEV;0
+Great Britain;18;G-PHEV;0
+Great Britain;19;G-PHEV;0
+Great Britain;20;G-PHEV;0
+Great Britain;21;G-PHEV;0
+Great Britain;22;G-PHEV;0
+Great Britain;23;G-PHEV;0
+Great Britain;24;G-PHEV;0
+Great Britain;25;G-PHEV;0
+Great Britain;26;G-PHEV;0
+Great Britain;27;G-PHEV;0
+Great Britain;28;G-PHEV;0
+Great Britain;29;G-PHEV;0
+Great Britain;30;G-PHEV;0
+Great Britain;31;G-PHEV;0
+Great Britain;32;G-PHEV;0
+Great Britain;33;G-PHEV;0
+Great Britain;34;G-PHEV;0
+Great Britain;35;G-PHEV;0
+Great Britain;36;G-PHEV;0
+Great Britain;37;G-PHEV;0
+Great Britain;38;G-PHEV;0
+Great Britain;39;G-PHEV;0
+Great Britain;40;G-PHEV;0
+Great Britain;41;G-PHEV;0
+Great Britain;42;G-PHEV;0
+Great Britain;43;G-PHEV;0
+Great Britain;44;G-PHEV;0
+Great Britain;45;G-PHEV;0
+Great Britain;46;G-PHEV;0
+Great Britain;47;G-PHEV;0
+Great Britain;48;G-PHEV;0
+Great Britain;49;G-PHEV;0
+Great Britain;50;G-PHEV;0
+Great Britain;51;G-PHEV;0
+Great Britain;52;G-PHEV;0
+Great Britain;53;G-PHEV;0
+Great Britain;54;G-PHEV;0
+Great Britain;55;G-PHEV;0
+Great Britain;56;G-PHEV;0
+Great Britain;57;G-PHEV;0
+Great Britain;58;G-PHEV;0
+Great Britain;59;G-PHEV;0
+Great Britain;60;G-PHEV;0
+Great Britain;61;G-PHEV;0
+Great Britain;62;G-PHEV;0
+Great Britain;63;G-PHEV;0
+Great Britain;64;G-PHEV;0
+Great Britain;65;G-PHEV;0
+Great Britain;66;G-PHEV;0
+Great Britain;67;G-PHEV;0
+Great Britain;68;G-PHEV;0
+Great Britain;69;G-PHEV;0
+Great Britain;70;G-PHEV;0
+Great Britain;71;G-PHEV;0
+Great Britain;72;G-PHEV;0
+Great Britain;73;G-PHEV;0
+Great Britain;74;G-PHEV;0
+Great Britain;75;G-PHEV;0
+Great Britain;76;G-PHEV;0
+Great Britain;77;G-PHEV;0
+Great Britain;78;G-PHEV;0
+Great Britain;79;G-PHEV;0
+Great Britain;80;G-PHEV;0
+Great Britain;81;G-PHEV;0
+Great Britain;82;G-PHEV;0
+Great Britain;83;G-PHEV;0
+Great Britain;84;G-PHEV;0
+Great Britain;85;G-PHEV;0
+Great Britain;86;G-PHEV;0
+Great Britain;87;G-PHEV;0
+Great Britain;88;G-PHEV;0
+Great Britain;89;G-PHEV;0
+Great Britain;90;G-PHEV;0
+Great Britain;91;G-PHEV;0
+Great Britain;92;G-PHEV;0
+Great Britain;93;G-PHEV;0
+Great Britain;94;G-PHEV;0
+Great Britain;95;G-PHEV;0
+Great Britain;96;G-PHEV;0
+Great Britain;97;G-PHEV;0
+Great Britain;98;G-PHEV;0
+Great Britain;99;G-PHEV;0
+Great Britain;100;G-PHEV;0
+Great Britain;101;G-PHEV;0
+Great Britain;102;G-PHEV;0
+Great Britain;103;G-PHEV;0
+Great Britain;104;G-PHEV;0
+Great Britain;105;G-PHEV;0
+Great Britain;106;G-PHEV;0
+Great Britain;107;G-PHEV;0
+Great Britain;108;G-PHEV;0
+Great Britain;109;G-PHEV;0
+Great Britain;110;G-PHEV;0
+Great Britain;111;G-PHEV;0
+Great Britain;112;G-PHEV;0
+Great Britain;113;G-PHEV;0
+Great Britain;114;G-PHEV;0
+Great Britain;115;G-PHEV;0
+Great Britain;116;G-PHEV;0
+Great Britain;117;G-PHEV;0
+Great Britain;118;G-PHEV;0
+Great Britain;119;G-PHEV;0
+Great Britain;120;G-PHEV;0
+Great Britain;121;G-PHEV;0
+Great Britain;122;G-PHEV;0
+Great Britain;123;G-PHEV;0
+Great Britain;124;G-PHEV;0
+Great Britain;125;G-PHEV;0
+Great Britain;126;G-PHEV;0
+Great Britain;1;Other;0
+Great Britain;2;Other;0
+Great Britain;3;Other;0
+Great Britain;4;Other;0
+Great Britain;5;Other;0
+Great Britain;6;Other;0
+Great Britain;7;Other;0
+Great Britain;8;Other;0
+Great Britain;9;Other;0
+Great Britain;10;Other;0
+Great Britain;11;Other;0
+Great Britain;12;Other;0
+Great Britain;13;Other;0
+Great Britain;14;Other;0
+Great Britain;15;Other;0
+Great Britain;16;Other;0
+Great Britain;17;Other;0
+Great Britain;18;Other;0
+Great Britain;19;Other;0
+Great Britain;20;Other;0
+Great Britain;21;Other;0
+Great Britain;22;Other;0
+Great Britain;23;Other;0
+Great Britain;24;Other;0
+Great Britain;25;Other;0
+Great Britain;26;Other;0
+Great Britain;27;Other;0
+Great Britain;28;Other;0
+Great Britain;29;Other;0
+Great Britain;30;Other;0
+Great Britain;31;Other;0
+Great Britain;32;Other;0
+Great Britain;33;Other;0
+Great Britain;34;Other;0
+Great Britain;35;Other;0
+Great Britain;36;Other;0
+Great Britain;37;Other;0
+Great Britain;38;Other;0
+Great Britain;39;Other;0
+Great Britain;40;Other;0
+Great Britain;41;Other;0
+Great Britain;42;Other;0
+Great Britain;43;Other;0
+Great Britain;44;Other;0
+Great Britain;45;Other;0
+Great Britain;46;Other;0
+Great Britain;47;Other;0
+Great Britain;48;Other;0
+Great Britain;49;Other;0
+Great Britain;50;Other;0
+Great Britain;51;Other;0
+Great Britain;52;Other;0
+Great Britain;53;Other;0
+Great Britain;54;Other;0
+Great Britain;55;Other;0
+Great Britain;56;Other;0
+Great Britain;57;Other;0
+Great Britain;58;Other;0
+Great Britain;59;Other;0
+Great Britain;60;Other;0
+Great Britain;61;Other;0
+Great Britain;62;Other;0
+Great Britain;63;Other;0
+Great Britain;64;Other;0
+Great Britain;65;Other;0
+Great Britain;66;Other;0
+Great Britain;67;Other;0
+Great Britain;68;Other;0
+Great Britain;69;Other;0
+Great Britain;70;Other;0
+Great Britain;71;Other;0
+Great Britain;72;Other;0
+Great Britain;73;Other;0
+Great Britain;74;Other;0
+Great Britain;75;Other;0
+Great Britain;76;Other;0
+Great Britain;77;Other;0
+Great Britain;78;Other;0
+Great Britain;79;Other;0
+Great Britain;80;Other;0
+Great Britain;81;Other;0
+Great Britain;82;Other;0
+Great Britain;83;Other;0
+Great Britain;84;Other;0
+Great Britain;85;Other;0
+Great Britain;86;Other;0
+Great Britain;87;Other;0
+Great Britain;88;Other;0
+Great Britain;89;Other;0
+Great Britain;90;Other;0
+Great Britain;91;Other;0
+Great Britain;92;Other;0
+Great Britain;93;Other;0
+Great Britain;94;Other;0
+Great Britain;95;Other;0
+Great Britain;96;Other;0
+Great Britain;97;Other;0
+Great Britain;98;Other;0
+Great Britain;99;Other;0
+Great Britain;100;Other;0
+Great Britain;101;Other;0
+Great Britain;102;Other;0
+Great Britain;103;Other;0
+Great Britain;104;Other;0
+Great Britain;105;Other;0
+Great Britain;106;Other;0
+Great Britain;107;Other;0
+Great Britain;108;Other;0
+Great Britain;109;Other;0
+Great Britain;110;Other;0
+Great Britain;111;Other;0
+Great Britain;112;Other;0
+Great Britain;113;Other;0
+Great Britain;114;Other;0
+Great Britain;115;Other;0
+Great Britain;116;Other;0
+Great Britain;117;Other;0
+Great Britain;118;Other;0
+Great Britain;119;Other;0
+Great Britain;120;Other;0
+Great Britain;121;Other;0
+Great Britain;122;Other;0
+Great Britain;123;Other;0
+Great Britain;124;Other;0
+Great Britain;125;Other;0
+Great Britain;126;Other;0
+Great Britain;1;REEV;0
+Great Britain;2;REEV;0
+Great Britain;3;REEV;0
+Great Britain;4;REEV;0
+Great Britain;5;REEV;0
+Great Britain;6;REEV;0
+Great Britain;7;REEV;0
+Great Britain;8;REEV;2000
+Great Britain;9;REEV;2000
+Great Britain;10;REEV;2000
+Great Britain;11;REEV;1000
+Great Britain;12;REEV;1000
+Great Britain;13;REEV;0
+Great Britain;14;REEV;0
+Great Britain;15;REEV;0
+Great Britain;16;REEV;0
+Great Britain;17;REEV;0
+Great Britain;18;REEV;0
+Great Britain;19;REEV;0
+Great Britain;20;REEV;0
+Great Britain;21;REEV;0
+Great Britain;22;REEV;0
+Great Britain;23;REEV;0
+Great Britain;24;REEV;0
+Great Britain;25;REEV;0
+Great Britain;26;REEV;0
+Great Britain;27;REEV;0
+Great Britain;28;REEV;0
+Great Britain;29;REEV;0
+Great Britain;30;REEV;0
+Great Britain;31;REEV;0
+Great Britain;32;REEV;0
+Great Britain;33;REEV;0
+Great Britain;34;REEV;0
+Great Britain;35;REEV;0
+Great Britain;36;REEV;0
+Great Britain;37;REEV;0
+Great Britain;38;REEV;0
+Great Britain;39;REEV;0
+Great Britain;40;REEV;0
+Great Britain;41;REEV;0
+Great Britain;42;REEV;0
+Great Britain;43;REEV;0
+Great Britain;44;REEV;0
+Great Britain;45;REEV;0
+Great Britain;46;REEV;0
+Great Britain;47;REEV;0
+Great Britain;48;REEV;0
+Great Britain;49;REEV;0
+Great Britain;50;REEV;0
+Great Britain;51;REEV;0
+Great Britain;52;REEV;0
+Great Britain;53;REEV;0
+Great Britain;54;REEV;0
+Great Britain;55;REEV;0
+Great Britain;56;REEV;0
+Great Britain;57;REEV;0
+Great Britain;58;REEV;0
+Great Britain;59;REEV;0
+Great Britain;60;REEV;0
+Great Britain;61;REEV;0
+Great Britain;62;REEV;0
+Great Britain;63;REEV;0
+Great Britain;64;REEV;0
+Great Britain;65;REEV;0
+Great Britain;66;REEV;0
+Great Britain;67;REEV;0
+Great Britain;68;REEV;0
+Great Britain;69;REEV;0
+Great Britain;70;REEV;0
+Great Britain;71;REEV;0
+Great Britain;72;REEV;0
+Great Britain;73;REEV;0
+Great Britain;74;REEV;0
+Great Britain;75;REEV;0
+Great Britain;76;REEV;0
+Great Britain;77;REEV;0
+Great Britain;78;REEV;0
+Great Britain;79;REEV;0
+Great Britain;80;REEV;0
+Great Britain;81;REEV;0
+Great Britain;82;REEV;0
+Great Britain;83;REEV;0
+Great Britain;84;REEV;0
+Great Britain;85;REEV;0
+Great Britain;86;REEV;0
+Great Britain;87;REEV;0
+Great Britain;88;REEV;0
+Great Britain;89;REEV;0
+Great Britain;90;REEV;0
+Great Britain;91;REEV;0
+Great Britain;92;REEV;0
+Great Britain;93;REEV;0
+Great Britain;94;REEV;0
+Great Britain;95;REEV;0
+Great Britain;96;REEV;0
+Great Britain;97;REEV;0
+Great Britain;98;REEV;0
+Great Britain;99;REEV;0
+Great Britain;100;REEV;0
+Great Britain;101;REEV;0
+Great Britain;102;REEV;0
+Great Britain;103;REEV;0
+Great Britain;104;REEV;0
+Great Britain;105;REEV;0
+Great Britain;106;REEV;0
+Great Britain;107;REEV;0
+Great Britain;108;REEV;0
+Great Britain;109;REEV;0
+Great Britain;110;REEV;0
+Great Britain;111;REEV;0
+Great Britain;112;REEV;0
+Great Britain;113;REEV;0
+Great Britain;114;REEV;0
+Great Britain;115;REEV;0
+Great Britain;116;REEV;0
+Great Britain;117;REEV;0
+Great Britain;118;REEV;0
+Great Britain;119;REEV;0
+Great Britain;120;REEV;0
+Great Britain;121;REEV;0
+Great Britain;122;REEV;0
+Great Britain;123;REEV;0
+Great Britain;124;REEV;0
+Great Britain;125;REEV;0
+Great Britain;126;REEV;0
+Great Britain;1;Total;1906000
+Great Britain;2;Total;1824000
+Great Britain;3;Total;1768000
+Great Britain;4;Total;1453000
+Great Britain;5;Total;1494000
+Great Britain;6;Total;1476000
+Great Britain;7;Total;2078000
+Great Britain;8;Total;2088000
+Great Britain;9;Total;2199000
+Great Britain;10;Total;2304000
+Great Britain;11;Total;2203000
+Great Britain;12;Total;1996000
+Great Britain;13;Total;1742000
+Great Britain;14;Total;1461000
+Great Britain;15;Total;1247000
+Great Britain;16;Total;1160000
+Great Britain;17;Total;1001000
+Great Britain;18;Total;780000
+Great Britain;19;Total;692000
+Great Britain;20;Total;508000
+Great Britain;21;Total;378000
+Great Britain;22;Total;283000
+Great Britain;23;Total;212000
+Great Britain;24;Total;145000
+Great Britain;25;Total;92000
+Great Britain;26;Total;55000
+Great Britain;27;Total;39000
+Great Britain;28;Total;30000
+Great Britain;29;Total;22000
+Great Britain;30;Total;15000
+Great Britain;31;Total;12000
+Great Britain;32;Total;9000
+Great Britain;33;Total;7800
+Great Britain;34;Total;7100
+Great Britain;35;Total;8000
+Great Britain;36;Total;9000
+Great Britain;37;Total;8600
+Great Britain;38;Total;6300
+Great Britain;39;Total;4900
+Great Britain;40;Total;4000
+Great Britain;41;Total;3700
+Great Britain;42;Total;5800
+Great Britain;43;Total;6900
+Great Britain;44;Total;5300
+Great Britain;45;Total;5500
+Great Britain;46;Total;7100
+Great Britain;47;Total;7700
+Great Britain;48;Total;7600
+Great Britain;49;Total;6500
+Great Britain;50;Total;5700
+Great Britain;51;Total;6100
+Great Britain;52;Total;8700
+Great Britain;53;Total;13800
+Great Britain;54;Total;15900
+Great Britain;55;Total;11500
+Great Britain;56;Total;10700
+Great Britain;57;Total;9600
+Great Britain;58;Total;10500
+Great Britain;59;Total;9300
+Great Britain;60;Total;8000
+Great Britain;61;Total;7100
+Great Britain;62;Total;7200
+Great Britain;63;Total;6700
+Great Britain;64;Total;5200
+Great Britain;65;Total;5300
+Great Britain;66;Total;5700
+Great Britain;67;Total;4900
+Great Britain;68;Total;3900
+Great Britain;69;Total;3000
+Great Britain;70;Total;3000
+Great Britain;71;Total;3800
+Great Britain;72;Total;3300
+Great Britain;73;Total;2800
+Great Britain;74;Total;1800
+Great Britain;75;Total;1600
+Great Britain;76;Total;1400
+Great Britain;77;Total;1400
+Great Britain;78;Total;1300
+Great Britain;79;Total;1200
+Great Britain;80;Total;800
+Great Britain;81;Total;0
+Great Britain;82;Total;0
+Great Britain;83;Total;0
+Great Britain;84;Total;0
+Great Britain;85;Total;0
+Great Britain;86;Total;200
+Great Britain;87;Total;1300
+Great Britain;88;Total;2100
+Great Britain;89;Total;2800
+Great Britain;90;Total;2800
+Great Britain;91;Total;2800
+Great Britain;92;Total;2900
+Great Britain;93;Total;2300
+Great Britain;94;Total;1600
+Great Britain;95;Total;1200
+Great Britain;96;Total;1200
+Great Britain;97;Total;1100
+Great Britain;98;Total;1000
+Great Britain;99;Total;800
+Great Britain;100;Total;600
+Great Britain;101;Total;500
+Great Britain;102;Total;400
+Great Britain;103;Total;200
+Great Britain;104;Total;100
+Great Britain;105;Total;400
+Great Britain;106;Total;0
+Great Britain;107;Total;0
+Great Britain;108;Total;0
+Great Britain;109;Total;0
+Great Britain;110;Total;0
+Great Britain;111;Total;0
+Great Britain;112;Total;0
+Great Britain;113;Total;0
+Great Britain;114;Total;0
+Great Britain;115;Total;0
+Great Britain;116;Total;0
+Great Britain;117;Total;0
+Great Britain;118;Total;0
+Great Britain;119;Total;0
+Great Britain;120;Total;0
+Great Britain;121;Total;0
+Great Britain;122;Total;0
+Great Britain;123;Total;0
+Great Britain;124;Total;0
+Great Britain;125;Total;0
+Great Britain;126;Total;0
+Netherlands;1;BEV;131350
+Netherlands;2;BEV;114300
+Netherlands;3;BEV;82955
+Netherlands;4;BEV;77968
+Netherlands;5;BEV;80613
+Netherlands;6;BEV;45594
+Netherlands;7;BEV;17397
+Netherlands;8;BEV;6882
+Netherlands;9;BEV;3623
+Netherlands;10;BEV;2739
+Netherlands;11;BEV;2471
+Netherlands;12;BEV;2094
+Netherlands;13;BEV;541
+Netherlands;14;BEV;290
+Netherlands;15;BEV;69
+Netherlands;16;BEV;38
+Netherlands;17;BEV;9
+Netherlands;18;BEV;1
+Netherlands;19;BEV;5
+Netherlands;20;BEV;1
+Netherlands;21;BEV;5
+Netherlands;22;BEV;4
+Netherlands;23;BEV;4
+Netherlands;24;BEV;6
+Netherlands;25;BEV;1
+Netherlands;26;BEV;5
+Netherlands;27;BEV;7
+Netherlands;28;BEV;3
+Netherlands;29;BEV;5
+Netherlands;30;BEV;1
+Netherlands;31;BEV;3
+Netherlands;32;BEV;2
+Netherlands;33;BEV;5
+Netherlands;34;BEV;6
+Netherlands;35;BEV;1
+Netherlands;36;BEV;3
+Netherlands;37;BEV;3
+Netherlands;38;BEV;2
+Netherlands;39;BEV;4
+Netherlands;40;BEV;3
+Netherlands;41;BEV;6
+Netherlands;42;BEV;10
+Netherlands;43;BEV;3
+Netherlands;44;BEV;3
+Netherlands;45;BEV;2
+Netherlands;46;BEV;4
+Netherlands;47;BEV;4
+Netherlands;48;BEV;4
+Netherlands;49;BEV;9
+Netherlands;50;BEV;3
+Netherlands;51;BEV;0
+Netherlands;52;BEV;0
+Netherlands;53;BEV;0
+Netherlands;54;BEV;0
+Netherlands;55;BEV;0
+Netherlands;56;BEV;0
+Netherlands;57;BEV;0
+Netherlands;58;BEV;0
+Netherlands;59;BEV;0
+Netherlands;60;BEV;0
+Netherlands;61;BEV;0
+Netherlands;62;BEV;0
+Netherlands;63;BEV;0
+Netherlands;64;BEV;0
+Netherlands;65;BEV;0
+Netherlands;66;BEV;0
+Netherlands;67;BEV;0
+Netherlands;68;BEV;0
+Netherlands;1;CNG;0
+Netherlands;2;CNG;11
+Netherlands;3;CNG;20
+Netherlands;4;CNG;71
+Netherlands;5;CNG;117
+Netherlands;6;CNG;321
+Netherlands;7;CNG;974
+Netherlands;8;CNG;842
+Netherlands;9;CNG;458
+Netherlands;10;CNG;454
+Netherlands;11;CNG;2175
+Netherlands;12;CNG;428
+Netherlands;13;CNG;355
+Netherlands;14;CNG;172
+Netherlands;15;CNG;131
+Netherlands;16;CNG;95
+Netherlands;17;CNG;62
+Netherlands;18;CNG;53
+Netherlands;19;CNG;62
+Netherlands;20;CNG;36
+Netherlands;21;CNG;12
+Netherlands;22;CNG;5
+Netherlands;23;CNG;9
+Netherlands;24;CNG;2
+Netherlands;25;CNG;3
+Netherlands;26;CNG;2
+Netherlands;27;CNG;1
+Netherlands;28;CNG;1
+Netherlands;29;CNG;0
+Netherlands;30;CNG;0
+Netherlands;31;CNG;0
+Netherlands;32;CNG;0
+Netherlands;33;CNG;0
+Netherlands;34;CNG;0
+Netherlands;35;CNG;0
+Netherlands;36;CNG;0
+Netherlands;37;CNG;1
+Netherlands;38;CNG;2
+Netherlands;39;CNG;0
+Netherlands;40;CNG;0
+Netherlands;41;CNG;1
+Netherlands;42;CNG;0
+Netherlands;43;CNG;0
+Netherlands;44;CNG;1
+Netherlands;45;CNG;0
+Netherlands;46;CNG;0
+Netherlands;47;CNG;0
+Netherlands;48;CNG;0
+Netherlands;49;CNG;0
+Netherlands;50;CNG;0
+Netherlands;51;CNG;0
+Netherlands;52;CNG;0
+Netherlands;53;CNG;0
+Netherlands;54;CNG;0
+Netherlands;55;CNG;0
+Netherlands;56;CNG;0
+Netherlands;57;CNG;0
+Netherlands;58;CNG;0
+Netherlands;59;CNG;0
+Netherlands;60;CNG;0
+Netherlands;61;CNG;0
+Netherlands;62;CNG;0
+Netherlands;63;CNG;0
+Netherlands;64;CNG;0
+Netherlands;65;CNG;0
+Netherlands;66;CNG;0
+Netherlands;67;CNG;0
+Netherlands;68;CNG;0
+Netherlands;1;D-HEV;280
+Netherlands;2;D-HEV;595
+Netherlands;3;D-HEV;856
+Netherlands;4;D-HEV;1295
+Netherlands;5;D-HEV;1295
+Netherlands;6;D-HEV;1197
+Netherlands;7;D-HEV;552
+Netherlands;8;D-HEV;101
+Netherlands;9;D-HEV;235
+Netherlands;10;D-HEV;474
+Netherlands;11;D-HEV;282
+Netherlands;12;D-HEV;505
+Netherlands;13;D-HEV;238
+Netherlands;14;D-HEV;1
+Netherlands;15;D-HEV;0
+Netherlands;16;D-HEV;0
+Netherlands;17;D-HEV;0
+Netherlands;18;D-HEV;0
+Netherlands;19;D-HEV;0
+Netherlands;20;D-HEV;0
+Netherlands;21;D-HEV;0
+Netherlands;22;D-HEV;0
+Netherlands;23;D-HEV;0
+Netherlands;24;D-HEV;0
+Netherlands;25;D-HEV;0
+Netherlands;26;D-HEV;0
+Netherlands;27;D-HEV;0
+Netherlands;28;D-HEV;0
+Netherlands;29;D-HEV;0
+Netherlands;30;D-HEV;0
+Netherlands;31;D-HEV;0
+Netherlands;32;D-HEV;0
+Netherlands;33;D-HEV;0
+Netherlands;34;D-HEV;0
+Netherlands;35;D-HEV;0
+Netherlands;36;D-HEV;0
+Netherlands;37;D-HEV;0
+Netherlands;38;D-HEV;0
+Netherlands;39;D-HEV;0
+Netherlands;40;D-HEV;0
+Netherlands;41;D-HEV;0
+Netherlands;42;D-HEV;0
+Netherlands;43;D-HEV;0
+Netherlands;44;D-HEV;0
+Netherlands;45;D-HEV;0
+Netherlands;46;D-HEV;0
+Netherlands;47;D-HEV;0
+Netherlands;48;D-HEV;0
+Netherlands;49;D-HEV;0
+Netherlands;50;D-HEV;0
+Netherlands;51;D-HEV;0
+Netherlands;52;D-HEV;0
+Netherlands;53;D-HEV;0
+Netherlands;54;D-HEV;0
+Netherlands;55;D-HEV;0
+Netherlands;56;D-HEV;0
+Netherlands;57;D-HEV;0
+Netherlands;58;D-HEV;0
+Netherlands;59;D-HEV;0
+Netherlands;60;D-HEV;0
+Netherlands;61;D-HEV;0
+Netherlands;62;D-HEV;0
+Netherlands;63;D-HEV;0
+Netherlands;64;D-HEV;0
+Netherlands;65;D-HEV;0
+Netherlands;66;D-HEV;0
+Netherlands;67;D-HEV;0
+Netherlands;68;D-HEV;0
+Netherlands;1;Diesel;3725
+Netherlands;2;Diesel;5080
+Netherlands;3;Diesel;7078
+Netherlands;4;Diesel;11642
+Netherlands;5;Diesel;15975
+Netherlands;6;Diesel;26420
+Netherlands;7;Diesel;34424
+Netherlands;8;Diesel;47340
+Netherlands;9;Diesel;51182
+Netherlands;10;Diesel;66394
+Netherlands;11;Diesel;58337
+Netherlands;12;Diesel;52831
+Netherlands;13;Diesel;57042
+Netherlands;14;Diesel;56513
+Netherlands;15;Diesel;31877
+Netherlands;16;Diesel;18967
+Netherlands;17;Diesel;21252
+Netherlands;18;Diesel;18506
+Netherlands;19;Diesel;15203
+Netherlands;20;Diesel;11001
+Netherlands;21;Diesel;8878
+Netherlands;22;Diesel;6708
+Netherlands;23;Diesel;5078
+Netherlands;24;Diesel;3833
+Netherlands;25;Diesel;3178
+Netherlands;26;Diesel;2287
+Netherlands;27;Diesel;1746
+Netherlands;28;Diesel;1303
+Netherlands;29;Diesel;1046
+Netherlands;30;Diesel;851
+Netherlands;31;Diesel;918
+Netherlands;32;Diesel;877
+Netherlands;33;Diesel;1174
+Netherlands;34;Diesel;1089
+Netherlands;35;Diesel;843
+Netherlands;36;Diesel;719
+Netherlands;37;Diesel;600
+Netherlands;38;Diesel;615
+Netherlands;39;Diesel;1243
+Netherlands;40;Diesel;972
+Netherlands;41;Diesel;942
+Netherlands;42;Diesel;1062
+Netherlands;43;Diesel;1062
+Netherlands;44;Diesel;872
+Netherlands;45;Diesel;832
+Netherlands;46;Diesel;741
+Netherlands;47;Diesel;684
+Netherlands;48;Diesel;635
+Netherlands;49;Diesel;416
+Netherlands;50;Diesel;356
+Netherlands;51;Diesel;105
+Netherlands;52;Diesel;105
+Netherlands;53;Diesel;105
+Netherlands;54;Diesel;105
+Netherlands;55;Diesel;105
+Netherlands;56;Diesel;105
+Netherlands;57;Diesel;105
+Netherlands;58;Diesel;105
+Netherlands;59;Diesel;105
+Netherlands;60;Diesel;105
+Netherlands;61;Diesel;105
+Netherlands;62;Diesel;105
+Netherlands;63;Diesel;105
+Netherlands;64;Diesel;105
+Netherlands;65;Diesel;105
+Netherlands;66;Diesel;105
+Netherlands;67;Diesel;105
+Netherlands;68;Diesel;10
+Netherlands;1;D-PHEV;119
+Netherlands;2;D-PHEV;120
+Netherlands;3;D-PHEV;266
+Netherlands;4;D-PHEV;559
+Netherlands;5;D-PHEV;423
+Netherlands;6;D-PHEV;152
+Netherlands;7;D-PHEV;78
+Netherlands;8;D-PHEV;85
+Netherlands;9;D-PHEV;1926
+Netherlands;10;D-PHEV;2343
+Netherlands;11;D-PHEV;1529
+Netherlands;12;D-PHEV;2998
+Netherlands;13;D-PHEV;23
+Netherlands;14;D-PHEV;0
+Netherlands;15;D-PHEV;0
+Netherlands;16;D-PHEV;0
+Netherlands;17;D-PHEV;0
+Netherlands;18;D-PHEV;0
+Netherlands;19;D-PHEV;0
+Netherlands;20;D-PHEV;0
+Netherlands;21;D-PHEV;0
+Netherlands;22;D-PHEV;0
+Netherlands;23;D-PHEV;0
+Netherlands;24;D-PHEV;0
+Netherlands;25;D-PHEV;0
+Netherlands;26;D-PHEV;0
+Netherlands;27;D-PHEV;0
+Netherlands;28;D-PHEV;0
+Netherlands;29;D-PHEV;0
+Netherlands;30;D-PHEV;0
+Netherlands;31;D-PHEV;0
+Netherlands;32;D-PHEV;0
+Netherlands;33;D-PHEV;0
+Netherlands;34;D-PHEV;0
+Netherlands;35;D-PHEV;0
+Netherlands;36;D-PHEV;0
+Netherlands;37;D-PHEV;0
+Netherlands;38;D-PHEV;0
+Netherlands;39;D-PHEV;0
+Netherlands;40;D-PHEV;0
+Netherlands;41;D-PHEV;0
+Netherlands;42;D-PHEV;0
+Netherlands;43;D-PHEV;0
+Netherlands;44;D-PHEV;0
+Netherlands;45;D-PHEV;0
+Netherlands;46;D-PHEV;0
+Netherlands;47;D-PHEV;0
+Netherlands;48;D-PHEV;0
+Netherlands;49;D-PHEV;0
+Netherlands;50;D-PHEV;0
+Netherlands;51;D-PHEV;0
+Netherlands;52;D-PHEV;0
+Netherlands;53;D-PHEV;0
+Netherlands;54;D-PHEV;0
+Netherlands;55;D-PHEV;0
+Netherlands;56;D-PHEV;0
+Netherlands;57;D-PHEV;0
+Netherlands;58;D-PHEV;0
+Netherlands;59;D-PHEV;0
+Netherlands;60;D-PHEV;0
+Netherlands;61;D-PHEV;0
+Netherlands;62;D-PHEV;0
+Netherlands;63;D-PHEV;0
+Netherlands;64;D-PHEV;0
+Netherlands;65;D-PHEV;0
+Netherlands;66;D-PHEV;0
+Netherlands;67;D-PHEV;0
+Netherlands;68;D-PHEV;0
+Netherlands;1;FCEV;0
+Netherlands;2;FCEV;30
+Netherlands;3;FCEV;97
+Netherlands;4;FCEV;132
+Netherlands;5;FCEV;143
+Netherlands;6;FCEV;131
+Netherlands;7;FCEV;24
+Netherlands;8;FCEV;25
+Netherlands;9;FCEV;32
+Netherlands;10;FCEV;13
+Netherlands;11;FCEV;1
+Netherlands;12;FCEV;1
+Netherlands;13;FCEV;0
+Netherlands;14;FCEV;0
+Netherlands;15;FCEV;0
+Netherlands;16;FCEV;0
+Netherlands;17;FCEV;0
+Netherlands;18;FCEV;0
+Netherlands;19;FCEV;0
+Netherlands;20;FCEV;0
+Netherlands;21;FCEV;0
+Netherlands;22;FCEV;0
+Netherlands;23;FCEV;0
+Netherlands;24;FCEV;0
+Netherlands;25;FCEV;0
+Netherlands;26;FCEV;0
+Netherlands;27;FCEV;0
+Netherlands;28;FCEV;0
+Netherlands;29;FCEV;0
+Netherlands;30;FCEV;0
+Netherlands;31;FCEV;0
+Netherlands;32;FCEV;0
+Netherlands;33;FCEV;0
+Netherlands;34;FCEV;0
+Netherlands;35;FCEV;0
+Netherlands;36;FCEV;0
+Netherlands;37;FCEV;0
+Netherlands;38;FCEV;0
+Netherlands;39;FCEV;0
+Netherlands;40;FCEV;0
+Netherlands;41;FCEV;0
+Netherlands;42;FCEV;0
+Netherlands;43;FCEV;1
+Netherlands;44;FCEV;1
+Netherlands;45;FCEV;0
+Netherlands;46;FCEV;0
+Netherlands;47;FCEV;0
+Netherlands;48;FCEV;0
+Netherlands;49;FCEV;0
+Netherlands;50;FCEV;0
+Netherlands;51;FCEV;0
+Netherlands;52;FCEV;0
+Netherlands;53;FCEV;0
+Netherlands;54;FCEV;0
+Netherlands;55;FCEV;0
+Netherlands;56;FCEV;0
+Netherlands;57;FCEV;0
+Netherlands;58;FCEV;0
+Netherlands;59;FCEV;0
+Netherlands;60;FCEV;0
+Netherlands;61;FCEV;0
+Netherlands;62;FCEV;0
+Netherlands;63;FCEV;0
+Netherlands;64;FCEV;0
+Netherlands;65;FCEV;0
+Netherlands;66;FCEV;0
+Netherlands;67;FCEV;0
+Netherlands;68;FCEV;0
+Netherlands;1;Gasoline;81258
+Netherlands;2;Gasoline;122480
+Netherlands;3;Gasoline;140258
+Netherlands;4;Gasoline;184748
+Netherlands;5;Gasoline;245696
+Netherlands;6;Gasoline;383936
+Netherlands;7;Gasoline;425006
+Netherlands;8;Gasoline;396819
+Netherlands;9;Gasoline;352663
+Netherlands;10;Gasoline;334894
+Netherlands;11;Gasoline;324258
+Netherlands;12;Gasoline;334925
+Netherlands;13;Gasoline;381908
+Netherlands;14;Gasoline;416570
+Netherlands;15;Gasoline;389160
+Netherlands;16;Gasoline;320418
+Netherlands;17;Gasoline;318855
+Netherlands;18;Gasoline;290935
+Netherlands;19;Gasoline;264503
+Netherlands;20;Gasoline;211233
+Netherlands;21;Gasoline;184439
+Netherlands;22;Gasoline;146716
+Netherlands;23;Gasoline;114591
+Netherlands;24;Gasoline;82993
+Netherlands;25;Gasoline;69564
+Netherlands;26;Gasoline;47828
+Netherlands;27;Gasoline;30764
+Netherlands;28;Gasoline;22026
+Netherlands;29;Gasoline;15861
+Netherlands;30;Gasoline;11072
+Netherlands;31;Gasoline;8496
+Netherlands;32;Gasoline;7687
+Netherlands;33;Gasoline;8799
+Netherlands;34;Gasoline;8472
+Netherlands;35;Gasoline;7017
+Netherlands;36;Gasoline;5331
+Netherlands;37;Gasoline;4835
+Netherlands;38;Gasoline;7573
+Netherlands;39;Gasoline;10244
+Netherlands;40;Gasoline;7212
+Netherlands;41;Gasoline;6524
+Netherlands;42;Gasoline;6777
+Netherlands;43;Gasoline;5287
+Netherlands;44;Gasoline;4101
+Netherlands;45;Gasoline;4082
+Netherlands;46;Gasoline;5803
+Netherlands;47;Gasoline;5500
+Netherlands;48;Gasoline;5024
+Netherlands;49;Gasoline;4217
+Netherlands;50;Gasoline;4821
+Netherlands;51;Gasoline;5117
+Netherlands;52;Gasoline;5117
+Netherlands;53;Gasoline;5117
+Netherlands;54;Gasoline;5117
+Netherlands;55;Gasoline;5117
+Netherlands;56;Gasoline;5117
+Netherlands;57;Gasoline;5117
+Netherlands;58;Gasoline;5117
+Netherlands;59;Gasoline;5117
+Netherlands;60;Gasoline;5117
+Netherlands;61;Gasoline;5117
+Netherlands;62;Gasoline;5117
+Netherlands;63;Gasoline;5117
+Netherlands;64;Gasoline;5117
+Netherlands;65;Gasoline;5117
+Netherlands;66;Gasoline;5117
+Netherlands;67;Gasoline;5117
+Netherlands;68;Gasoline;496
+Netherlands;1;G-HEV;105029
+Netherlands;2;G-HEV;96984
+Netherlands;3;G-HEV;93347
+Netherlands;4;G-HEV;92295
+Netherlands;5;G-HEV;64434
+Netherlands;6;G-HEV;41834
+Netherlands;7;G-HEV;32356
+Netherlands;8;G-HEV;27186
+Netherlands;9;G-HEV;16235
+Netherlands;10;G-HEV;16218
+Netherlands;11;G-HEV;14500
+Netherlands;12;G-HEV;16748
+Netherlands;13;G-HEV;14538
+Netherlands;14;G-HEV;11036
+Netherlands;15;G-HEV;9081
+Netherlands;16;G-HEV;6500
+Netherlands;17;G-HEV;3755
+Netherlands;18;G-HEV;2100
+Netherlands;19;G-HEV;1547
+Netherlands;20;G-HEV;1291
+Netherlands;21;G-HEV;529
+Netherlands;22;G-HEV;10
+Netherlands;23;G-HEV;13
+Netherlands;24;G-HEV;56
+Netherlands;25;G-HEV;7
+Netherlands;26;G-HEV;0
+Netherlands;27;G-HEV;0
+Netherlands;28;G-HEV;0
+Netherlands;29;G-HEV;0
+Netherlands;30;G-HEV;0
+Netherlands;31;G-HEV;0
+Netherlands;32;G-HEV;0
+Netherlands;33;G-HEV;0
+Netherlands;34;G-HEV;0
+Netherlands;35;G-HEV;0
+Netherlands;36;G-HEV;0
+Netherlands;37;G-HEV;0
+Netherlands;38;G-HEV;0
+Netherlands;39;G-HEV;0
+Netherlands;40;G-HEV;0
+Netherlands;41;G-HEV;0
+Netherlands;42;G-HEV;0
+Netherlands;43;G-HEV;0
+Netherlands;44;G-HEV;0
+Netherlands;45;G-HEV;0
+Netherlands;46;G-HEV;0
+Netherlands;47;G-HEV;0
+Netherlands;48;G-HEV;0
+Netherlands;49;G-HEV;0
+Netherlands;50;G-HEV;0
+Netherlands;51;G-HEV;0
+Netherlands;52;G-HEV;0
+Netherlands;53;G-HEV;0
+Netherlands;54;G-HEV;0
+Netherlands;55;G-HEV;0
+Netherlands;56;G-HEV;0
+Netherlands;57;G-HEV;0
+Netherlands;58;G-HEV;0
+Netherlands;59;G-HEV;0
+Netherlands;60;G-HEV;0
+Netherlands;61;G-HEV;0
+Netherlands;62;G-HEV;0
+Netherlands;63;G-HEV;0
+Netherlands;64;G-HEV;0
+Netherlands;65;G-HEV;0
+Netherlands;66;G-HEV;0
+Netherlands;67;G-HEV;0
+Netherlands;68;G-HEV;0
+Netherlands;1;G-PHEV;53312
+Netherlands;2;G-PHEV;57621
+Netherlands;3;G-PHEV;58645
+Netherlands;4;G-PHEV;71907
+Netherlands;5;G-PHEV;42995
+Netherlands;6;G-PHEV;10946
+Netherlands;7;G-PHEV;7798
+Netherlands;8;G-PHEV;4963
+Netherlands;9;G-PHEV;13960
+Netherlands;10;G-PHEV;28483
+Netherlands;11;G-PHEV;5414
+Netherlands;12;G-PHEV;7020
+Netherlands;13;G-PHEV;1388
+Netherlands;14;G-PHEV;17
+Netherlands;15;G-PHEV;18
+Netherlands;16;G-PHEV;18
+Netherlands;17;G-PHEV;40
+Netherlands;18;G-PHEV;19
+Netherlands;19;G-PHEV;91
+Netherlands;20;G-PHEV;19
+Netherlands;21;G-PHEV;7
+Netherlands;22;G-PHEV;0
+Netherlands;23;G-PHEV;1
+Netherlands;24;G-PHEV;0
+Netherlands;25;G-PHEV;0
+Netherlands;26;G-PHEV;0
+Netherlands;27;G-PHEV;0
+Netherlands;28;G-PHEV;0
+Netherlands;29;G-PHEV;0
+Netherlands;30;G-PHEV;0
+Netherlands;31;G-PHEV;0
+Netherlands;32;G-PHEV;0
+Netherlands;33;G-PHEV;0
+Netherlands;34;G-PHEV;0
+Netherlands;35;G-PHEV;0
+Netherlands;36;G-PHEV;0
+Netherlands;37;G-PHEV;0
+Netherlands;38;G-PHEV;0
+Netherlands;39;G-PHEV;0
+Netherlands;40;G-PHEV;0
+Netherlands;41;G-PHEV;0
+Netherlands;42;G-PHEV;0
+Netherlands;43;G-PHEV;0
+Netherlands;44;G-PHEV;0
+Netherlands;45;G-PHEV;0
+Netherlands;46;G-PHEV;0
+Netherlands;47;G-PHEV;0
+Netherlands;48;G-PHEV;0
+Netherlands;49;G-PHEV;0
+Netherlands;50;G-PHEV;0
+Netherlands;51;G-PHEV;0
+Netherlands;52;G-PHEV;0
+Netherlands;53;G-PHEV;0
+Netherlands;54;G-PHEV;0
+Netherlands;55;G-PHEV;0
+Netherlands;56;G-PHEV;0
+Netherlands;57;G-PHEV;0
+Netherlands;58;G-PHEV;0
+Netherlands;59;G-PHEV;0
+Netherlands;60;G-PHEV;0
+Netherlands;61;G-PHEV;0
+Netherlands;62;G-PHEV;0
+Netherlands;63;G-PHEV;0
+Netherlands;64;G-PHEV;0
+Netherlands;65;G-PHEV;0
+Netherlands;66;G-PHEV;0
+Netherlands;67;G-PHEV;0
+Netherlands;68;G-PHEV;0
+Netherlands;1;LPG;2135
+Netherlands;2;LPG;2357
+Netherlands;3;LPG;2283
+Netherlands;4;LPG;2271
+Netherlands;5;LPG;1945
+Netherlands;6;LPG;737
+Netherlands;7;LPG;1311
+Netherlands;8;LPG;1497
+Netherlands;9;LPG;1142
+Netherlands;10;LPG;759
+Netherlands;11;LPG;1336
+Netherlands;12;LPG;2083
+Netherlands;13;LPG;7739
+Netherlands;14;LPG;6631
+Netherlands;15;LPG;3507
+Netherlands;16;LPG;2562
+Netherlands;17;LPG;4268
+Netherlands;18;LPG;3760
+Netherlands;19;LPG;3579
+Netherlands;20;LPG;3077
+Netherlands;21;LPG;2495
+Netherlands;22;LPG;2014
+Netherlands;23;LPG;1722
+Netherlands;24;LPG;1543
+Netherlands;25;LPG;1215
+Netherlands;26;LPG;917
+Netherlands;27;LPG;991
+Netherlands;28;LPG;935
+Netherlands;29;LPG;539
+Netherlands;30;LPG;367
+Netherlands;31;LPG;171
+Netherlands;32;LPG;158
+Netherlands;33;LPG;158
+Netherlands;34;LPG;124
+Netherlands;35;LPG;116
+Netherlands;36;LPG;105
+Netherlands;37;LPG;90
+Netherlands;38;LPG;86
+Netherlands;39;LPG;235
+Netherlands;40;LPG;213
+Netherlands;41;LPG;341
+Netherlands;42;LPG;483
+Netherlands;43;LPG;455
+Netherlands;44;LPG;521
+Netherlands;45;LPG;667
+Netherlands;46;LPG;969
+Netherlands;47;LPG;1081
+Netherlands;48;LPG;955
+Netherlands;49;LPG;850
+Netherlands;50;LPG;859
+Netherlands;51;LPG;14
+Netherlands;52;LPG;14
+Netherlands;53;LPG;14
+Netherlands;54;LPG;14
+Netherlands;55;LPG;14
+Netherlands;56;LPG;14
+Netherlands;57;LPG;14
+Netherlands;58;LPG;14
+Netherlands;59;LPG;14
+Netherlands;60;LPG;14
+Netherlands;61;LPG;14
+Netherlands;62;LPG;14
+Netherlands;63;LPG;14
+Netherlands;64;LPG;14
+Netherlands;65;LPG;14
+Netherlands;66;LPG;14
+Netherlands;67;LPG;14
+Netherlands;68;LPG;1
+Netherlands;1;Other;3
+Netherlands;2;Other;8
+Netherlands;3;Other;42
+Netherlands;4;Other;25
+Netherlands;5;Other;19
+Netherlands;6;Other;32
+Netherlands;7;Other;21
+Netherlands;8;Other;18
+Netherlands;9;Other;17
+Netherlands;10;Other;49
+Netherlands;11;Other;57
+Netherlands;12;Other;101
+Netherlands;13;Other;23
+Netherlands;14;Other;25
+Netherlands;15;Other;20
+Netherlands;16;Other;23
+Netherlands;17;Other;15
+Netherlands;18;Other;6
+Netherlands;19;Other;16
+Netherlands;20;Other;7
+Netherlands;21;Other;5
+Netherlands;22;Other;0
+Netherlands;23;Other;0
+Netherlands;24;Other;0
+Netherlands;25;Other;0
+Netherlands;26;Other;0
+Netherlands;27;Other;0
+Netherlands;28;Other;0
+Netherlands;29;Other;0
+Netherlands;30;Other;0
+Netherlands;31;Other;0
+Netherlands;32;Other;0
+Netherlands;33;Other;0
+Netherlands;34;Other;0
+Netherlands;35;Other;0
+Netherlands;36;Other;0
+Netherlands;37;Other;0
+Netherlands;38;Other;0
+Netherlands;39;Other;0
+Netherlands;40;Other;0
+Netherlands;41;Other;0
+Netherlands;42;Other;0
+Netherlands;43;Other;0
+Netherlands;44;Other;0
+Netherlands;45;Other;0
+Netherlands;46;Other;0
+Netherlands;47;Other;0
+Netherlands;48;Other;0
+Netherlands;49;Other;0
+Netherlands;50;Other;0
+Netherlands;51;Other;0
+Netherlands;52;Other;0
+Netherlands;53;Other;0
+Netherlands;54;Other;0
+Netherlands;55;Other;0
+Netherlands;56;Other;0
+Netherlands;57;Other;0
+Netherlands;58;Other;0
+Netherlands;59;Other;0
+Netherlands;60;Other;0
+Netherlands;61;Other;0
+Netherlands;62;Other;0
+Netherlands;63;Other;0
+Netherlands;64;Other;0
+Netherlands;65;Other;0
+Netherlands;66;Other;0
+Netherlands;67;Other;0
+Netherlands;68;Other;0
+Netherlands;1;Total;377211
+Netherlands;2;Total;399589
+Netherlands;3;Total;385853
+Netherlands;4;Total;442916
+Netherlands;5;Total;453655
+Netherlands;6;Total;511324
+Netherlands;7;Total;519947
+Netherlands;8;Total;485767
+Netherlands;9;Total;441489
+Netherlands;10;Total;452842
+Netherlands;11;Total;410401
+Netherlands;12;Total;419792
+Netherlands;13;Total;464236
+Netherlands;14;Total;492010
+Netherlands;15;Total;434396
+Netherlands;16;Total;349853
+Netherlands;17;Total;348713
+Netherlands;18;Total;315488
+Netherlands;19;Total;285026
+Netherlands;20;Total;226670
+Netherlands;21;Total;196371
+Netherlands;22;Total;155457
+Netherlands;23;Total;121418
+Netherlands;24;Total;88433
+Netherlands;25;Total;73968
+Netherlands;26;Total;51040
+Netherlands;27;Total;33509
+Netherlands;28;Total;24268
+Netherlands;29;Total;17451
+Netherlands;30;Total;12291
+Netherlands;31;Total;9588
+Netherlands;32;Total;8724
+Netherlands;33;Total;10136
+Netherlands;34;Total;9691
+Netherlands;35;Total;7977
+Netherlands;36;Total;6158
+Netherlands;37;Total;5529
+Netherlands;38;Total;8278
+Netherlands;39;Total;11726
+Netherlands;40;Total;8400
+Netherlands;41;Total;7814
+Netherlands;42;Total;8332
+Netherlands;43;Total;6808
+Netherlands;44;Total;5499
+Netherlands;45;Total;5583
+Netherlands;46;Total;7517
+Netherlands;47;Total;7269
+Netherlands;48;Total;6618
+Netherlands;49;Total;5492
+Netherlands;50;Total;6039
+Netherlands;51;Total;6039
+Netherlands;52;Total;6039
+Netherlands;53;Total;6039
+Netherlands;54;Total;6039
+Netherlands;55;Total;6039
+Netherlands;56;Total;6039
+Netherlands;57;Total;6039
+Netherlands;58;Total;6039
+Netherlands;59;Total;6039
+Netherlands;60;Total;6039
+Netherlands;61;Total;6039
+Netherlands;62;Total;6039
+Netherlands;63;Total;6039
+Netherlands;64;Total;6039
+Netherlands;65;Total;6039
+Netherlands;66;Total;6039
+Netherlands;67;Total;6039
+Netherlands;68;Total;585
+Netherlands;1;HEV;105309
+Netherlands;2;HEV;97579
+Netherlands;3;HEV;94203
+Netherlands;4;HEV;93590
+Netherlands;5;HEV;65729
+Netherlands;6;HEV;43031
+Netherlands;7;HEV;32908
+Netherlands;8;HEV;27287
+Netherlands;9;HEV;16470
+Netherlands;10;HEV;16692
+Netherlands;11;HEV;14782
+Netherlands;12;HEV;17253
+Netherlands;13;HEV;14776
+Netherlands;14;HEV;11037
+Netherlands;15;HEV;9081
+Netherlands;16;HEV;6500
+Netherlands;17;HEV;3755
+Netherlands;18;HEV;2100
+Netherlands;19;HEV;1547
+Netherlands;20;HEV;1291
+Netherlands;21;HEV;529
+Netherlands;22;HEV;10
+Netherlands;23;HEV;13
+Netherlands;24;HEV;56
+Netherlands;25;HEV;7
+Netherlands;26;HEV;0
+Netherlands;27;HEV;0
+Netherlands;28;HEV;0
+Netherlands;29;HEV;0
+Netherlands;30;HEV;0
+Netherlands;31;HEV;0
+Netherlands;32;HEV;0
+Netherlands;33;HEV;0
+Netherlands;34;HEV;0
+Netherlands;35;HEV;0
+Netherlands;36;HEV;0
+Netherlands;37;HEV;0
+Netherlands;38;HEV;0
+Netherlands;39;HEV;0
+Netherlands;40;HEV;0
+Netherlands;41;HEV;0
+Netherlands;42;HEV;0
+Netherlands;43;HEV;0
+Netherlands;44;HEV;0
+Netherlands;45;HEV;0
+Netherlands;46;HEV;0
+Netherlands;47;HEV;0
+Netherlands;48;HEV;0
+Netherlands;49;HEV;0
+Netherlands;50;HEV;0
+Netherlands;51;HEV;0
+Netherlands;52;HEV;0
+Netherlands;53;HEV;0
+Netherlands;54;HEV;0
+Netherlands;55;HEV;0
+Netherlands;56;HEV;0
+Netherlands;57;HEV;0
+Netherlands;58;HEV;0
+Netherlands;59;HEV;0
+Netherlands;60;HEV;0
+Netherlands;61;HEV;0
+Netherlands;62;HEV;0
+Netherlands;63;HEV;0
+Netherlands;64;HEV;0
+Netherlands;65;HEV;0
+Netherlands;66;HEV;0
+Netherlands;67;HEV;0
+Netherlands;68;HEV;0
+Netherlands;1;PHEV;53431
+Netherlands;2;PHEV;57741
+Netherlands;3;PHEV;58911
+Netherlands;4;PHEV;72466
+Netherlands;5;PHEV;43418
+Netherlands;6;PHEV;11098
+Netherlands;7;PHEV;7876
+Netherlands;8;PHEV;5048
+Netherlands;9;PHEV;15886
+Netherlands;10;PHEV;30826
+Netherlands;11;PHEV;6943
+Netherlands;12;PHEV;10018
+Netherlands;13;PHEV;1411
+Netherlands;14;PHEV;17
+Netherlands;15;PHEV;18
+Netherlands;16;PHEV;18
+Netherlands;17;PHEV;40
+Netherlands;18;PHEV;19
+Netherlands;19;PHEV;91
+Netherlands;20;PHEV;19
+Netherlands;21;PHEV;7
+Netherlands;22;PHEV;0
+Netherlands;23;PHEV;1
+Netherlands;24;PHEV;0
+Netherlands;25;PHEV;0
+Netherlands;26;PHEV;0
+Netherlands;27;PHEV;0
+Netherlands;28;PHEV;0
+Netherlands;29;PHEV;0
+Netherlands;30;PHEV;0
+Netherlands;31;PHEV;0
+Netherlands;32;PHEV;0
+Netherlands;33;PHEV;0
+Netherlands;34;PHEV;0
+Netherlands;35;PHEV;0
+Netherlands;36;PHEV;0
+Netherlands;37;PHEV;0
+Netherlands;38;PHEV;0
+Netherlands;39;PHEV;0
+Netherlands;40;PHEV;0
+Netherlands;41;PHEV;0
+Netherlands;42;PHEV;0
+Netherlands;43;PHEV;0
+Netherlands;44;PHEV;0
+Netherlands;45;PHEV;0
+Netherlands;46;PHEV;0
+Netherlands;47;PHEV;0
+Netherlands;48;PHEV;0
+Netherlands;49;PHEV;0
+Netherlands;50;PHEV;0
+Netherlands;51;PHEV;0
+Netherlands;52;PHEV;0
+Netherlands;53;PHEV;0
+Netherlands;54;PHEV;0
+Netherlands;55;PHEV;0
+Netherlands;56;PHEV;0
+Netherlands;57;PHEV;0
+Netherlands;58;PHEV;0
+Netherlands;59;PHEV;0
+Netherlands;60;PHEV;0
+Netherlands;61;PHEV;0
+Netherlands;62;PHEV;0
+Netherlands;63;PHEV;0
+Netherlands;64;PHEV;0
+Netherlands;65;PHEV;0
+Netherlands;66;PHEV;0
+Netherlands;67;PHEV;0
+Netherlands;68;PHEV;0
+Denmark;1;Total;163338
+Denmark;2;Total;139469
+Denmark;3;Total;160782
+Denmark;4;Total;154799
+Denmark;5;Total;192753
+Denmark;6;Total;173867
+Denmark;7;Total;171943
+Denmark;8;Total;177066
+Denmark;9;Total;187065
+Denmark;10;Total;180758
+Denmark;11;Total;170593
+Denmark;12;Total;152560
+Denmark;13;Total;145649
+Denmark;14;Total;130563
+Denmark;15;Total;112469
+Denmark;16;Total;91897
+Denmark;17;Total;56278
+Denmark;18;Total;63456
+Denmark;19;Total;56732
+Denmark;20;Total;49186
+Denmark;21;Total;34160
+Denmark;22;Total;21963
+Denmark;23;Total;13153
+Denmark;24;Total;12979
+Denmark;25;Total;7688
+Denmark;26;Total;7688
+Denmark;27;Total;7688
+Denmark;28;Total;7688
+Denmark;29;Total;7688
+Denmark;30;Total;7688
+Denmark;31;Total;7688
+Denmark;32;Total;7688
+Denmark;33;Total;7688
+Denmark;34;Total;7688
+Denmark;35;Total;7688
+Denmark;36;Total;7688
+Denmark;37;Total;7688
+Denmark;38;Total;578
+Denmark;39;Total;0
+Denmark;40;Total;0
+Denmark;41;Total;0
+Denmark;42;Total;0
+Denmark;43;Total;0
+Denmark;44;Total;0
+Denmark;45;Total;0
+Denmark;1;Gasoline;23511
+Denmark;2;Gasoline;29625
+Denmark;3;Gasoline;44190
+Denmark;4;Gasoline;43422
+Denmark;5;Gasoline;66106
+Denmark;6;Gasoline;89152
+Denmark;7;Gasoline;117468
+Denmark;8;Gasoline;116890
+Denmark;9;Gasoline;124215
+Denmark;10;Gasoline;122285
+Denmark;11;Gasoline;118916
+Denmark;12;Gasoline;109422
+Denmark;13;Gasoline;105496
+Denmark;14;Gasoline;85692
+Denmark;15;Gasoline;67075
+Denmark;16;Gasoline;57949
+Denmark;17;Gasoline;39270
+Denmark;18;Gasoline;45538
+Denmark;19;Gasoline;45277
+Denmark;20;Gasoline;43417
+Denmark;21;Gasoline;30707
+Denmark;22;Gasoline;19649
+Denmark;23;Gasoline;11637
+Denmark;24;Gasoline;11584
+Denmark;25;Gasoline;6700
+Denmark;26;Gasoline;6700
+Denmark;27;Gasoline;6700
+Denmark;28;Gasoline;6700
+Denmark;29;Gasoline;6700
+Denmark;30;Gasoline;6700
+Denmark;31;Gasoline;6700
+Denmark;32;Gasoline;6700
+Denmark;33;Gasoline;6700
+Denmark;34;Gasoline;6700
+Denmark;35;Gasoline;6700
+Denmark;36;Gasoline;6700
+Denmark;37;Gasoline;6700
+Denmark;38;Gasoline;6700
+Denmark;39;Gasoline;2428
+Denmark;40;Gasoline;0
+Denmark;41;Gasoline;0
+Denmark;42;Gasoline;0
+Denmark;43;Gasoline;0
+Denmark;44;Gasoline;0
+Denmark;45;Gasoline;0
+Denmark;1;Diesel;5036
+Denmark;2;Diesel;3647
+Denmark;3;Diesel;6122
+Denmark;4;Diesel;6695
+Denmark;5;Diesel;10815
+Denmark;6;Diesel;26595
+Denmark;7;Diesel;38516
+Denmark;8;Diesel;51867
+Denmark;9;Diesel;58113
+Denmark;10;Diesel;56007
+Denmark;11;Diesel;46830
+Denmark;12;Diesel;41608
+Denmark;13;Diesel;39687
+Denmark;14;Diesel;44595
+Denmark;15;Diesel;45255
+Denmark;16;Diesel;33928
+Denmark;17;Diesel;16967
+Denmark;18;Diesel;17910
+Denmark;19;Diesel;11449
+Denmark;20;Diesel;5768
+Denmark;21;Diesel;3452
+Denmark;22;Diesel;2314
+Denmark;23;Diesel;1513
+Denmark;24;Diesel;1394
+Denmark;25;Diesel;987
+Denmark;26;Diesel;987
+Denmark;27;Diesel;987
+Denmark;28;Diesel;987
+Denmark;29;Diesel;313
+Denmark;30;Diesel;0
+Denmark;31;Diesel;0
+Denmark;32;Diesel;0
+Denmark;33;Diesel;0
+Denmark;34;Diesel;0
+Denmark;35;Diesel;0
+Denmark;36;Diesel;0
+Denmark;37;Diesel;0
+Denmark;38;Diesel;0
+Denmark;39;Diesel;0
+Denmark;40;Diesel;0
+Denmark;41;Diesel;0
+Denmark;42;Diesel;0
+Denmark;43;Diesel;0
+Denmark;44;Diesel;0
+Denmark;45;Diesel;0
+Denmark;1;LPG;0
+Denmark;2;LPG;0
+Denmark;3;LPG;1
+Denmark;4;LPG;0
+Denmark;5;LPG;0
+Denmark;6;LPG;0
+Denmark;7;LPG;2
+Denmark;8;LPG;1
+Denmark;9;LPG;1
+Denmark;10;LPG;0
+Denmark;11;LPG;0
+Denmark;12;LPG;0
+Denmark;13;LPG;0
+Denmark;14;LPG;0
+Denmark;15;LPG;0
+Denmark;16;LPG;1
+Denmark;17;LPG;0
+Denmark;18;LPG;0
+Denmark;19;LPG;0
+Denmark;20;LPG;0
+Denmark;21;LPG;0
+Denmark;22;LPG;0
+Denmark;23;LPG;0
+Denmark;24;LPG;0
+Denmark;25;LPG;0
+Denmark;26;LPG;3
+Denmark;27;LPG;0
+Denmark;28;LPG;0
+Denmark;29;LPG;0
+Denmark;30;LPG;0
+Denmark;31;LPG;0
+Denmark;32;LPG;0
+Denmark;33;LPG;0
+Denmark;34;LPG;0
+Denmark;35;LPG;0
+Denmark;36;LPG;0
+Denmark;37;LPG;0
+Denmark;38;LPG;0
+Denmark;39;LPG;0
+Denmark;40;LPG;0
+Denmark;41;LPG;0
+Denmark;42;LPG;0
+Denmark;43;LPG;0
+Denmark;44;LPG;0
+Denmark;45;LPG;0
+Denmark;1;CNG;0
+Denmark;2;CNG;0
+Denmark;3;CNG;0
+Denmark;4;CNG;0
+Denmark;5;CNG;0
+Denmark;6;CNG;0
+Denmark;7;CNG;5
+Denmark;8;CNG;5
+Denmark;9;CNG;21
+Denmark;10;CNG;10
+Denmark;11;CNG;6
+Denmark;12;CNG;14
+Denmark;13;CNG;12
+Denmark;14;CNG;1
+Denmark;15;CNG;1
+Denmark;16;CNG;0
+Denmark;17;CNG;2
+Denmark;18;CNG;1
+Denmark;19;CNG;1
+Denmark;20;CNG;0
+Denmark;21;CNG;1
+Denmark;22;CNG;0
+Denmark;23;CNG;0
+Denmark;24;CNG;0
+Denmark;25;CNG;0
+Denmark;26;CNG;1
+Denmark;27;CNG;0
+Denmark;28;CNG;0
+Denmark;29;CNG;0
+Denmark;30;CNG;0
+Denmark;31;CNG;0
+Denmark;32;CNG;0
+Denmark;33;CNG;0
+Denmark;34;CNG;0
+Denmark;35;CNG;0
+Denmark;36;CNG;0
+Denmark;37;CNG;0
+Denmark;38;CNG;0
+Denmark;39;CNG;0
+Denmark;40;CNG;0
+Denmark;41;CNG;0
+Denmark;42;CNG;0
+Denmark;43;CNG;0
+Denmark;44;CNG;0
+Denmark;45;CNG;0
+Denmark;1;BEV;130548
+Denmark;2;BEV;100817
+Denmark;3;BEV;97578
+Denmark;4;BEV;81926
+Denmark;5;BEV;75179
+Denmark;6;BEV;33033
+Denmark;7;BEV;10198
+Denmark;8;BEV;2959
+Denmark;9;BEV;1816
+Denmark;10;BEV;1003
+Denmark;11;BEV;3694
+Denmark;12;BEV;1320
+Denmark;13;BEV;407
+Denmark;14;BEV;263
+Denmark;15;BEV;138
+Denmark;16;BEV;19
+Denmark;17;BEV;39
+Denmark;18;BEV;7
+Denmark;19;BEV;5
+Denmark;20;BEV;1
+Denmark;21;BEV;0
+Denmark;22;BEV;0
+Denmark;23;BEV;3
+Denmark;24;BEV;1
+Denmark;25;BEV;1
+Denmark;26;BEV;1
+Denmark;27;BEV;1
+Denmark;28;BEV;1
+Denmark;29;BEV;1
+Denmark;30;BEV;1
+Denmark;31;BEV;0
+Denmark;32;BEV;0
+Denmark;33;BEV;0
+Denmark;34;BEV;0
+Denmark;35;BEV;0
+Denmark;36;BEV;0
+Denmark;37;BEV;0
+Denmark;38;BEV;0
+Denmark;39;BEV;0
+Denmark;40;BEV;0
+Denmark;41;BEV;0
+Denmark;42;BEV;0
+Denmark;43;BEV;0
+Denmark;44;BEV;0
+Denmark;45;BEV;0
+Denmark;1;FCEV;0
+Denmark;2;FCEV;0
+Denmark;3;FCEV;1
+Denmark;4;FCEV;0
+Denmark;5;FCEV;4
+Denmark;6;FCEV;1
+Denmark;7;FCEV;2
+Denmark;8;FCEV;0
+Denmark;9;FCEV;0
+Denmark;10;FCEV;2
+Denmark;11;FCEV;3
+Denmark;12;FCEV;0
+Denmark;13;FCEV;0
+Denmark;14;FCEV;0
+Denmark;15;FCEV;0
+Denmark;16;FCEV;0
+Denmark;17;FCEV;0
+Denmark;18;FCEV;0
+Denmark;19;FCEV;0
+Denmark;20;FCEV;0
+Denmark;21;FCEV;0
+Denmark;22;FCEV;0
+Denmark;23;FCEV;0
+Denmark;24;FCEV;0
+Denmark;25;FCEV;0
+Denmark;26;FCEV;1
+Denmark;27;FCEV;0
+Denmark;28;FCEV;0
+Denmark;29;FCEV;0
+Denmark;30;FCEV;0
+Denmark;31;FCEV;0
+Denmark;32;FCEV;0
+Denmark;33;FCEV;0
+Denmark;34;FCEV;0
+Denmark;35;FCEV;0
+Denmark;36;FCEV;0
+Denmark;37;FCEV;0
+Denmark;38;FCEV;0
+Denmark;39;FCEV;0
+Denmark;40;FCEV;0
+Denmark;41;FCEV;0
+Denmark;42;FCEV;0
+Denmark;43;FCEV;0
+Denmark;44;FCEV;0
+Denmark;45;FCEV;0
+Denmark;1;PHEV;4243
+Denmark;2;PHEV;5380
+Denmark;3;PHEV;12890
+Denmark;4;PHEV;22756
+Denmark;5;PHEV;40649
+Denmark;6;PHEV;25086
+Denmark;7;PHEV;5752
+Denmark;8;PHEV;5344
+Denmark;9;PHEV;2899
+Denmark;10;PHEV;1451
+Denmark;11;PHEV;1144
+Denmark;12;PHEV;196
+Denmark;13;PHEV;47
+Denmark;14;PHEV;12
+Denmark;15;PHEV;0
+Denmark;16;PHEV;0
+Denmark;17;PHEV;0
+Denmark;18;PHEV;0
+Denmark;19;PHEV;0
+Denmark;20;PHEV;0
+Denmark;21;PHEV;0
+Denmark;22;PHEV;0
+Denmark;23;PHEV;0
+Denmark;24;PHEV;0
+Denmark;25;PHEV;0
+Denmark;26;PHEV;2
+Denmark;27;PHEV;0
+Denmark;28;PHEV;0
+Denmark;29;PHEV;0
+Denmark;30;PHEV;0
+Denmark;31;PHEV;0
+Denmark;32;PHEV;0
+Denmark;33;PHEV;0
+Denmark;34;PHEV;0
+Denmark;35;PHEV;0
+Denmark;36;PHEV;0
+Denmark;37;PHEV;0
+Denmark;38;PHEV;0
+Denmark;39;PHEV;0
+Denmark;40;PHEV;0
+Denmark;41;PHEV;0
+Denmark;42;PHEV;0
+Denmark;43;PHEV;0
+Denmark;44;PHEV;0
+Denmark;45;PHEV;0
+Denmark;1;Other;0
+Denmark;2;Other;0
+Denmark;3;Other;0
+Denmark;4;Other;0
+Denmark;5;Other;0
+Denmark;6;Other;0
+Denmark;7;Other;0
+Denmark;8;Other;0
+Denmark;9;Other;0
+Denmark;10;Other;0
+Denmark;11;Other;0
+Denmark;12;Other;0
+Denmark;13;Other;0
+Denmark;14;Other;0
+Denmark;15;Other;0
+Denmark;16;Other;0
+Denmark;17;Other;0
+Denmark;18;Other;0
+Denmark;19;Other;0
+Denmark;20;Other;0
+Denmark;21;Other;0
+Denmark;22;Other;0
+Denmark;23;Other;0
+Denmark;24;Other;0
+Denmark;25;Other;0
+Denmark;26;Other;0
+Denmark;27;Other;0
+Denmark;28;Other;0
+Denmark;29;Other;0
+Denmark;30;Other;0
+Denmark;31;Other;0
+Denmark;32;Other;0
+Denmark;33;Other;0
+Denmark;34;Other;0
+Denmark;35;Other;0
+Denmark;36;Other;0
+Denmark;37;Other;0
+Denmark;38;Other;0
+Denmark;39;Other;0
+Denmark;40;Other;0
+Denmark;41;Other;0
+Denmark;42;Other;0
+Denmark;43;Other;0
+Denmark;44;Other;0
+Denmark;45;Other;0
+Switzerland;1;BEV;52508
+Switzerland;1;CNG;3
+Switzerland;1;Diesel;20433
+Switzerland;1;D-HEV;9659
+Switzerland;1;D-HEV;493
+Switzerland;1;D-HEV;670
+Switzerland;1;FCEV;4
+Switzerland;1;CNG;1
+Switzerland;1;Gasoline;54976
+Switzerland;1;G-HEV;36968
+Switzerland;1;G-HEV;18192
+Switzerland;1;G-HEV;40458
+Switzerland;1;LPG;10
+Switzerland;1;REEV;213
+Switzerland;2;BEV;45201
+Switzerland;2;CNG;16
+Switzerland;2;Diesel;29173
+Switzerland;2;D-HEV;10672
+Switzerland;2;D-HEV;476
+Switzerland;2;D-HEV;2423
+Switzerland;2;FCEV;6
+Switzerland;2;Gasoline;72976
+Switzerland;2;G-HEV;29443
+Switzerland;2;G-HEV;9648
+Switzerland;2;G-HEV;50215
+Switzerland;2;LPG;18
+Switzerland;2;Other;2
+Switzerland;2;REEV;7
+Switzerland;3;BEV;51896
+Switzerland;3;CNG;45
+Switzerland;3;Diesel;31315
+Switzerland;3;D-HEV;4945
+Switzerland;3;D-HEV;430
+Switzerland;3;D-HEV;8479
+Switzerland;3;FCEV;25
+Switzerland;3;Gasoline;89524
+Switzerland;3;G-HEV;12310
+Switzerland;3;G-HEV;5166
+Switzerland;3;G-HEV;64011
+Switzerland;3;LPG;42
+Switzerland;3;Other;4
+Switzerland;4;BEV;39849
+Switzerland;4;CNG;132
+Switzerland;4;Diesel;33726
+Switzerland;4;D-HEV;850
+Switzerland;4;D-HEV;200
+Switzerland;4;D-HEV;10633
+Switzerland;4;FCEV;52
+Switzerland;4;CNG;2
+Switzerland;4;Gasoline;90581
+Switzerland;4;G-HEV;1291
+Switzerland;4;G-HEV;756
+Switzerland;4;G-HEV;63031
+Switzerland;4;LPG;30
+Switzerland;4;Other;2
+Switzerland;4;REEV;13
+Switzerland;5;BEV;30224
+Switzerland;5;CNG;280
+Switzerland;5;Diesel;40761
+Switzerland;5;D-HEV;55
+Switzerland;5;D-HEV;3
+Switzerland;5;D-HEV;10309
+Switzerland;5;FCEV;51
+Switzerland;5;Gasoline;102922
+Switzerland;5;G-HEV;73
+Switzerland;5;G-HEV;151
+Switzerland;5;G-HEV;65719
+Switzerland;5;LPG;57
+Switzerland;5;Other;3
+Switzerland;5;REEV;19
+Switzerland;6;BEV;18826
+Switzerland;6;CNG;522
+Switzerland;6;Diesel;58493
+Switzerland;6;D-HEV;19
+Switzerland;6;D-HEV;2
+Switzerland;6;D-HEV;5691
+Switzerland;6;FCEV;32
+Switzerland;6;Gasoline;120027
+Switzerland;6;G-HEV;36
+Switzerland;6;G-HEV;25
+Switzerland;6;G-HEV;43602
+Switzerland;6;LPG;36
+Switzerland;6;Other;4
+Switzerland;6;REEV;67
+Switzerland;7;BEV;12328
+Switzerland;7;CNG;1068
+Switzerland;7;Diesel;81948
+Switzerland;7;D-HEV;2
+Switzerland;7;D-HEV;4088
+Switzerland;7;FCEV;19
+Switzerland;7;CNG;4
+Switzerland;7;Gasoline;192681
+Switzerland;7;G-HEV;23359
+Switzerland;7;LPG;48
+Switzerland;7;Other;6
+Switzerland;7;REEV;12
+Switzerland;8;BEV;4532
+Switzerland;8;CNG;733
+Switzerland;8;Diesel;88155
+Switzerland;8;D-HEV;904
+Switzerland;8;FCEV;11
+Switzerland;8;CNG;2
+Switzerland;8;Gasoline;181162
+Switzerland;8;G-HEV;14135
+Switzerland;8;LPG;53
+Switzerland;8;Other;6
+Switzerland;8;REEV;275
+Switzerland;9;BEV;4109
+Switzerland;9;CNG;688
+Switzerland;9;Diesel;105421
+Switzerland;9;D-HEV;258
+Switzerland;9;Gasoline;171200
+Switzerland;9;G-HEV;10833
+Switzerland;9;LPG;30
+Switzerland;9;Other;5
+Switzerland;9;REEV;180
+Switzerland;10;BEV;2718
+Switzerland;10;CNG;810
+Switzerland;10;Diesel;110344
+Switzerland;10;D-HEV;508
+Switzerland;10;FCEV;5
+Switzerland;10;Gasoline;161191
+Switzerland;10;G-HEV;8931
+Switzerland;10;LPG;39
+Switzerland;10;REEV;193
+Switzerland;11;BEV;2499
+Switzerland;11;CNG;841
+Switzerland;11;Diesel;104883
+Switzerland;11;D-HEV;776
+Switzerland;11;FCEV;1
+Switzerland;11;Gasoline;160820
+Switzerland;11;G-HEV;1
+Switzerland;11;G-HEV;6516
+Switzerland;11;LPG;67
+Switzerland;11;Other;6
+Switzerland;11;REEV;408
+Switzerland;12;BEV;1243
+Switzerland;12;CNG;650
+Switzerland;12;Diesel;87000
+Switzerland;12;D-HEV;470
+Switzerland;12;FCEV;1
+Switzerland;12;CNG;1
+Switzerland;12;Gasoline;150247
+Switzerland;12;G-HEV;5316
+Switzerland;12;LPG;40
+Switzerland;12;Other;2
+Switzerland;12;REEV;204
+Switzerland;13;BEV;792
+Switzerland;13;CNG;521
+Switzerland;13;Diesel;81073
+Switzerland;13;D-HEV;505
+Switzerland;13;Gasoline;144330
+Switzerland;13;G-HEV;1
+Switzerland;13;G-HEV;5186
+Switzerland;13;LPG;39
+Switzerland;13;Other;3
+Switzerland;13;REEV;122
+Switzerland;14;BEV;259
+Switzerland;14;CNG;259
+Switzerland;14;Diesel;79857
+Switzerland;14;D-HEV;520
+Switzerland;14;CNG;2
+Switzerland;14;Gasoline;144395
+Switzerland;14;G-HEV;1
+Switzerland;14;G-HEV;4477
+Switzerland;14;LPG;41
+Switzerland;14;Other;1
+Switzerland;14;REEV;231
+Switzerland;15;BEV;220
+Switzerland;15;CNG;247
+Switzerland;15;Diesel;63318
+Switzerland;15;D-HEV;8
+Switzerland;15;CNG;4
+Switzerland;15;Gasoline;138929
+Switzerland;15;G-HEV;3959
+Switzerland;15;LPG;19
+Switzerland;15;Other;4
+Switzerland;15;REEV;19
+Switzerland;16;BEV;44
+Switzerland;16;CNG;267
+Switzerland;16;Diesel;44940
+Switzerland;16;D-HEV;2
+Switzerland;16;CNG;2
+Switzerland;16;Gasoline;118332
+Switzerland;16;G-HEV;2643
+Switzerland;16;LPG;39
+Switzerland;16;Other;1
+Switzerland;17;BEV;27
+Switzerland;17;CNG;304
+Switzerland;17;Diesel;33030
+Switzerland;17;D-HEV;3
+Switzerland;17;CNG;2
+Switzerland;17;Gasoline;95478
+Switzerland;17;G-HEV;2080
+Switzerland;17;LPG;33
+Switzerland;17;Other;4
+Switzerland;18;BEV;13
+Switzerland;18;CNG;258
+Switzerland;18;Diesel;32650
+Switzerland;18;D-HEV;4
+Switzerland;18;CNG;3
+Switzerland;18;Gasoline;87607
+Switzerland;18;G-HEV;1384
+Switzerland;18;LPG;21
+Switzerland;19;BEV;14
+Switzerland;19;CNG;294
+Switzerland;19;Diesel;26990
+Switzerland;19;CNG;1
+Switzerland;19;Gasoline;75587
+Switzerland;19;G-HEV;1240
+Switzerland;19;LPG;15
+Switzerland;19;Other;1
+Switzerland;20;BEV;6
+Switzerland;20;CNG;154
+Switzerland;20;Diesel;19283
+Switzerland;20;CNG;1
+Switzerland;20;Gasoline;64581
+Switzerland;20;G-HEV;763
+Switzerland;20;LPG;14
+Switzerland;20;Other;3
+Switzerland;21;BEV;8
+Switzerland;21;CNG;32
+Switzerland;21;Diesel;14440
+Switzerland;21;D-HEV;1
+Switzerland;21;Gasoline;50949
+Switzerland;21;G-HEV;1
+Switzerland;21;G-HEV;439
+Switzerland;21;LPG;10
+Switzerland;21;Other;6
+Switzerland;22;BEV;7
+Switzerland;22;CNG;26
+Switzerland;22;Diesel;11432
+Switzerland;22;D-HEV;1
+Switzerland;22;CNG;2
+Switzerland;22;Gasoline;43552
+Switzerland;22;G-HEV;1
+Switzerland;22;G-HEV;103
+Switzerland;22;LPG;7
+Switzerland;22;Other;2
+Switzerland;23;BEV;9
+Switzerland;23;CNG;13
+Switzerland;23;Diesel;8102
+Switzerland;23;D-HEV;1
+Switzerland;23;CNG;1
+Switzerland;23;Gasoline;36096
+Switzerland;23;G-HEV;7
+Switzerland;23;LPG;4
+Switzerland;23;Other;3
+Switzerland;24;BEV;14
+Switzerland;24;CNG;19
+Switzerland;24;Diesel;6301
+Switzerland;24;Gasoline;31257
+Switzerland;24;G-HEV;6
+Switzerland;24;LPG;4
+Switzerland;24;Other;1
+Switzerland;25;BEV;6
+Switzerland;25;CNG;2
+Switzerland;25;Diesel;4525
+Switzerland;25;Gasoline;27154
+Switzerland;25;G-HEV;10
+Switzerland;25;LPG;1
+Switzerland;25;Other;5
+Switzerland;26;BEV;3
+Switzerland;26;Diesel;3034
+Switzerland;26;Gasoline;22871
+Switzerland;26;G-HEV;12
+Switzerland;26;LPG;1
+Switzerland;26;Other;13
+Switzerland;27;BEV;8
+Switzerland;27;CNG;1
+Switzerland;27;Diesel;2106
+Switzerland;27;Gasoline;17857
+Switzerland;27;LPG;2
+Switzerland;27;Other;21
+Switzerland;28;BEV;10
+Switzerland;28;CNG;4
+Switzerland;28;Diesel;1458
+Switzerland;28;Gasoline;13701
+Switzerland;28;LPG;4
+Switzerland;28;Other;18
+Switzerland;29;BEV;4
+Switzerland;29;CNG;1
+Switzerland;29;Diesel;952
+Switzerland;29;Gasoline;9803
+Switzerland;29;LPG;1
+Switzerland;29;Other;16
+Switzerland;30;BEV;7
+Switzerland;30;Diesel;657
+Switzerland;30;Gasoline;5563
+Switzerland;30;Other;19
+Switzerland;31;BEV;11
+Switzerland;31;Diesel;328
+Switzerland;31;Gasoline;3234
+Switzerland;31;G-HEV;1
+Switzerland;31;Other;15
+Switzerland;32;BEV;4
+Switzerland;32;Diesel;308
+Switzerland;32;Gasoline;2725
+Switzerland;32;G-HEV;1
+Switzerland;32;Other;7
+Switzerland;33;BEV;3
+Switzerland;33;Diesel;234
+Switzerland;33;Gasoline;2417
+Switzerland;33;LPG;1
+Switzerland;33;Other;7
+Switzerland;34;BEV;8
+Switzerland;34;Diesel;249
+Switzerland;34;Gasoline;2774
+Switzerland;34;G-HEV;1
+Switzerland;34;LPG;1
+Switzerland;34;Other;5
+Switzerland;35;BEV;4
+Switzerland;35;Diesel;268
+Switzerland;35;Gasoline;3166
+Switzerland;35;LPG;1
+Switzerland;35;Other;8
+Switzerland;36;BEV;5
+Switzerland;36;Diesel;289
+Switzerland;36;Gasoline;2876
+Switzerland;36;G-HEV;1
+Switzerland;36;LPG;1
+Switzerland;36;Other;10
+Switzerland;37;BEV;2
+Switzerland;37;Diesel;194
+Switzerland;37;Gasoline;2325
+Switzerland;37;LPG;1
+Switzerland;37;Other;6
+Switzerland;38;Diesel;202
+Switzerland;38;Gasoline;1950
+Switzerland;38;Other;4
+Switzerland;39;BEV;1
+Switzerland;39;Diesel;186
+Switzerland;39;Gasoline;2206
+Switzerland;39;G-HEV;1
+Switzerland;39;Other;4
+Switzerland;40;BEV;1
+Switzerland;40;Diesel;132
+Switzerland;40;Gasoline;2671
+Switzerland;40;Other;6
+Switzerland;41;BEV;3
+Switzerland;41;Diesel;68
+Switzerland;41;Gasoline;2158
+Switzerland;41;G-HEV;1
+Switzerland;41;Other;7
+Switzerland;42;BEV;2
+Switzerland;42;Diesel;68
+Switzerland;42;Gasoline;1946
+Switzerland;43;Diesel;71
+Switzerland;43;Gasoline;2160
+Switzerland;43;G-HEV;1
+Switzerland;43;LPG;1
+Switzerland;43;Other;3
+Switzerland;44;BEV;1
+Switzerland;44;Diesel;69
+Switzerland;44;Gasoline;2392
+Switzerland;44;Other;2
+Switzerland;45;BEV;1
+Switzerland;45;Diesel;30
+Switzerland;45;Gasoline;1932
+Switzerland;45;Other;4
+Switzerland;46;Diesel;16
+Switzerland;46;Gasoline;1733
+Switzerland;46;Other;6
+Switzerland;47;BEV;1
+Switzerland;47;Diesel;17
+Switzerland;47;Gasoline;1988
+Switzerland;47;Other;4
+Switzerland;48;BEV;3
+Switzerland;48;Diesel;17
+Switzerland;48;CNG;1
+Switzerland;48;Gasoline;1832
+Switzerland;48;G-HEV;1
+Switzerland;48;LPG;1
+Switzerland;48;Other;10
+Switzerland;49;BEV;2
+Switzerland;49;Diesel;11
+Switzerland;49;Gasoline;1448
+Switzerland;49;Other;3
+Switzerland;50;BEV;1
+Switzerland;50;Diesel;6
+Switzerland;50;Gasoline;1404
+Switzerland;50;Other;5
+Switzerland;51;Diesel;12
+Switzerland;51;Gasoline;1543
+Switzerland;51;Other;9
+Switzerland;52;CNG;1
+Switzerland;52;Diesel;14
+Switzerland;52;Gasoline;2124
+Switzerland;52;Other;11
+Switzerland;53;BEV;2
+Switzerland;53;Diesel;5
+Switzerland;53;Gasoline;2991
+Switzerland;53;G-HEV;1
+Switzerland;53;Other;17
+Switzerland;54;BEV;1
+Switzerland;54;Diesel;16
+Switzerland;54;Gasoline;3245
+Switzerland;54;Other;15
+Switzerland;55;BEV;1
+Switzerland;55;Diesel;13
+Switzerland;55;Gasoline;3006
+Switzerland;55;Other;18
+Switzerland;56;BEV;3
+Switzerland;56;Diesel;19
+Switzerland;56;Gasoline;2991
+Switzerland;56;G-HEV;1
+Switzerland;56;Other;22
+Switzerland;57;BEV;4
+Switzerland;57;Diesel;28
+Switzerland;57;Gasoline;2750
+Switzerland;57;Other;15
+Switzerland;58;BEV;1
+Switzerland;58;Diesel;23
+Switzerland;58;Gasoline;2511
+Switzerland;58;Other;14
+Switzerland;59;BEV;1
+Switzerland;59;Diesel;34
+Switzerland;59;Gasoline;2571
+Switzerland;59;G-HEV;1
+Switzerland;59;Other;22
+Switzerland;60;Diesel;52
+Switzerland;60;Gasoline;2227
+Switzerland;60;G-HEV;1
+Switzerland;60;Other;20
+Switzerland;61;Diesel;71
+Switzerland;61;Gasoline;1916
+Switzerland;61;G-HEV;1
+Switzerland;61;Other;16
+Switzerland;62;Diesel;76
+Switzerland;62;Gasoline;1438
+Switzerland;62;Other;17
+Switzerland;63;Diesel;62
+Switzerland;63;Gasoline;1333
+Switzerland;63;G-HEV;1
+Switzerland;63;Other;9
+Switzerland;64;BEV;1
+Switzerland;64;Diesel;43
+Switzerland;64;Gasoline;1194
+Switzerland;64;Other;15
+Switzerland;65;Diesel;48
+Switzerland;65;Gasoline;1099
+Switzerland;65;Other;9
+Switzerland;66;BEV;1
+Switzerland;66;Diesel;29
+Switzerland;66;Gasoline;972
+Switzerland;66;Other;10
+Switzerland;67;Diesel;39
+Switzerland;67;Gasoline;1043
+Switzerland;67;Other;22
+Switzerland;68;Diesel;32
+Switzerland;68;Gasoline;886
+Switzerland;68;G-HEV;1
+Switzerland;68;Other;10
+Switzerland;69;Diesel;20
+Switzerland;69;Gasoline;715
+Switzerland;69;Other;6
+Switzerland;70;Diesel;9
+Switzerland;70;Gasoline;765
+Switzerland;70;G-HEV;1
+Switzerland;70;Other;6
+Switzerland;71;Diesel;10
+Switzerland;71;Gasoline;751
+Switzerland;71;Other;15
+Switzerland;72;Diesel;9
+Switzerland;72;Gasoline;589
+Switzerland;72;Other;10
+Switzerland;73;Diesel;6
+Switzerland;73;Gasoline;598
+Switzerland;73;Other;6
+Switzerland;74;CNG;1
+Switzerland;74;Diesel;15
+Switzerland;74;Gasoline;443
+Switzerland;74;Other;8
+Switzerland;75;Diesel;10
+Switzerland;75;Gasoline;396
+Switzerland;75;Other;10
+Switzerland;76;Diesel;15
+Switzerland;76;Gasoline;419
+Switzerland;76;Other;5
+Switzerland;77;Diesel;8
+Switzerland;77;Gasoline;321
+Switzerland;77;Other;5
+Switzerland;78;Diesel;13
+Switzerland;78;Gasoline;330
+Switzerland;78;Other;10
+Switzerland;79;Diesel;6
+Switzerland;79;Gasoline;220
+Switzerland;79;Other;5
+Switzerland;80;Diesel;2
+Switzerland;80;Gasoline;96
+Switzerland;80;Other;1
+Switzerland;81;Gasoline;30
+Switzerland;82;Diesel;2
+Switzerland;82;Gasoline;168
+Switzerland;82;Other;6
+Switzerland;83;Diesel;1
+Switzerland;83;Gasoline;80
+Switzerland;83;Other;2
+Switzerland;84;Gasoline;76
+Switzerland;84;Other;3
+Switzerland;85;Gasoline;39
+Switzerland;85;Other;1
+Switzerland;86;Gasoline;42
+Switzerland;87;Gasoline;106
+Switzerland;87;Other;3
+Switzerland;88;Gasoline;137
+Switzerland;88;Other;4
+Switzerland;89;Diesel;1
+Switzerland;89;Gasoline;130
+Switzerland;89;Other;6
+Switzerland;90;Diesel;1
+Switzerland;90;Gasoline;119
+Switzerland;90;Other;3
+Switzerland;91;Gasoline;137
+Switzerland;91;G-HEV;1
+Switzerland;91;Other;4
+Switzerland;92;Diesel;1
+Switzerland;92;Gasoline;149
+Switzerland;92;G-HEV;1
+Switzerland;92;Other;3
+Switzerland;93;Gasoline;116
+Switzerland;93;Other;5
+Switzerland;94;BEV;2
+Switzerland;94;Diesel;1
+Switzerland;94;Gasoline;158
+Switzerland;94;Other;3
+Switzerland;95;Diesel;1
+Switzerland;95;Gasoline;129
+Switzerland;95;Other;6
+Switzerland;96;Diesel;1
+Switzerland;96;Gasoline;139
+Switzerland;96;Other;6
+Switzerland;97;Gasoline;135
+Switzerland;97;Other;7
+Switzerland;98;Diesel;3
+Switzerland;98;Gasoline;104
+Switzerland;98;Other;1
+Switzerland;99;Gasoline;59
+Switzerland;99;Other;2
+Switzerland;100;Gasoline;66
+Switzerland;100;G-HEV;1
+Switzerland;100;Other;2
+Switzerland;101;Diesel;1
+Switzerland;101;Gasoline;52
+Switzerland;101;Other;3
+Switzerland;102;Gasoline;30
+Switzerland;102;Other;1
+Switzerland;103;Gasoline;29
+Switzerland;104;BEV;1
+Switzerland;104;Gasoline;15
+Switzerland;105;Gasoline;9
+Switzerland;106;Gasoline;5
+Switzerland;107;Gasoline;4
+Switzerland;108;Gasoline;2
+Switzerland;109;Gasoline;7
+Switzerland;110;Gasoline;7
+Switzerland;111;Gasoline;9
+Switzerland;112;Gasoline;11
+Switzerland;112;Other;1
+Switzerland;113;Gasoline;10
+Switzerland;114;Gasoline;11
+Switzerland;115;Gasoline;5
+Switzerland;115;Other;1
+Switzerland;116;Gasoline;6
+Switzerland;117;BEV;1
+Switzerland;117;Gasoline;3
+Switzerland;118;Gasoline;5
+Switzerland;119;Gasoline;1
+Switzerland;120;Gasoline;1
+Switzerland;121;BEV;1
+Switzerland;123;Diesel;1
+Switzerland;123;Gasoline;6
+Switzerland;124;Gasoline;1
+Switzerland;125;Gasoline;2
+Switzerland;126;Gasoline;6
+Switzerland;128;Gasoline;1
+Switzerland;1;Total;234588
+Switzerland;2;Total;250278
+Switzerland;3;Total;268193
+Switzerland;4;Total;241149
+Switzerland;5;Total;250633
+Switzerland;6;Total;247386
+Switzerland;7;Total;315572
+Switzerland;8;Total;289977
+Switzerland;9;Total;292729
+Switzerland;10;Total;284746
+Switzerland;11;Total;276836
+Switzerland;12;Total;245200
+Switzerland;13;Total;232625
+Switzerland;14;Total;230266
+Switzerland;15;Total;206982
+Switzerland;16;Total;166444
+Switzerland;17;Total;131229
+Switzerland;18;Total;122457
+Switzerland;19;Total;104613
+Switzerland;20;Total;84824
+Switzerland;21;Total;65889
+Switzerland;22;Total;55136
+Switzerland;23;Total;44237
+Switzerland;24;Total;37602
+Switzerland;25;Total;31706
+Switzerland;26;Total;25935
+Switzerland;27;Total;19996
+Switzerland;28;Total;15195
+Switzerland;29;Total;10777
+Switzerland;30;Total;6247
+Switzerland;31;Total;3589
+Switzerland;32;Total;3045
+Switzerland;33;Total;2662
+Switzerland;34;Total;3038
+Switzerland;35;Total;3447
+Switzerland;36;Total;3182
+Switzerland;37;Total;2528
+Switzerland;38;Total;2156
+Switzerland;39;Total;2399
+Switzerland;40;Total;2810
+Switzerland;41;Total;2238
+Switzerland;42;Total;2016
+Switzerland;43;Total;2236
+Switzerland;44;Total;2464
+Switzerland;45;Total;1967
+Switzerland;46;Total;1755
+Switzerland;47;Total;2010
+Switzerland;48;Total;1865
+Switzerland;49;Total;1464
+Switzerland;50;Total;1416
+Switzerland;51;Total;1564
+Switzerland;52;Total;2150
+Switzerland;53;Total;3016
+Switzerland;54;Total;3277
+Switzerland;55;Total;3038
+Switzerland;56;Total;3036
+Switzerland;57;Total;2797
+Switzerland;58;Total;2549
+Switzerland;59;Total;2629
+Switzerland;60;Total;2300
+Switzerland;61;Total;2004
+Switzerland;62;Total;1531
+Switzerland;63;Total;1405
+Switzerland;64;Total;1253
+Switzerland;65;Total;1156
+Switzerland;66;Total;1012
+Switzerland;67;Total;1104
+Switzerland;68;Total;929
+Switzerland;69;Total;741
+Switzerland;70;Total;781
+Switzerland;71;Total;776
+Switzerland;72;Total;608
+Switzerland;73;Total;610
+Switzerland;74;Total;467
+Switzerland;75;Total;416
+Switzerland;76;Total;439
+Switzerland;77;Total;334
+Switzerland;78;Total;353
+Switzerland;79;Total;231
+Switzerland;80;Total;99
+Switzerland;81;Total;30
+Switzerland;82;Total;176
+Switzerland;83;Total;83
+Switzerland;84;Total;79
+Switzerland;85;Total;40
+Switzerland;86;Total;42
+Switzerland;87;Total;109
+Switzerland;88;Total;141
+Switzerland;89;Total;137
+Switzerland;90;Total;123
+Switzerland;91;Total;143
+Switzerland;92;Total;154
+Switzerland;93;Total;121
+Switzerland;94;Total;164
+Switzerland;95;Total;137
+Switzerland;96;Total;146
+Switzerland;97;Total;142
+Switzerland;98;Total;108
+Switzerland;99;Total;61
+Switzerland;100;Total;69
+Switzerland;101;Total;56
+Switzerland;102;Total;31
+Switzerland;103;Total;29
+Switzerland;104;Total;16
+Switzerland;105;Total;9
+Switzerland;106;Total;5
+Switzerland;107;Total;4
+Switzerland;108;Total;2
+Switzerland;109;Total;7
+Switzerland;110;Total;7
+Switzerland;111;Total;9
+Switzerland;112;Total;12
+Switzerland;113;Total;10
+Switzerland;114;Total;11
+Switzerland;115;Total;6
+Switzerland;116;Total;6
+Switzerland;117;Total;4
+Switzerland;118;Total;5
+Switzerland;119;Total;1
+Switzerland;120;Total;1
+Switzerland;121;Total;1
+Switzerland;123;Total;7
+Switzerland;124;Total;1
+Switzerland;125;Total;2
+Switzerland;126;Total;6
+Switzerland;128;Total;1
+Switzerland;38;BEV;0
+Switzerland;43;BEV;0
