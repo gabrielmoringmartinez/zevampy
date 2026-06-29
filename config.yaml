@@ -36,3 +36,4 @@ survival_rates:
   grouping:
     - geo country
     - powertrain
+    - stock year

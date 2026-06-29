@@ -23,7 +23,8 @@ def obtain_survival_rates(stock, registrations, survival_grouping):
     )
 
     join_cols = survival_grouping + ["_registration_year"]
-    output_cols = survival_grouping + [age_dim, stock_year_dim]
+    output_cols = survival_grouping + [age_dim]
+    registrations.to_csv(f'outputs/TEST_registration_1.csv', sep=';', index=False, decimal=',')
 
     registrations = (
         registrations
