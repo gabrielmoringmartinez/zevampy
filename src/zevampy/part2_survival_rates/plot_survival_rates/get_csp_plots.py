@@ -12,7 +12,7 @@ from zevampy.part2_survival_rates.plot_survival_rates.get_columns_to_plot import
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
-def get_csp_plots(survival_rates, fitted_csp_values, config_all, config_group, survival_grouping):
+def get_csp_plots(survival_rates, fitted_csp_values, config_all, config_group, survival_grouping, powertrains):
     """
     Generate CSP plots for all survival-rate groups.
 
@@ -38,6 +38,25 @@ def get_csp_plots(survival_rates, fitted_csp_values, config_all, config_group, s
     Returns:
         None
     """
+    # Keep only config.yaml
+    print("TEST THIS")
+    print(powertrains)
+    print("before")
+    print("(before) Powertrains in survival_rates:")
+    print(survival_rates[powertrain_dim].unique())
+    print("(before )Powertrains in fitted_csp_values:")
+    print(fitted_csp_values[powertrain_dim].unique())
+    survival_rates = survival_rates[
+        survival_rates[powertrain_dim].isin(powertrains)
+    ].copy()
+    fitted_csp_values = fitted_csp_values[
+        fitted_csp_values[powertrain_dim].isin(powertrains)
+    ].copy()
+    print("AFTER")
+    print("(after) Powertrains in survival_rates:")
+    print(survival_rates[powertrain_dim].unique())
+    print("(after) Powertrains in fitted_csp_values:")
+    print(fitted_csp_values[powertrain_dim].unique())
     merged_df = pd.merge(survival_rates, fitted_csp_values, on=survival_grouping + [age_dim], how='left')
     merged_df = add_survival_group_label(merged_df, survival_grouping)
     # Define column mappings for different distributions

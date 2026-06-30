@@ -105,7 +105,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
                                              inputs[save_fitted_csp_values_label],
                                              )
     get_csp_plots(empirical_survival_rates, fitted_csp_values, inputs[config_all_label], inputs[config_group_label],
-                  inputs[survival_grouping_label])
+                  inputs[survival_grouping_label], inputs[powertrain_dim])
     return {
         registrations_label: registrations,
         empirical_survival_rates_label: empirical_survival_rates,
