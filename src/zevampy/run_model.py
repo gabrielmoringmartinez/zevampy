@@ -53,14 +53,6 @@ def run_model(config_path=None, input_path=None, output_path=None):
     # Step 2: Calculate and plot CSPs and stock
     csp_and_stock_calculated_data = calculate_and_plot_csps_and_stock(data, inputs)
 
-    # Step 3: Compare model results with actual stock results
-    if inputs[historical_validation_label] and inputs[survival_grouping_label] == [country_dim]:
-        compare_model_and_actual_stock_results(data, csp_and_stock_calculated_data, inputs)
-
-    # Step 4: Perform sensitivity analysis
-    if inputs[sensitivity_analysis_label] and inputs[survival_grouping_label] == [country_dim]:
-        perform_sensitivity_analysis(data, csp_and_stock_calculated_data, inputs)
-
 
 # Execute the main function when the script is run
 if __name__ == "__main__":

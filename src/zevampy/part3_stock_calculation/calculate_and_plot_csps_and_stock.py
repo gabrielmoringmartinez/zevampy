@@ -95,7 +95,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
 
     empirical_survival_rates = empirical_survival_rates[empirical_survival_rates[age_dim] <=
                                                         inputs[csp_available_years_label]].copy()
-    stock_values, stock_shares, optimum_parameters_wg, optimal_distribution_dict, fitted_csp_values = \
+    optimum_parameters_wg, optimal_distribution_dict, fitted_csp_values = \
         compute_csp_values_and_compute_stock(empirical_survival_rates, registrations,
                                              inputs[simulation_stock_years_label],
                                              inputs[distribution_bounds_label], inputs[historical_csp_label],
@@ -106,28 +106,9 @@ def calculate_and_plot_csps_and_stock(data, inputs):
                                              )
     get_csp_plots(empirical_survival_rates, fitted_csp_values, inputs[config_all_label], inputs[config_group_label],
                   inputs[survival_grouping_label])
-    if not stock_shares_are_valid:
-        warnings.warn(
-            "Stock shares will not be plotted because not all registration powertrains "
-            "have corresponding survival rates.\n\n"
-            f"Missing survival rates for: {sorted(missing_survival_powertrains)}\n\n"
-            "Absolute stock can still be calculated for available powertrains, but stock "
-            "shares would be misleading because the denominator would not include all "
-            "powertrain categories.",
-            UserWarning
-        )
-    else:
-        plot_stock_shares(
-            stock_shares,
-            inputs[config_bev_reference_scenario_label],
-            inputs[powertrain_dim]
-        )
-
     return {
         registrations_label: registrations,
         empirical_survival_rates_label: empirical_survival_rates,
-        stock_values_label: stock_values,
-        stock_shares_label: stock_shares,
         optimum_parameters_wg_label: optimum_parameters_wg,
         optimal_distribution_dict_label: optimal_distribution_dict,
         fitted_csp_values_label: fitted_csp_values
