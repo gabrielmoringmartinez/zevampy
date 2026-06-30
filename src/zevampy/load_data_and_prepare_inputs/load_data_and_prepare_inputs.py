@@ -45,6 +45,8 @@ def load_data_and_prepare_inputs(input_path, config=None):
     use_clusters_active = geography_config.get("use_clusters", True)
 
     powertrains = config.get("powertrains") if config else None
+    csp_plot_years = config.get("csp_plot_years") if config else None
+
 
     survival_config = config.get("survival_rates", {}) if config else {}
     survival_grouping = survival_config.get("grouping", [country_dim])

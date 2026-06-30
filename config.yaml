@@ -3,14 +3,14 @@
 
 data:
   input_path: inputs
-  output_path: outputs
+  output_path: outputs2
 
 model:
   start_new_registration_year: 1970
   first_stock_year: 2014
   end_year: 2025 # We do not project stock now
   csp_reference_year: 2025
-  csp_available_years: 45
+  csp_available_years: 25
   historical_validation: false
   sensitivity_analysis: false
   historical_csp: false
@@ -37,3 +37,6 @@ survival_rates:
     - geo country
     - powertrain
     - stock year
+
+csp_plot_years:
+  - 2025

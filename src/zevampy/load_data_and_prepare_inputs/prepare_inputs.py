@@ -59,6 +59,7 @@ def prepare_inputs(simulation_end_year, config=None):
     model_config = config.get("model", {})
     geography_config = config.get("geography") or {}
     powertrains = config.get("powertrains") or default_powertrains
+    csp_plot_years = config.get("csp_plot_years") or {}
     initial_stock_year = model_config.get("first_stock_year", initial_simulation_stock_year)
     initial_new_registrations_year = model_config.get("start_new_registration_year", initial_registration_year)
     end_year = model_config.get("end_year", simulation_end_year)
@@ -85,6 +86,7 @@ def prepare_inputs(simulation_end_year, config=None):
         save_fitted_csp_values_label: save_fitted_csp_values,
         distribution_bounds_label: distribution_bounds,
         powertrain_dim: powertrains,
+        csp_plot_years_label: csp_plot_years,
         initial_registration_year_label: initial_new_registrations_year,
         use_clusters_label: use_clusters,
         output_path_label: outputs_config,

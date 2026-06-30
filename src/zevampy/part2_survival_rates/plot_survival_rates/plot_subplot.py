@@ -35,7 +35,7 @@ def plot_survival_rate_country(ax, label, x, y, country_name, plot_params):
         None
     """
     ax.plot(x, y, '-o', markersize=plot_params[marker_size_dim], linewidth=plot_params[line_width_dim], label=label)
-    ax.set_title(country_name, fontsize=plot_params[title_fontsize_dim])
+    ax.set_title(country_name, fontsize=plot_params[title_fontsize_dim], y=plot_params[subfigure_height_dim])
     plt.style.use('seaborn-v0_8-white')
     ax = plt.gca()
     customize_axes(ax, plot_params)

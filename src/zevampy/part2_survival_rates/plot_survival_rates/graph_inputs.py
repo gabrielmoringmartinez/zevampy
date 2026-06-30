@@ -7,11 +7,11 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
 # Define your configuration dictionary
-TITLE = "Empirical cumulative survival probability (CSP) curves of year 2021"
+TITLE = "Empirical cumulative survival probability (CSP) curves for selected European countries"
 X_COLUMN = "vehicle age"
 X_LABEL = "Vehicle age"
 Y_LABEL = "Cumulative Survival Probability (CSP)"
-X_LIM = (0, 45)
+X_LIM = (0, 25)
 Y_LIM = (0, None)
 FIGURE_HEIGHT = 40
 FIGURE_WEIGHT = 40
@@ -22,6 +22,7 @@ NUMBER_OF_COUNTRIES_PER_PLOT = 16
 FILE_EXTENSION = '.pdf'
 TITLE_FONT = 64
 TITLE_VERTICAL_POSITION = 0.93
+SUBTITLE_VERTICAL_POSITION=1.025
 AXIS_TITLE_FONT = 48
 X_AXIS_TITLE_VERTICAL_POSITION = 0.075
 
@@ -54,13 +55,14 @@ base_plot_params = {
     number_of_countries_group_dim: NUMBER_OF_COUNTRIES_PER_PLOT,
     title_font_dim: TITLE_FONT,
     title_vertical_position_dim: TITLE_VERTICAL_POSITION,
+    subfigure_height_dim: SUBTITLE_VERTICAL_POSITION,
     axis_title_font_dim: AXIS_TITLE_FONT,
     x_axis_title_vertical_position_dim: X_AXIS_TITLE_VERTICAL_POSITION,
     y_axis_title_horizontal_position_dim: X_AXIS_TITLE_VERTICAL_POSITION,
     legend_show_dim: True,
-    legend_loc_dim: "upper left",
-    legend_bbox_to_anchor_dim: (0.265, 0.885),  # Adjust to place the legend outside the figure
-    legend_fontsize_dim: 30,
+    legend_loc_dim: "lower right",
+    legend_bbox_to_anchor_dim: (0.95, 0.15),  # Adjust to place the legend outside the figure
+    legend_fontsize_dim: 48,
     fill_between_dim: False,
 
 }
