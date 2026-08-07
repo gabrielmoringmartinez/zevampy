@@ -24,6 +24,7 @@ geography:
     - Netherlands
     - Norway
     - Switzerland
+    - Germany
   use_clusters: false
 
 
