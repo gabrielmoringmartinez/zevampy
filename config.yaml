@@ -3,7 +3,7 @@
 
 data:
   input_path: inputs
-  output_path: outputs2
+  output_path: outputs
 
 model:
   start_new_registration_year: 1970

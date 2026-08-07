@@ -5,7 +5,7 @@
 
 import pandas as pd
 
-from zevampy.load_data_and_prepare_inputs.dimension_names import survival_rate_dim
+from zevampy.load_data_and_prepare_inputs.dimension_names import age_dim, survival_rate_dim
 
 
 def get_distribution_function_discrete_points(survival_rate_distribution_function, survival_rates_country,
@@ -13,8 +13,12 @@ def get_distribution_function_discrete_points(survival_rate_distribution_functio
     """
     Append predicted survival-rate values to a distribution DataFrame.
 
-    The function replaces the empirical survival-rate values of a country or survival group with predicted values
-    from a fitted distribution function and appends the updated data to the output DataFrame.
+    The empirical observations used for fitting can be shorter than the configured
+    CSP horizon (for example, a young BEV cohort may only provide 15 valid empirical
+    ages while ``csp_available_years`` is 25). Therefore, the fitted output must not
+    reuse the empirical DataFrame row-for-row. Instead, a new age grid is created
+    for the complete fitted horizon and the survival-group identifiers are copied
+    from the empirical group.
 
     Parameters:
         survival_rate_distribution_function (pandas.DataFrame):
@@ -28,11 +32,33 @@ def get_distribution_function_discrete_points(survival_rate_distribution_functio
 
     Returns:
         pandas.DataFrame:
-            Updated DataFrame containing the fitted survival-rate values.
+            Updated DataFrame containing the fitted survival-rate values over the
+            complete configured age horizon.
     """
-    survival_rates_country = survival_rates_country.reset_index()  # for reseting the index
-    survival_rates_country = survival_rates_country.drop(['index'], axis=1)  # deleting the new column of index
-    survival_rates_country[survival_rate_dim] = predicted_function_value
-    survival_rate_distribution_function = pd.concat([survival_rate_distribution_function, survival_rates_country],
-                                                    ignore_index=True)
+    if survival_rates_country.empty:
+        return survival_rate_distribution_function
+
+    number_fitted_ages = len(predicted_function_value)
+
+    # Create a fresh fitted curve instead of assigning a full-horizon prediction
+    # vector to the (possibly shorter) empirical DataFrame.
+    fitted_group = pd.DataFrame(index=range(number_fitted_ages))
+
+    # All columns other than age and survival rate identify the fitted group
+    # (country, powertrain, stock year, methodology, ...). They are constant
+    # within the group and can therefore be copied from its first row.
+    for column in survival_rates_country.columns:
+        if column not in {age_dim, survival_rate_dim}:
+            fitted_group[column] = survival_rates_country[column].iloc[0]
+
+    fitted_group[age_dim] = range(1, number_fitted_ages + 1)
+    fitted_group[survival_rate_dim] = predicted_function_value
+
+    # Preserve the same column order expected by the downstream merge logic.
+    fitted_group = fitted_group[survival_rates_country.columns]
+
+    survival_rate_distribution_function = pd.concat(
+        [survival_rate_distribution_function, fitted_group],
+        ignore_index=True,
+    )
     return survival_rate_distribution_function

@@ -9,8 +9,9 @@ from zevampy.part2_survival_rates.calculate_empirical_survival_rates.filter_vehi
 from zevampy.part2_survival_rates.calculate_empirical_survival_rates.prepare_registrations_data import \
     prepare_registrations_data
 from zevampy.part2_survival_rates.calculate_empirical_survival_rates.obtain_survival_rates import obtain_survival_rates
-from zevampy.part2_survival_rates.calculate_empirical_survival_rates.save_dataframes import save_dataframes
-from zevampy.load_data_and_prepare_inputs.dimension_names import country_dim
+from zevampy.load_data_and_prepare_inputs.dimension_names import (
+    country_dim, methodology_dim, registration_based_method_label
+)
 
 
 def calculate_empirical_survival_rates(stock, registrations, stock_year, countries_to_keep, output_path,
@@ -53,8 +54,7 @@ def calculate_empirical_survival_rates(stock, registrations, stock_year, countri
     registrations = prepare_registrations_data(registrations, stock)
     registrations = registrations[registrations[country_dim].isin(countries_to_keep)]
     survival_rates = obtain_survival_rates(stock, registrations, survival_grouping)
-    # Save outputs
-    save_dataframes(survival_rates, output_path)
+    survival_rates[methodology_dim] = registration_based_method_label
     return survival_rates
 
 

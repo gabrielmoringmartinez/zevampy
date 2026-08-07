@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 
-def save_dataframes(survival_rates, output_path):
+def save_dataframes(survival_rates, output_path, filename="2_2_empirical_survival_rates.csv"):
     """
     Save empirical survival-rate data to CSV files.
 
@@ -18,5 +18,4 @@ def save_dataframes(survival_rates, output_path):
     Returns:
         None
     """
-    survival_rates.to_csv(f'{output_path}/2_2_empirical_survival_rates.csv', sep=';', index=False,
-                          decimal=',')
+    survival_rates.to_csv(f'{output_path}/{filename}', sep=';', index=False, decimal=',')
