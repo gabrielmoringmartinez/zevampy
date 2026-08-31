@@ -11,6 +11,30 @@ from zevampy.load_data_and_prepare_inputs.ensure_clean_directory import ensure_c
 from zevampy.part3_stock_calculation import calculate_and_plot_csps_and_stock
 from zevampy.part4_validate_model import compare_model_and_actual_stock_results
 
+test_config = {
+    "data": {
+        "output_path": "outputs",
+    },
+    "geography": {
+        "countries": ["Example Country"],
+        "use_clusters": True,
+    },
+    "powertrains": ["BEV", "Gasoline"],
+    "model": {
+        "start_new_registration_year": 1970,
+        "first_stock_year": 2014,
+        "end_year": 2050,
+        "csp_reference_year": 2021,
+        "csp_available_years": 45,
+        "historical_validation": True,
+        "historical_csp": False,
+        "sensitivity_analysis": False,
+    },
+    "survival_rates": {
+        "grouping": ["geo country"],
+    },
+}
+
 
 @pytest.mark.parametrize("input_dir", [
     "tests/test_inputs_single_country",
@@ -40,7 +64,7 @@ def test_model_runs_on_minimal_input(input_dir):
     ensure_clean_directory('outputs')
     ensure_clean_directory(os.path.join('outputs', 'figures'))
     # Use test-specific input folder
-    test_data, test_inputs = load_data_and_prepare_inputs(input_dir)
+    test_data, test_inputs = load_data_and_prepare_inputs(input_dir, config=test_config)
     test_csp_and_stock_calculated_data = calculate_and_plot_csps_and_stock(test_data, test_inputs)
     # Simple assertion — check result is not empty
     for key, value in test_csp_and_stock_calculated_data.items():

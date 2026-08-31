@@ -1,210 +1,30 @@
 ﻿geo country;time;scenario;new vehicle registrations
-Austria;2022;EU-27 CAM scenario proportionally distributed across each EU country;229311,1431
-Austria;2023;EU-27 CAM scenario proportionally distributed across each EU country;240925,4371
-Austria;2024;EU-27 CAM scenario proportionally distributed across each EU country;252539,7311
-Austria;2025;EU-27 CAM scenario proportionally distributed across each EU country;264154,0254
-Austria;2026;EU-27 CAM scenario proportionally distributed across each EU country;275768,3192
-Austria;2027;EU-27 CAM scenario proportionally distributed across each EU country;287382,6133
-Austria;2028;EU-27 CAM scenario proportionally distributed across each EU country;298996,9071
-Austria;2029;EU-27 CAM scenario proportionally distributed across each EU country;310611,2015
-Austria;2030;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2031;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2032;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2033;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2034;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2035;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2036;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2037;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2038;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2039;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Austria;2040;EU-27 CAM scenario proportionally distributed across each EU country;322225,4953
-Belgium;2022;EU-27 CAM scenario proportionally distributed across each EU country;366360,6088
-Belgium;2023;EU-27 CAM scenario proportionally distributed across each EU country;384916,2698
-Belgium;2024;EU-27 CAM scenario proportionally distributed across each EU country;403471,9307
-Belgium;2025;EU-27 CAM scenario proportionally distributed across each EU country;422027,5921
-Belgium;2026;EU-27 CAM scenario proportionally distributed across each EU country;440583,2528
-Belgium;2027;EU-27 CAM scenario proportionally distributed across each EU country;459138,9139
-Belgium;2028;EU-27 CAM scenario proportionally distributed across each EU country;477694,5745
-Belgium;2029;EU-27 CAM scenario proportionally distributed across each EU country;496250,236
-Belgium;2030;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2031;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2032;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2033;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2034;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2035;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2036;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2037;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2038;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2039;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Belgium;2040;EU-27 CAM scenario proportionally distributed across each EU country;514805,8966
-Czech Republic;2022;EU-27 CAM scenario proportionally distributed across each EU country;197824,7646
-Czech Republic;2023;EU-27 CAM scenario proportionally distributed across each EU country;207844,3169
-Czech Republic;2024;EU-27 CAM scenario proportionally distributed across each EU country;217863,8691
-Czech Republic;2025;EU-27 CAM scenario proportionally distributed across each EU country;227883,4216
-Czech Republic;2026;EU-27 CAM scenario proportionally distributed across each EU country;237902,9737
-Czech Republic;2027;EU-27 CAM scenario proportionally distributed across each EU country;247922,526
-Czech Republic;2028;EU-27 CAM scenario proportionally distributed across each EU country;257942,0781
-Czech Republic;2029;EU-27 CAM scenario proportionally distributed across each EU country;267961,6306
-Czech Republic;2030;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2031;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2032;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2033;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2034;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2035;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2036;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2037;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2038;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2039;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Czech Republic;2040;EU-27 CAM scenario proportionally distributed across each EU country;277981,1827
-Spain;2022;EU-27 CAM scenario proportionally distributed across each EU country;821877,9576
-Spain;2023;EU-27 CAM scenario proportionally distributed across each EU country;863504,9459
-Spain;2024;EU-27 CAM scenario proportionally distributed across each EU country;905131,934
-Spain;2025;EU-27 CAM scenario proportionally distributed across each EU country;946758,9232
-Spain;2026;EU-27 CAM scenario proportionally distributed across each EU country;988385,9107
-Spain;2027;EU-27 CAM scenario proportionally distributed across each EU country;1030012,899
-Spain;2028;EU-27 CAM scenario proportionally distributed across each EU country;1071639,887
-Spain;2029;EU-27 CAM scenario proportionally distributed across each EU country;1113266,876
-Spain;2030;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2031;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2032;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2033;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2034;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2035;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2036;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2037;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2038;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2039;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-Spain;2040;EU-27 CAM scenario proportionally distributed across each EU country;1154893,863
-France;2022;EU-27 CAM scenario proportionally distributed across each EU country;1561725,135
-France;2023;EU-27 CAM scenario proportionally distributed across each EU country;1640824,366
-France;2024;EU-27 CAM scenario proportionally distributed across each EU country;1719923,596
-France;2025;EU-27 CAM scenario proportionally distributed across each EU country;1799022,828
-France;2026;EU-27 CAM scenario proportionally distributed across each EU country;1878122,057
-France;2027;EU-27 CAM scenario proportionally distributed across each EU country;1957221,287
-France;2028;EU-27 CAM scenario proportionally distributed across each EU country;2036320,516
-France;2029;EU-27 CAM scenario proportionally distributed across each EU country;2115419,749
-France;2030;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2031;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2032;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2033;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2034;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2035;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2036;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2037;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2038;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2039;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-France;2040;EU-27 CAM scenario proportionally distributed across each EU country;2194518,978
-Hungary;2022;EU-27 CAM scenario proportionally distributed across each EU country;116585,7582
-Hungary;2023;EU-27 CAM scenario proportionally distributed across each EU country;122490,6665
-Hungary;2024;EU-27 CAM scenario proportionally distributed across each EU country;128395,5748
-Hungary;2025;EU-27 CAM scenario proportionally distributed across each EU country;134300,4832
-Hungary;2026;EU-27 CAM scenario proportionally distributed across each EU country;140205,3914
-Hungary;2027;EU-27 CAM scenario proportionally distributed across each EU country;146110,2998
-Hungary;2028;EU-27 CAM scenario proportionally distributed across each EU country;152015,208
-Hungary;2029;EU-27 CAM scenario proportionally distributed across each EU country;157920,1164
-Hungary;2030;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2031;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2032;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2033;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2034;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2035;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2036;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2037;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2038;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2039;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Hungary;2040;EU-27 CAM scenario proportionally distributed across each EU country;163825,0246
-Italy;2022;EU-27 CAM scenario proportionally distributed across each EU country;1394508,914
-Italy;2023;EU-27 CAM scenario proportionally distributed across each EU country;1465138,872
-Italy;2024;EU-27 CAM scenario proportionally distributed across each EU country;1535768,831
-Italy;2025;EU-27 CAM scenario proportionally distributed across each EU country;1606398,791
-Italy;2026;EU-27 CAM scenario proportionally distributed across each EU country;1677028,748
-Italy;2027;EU-27 CAM scenario proportionally distributed across each EU country;1747658,707
-Italy;2028;EU-27 CAM scenario proportionally distributed across each EU country;1818288,665
-Italy;2029;EU-27 CAM scenario proportionally distributed across each EU country;1888918,625
-Italy;2030;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2031;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2032;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2033;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2034;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2035;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2036;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2037;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2038;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2039;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Italy;2040;EU-27 CAM scenario proportionally distributed across each EU country;1959548,582
-Norway;2022;EU-27 CAM scenario proportionally distributed across each EU country;168563,5753
-Norway;2023;EU-27 CAM scenario proportionally distributed across each EU country;177101,0886
-Norway;2024;EU-27 CAM scenario proportionally distributed across each EU country;185638,6018
-Norway;2025;EU-27 CAM scenario proportionally distributed across each EU country;194176,1153
-Norway;2026;EU-27 CAM scenario proportionally distributed across each EU country;202713,6284
-Norway;2027;EU-27 CAM scenario proportionally distributed across each EU country;211251,1417
-Norway;2028;EU-27 CAM scenario proportionally distributed across each EU country;219788,6549
-Norway;2029;EU-27 CAM scenario proportionally distributed across each EU country;228326,1683
-Norway;2030;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2031;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2032;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2033;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2034;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2035;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2036;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2037;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2038;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2039;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Norway;2040;EU-27 CAM scenario proportionally distributed across each EU country;236863,6815
-Poland;2022;EU-27 CAM scenario proportionally distributed across each EU country;427105,3078
-Poland;2023;EU-27 CAM scenario proportionally distributed across each EU country;448737,6043
-Poland;2024;EU-27 CAM scenario proportionally distributed across each EU country;470369,9006
-Poland;2025;EU-27 CAM scenario proportionally distributed across each EU country;492002,1976
-Poland;2026;EU-27 CAM scenario proportionally distributed across each EU country;513634,4937
-Poland;2027;EU-27 CAM scenario proportionally distributed across each EU country;535266,7902
-Poland;2028;EU-27 CAM scenario proportionally distributed across each EU country;556899,0863
-Poland;2029;EU-27 CAM scenario proportionally distributed across each EU country;578531,3832
-Poland;2030;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2031;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2032;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2033;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2034;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2035;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2036;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2037;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2038;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2039;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Poland;2040;EU-27 CAM scenario proportionally distributed across each EU country;600163,6793
-Slovenia;2022;EU-27 CAM scenario proportionally distributed across each EU country;51851,59244
-Slovenia;2023;EU-27 CAM scenario proportionally distributed across each EU country;54477,80429
-Slovenia;2024;EU-27 CAM scenario proportionally distributed across each EU country;57104,01612
-Slovenia;2025;EU-27 CAM scenario proportionally distributed across each EU country;59730,22804
-Slovenia;2026;EU-27 CAM scenario proportionally distributed across each EU country;62356,43984
-Slovenia;2027;EU-27 CAM scenario proportionally distributed across each EU country;64982,65169
-Slovenia;2028;EU-27 CAM scenario proportionally distributed across each EU country;67608,86349
-Slovenia;2029;EU-27 CAM scenario proportionally distributed across each EU country;70235,07541
-Slovenia;2030;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2031;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2032;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2033;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2034;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2035;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2036;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2037;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2038;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2039;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Slovenia;2040;EU-27 CAM scenario proportionally distributed across each EU country;72861,28721
-Sweden;2022;EU-27 CAM scenario proportionally distributed across each EU country;287838,3029
-Sweden;2023;EU-27 CAM scenario proportionally distributed across each EU country;302416,9171
-Sweden;2024;EU-27 CAM scenario proportionally distributed across each EU country;316995,5312
-Sweden;2025;EU-27 CAM scenario proportionally distributed across each EU country;331574,1458
-Sweden;2026;EU-27 CAM scenario proportionally distributed across each EU country;346152,7597
-Sweden;2027;EU-27 CAM scenario proportionally distributed across each EU country;360731,3739
-Sweden;2028;EU-27 CAM scenario proportionally distributed across each EU country;375309,9879
-Sweden;2029;EU-27 CAM scenario proportionally distributed across each EU country;389888,6024
-Sweden;2030;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2031;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2032;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2033;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2034;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2035;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2036;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2037;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2038;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2039;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
-Sweden;2040;EU-27 CAM scenario proportionally distributed across each EU country;404467,2164
+Example Country;2022;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2023;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2024;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2025;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2026;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2027;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2028;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2029;EU-27 CAM scenario proportionally distributed across each EU country;3000000
+Example Country;2030;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2031;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2032;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2033;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2034;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2035;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2036;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2037;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2038;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2039;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2040;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2041;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2042;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2043;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2044;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2045;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2046;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2047;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2048;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2049;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2050;EU-27 CAM scenario proportionally distributed across each EU country;3500000

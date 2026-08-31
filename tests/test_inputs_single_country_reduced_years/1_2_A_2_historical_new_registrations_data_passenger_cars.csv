@@ -1,54 +1,54 @@
 geo country;time;new vehicle registrations
-Germany;1970;2107123
-Germany;1971;2106908
-Germany;1972;2106693
-Germany;1973;2106478
-Germany;1974;2106263
-Germany;1975;2106048
-Germany;1976;2170076
-Germany;1977;2234104
-Germany;1978;2298132
-Germany;1979;2623400
-Germany;1980;2426187
-Germany;1981;2330335
-Germany;1982;2155537
-Germany;1983;2426774
-Germany;1984;2393939
-Germany;1985;2379261
-Germany;1986;2829438
-Germany;1987;2915654
-Germany;1988;2807939
-Germany;1989;2831740
-Germany;1990;3040783
-Germany;1991;3485171
-Germany;1992;3929558
-Germany;1993;3194204
-Germany;1994;3209224
-Germany;1995;3314061
-Germany;1996;3496320
-Germany;1997;3528179
-Germany;1998;3735987
-Germany;1999;3802176
-Germany;2000;3378343
-Germany;2001;3341718
-Germany;2002;3252898
-Germany;2003;3236938
-Germany;2004;3266826
-Germany;2005;3342122
-Germany;2006;3467961
-Germany;2007;3148163
-Germany;2008;3090040
-Germany;2009;3807175
-Germany;2010;2916260
-Germany;2011;3173634
-Germany;2012;3082504
-Germany;2013;2952431
-Germany;2014;3036773
-Germany;2015;3206042
-Germany;2016;3351607
-Germany;2017;3441262
-Germany;2018;3435778
-Germany;2019;3607258
-Germany;2020;2917678
-Germany;2021;2622132
-Germany;2022;0
+Example Country;1970;2000000
+Example Country;1971;2000000
+Example Country;1972;2000000
+Example Country;1973;2000000
+Example Country;1974;2000000
+Example Country;1975;2000000
+Example Country;1976;2000000
+Example Country;1977;2000000
+Example Country;1978;2000000
+Example Country;1979;2000000
+Example Country;1980;2000000
+Example Country;1981;2000000
+Example Country;1982;2000000
+Example Country;1983;2000000
+Example Country;1984;2000000
+Example Country;1985;2000000
+Example Country;1986;2000000
+Example Country;1987;2000000
+Example Country;1988;2000000
+Example Country;1989;2000000
+Example Country;1990;3000000
+Example Country;1991;3000000
+Example Country;1992;3000000
+Example Country;1993;3000000
+Example Country;1994;3000000
+Example Country;1995;3000000
+Example Country;1996;3000000
+Example Country;1997;3000000
+Example Country;1998;3000000
+Example Country;1999;3000000
+Example Country;2000;3000000
+Example Country;2001;3000000
+Example Country;2002;3000000
+Example Country;2003;3000000
+Example Country;2004;3000000
+Example Country;2005;3000000
+Example Country;2006;3000000
+Example Country;2007;3000000
+Example Country;2008;3000000
+Example Country;2009;3000000
+Example Country;2010;3000000
+Example Country;2011;3000000
+Example Country;2012;3000000
+Example Country;2013;3000000
+Example Country;2014;3000000
+Example Country;2015;3000000
+Example Country;2016;3000000
+Example Country;2017;3000000
+Example Country;2018;3000000
+Example Country;2019;3000000
+Example Country;2020;3000000
+Example Country;2021;3000000
+Example Country;2022;0

@@ -1,12 +1,2 @@
-geo country;stock year of empirical csp data
-Austria;2021
-Belgium;2021
-Czech Republic;2020
-Spain;2021
-France;2021
-Hungary;2021
-Italy;2021
-Norway;2021
-Poland;2021
-Slovenia;2021
-Sweden;2021
+﻿geo country;stock year of empirical csp data
+Example Country;2021

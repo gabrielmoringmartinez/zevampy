@@ -1,6 +1,6 @@
 <!--
 SPDX-FileCopyrightText: 2025 German Aerospace Center (DLR), Gabriel Möring-Martínez
-SPDX-License-Identifier: CC-BY-4.0
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Changelog

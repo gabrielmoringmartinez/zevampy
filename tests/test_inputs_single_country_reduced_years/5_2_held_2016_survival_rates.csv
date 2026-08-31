@@ -1,46 +1,46 @@
 geo country;vehicle age;survival rate
-Germany;1;0,931282533
-Germany;2;0,9287985
-Germany;3;0,94755255
-Germany;4;0,88939352
-Germany;5;0,881319213
-Germany;6;0,875771434
-Germany;7;0,852480232
-Germany;8;0,853252609
-Germany;9;0,793321122
-Germany;10;0,74086094
-Germany;11;0,713908836
-Germany;12;0,648848247
-Germany;13;0,593374425
-Germany;14;0,545674338
-Germany;15;0,48417073
-Germany;16;0,41988163
-Germany;17;0,37526829
-Germany;18;0,321401482
-Germany;19;0,25858575
-Germany;20;0,198529326
-Germany;21;0,157171254
-Germany;22;0,11672869
-Germany;23;0,082135121
-Germany;24;0,062448735
-Germany;25;0,051302971
-Germany;26;0,05389836
-Germany;27;0,045473156
-Germany;28;0,035529039
-Germany;29;0,02674702
-Germany;30;0,020591264
-Germany;31;0,016696955
-Germany;32;0,015249273
-Germany;33;0,014332863
-Germany;34;0,014355684
-Germany;35;0,013205526
-Germany;36;0,010845222
-Germany;37;0,009615087
-Germany;38;0,008892277
-Germany;39;0,010150853
-Germany;40;0,01044177
-Germany;41;0,010749854
-Germany;42;0,011076671
-Germany;43;0,01107554
-Germany;44;0,01107441
-Germany;45;0,011073279
+Example Country;1;1
+Example Country;2;1
+Example Country;3;0,99
+Example Country;4;0,98
+Example Country;5;0,97
+Example Country;6;0,95
+Example Country;7;0,92
+Example Country;8;0,88
+Example Country;9;0,84
+Example Country;10;0,78
+Example Country;11;0,72
+Example Country;12;0,66
+Example Country;13;0,58
+Example Country;14;0,51
+Example Country;15;0,44
+Example Country;16;0,37
+Example Country;17;0,3
+Example Country;18;0,24
+Example Country;19;0,19
+Example Country;20;0,14
+Example Country;21;0,1
+Example Country;22;0,07
+Example Country;23;0,05
+Example Country;24;0,03
+Example Country;25;0,02
+Example Country;26;0,01
+Example Country;27;0,01
+Example Country;28;0
+Example Country;29;0
+Example Country;30;0
+Example Country;31;0
+Example Country;32;0
+Example Country;33;0
+Example Country;34;0
+Example Country;35;0
+Example Country;36;0
+Example Country;37;0
+Example Country;38;0
+Example Country;39;0
+Example Country;40;0
+Example Country;41;0
+Example Country;42;0
+Example Country;43;0
+Example Country;44;0
+Example Country;45;0

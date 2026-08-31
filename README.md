@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 
-SPDX-License-Identifier: CC-BY-4.0
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 ![zevampy Banner](fk_stock_model_banner.png)
@@ -15,8 +15,6 @@ SPDX-License-Identifier: CC-BY-4.0
 
 [![REUSE status](https://api.reuse.software/badge/github.com/gabrielmoringmartinez/zevampy)](https://api.reuse.software/info/github.com/gabrielmoringmartinez/zevampy)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSES/MIT.txt)
-[![Data License: CC BY-SA 4.0](https://img.shields.io/badge/data%20license-CC%20BY--SA%204.0-blue.svg)](LICENSES/CC-BY-SA-4.0.txt)
-
 
 <a href="https://github.com/gabrielmoringmartinez/zevampy">
   <img src="https://raw.githubusercontent.com/gabrielmoringmartinez/zevampy/main/dlr_logo.png"
@@ -475,16 +473,13 @@ You can also find machine-readable citation metadata in the [CITATION.cff](https
 
 [![REUSE status](https://api.reuse.software/badge/github.com/gabrielmoringmartinez/zevampy)](https://api.reuse.software/info/github.com/gabrielmoringmartinez/zevampy)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSES/MIT.txt)
-[![Data License: CC BY-SA 4.0](https://img.shields.io/badge/data%20license-CC%20BY--SA%204.0-blue.svg)](LICENSES/CC-BY-SA-4.0.txt)
 
 This project is REUSE compliant and licensed under multiple open licenses depending on content type:
 
-- **Source Code**: [MIT License](LICENSES/MIT.txt)  
-- **Datasets**: [CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt)
-- **Documentation and Plots**: [CC BY 4.0](LICENSES/CC-BY-4.0.txt)  
-- **Minor Assets**: [CC0-1.0](LICENSES/CC0-1.0.txt)
-
-Some third-party data is excluded (see details below).
+- **Source code, tests, configuration files, and synthetic example/test data**: [MIT License](LICENSES/MIT.txt)
+- **Documentation and original figures**: [CC BY SA 4.0](LICENSES/CC-BY-SA-4.0.txt)
+- **Minor metadata**: [CC0-1.0](LICENSES/CC0-1.0.txt) where indicated
+- **Research input datasets**: Licensed individually according to their respective sources. See the file-level SPDX/REUSE metadata and [LICENSE.md](./LICENSE.md) for details.
 
 For full licensing details and exceptions, see the [LICENSE.md](./LICENSE.md) file.
 

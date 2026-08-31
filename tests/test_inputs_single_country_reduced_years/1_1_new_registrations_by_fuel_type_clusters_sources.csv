@@ -1,649 +1,163 @@
 ﻿geo country;time;powertrain;Source
-Germany;1970;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1971;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1972;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1973;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1974;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1975;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1976;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1977;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1978;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1979;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1980;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1981;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1982;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1983;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1984;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1985;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1986;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1987;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1988;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1989;Gasoline;Assumption: KBA 1990 data is constant
-Germany;1990;Gasoline;KBA
-Germany;1991;Gasoline;KBA
-Germany;1992;Gasoline;KBA
-Germany;1993;Gasoline;KBA
-Germany;1994;Gasoline;KBA
-Germany;1995;Gasoline;KBA
-Germany;1996;Gasoline;KBA
-Germany;1997;Gasoline;KBA
-Germany;1998;Gasoline;KBA
-Germany;1999;Gasoline;KBA
-Germany;2000;Gasoline;KBA
-Germany;2001;Gasoline;KBA
-Germany;2002;Gasoline;KBA
-Germany;2003;Gasoline;KBA
-Germany;2004;Gasoline;KBA
-Germany;2005;Gasoline;KBA
-Germany;2006;Gasoline;KBA
-Germany;2007;Gasoline;KBA
-Germany;2008;Gasoline;KBA
-Germany;2009;Gasoline;KBA
-Germany;2010;Gasoline;KBA
-Germany;2011;Gasoline;KBA
-Germany;2012;Gasoline;KBA
-Germany;2013;Gasoline;KBA
-Germany;2014;Gasoline;KBA
-Germany;2015;Gasoline;KBA
-Germany;2016;Gasoline;KBA
-Germany;2017;Gasoline;KBA
-Germany;2018;Gasoline;KBA
-Germany;2019;Gasoline;KBA
-Germany;2020;Gasoline;KBA
-Germany;2021;Gasoline;KBA
-Germany;2022;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;Gasoline;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;Diesel;Assumption: KBA 1990 data is constant
-Germany;1971;Diesel;Assumption: KBA 1990 data is constant
-Germany;1972;Diesel;Assumption: KBA 1990 data is constant
-Germany;1973;Diesel;Assumption: KBA 1990 data is constant
-Germany;1974;Diesel;Assumption: KBA 1990 data is constant
-Germany;1975;Diesel;Assumption: KBA 1990 data is constant
-Germany;1976;Diesel;Assumption: KBA 1990 data is constant
-Germany;1977;Diesel;Assumption: KBA 1990 data is constant
-Germany;1978;Diesel;Assumption: KBA 1990 data is constant
-Germany;1979;Diesel;Assumption: KBA 1990 data is constant
-Germany;1980;Diesel;Assumption: KBA 1990 data is constant
-Germany;1981;Diesel;Assumption: KBA 1990 data is constant
-Germany;1982;Diesel;Assumption: KBA 1990 data is constant
-Germany;1983;Diesel;Assumption: KBA 1990 data is constant
-Germany;1984;Diesel;Assumption: KBA 1990 data is constant
-Germany;1985;Diesel;Assumption: KBA 1990 data is constant
-Germany;1986;Diesel;Assumption: KBA 1990 data is constant
-Germany;1987;Diesel;Assumption: KBA 1990 data is constant
-Germany;1988;Diesel;Assumption: KBA 1990 data is constant
-Germany;1989;Diesel;Assumption: KBA 1990 data is constant
-Germany;1990;Diesel;KBA
-Germany;1991;Diesel;KBA
-Germany;1992;Diesel;KBA
-Germany;1993;Diesel;KBA
-Germany;1994;Diesel;KBA
-Germany;1995;Diesel;KBA
-Germany;1996;Diesel;KBA
-Germany;1997;Diesel;KBA
-Germany;1998;Diesel;KBA
-Germany;1999;Diesel;KBA
-Germany;2000;Diesel;KBA
-Germany;2001;Diesel;KBA
-Germany;2002;Diesel;KBA
-Germany;2003;Diesel;KBA
-Germany;2004;Diesel;KBA
-Germany;2005;Diesel;KBA
-Germany;2006;Diesel;KBA
-Germany;2007;Diesel;KBA
-Germany;2008;Diesel;KBA
-Germany;2009;Diesel;KBA
-Germany;2010;Diesel;KBA
-Germany;2011;Diesel;KBA
-Germany;2012;Diesel;KBA
-Germany;2013;Diesel;KBA
-Germany;2014;Diesel;KBA
-Germany;2015;Diesel;KBA
-Germany;2016;Diesel;KBA
-Germany;2017;Diesel;KBA
-Germany;2018;Diesel;KBA
-Germany;2019;Diesel;KBA
-Germany;2020;Diesel;KBA
-Germany;2021;Diesel;KBA
-Germany;2022;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;Diesel;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;CNG;Assumption: KBA 1990 data is constant
-Germany;1971;CNG;Assumption: KBA 1990 data is constant
-Germany;1972;CNG;Assumption: KBA 1990 data is constant
-Germany;1973;CNG;Assumption: KBA 1990 data is constant
-Germany;1974;CNG;Assumption: KBA 1990 data is constant
-Germany;1975;CNG;Assumption: KBA 1990 data is constant
-Germany;1976;CNG;Assumption: KBA 1990 data is constant
-Germany;1977;CNG;Assumption: KBA 1990 data is constant
-Germany;1978;CNG;Assumption: KBA 1990 data is constant
-Germany;1979;CNG;Assumption: KBA 1990 data is constant
-Germany;1980;CNG;Assumption: KBA 1990 data is constant
-Germany;1981;CNG;Assumption: KBA 1990 data is constant
-Germany;1982;CNG;Assumption: KBA 1990 data is constant
-Germany;1983;CNG;Assumption: KBA 1990 data is constant
-Germany;1984;CNG;Assumption: KBA 1990 data is constant
-Germany;1985;CNG;Assumption: KBA 1990 data is constant
-Germany;1986;CNG;Assumption: KBA 1990 data is constant
-Germany;1987;CNG;Assumption: KBA 1990 data is constant
-Germany;1988;CNG;Assumption: KBA 1990 data is constant
-Germany;1989;CNG;Assumption: KBA 1990 data is constant
-Germany;1990;CNG;KBA
-Germany;1991;CNG;KBA
-Germany;1992;CNG;KBA
-Germany;1993;CNG;KBA
-Germany;1994;CNG;KBA
-Germany;1995;CNG;KBA
-Germany;1996;CNG;KBA
-Germany;1997;CNG;KBA
-Germany;1998;CNG;KBA
-Germany;1999;CNG;KBA
-Germany;2000;CNG;KBA
-Germany;2001;CNG;KBA
-Germany;2002;CNG;KBA
-Germany;2003;CNG;KBA
-Germany;2004;CNG;KBA
-Germany;2005;CNG;KBA
-Germany;2006;CNG;KBA
-Germany;2007;CNG;KBA
-Germany;2008;CNG;KBA
-Germany;2009;CNG;KBA
-Germany;2010;CNG;KBA
-Germany;2011;CNG;KBA
-Germany;2012;CNG;KBA
-Germany;2013;CNG;KBA
-Germany;2014;CNG;KBA
-Germany;2015;CNG;KBA
-Germany;2016;CNG;KBA
-Germany;2017;CNG;KBA
-Germany;2018;CNG;KBA
-Germany;2019;CNG;KBA
-Germany;2020;CNG;KBA
-Germany;2021;CNG;KBA
-Germany;2022;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;CNG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;LPG;Assumption: KBA 1990 data is constant
-Germany;1971;LPG;Assumption: KBA 1990 data is constant
-Germany;1972;LPG;Assumption: KBA 1990 data is constant
-Germany;1973;LPG;Assumption: KBA 1990 data is constant
-Germany;1974;LPG;Assumption: KBA 1990 data is constant
-Germany;1975;LPG;Assumption: KBA 1990 data is constant
-Germany;1976;LPG;Assumption: KBA 1990 data is constant
-Germany;1977;LPG;Assumption: KBA 1990 data is constant
-Germany;1978;LPG;Assumption: KBA 1990 data is constant
-Germany;1979;LPG;Assumption: KBA 1990 data is constant
-Germany;1980;LPG;Assumption: KBA 1990 data is constant
-Germany;1981;LPG;Assumption: KBA 1990 data is constant
-Germany;1982;LPG;Assumption: KBA 1990 data is constant
-Germany;1983;LPG;Assumption: KBA 1990 data is constant
-Germany;1984;LPG;Assumption: KBA 1990 data is constant
-Germany;1985;LPG;Assumption: KBA 1990 data is constant
-Germany;1986;LPG;Assumption: KBA 1990 data is constant
-Germany;1987;LPG;Assumption: KBA 1990 data is constant
-Germany;1988;LPG;Assumption: KBA 1990 data is constant
-Germany;1989;LPG;Assumption: KBA 1990 data is constant
-Germany;1990;LPG;KBA
-Germany;1991;LPG;KBA
-Germany;1992;LPG;KBA
-Germany;1993;LPG;KBA
-Germany;1994;LPG;KBA
-Germany;1995;LPG;KBA
-Germany;1996;LPG;KBA
-Germany;1997;LPG;KBA
-Germany;1998;LPG;KBA
-Germany;1999;LPG;KBA
-Germany;2000;LPG;KBA
-Germany;2001;LPG;KBA
-Germany;2002;LPG;KBA
-Germany;2003;LPG;KBA
-Germany;2004;LPG;KBA
-Germany;2005;LPG;KBA
-Germany;2006;LPG;KBA
-Germany;2007;LPG;KBA
-Germany;2008;LPG;KBA
-Germany;2009;LPG;KBA
-Germany;2010;LPG;KBA
-Germany;2011;LPG;KBA
-Germany;2012;LPG;KBA
-Germany;2013;LPG;KBA
-Germany;2014;LPG;KBA
-Germany;2015;LPG;KBA
-Germany;2016;LPG;KBA
-Germany;2017;LPG;KBA
-Germany;2018;LPG;KBA
-Germany;2019;LPG;KBA
-Germany;2020;LPG;KBA
-Germany;2021;LPG;KBA
-Germany;2022;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;LPG;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1971;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1972;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1973;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1974;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1975;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1976;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1977;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1978;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1979;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1980;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1981;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1982;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1983;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1984;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1985;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1986;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1987;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1988;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1989;G-HEV;Assumption: KBA 1990 data is constant
-Germany;1990;G-HEV;KBA
-Germany;1991;G-HEV;KBA
-Germany;1992;G-HEV;KBA
-Germany;1993;G-HEV;KBA
-Germany;1994;G-HEV;KBA
-Germany;1995;G-HEV;KBA
-Germany;1996;G-HEV;KBA
-Germany;1997;G-HEV;KBA
-Germany;1998;G-HEV;KBA
-Germany;1999;G-HEV;KBA
-Germany;2000;G-HEV;KBA
-Germany;2001;G-HEV;ICCT
-Germany;2002;G-HEV;ICCT
-Germany;2003;G-HEV;ICCT
-Germany;2004;G-HEV;ICCT
-Germany;2005;G-HEV;ICCT
-Germany;2006;G-HEV;ICCT
-Germany;2007;G-HEV;ICCT
-Germany;2008;G-HEV;ICCT
-Germany;2009;G-HEV;ICCT
-Germany;2010;G-HEV;ICCT
-Germany;2011;G-HEV;ICCT
-Germany;2012;G-HEV;ICCT
-Germany;2013;G-HEV;ICCT
-Germany;2014;G-HEV;ICCT
-Germany;2015;G-HEV;ICCT
-Germany;2016;G-HEV;ICCT
-Germany;2017;G-HEV;ICCT
-Germany;2018;G-HEV;ICCT
-Germany;2019;G-HEV;ICCT
-Germany;2020;G-HEV;ICCT
-Germany;2021;G-HEV;ICCT
-Germany;2022;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;G-HEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1971;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1972;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1973;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1974;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1975;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1976;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1977;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1978;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1979;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1980;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1981;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1982;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1983;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1984;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1985;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1986;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1987;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1988;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1989;G-PHEV;Assumption: KBA 1990 data is constant
-Germany;1990;G-PHEV;KBA
-Germany;1991;G-PHEV;KBA
-Germany;1992;G-PHEV;KBA
-Germany;1993;G-PHEV;KBA
-Germany;1994;G-PHEV;KBA
-Germany;1995;G-PHEV;KBA
-Germany;1996;G-PHEV;KBA
-Germany;1997;G-PHEV;KBA
-Germany;1998;G-PHEV;KBA
-Germany;1999;G-PHEV;KBA
-Germany;2000;G-PHEV;KBA
-Germany;2001;G-PHEV;KBA
-Germany;2002;G-PHEV;KBA
-Germany;2003;G-PHEV;KBA
-Germany;2004;G-PHEV;KBA
-Germany;2005;G-PHEV;KBA
-Germany;2006;G-PHEV;KBA
-Germany;2007;G-PHEV;KBA
-Germany;2008;G-PHEV;KBA
-Germany;2009;G-PHEV;KBA
-Germany;2010;G-PHEV;KBA
-Germany;2011;G-PHEV;KBA
-Germany;2012;G-PHEV;KBA
-Germany;2013;G-PHEV;KBA
-Germany;2014;G-PHEV;KBA
-Germany;2015;G-PHEV;KBA
-Germany;2016;G-PHEV;KBA
-Germany;2017;G-PHEV;KBA
-Germany;2018;G-PHEV;KBA
-Germany;2019;G-PHEV;KBA
-Germany;2020;G-PHEV;KBA
-Germany;2021;G-PHEV;KBA
-Germany;2022;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;G-PHEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;BEV;Assumption: KBA 1990 data is constant
-Germany;1971;BEV;Assumption: KBA 1990 data is constant
-Germany;1972;BEV;Assumption: KBA 1990 data is constant
-Germany;1973;BEV;Assumption: KBA 1990 data is constant
-Germany;1974;BEV;Assumption: KBA 1990 data is constant
-Germany;1975;BEV;Assumption: KBA 1990 data is constant
-Germany;1976;BEV;Assumption: KBA 1990 data is constant
-Germany;1977;BEV;Assumption: KBA 1990 data is constant
-Germany;1978;BEV;Assumption: KBA 1990 data is constant
-Germany;1979;BEV;Assumption: KBA 1990 data is constant
-Germany;1980;BEV;Assumption: KBA 1990 data is constant
-Germany;1981;BEV;Assumption: KBA 1990 data is constant
-Germany;1982;BEV;Assumption: KBA 1990 data is constant
-Germany;1983;BEV;Assumption: KBA 1990 data is constant
-Germany;1984;BEV;Assumption: KBA 1990 data is constant
-Germany;1985;BEV;Assumption: KBA 1990 data is constant
-Germany;1986;BEV;Assumption: KBA 1990 data is constant
-Germany;1987;BEV;Assumption: KBA 1990 data is constant
-Germany;1988;BEV;Assumption: KBA 1990 data is constant
-Germany;1989;BEV;Assumption: KBA 1990 data is constant
-Germany;1990;BEV;KBA
-Germany;1991;BEV;KBA
-Germany;1992;BEV;KBA
-Germany;1993;BEV;KBA
-Germany;1994;BEV;KBA
-Germany;1995;BEV;KBA
-Germany;1996;BEV;KBA
-Germany;1997;BEV;KBA
-Germany;1998;BEV;KBA
-Germany;1999;BEV;KBA
-Germany;2000;BEV;KBA
-Germany;2001;BEV;KBA
-Germany;2002;BEV;KBA
-Germany;2003;BEV;KBA
-Germany;2004;BEV;KBA
-Germany;2005;BEV;KBA
-Germany;2006;BEV;KBA
-Germany;2007;BEV;KBA
-Germany;2008;BEV;KBA
-Germany;2009;BEV;KBA
-Germany;2010;BEV;KBA
-Germany;2011;BEV;KBA
-Germany;2012;BEV;KBA
-Germany;2013;BEV;KBA
-Germany;2014;BEV;KBA
-Germany;2015;BEV;KBA
-Germany;2016;BEV;KBA
-Germany;2017;BEV;KBA
-Germany;2018;BEV;KBA
-Germany;2019;BEV;KBA
-Germany;2020;BEV;KBA
-Germany;2021;BEV;KBA
-Germany;2022;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;BEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;1970;FCEV;Assumption: KBA 1990 data is constant
-Germany;1971;FCEV;Assumption: KBA 1990 data is constant
-Germany;1972;FCEV;Assumption: KBA 1990 data is constant
-Germany;1973;FCEV;Assumption: KBA 1990 data is constant
-Germany;1974;FCEV;Assumption: KBA 1990 data is constant
-Germany;1975;FCEV;Assumption: KBA 1990 data is constant
-Germany;1976;FCEV;Assumption: KBA 1990 data is constant
-Germany;1977;FCEV;Assumption: KBA 1990 data is constant
-Germany;1978;FCEV;Assumption: KBA 1990 data is constant
-Germany;1979;FCEV;Assumption: KBA 1990 data is constant
-Germany;1980;FCEV;Assumption: KBA 1990 data is constant
-Germany;1981;FCEV;Assumption: KBA 1990 data is constant
-Germany;1982;FCEV;Assumption: KBA 1990 data is constant
-Germany;1983;FCEV;Assumption: KBA 1990 data is constant
-Germany;1984;FCEV;Assumption: KBA 1990 data is constant
-Germany;1985;FCEV;Assumption: KBA 1990 data is constant
-Germany;1986;FCEV;Assumption: KBA 1990 data is constant
-Germany;1987;FCEV;Assumption: KBA 1990 data is constant
-Germany;1988;FCEV;Assumption: KBA 1990 data is constant
-Germany;1989;FCEV;Assumption: KBA 1990 data is constant
-Germany;1990;FCEV;KBA
-Germany;1991;FCEV;KBA
-Germany;1992;FCEV;KBA
-Germany;1993;FCEV;KBA
-Germany;1994;FCEV;KBA
-Germany;1995;FCEV;KBA
-Germany;1996;FCEV;KBA
-Germany;1997;FCEV;KBA
-Germany;1998;FCEV;KBA
-Germany;1999;FCEV;KBA
-Germany;2000;FCEV;KBA
-Germany;2001;FCEV;KBA
-Germany;2002;FCEV;KBA
-Germany;2003;FCEV;KBA
-Germany;2004;FCEV;KBA
-Germany;2005;FCEV;KBA
-Germany;2006;FCEV;KBA
-Germany;2007;FCEV;KBA
-Germany;2008;FCEV;KBA
-Germany;2009;FCEV;EAFO
-Germany;2010;FCEV;EAFO
-Germany;2011;FCEV;EAFO
-Germany;2012;FCEV;EAFO
-Germany;2013;FCEV;EAFO
-Germany;2014;FCEV;EAFO
-Germany;2015;FCEV;EAFO
-Germany;2016;FCEV;EAFO
-Germany;2017;FCEV;EAFO
-Germany;2018;FCEV;EAFO
-Germany;2019;FCEV;EAFO
-Germany;2020;FCEV;EAFO
-Germany;2021;FCEV;EAFO
-Germany;2022;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2023;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2024;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2025;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2026;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2027;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2028;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2029;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2030;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2031;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2032;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2033;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2034;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2035;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2036;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2037;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2038;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2039;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2040;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2041;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2042;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2043;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2044;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2045;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2046;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2047;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2048;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2049;FCEV;Projected shares from (Möring-Martínez et al., 2024)
-Germany;2050;FCEV;Projected shares from (Möring-Martínez et al., 2024)
+Example Country;1970;Gasoline;own assumption
+Example Country;1971;Gasoline;own assumption
+Example Country;1972;Gasoline;own assumption
+Example Country;1973;Gasoline;own assumption
+Example Country;1974;Gasoline;own assumption
+Example Country;1975;Gasoline;own assumption
+Example Country;1976;Gasoline;own assumption
+Example Country;1977;Gasoline;own assumption
+Example Country;1978;Gasoline;own assumption
+Example Country;1979;Gasoline;own assumption
+Example Country;1980;Gasoline;own assumption
+Example Country;1981;Gasoline;own assumption
+Example Country;1982;Gasoline;own assumption
+Example Country;1983;Gasoline;own assumption
+Example Country;1984;Gasoline;own assumption
+Example Country;1985;Gasoline;own assumption
+Example Country;1986;Gasoline;own assumption
+Example Country;1987;Gasoline;own assumption
+Example Country;1988;Gasoline;own assumption
+Example Country;1989;Gasoline;own assumption
+Example Country;1990;Gasoline;own assumption
+Example Country;1991;Gasoline;own assumption
+Example Country;1992;Gasoline;own assumption
+Example Country;1993;Gasoline;own assumption
+Example Country;1994;Gasoline;own assumption
+Example Country;1995;Gasoline;own assumption
+Example Country;1996;Gasoline;own assumption
+Example Country;1997;Gasoline;own assumption
+Example Country;1998;Gasoline;own assumption
+Example Country;1999;Gasoline;own assumption
+Example Country;2000;Gasoline;own assumption
+Example Country;2001;Gasoline;own assumption
+Example Country;2002;Gasoline;own assumption
+Example Country;2003;Gasoline;own assumption
+Example Country;2004;Gasoline;own assumption
+Example Country;2005;Gasoline;own assumption
+Example Country;2006;Gasoline;own assumption
+Example Country;2007;Gasoline;own assumption
+Example Country;2008;Gasoline;own assumption
+Example Country;2009;Gasoline;own assumption
+Example Country;2010;Gasoline;own assumption
+Example Country;2011;Gasoline;own assumption
+Example Country;2012;Gasoline;own assumption
+Example Country;2013;Gasoline;own assumption
+Example Country;2014;Gasoline;own assumption
+Example Country;2015;Gasoline;own assumption
+Example Country;2016;Gasoline;own assumption
+Example Country;2017;Gasoline;own assumption
+Example Country;2018;Gasoline;own assumption
+Example Country;2019;Gasoline;own assumption
+Example Country;2020;Gasoline;own assumption
+Example Country;2021;Gasoline;own assumption
+Example Country;2022;Gasoline;own assumption
+Example Country;2023;Gasoline;own assumption
+Example Country;2024;Gasoline;own assumption
+Example Country;2025;Gasoline;own assumption
+Example Country;2026;Gasoline;own assumption
+Example Country;2027;Gasoline;own assumption
+Example Country;2028;Gasoline;own assumption
+Example Country;2029;Gasoline;own assumption
+Example Country;2030;Gasoline;own assumption
+Example Country;2031;Gasoline;own assumption
+Example Country;2032;Gasoline;own assumption
+Example Country;2033;Gasoline;own assumption
+Example Country;2034;Gasoline;own assumption
+Example Country;2035;Gasoline;own assumption
+Example Country;2036;Gasoline;own assumption
+Example Country;2037;Gasoline;own assumption
+Example Country;2038;Gasoline;own assumption
+Example Country;2039;Gasoline;own assumption
+Example Country;2040;Gasoline;own assumption
+Example Country;2041;Gasoline;own assumption
+Example Country;2042;Gasoline;own assumption
+Example Country;2043;Gasoline;own assumption
+Example Country;2044;Gasoline;own assumption
+Example Country;2045;Gasoline;own assumption
+Example Country;2046;Gasoline;own assumption
+Example Country;2047;Gasoline;own assumption
+Example Country;2048;Gasoline;own assumption
+Example Country;2049;Gasoline;own assumption
+Example Country;2050;Gasoline;own assumption
+Example Country;1970;BEV;own assumption
+Example Country;1971;BEV;own assumption
+Example Country;1972;BEV;own assumption
+Example Country;1973;BEV;own assumption
+Example Country;1974;BEV;own assumption
+Example Country;1975;BEV;own assumption
+Example Country;1976;BEV;own assumption
+Example Country;1977;BEV;own assumption
+Example Country;1978;BEV;own assumption
+Example Country;1979;BEV;own assumption
+Example Country;1980;BEV;own assumption
+Example Country;1981;BEV;own assumption
+Example Country;1982;BEV;own assumption
+Example Country;1983;BEV;own assumption
+Example Country;1984;BEV;own assumption
+Example Country;1985;BEV;own assumption
+Example Country;1986;BEV;own assumption
+Example Country;1987;BEV;own assumption
+Example Country;1988;BEV;own assumption
+Example Country;1989;BEV;own assumption
+Example Country;1990;BEV;own assumption
+Example Country;1991;BEV;own assumption
+Example Country;1992;BEV;own assumption
+Example Country;1993;BEV;own assumption
+Example Country;1994;BEV;own assumption
+Example Country;1995;BEV;own assumption
+Example Country;1996;BEV;own assumption
+Example Country;1997;BEV;own assumption
+Example Country;1998;BEV;own assumption
+Example Country;1999;BEV;own assumption
+Example Country;2000;BEV;own assumption
+Example Country;2001;BEV;own assumption
+Example Country;2002;BEV;own assumption
+Example Country;2003;BEV;own assumption
+Example Country;2004;BEV;own assumption
+Example Country;2005;BEV;own assumption
+Example Country;2006;BEV;own assumption
+Example Country;2007;BEV;own assumption
+Example Country;2008;BEV;own assumption
+Example Country;2009;BEV;own assumption
+Example Country;2010;BEV;own assumption
+Example Country;2011;BEV;own assumption
+Example Country;2012;BEV;own assumption
+Example Country;2013;BEV;own assumption
+Example Country;2014;BEV;own assumption
+Example Country;2015;BEV;own assumption
+Example Country;2016;BEV;own assumption
+Example Country;2017;BEV;own assumption
+Example Country;2018;BEV;own assumption
+Example Country;2019;BEV;own assumption
+Example Country;2020;BEV;own assumption
+Example Country;2021;BEV;own assumption
+Example Country;2022;BEV;own assumption
+Example Country;2023;BEV;own assumption
+Example Country;2024;BEV;own assumption
+Example Country;2025;BEV;own assumption
+Example Country;2026;BEV;own assumption
+Example Country;2027;BEV;own assumption
+Example Country;2028;BEV;own assumption
+Example Country;2029;BEV;own assumption
+Example Country;2030;BEV;own assumption
+Example Country;2031;BEV;own assumption
+Example Country;2032;BEV;own assumption
+Example Country;2033;BEV;own assumption
+Example Country;2034;BEV;own assumption
+Example Country;2035;BEV;own assumption
+Example Country;2036;BEV;own assumption
+Example Country;2037;BEV;own assumption
+Example Country;2038;BEV;own assumption
+Example Country;2039;BEV;own assumption
+Example Country;2040;BEV;own assumption
+Example Country;2041;BEV;own assumption
+Example Country;2042;BEV;own assumption
+Example Country;2043;BEV;own assumption
+Example Country;2044;BEV;own assumption
+Example Country;2045;BEV;own assumption
+Example Country;2046;BEV;own assumption
+Example Country;2047;BEV;own assumption
+Example Country;2048;BEV;own assumption
+Example Country;2049;BEV;own assumption
+Example Country;2050;BEV;own assumption

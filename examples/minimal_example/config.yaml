@@ -1,12 +1,18 @@
+# SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
+# SPDX-License-Identifier: MIT
+
 data:
   input_path: inputs
   output_path: outputs
 
 geography:
   countries:
+    - Example Country
   use_clusters: true
 
 powertrains:
+  - BEV
+  - Gasoline
 
 model:
   start_new_registration_year: 1976

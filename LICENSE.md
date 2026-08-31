@@ -3,32 +3,32 @@
 This project uses multiple licenses depending on the content type:
 
 - **Source Code:**  
-  Licensed under the [MIT License](LICENSES/MIT.txt). This permissive license allows broad reuse with attribution.
+  Licensed under the [MIT License](LICENSES/MIT.txt).
 
-- **Datasets:**  
-  Licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSES/CC-BY-SA-4.0.txt), unless stated otherwise. This license permits sharing and adaptation with attribution and requires derivatives to use the same license.
+- **Tests, synthetic test fixtures, synthetic minimal example, and functional configuration files:**  
+  Licensed under the [MIT License](LICENSES/MIT.txt).
 
-- **Documentation and Plots:**  
-  Licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSES/CC-BY-4.0.txt). This allows reuse with appropriate credit.
+- **Documentation and original plots/figures:**  
+  Licensed under the [Creative Commons Attribution 4.0 International (CC BY SA 4.0)](LICENSES/CC-BY-SA-4.0.txt).
 
-- **Insignificant Files (e.g., minor assets, configs):**  
-  Licensed under [CC0 1.0 Universal (CC0-1.0)](LICENSES/CC0-1.0.txt), effectively dedicating them to the public domain.
+- **Minor/trivial metadata:**  
+  Licensed under [CC0 1.0 Universal (CC0-1.0)](LICENSES/CC0-1.0.txt), where indicated.
+
+- **Research input datasets:**  
+  Research input datasets are licensed individually according to their provenance and applicable source terms. Refer to the file-level SPDX/REUSE metadata for the license applicable to each file.
 
 ---
 
-### Exceptions for Third-Party Content
+### Third-Party Content
 
-Some content is included under more restrictive terms and is explicitly excluded from this project’s license:
+Some research input data are derived from or based on third-party sources and may be subject to licensing or usage terms that differ from the licenses covering ZEVAMPY's source code, documentation, and original content.
 
-- **ACEA Data (2015–2022 new passenger car registrations by alternative fuel type):**  
-  © ACEA. Used here under citation/fair use.  
-  **Not covered** by the project license.  
-  Source: [https://www.acea.auto/fuel-pc/alternative-fuel-vehicle-registrations-20-0-in-2015-21-1-in-q4/](https://www.acea.auto/fuel-pc/alternative-fuel-vehicle-registrations-20-0-in-2015-21-1-in-q4/)
+Such files are identified individually through their file-level SPDX/REUSE metadata. Third-party content is not relicensed under the ZEVAMPY project licenses unless the applicable source license permits this.
 
 ---
 
 ### File-Level Metadata
 
-Each file in this project is annotated with SPDX license and copyright headers, 
-in accordance with the [REUSE Specification 3.0](https://reuse.software/spec/).  
-Refer to individual files for exact license information.
+Each file in this project is annotated with SPDX license and copyright information, 
+in accordance with the [REUSE Specification](https://reuse.software/spec/).  
+Refer to individual files for exact license and copyright information.

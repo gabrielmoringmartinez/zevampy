@@ -2,6 +2,11 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
 # Ignore Python specific temporarily created files
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -21,3 +26,7 @@ inputs/**
 
 # Ignore everything in the outputs folder
 outputs/*
+outputs2/
+
+# Generated paper artifacts
+paper/paper.pdf
