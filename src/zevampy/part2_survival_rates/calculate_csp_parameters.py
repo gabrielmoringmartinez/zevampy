@@ -70,8 +70,8 @@ def calculate_csp_parameters(survival_rates, bounds, output_path, survival_group
     optimum_parameters_weibull_gaussian = select_optimal_type_of_distribution(optimum_parameters_weibull_gaussian)
     # Save the optimized parameters and distribution types to a CSV file
     if save_options:
-        optimum_parameters_weibull_gaussian.to_csv(f'{output_path}/2_1_optimum_parameters_csp_curves.csv', sep=';',
-                                                   index=False, decimal=',')
+        optimum_parameters_weibull_gaussian.to_csv(f'{output_path}/2_1_optimum_parameters_csp_curves.csv', sep=',',
+                                                   index=False, decimal='.')
     # Create a dictionary mapping each distribution type to a list of countries
     country_opt_dist_dict = {
         dist: optimum_parameters_weibull_gaussian.loc[

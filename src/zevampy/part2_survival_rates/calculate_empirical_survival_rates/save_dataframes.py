@@ -18,5 +18,5 @@ def save_dataframes(survival_rates, output_path):
     Returns:
         None
     """
-    survival_rates.to_csv(f'{output_path}/2_2_empirical_survival_rates.csv', sep=';', index=False,
-                          decimal=',')
+    survival_rates.to_csv(f'{output_path}/2_2_empirical_survival_rates.csv', sep=',', index=False,
+                          decimal='.')

@@ -51,7 +51,7 @@ def calculate_rmse(df, config, output_path):
                 append_values(rows_rmse, country, timeframe, powertrain, 'real values', rmse)
 
     rmse_df = pd.DataFrame(rows_rmse)
-    rmse_df.to_csv(f'{output_path}/{config[title_dim]}.csv', sep=';', index=False, decimal=',')
+    rmse_df.to_csv(f'{output_path}/{config[title_dim]}.csv', sep=',', index=False, decimal='.')
     return
 
 

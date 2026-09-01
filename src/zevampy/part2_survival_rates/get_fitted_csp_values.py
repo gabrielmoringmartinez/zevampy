@@ -81,9 +81,9 @@ def get_fitted_csp_values(survival_rates, pdf_parameters, csp_available_years, o
     if save_options:
         fitted_csp_values.to_csv(
             f"{output_path}/2_3_fitted_CSP_curves.csv",
-            sep=";",
+            sep=",",
             index=False,
-            decimal=","
+            decimal="."
         )
 
     return fitted_csp_values

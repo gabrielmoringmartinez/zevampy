@@ -62,10 +62,10 @@ def calculate_registrations(historical_registrations, countries_selected, regist
     absolute_registrations = preprocess_historical_registrations(historical_registrations, registrations_projected,
                                                                  reference_year, countries_selected,
                                                                  start_registrations_year, end_year)
-    absolute_registrations.to_csv(f'{output_path}/1_1_absolute_registrations.csv', sep=';', index=False, decimal=',')
+    absolute_registrations.to_csv(f'{output_path}/1_1_absolute_registrations.csv', sep=',', index=False, decimal='.')
     registrations_by_powertrain = combine_shares_and_absolute_registrations(absolute_registrations,
                                                                             registration_shares_by_cluster, clusters,
                                                                             use_clusters)
-    registrations_by_powertrain.to_csv(f'{output_path}/1_2_registrations_by_powertrain.csv', sep=';', index=False,
-                                       decimal=',')
+    registrations_by_powertrain.to_csv(f'{output_path}/1_2_registrations_by_powertrain.csv', sep=',', index=False,
+                                       decimal='.')
     return registrations_by_powertrain
