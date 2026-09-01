@@ -4,7 +4,6 @@
 # SPDX-License-Identifier: MIT
 
 # Import required modules
-import os
 from zevampy.load_data_and_prepare_inputs import load_data_and_prepare_inputs
 from zevampy.load_data_and_prepare_inputs.ensure_clean_directory import ensure_clean_directory
 from zevampy.part3_stock_calculation import calculate_and_plot_csps_and_stock

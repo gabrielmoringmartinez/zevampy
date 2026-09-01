@@ -9,9 +9,23 @@ from pathlib import Path
 
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
+DEFAULT_INPUT_FILES = {
+    "country_clusters": "0_country_clusters.csv",
+    "registration_shares": "1_1_new_registrations_by_fuel_type_clusters.csv",
+    "historical_registrations": "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
+    "projected_registrations": "1_3_new_registrations_projected.csv",
+    "stock_by_age": "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
+    "stock_year": "2_2_A_1_stock_year.csv",
+    "validation_registration_shares": "4_1_eafo_ev_new_registration_shares.csv",
+    "validation_stock_shares": "4_2_eafo_ev_stock_shares.csv",
+    "historical_csp_parameters": "5_1_oguchi_2008_survival_rate_parameters.csv",
+    "historical_survival_rates": "5_2_held_2016_survival_rates.csv",
+}
+
 
 def load_data(input_dir, historical_validation_active=True, sensitivity_analysis_active=True,
-              historical_csp_active=True, use_clusters_active=True, powertrains=None, survival_grouping=None):
+              historical_csp_active=True, use_clusters_active=True, powertrains=None, survival_grouping=None,
+              input_files=None):
     """
     Load datasets required for modeling vehicle stock shares and performing CSP-based simulations.
 
@@ -50,6 +64,10 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
         survival_grouping (list[str] | None, optional):
             Dimensions used for survival-rate estimation.
 
+        input_files (dict[str, str] | None, optional):
+            Mapping of logical input dataset names to CSV filenames.
+            Unspecified filenames fall back to the default ZEVAMPY filenames.
+
     Returns:
         tuple:
             - dict:
@@ -58,6 +76,11 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
                 Maximum year found in the projected registrations dataset.
     """
     input_dir = Path(input_dir)
+
+    input_files = {
+        **DEFAULT_INPUT_FILES,
+        **(input_files or {}),
+    }
     # --- Check folder exists ---
     if not input_dir.exists():
         raise FileNotFoundError(
@@ -73,23 +96,23 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
 
     # --- Required files ---
     required_model_files = [
-        "1_1_new_registrations_by_fuel_type_clusters.csv",
-        "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
-        "1_3_new_registrations_projected.csv",
-        "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
-        "2_2_A_1_stock_year.csv",
+        input_files["registration_shares"],
+        input_files["historical_registrations"],
+        input_files["projected_registrations"],
+        input_files["stock_by_age"],
+        input_files["stock_year"],
     ]
 
-    cluster_file = "0_country_clusters.csv"
+    cluster_file = input_files["country_clusters"]
 
     required_validation_files = [
-        "4_1_eafo_ev_new_registration_shares.csv",
-        "4_2_eafo_ev_stock_shares.csv",
+        input_files["validation_registration_shares"],
+        input_files["validation_stock_shares"],
     ]
 
     required_historical_csp_files = [
-        "5_1_oguchi_2008_survival_rate_parameters.csv",
-        "5_2_held_2016_survival_rates.csv",
+        input_files["historical_csp_parameters"],
+        input_files["historical_survival_rates"],
     ]
 
     # --- Check files ---
@@ -136,7 +159,7 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
     else:
         clusters = None
     registration_shares_by_cluster = pd.read_csv(
-        input_dir / "1_1_new_registrations_by_fuel_type_clusters.csv",
+        input_dir / input_files["registration_shares"],
         sep=";", decimal=","
     )
     if powertrains:
@@ -153,18 +176,18 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
             "registration shares by cluster",
         )
     historical_registrations = pd.read_csv(
-        input_dir / "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
+        input_dir / input_files["historical_registrations"],
         sep=";", decimal=","
     )
     registrations_projected = pd.read_csv(
-        input_dir / "1_3_new_registrations_projected.csv",
+        input_dir / input_files["projected_registrations"],
         sep=";", decimal=","
     )
 
     max_year = registrations_projected["time"].max()
 
     stock_by_age = pd.read_csv(
-        input_dir / "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
+        input_dir / input_files["stock_by_age"],
         sep=";", decimal=","
     )
 
@@ -269,7 +292,7 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
         )
 
     stock_year = pd.read_csv(
-        input_dir / "2_2_A_1_stock_year.csv",
+        input_dir / input_files["stock_year"],
         sep=";", decimal=","
     )
 
@@ -285,22 +308,22 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
     # --- Optional: validation data ---
     if historical_validation_active:
         data["actual_bev_registration_shares"] = pd.read_csv(
-            input_dir / "4_1_eafo_ev_new_registration_shares.csv",
+            input_dir / input_files["validation_registration_shares"],
             sep=";", decimal=","
         )
         data["actual_bev_stock_shares"] = pd.read_csv(
-            input_dir / "4_2_eafo_ev_stock_shares.csv",
+            input_dir / input_files["validation_stock_shares"],
             sep=";", decimal=","
         )
 
     # --- Optional: sensitivity data ---
     if sensitivity_analysis_active and historical_csp_active:
         data["optimum_parameters_2008"] = pd.read_csv(
-            input_dir / "5_1_oguchi_2008_survival_rate_parameters.csv",
+            input_dir / input_files["historical_csp_parameters"],
             sep=";", decimal=","
         )
         data["survival_rates_2016"] = pd.read_csv(
-            input_dir / "5_2_held_2016_survival_rates.csv",
+            input_dir / input_files["historical_survival_rates"],
             sep=";", decimal=","
         )
 

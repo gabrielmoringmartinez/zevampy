@@ -1,11 +1,11 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
 import pandas as pd
 import pytest
 
-INPUT_DIR = "inputs"
+INPUT_DIR = Path("inputs")
 
 
 def get_all_input_csv_files():
@@ -19,8 +19,9 @@ def get_all_input_csv_files():
             list of str: Filenames of all CSV files found in the inputs directory.
         """
     return [
-        f for f in os.listdir(INPUT_DIR)
-        if f.endswith(".csv") and os.path.isfile(os.path.join(INPUT_DIR, f))
+        path.name
+        for path in INPUT_DIR.glob("*.csv")
+        if path.is_file()
     ]
 
 
@@ -42,13 +43,13 @@ def test_no_missing_values_in_input_csv(filename):
        Raises:
            AssertionError: If missing values or partially filled rows are found in the CSV.
        """
-    file_path = os.path.join(INPUT_DIR, filename)
+    file_path = INPUT_DIR / filename
     df = pd.read_csv(
         file_path,
-        delimiter=';',
-        decimal=',',
+        delimiter=";",
+        decimal=",",
         keep_default_na=True,
-        na_values=["", " ", "  ", "NA", "n/a", "null"]
+        na_values=["", " ", "  ", "NA", "n/a", "null"],
     )
     # Check if any missing values exist
     assert not df.isnull().values.any(), f"Missing values found in: {filename}"

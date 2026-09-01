@@ -1,16 +1,17 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
 import pandas as pd
-
-INPUT_DIR = "inputs"
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
 
 # Define files and their grouping columns
+INPUT_DIR = Path("inputs")
+
 GROUPED_FILES = {
-    "0_country_clusters.csv": ["geo country"],
-    "1_1_new_registrations_by_fuel_type_clusters.csv": ["geo country", "powertrain"],
-    "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv": ["geo country", "powertrain"],
+    DEFAULT_INPUT_FILES["country_clusters"]: ["geo country"],
+    DEFAULT_INPUT_FILES["registration_shares"]: ["geo country", "powertrain"],
+    DEFAULT_INPUT_FILES["stock_by_age"]: ["geo country", "powertrain"],
 }
 
 
@@ -29,7 +30,7 @@ def test_each_country_or_country_powertrain_has_consistent_row_counts():
             AssertionError: If inconsistent row counts are found across groups in any file.
         """
     for filename, group_cols in GROUPED_FILES.items():
-        path = os.path.join(INPUT_DIR, filename)
+        path = INPUT_DIR / filename
         df = pd.read_csv(path, delimiter=';', decimal=',')
 
         # Only drop NA from columns that exist

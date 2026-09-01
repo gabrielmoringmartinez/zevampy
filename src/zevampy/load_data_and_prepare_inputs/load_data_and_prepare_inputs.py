@@ -49,6 +49,9 @@ def load_data_and_prepare_inputs(input_path, config=None):
     survival_config = config.get("survival_rates", {}) if config else {}
     survival_grouping = survival_config.get("grouping", [country_dim])
 
+    data_config = config.get("data") or {}
+    input_files = data_config.get("files", {})
+
     data, max_year = load_data(
         input_path,
         historical_validation_active=historical_validation_active,
@@ -57,7 +60,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
         use_clusters_active=use_clusters_active,
         powertrains=powertrains,
         survival_grouping=survival_grouping,
-
+        input_files=input_files,
     )
     inputs = prepare_inputs(max_year, config=config)
     return data, inputs

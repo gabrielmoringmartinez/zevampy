@@ -1,31 +1,35 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
-import shutil
 from zevampy.run_model import run_model
 
 
-def test_model_outputs_expected_files():
+def test_model_outputs_expected_files(tmp_path):
     """
-    Test that the main BEV stock share model runs successfully and produces all expected output files.
+    Test that the main ZEVAMPY model runs successfully and produces all expected output files.
 
     This test:
-    - Removes any existing 'outputs' folder to ensure a clean run.
-    - Executes the main modeling function.
-    - Checks that the 'outputs' directory is created.
-    - Verifies that all expected CSV files are generated in 'outputs'.
-    - Verifies that all expected PDF files are generated in 'outputs/figures'.
+    - Runs the model using a temporary output directory.
+    - Checks that the output directory is created.
+    - Verifies that all expected CSV files are generated.
+    - Verifies that all expected PDF figures are generated.
+
+    Args:
+        tmp_path (Path):
+            Temporary directory provided by pytest for isolated test outputs.
 
     Raises:
-        AssertionError: If the 'outputs' folder or 'outputs/figures' folder is missing,
-                        or if any expected output CSV or PDF files are not found.
+        AssertionError:
+            If the output directory, figures directory, or any expected
+            CSV or PDF output file is missing.
     """
     # Clean up any old outputs
-    if os.path.exists("outputs"):
-        shutil.rmtree("outputs")
+    output_dir = tmp_path / "outputs"
 
-    run_model(config_path="config.yaml")
+    run_model(
+        config_path="config.yaml",
+        output_path=str(output_dir),
+    )
 
     expected_csv_files = [
         "1_1_absolute_registrations.csv",
@@ -37,20 +41,44 @@ def test_model_outputs_expected_files():
         "3_2_stock_shares.csv",
     ]
 
-    assert os.path.exists("outputs"), "Output folder was not created"
-    actual_csv_files = os.listdir("outputs")
+    assert output_dir.exists(), "Output folder was not created"
+    actual_csv_files = {
+        path.name
+        for path in output_dir.glob("*.csv")
+    }
 
-    missing_csv = [f for f in expected_csv_files if f not in actual_csv_files]
-    assert not missing_csv, f"Missing expected CSV output files: {missing_csv}"
+    missing_csv = [
+        filename
+        for filename in expected_csv_files
+        if filename not in actual_csv_files
+    ]
+
+    assert not missing_csv, (
+        f"Missing expected CSV output files: {missing_csv}"
+    )
 
     expected_pdf_files = [
         "stock_shares_model_reference_scenario_BEV.pdf",
         "stock_shares_model_reference_scenario_Gasoline.pdf",
     ]
 
-    figures_folder = os.path.join("outputs", "figures")
-    assert os.path.exists(figures_folder), "'outputs/figures' folder was not created"
-    actual_pdf_files = os.listdir(figures_folder)
+    figures_dir = output_dir / "figures"
 
-    missing_pdfs = [f for f in expected_pdf_files if f not in actual_pdf_files]
-    assert not missing_pdfs, f"Missing expected PDF output files in figures: {missing_pdfs}"
+    assert figures_dir.exists(), (
+        "Output figures folder was not created"
+    )
+
+    actual_pdf_files = {
+        path.name
+        for path in figures_dir.glob("*.pdf")
+    }
+
+    missing_pdfs = [
+        filename
+        for filename in expected_pdf_files
+        if filename not in actual_pdf_files
+    ]
+
+    assert not missing_pdfs, (
+        f"Missing expected PDF output files: {missing_pdfs}"
+    )

@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
 
 
 def test_required_input_files_exist():
@@ -20,24 +21,25 @@ def test_required_input_files_exist():
         AssertionError: If any of the required input files is missing.
     """
     # Define required input files by category
+    input_dir = Path("inputs")
+
     essential_inputs = [
-        "0_country_clusters.csv",
-        "1_1_new_registrations_by_fuel_type_clusters.csv",
-        "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
-        "1_3_new_registrations_projected.csv",
-        "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
-        "2_2_A_1_stock_year.csv",
+        DEFAULT_INPUT_FILES["country_clusters"],
+        DEFAULT_INPUT_FILES["registration_shares"],
+        DEFAULT_INPUT_FILES["historical_registrations"],
+        DEFAULT_INPUT_FILES["projected_registrations"],
+        DEFAULT_INPUT_FILES["stock_by_age"],
+        DEFAULT_INPUT_FILES["stock_year"],
     ]
 
     validation_inputs = [
-        "4_1_eafo_ev_new_registration_shares.csv",
-        "4_2_eafo_ev_stock_shares.csv"
-
+        DEFAULT_INPUT_FILES["validation_registration_shares"],
+        DEFAULT_INPUT_FILES["validation_stock_shares"],
     ]
 
     sensitivity_inputs = [
-        "5_1_oguchi_2008_survival_rate_parameters.csv",
-        "5_2_held_2016_survival_rates.csv"
+        DEFAULT_INPUT_FILES["historical_csp_parameters"],
+        DEFAULT_INPUT_FILES["historical_survival_rates"],
     ]
 
     all_required_files = {
@@ -47,6 +49,8 @@ def test_required_input_files_exist():
     }
 
     for category, files in all_required_files.items():
-        for file in files:
-            file_path = os.path.join("inputs", file)
-            assert os.path.exists(file_path), f"Missing {category} input file: {file_path}"
+        for filename in files:
+            file_path = input_dir / filename
+            assert file_path.exists(), (
+                f"Missing {category} input file: {file_path}"
+            )

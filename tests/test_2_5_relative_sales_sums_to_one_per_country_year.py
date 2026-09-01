@@ -1,12 +1,14 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
 import pandas as pd
-import pytest
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
 
-INPUT_DIR = "inputs"
-FILENAME = "1_1_new_registrations_by_fuel_type_clusters.csv"
+
+INPUT_DIR = Path("inputs")
+FILENAME = DEFAULT_INPUT_FILES["registration_shares"]
+
 
 def test_relative_sales_sums_to_one_per_country_year():
     """
@@ -22,12 +24,12 @@ def test_relative_sales_sums_to_one_per_country_year():
         AssertionError: If any country-year group’s relative sales sum differs from 1.00 by more than 0.01,
                         or if required columns are missing.
     """
-    path = os.path.join(INPUT_DIR, FILENAME)
+    path = INPUT_DIR / FILENAME
     df = pd.read_csv(path, delimiter=';', decimal=',')
 
     required_cols = {"time", "geo country", "relative sales"}
     missing = required_cols - set(df.columns)
-    assert not missing, f"Missing columns in {FILENAME}: {missing}"
+    assert not missing, f"Missing columns in {FILENAME}: {sorted(missing)}"
 
     df["relative sales"] = pd.to_numeric(df["relative sales"], errors="coerce")
     df = df.dropna(subset=["relative sales", "time", "geo country"])

@@ -1,17 +1,19 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
 import pandas as pd
-import pytest
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
 
-INPUT_DIR = "inputs"
-REFERENCE_FILE = os.path.join(INPUT_DIR, "0_country_clusters.csv")
+
+INPUT_DIR = Path("inputs")
+
+REFERENCE_FILE = INPUT_DIR / DEFAULT_INPUT_FILES["country_clusters"]
 
 FILES_TO_CHECK = {
-    "1_2_A_2_new_registrations...": "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
-    "2_1_A_1_age_resolved_data...": "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
-    "2_2_A_1_stock_year": "2_2_A_1_stock_year.csv"
+    "historical registrations": DEFAULT_INPUT_FILES["historical_registrations"],
+    "stock by age": DEFAULT_INPUT_FILES["stock_by_age"],
+    "stock year": DEFAULT_INPUT_FILES["stock_year"],
 }
 
 
@@ -46,13 +48,18 @@ def test_countries_exist_in_reference():
     reference_countries = load_countries_from_file(REFERENCE_FILE)
 
     for label, filename in FILES_TO_CHECK.items():
-        path = os.path.join(INPUT_DIR, filename)
+        path = INPUT_DIR / filename
         countries = load_countries_from_file(path)
 
         unknown = countries - reference_countries
+
         assert not unknown, (
-            f"The following countries in '{filename}' are not listed in '0_country_clusters.csv':\n"
-            + "\n".join(f"- {country}" for country in sorted(unknown))
+                f"The following countries in '{filename}' are not listed in "
+                f"'{REFERENCE_FILE.name}':\n"
+                + "\n".join(
+            f"- {country}"
+            for country in sorted(unknown)
+        )
         )
 
 
@@ -68,7 +75,7 @@ def test_all_files_have_consistent_country_coverage():
         """
     country_sets = {}
     for label, filename in FILES_TO_CHECK.items():
-        path = os.path.join(INPUT_DIR, filename)
+        path = INPUT_DIR / filename
         country_sets[label] = load_countries_from_file(path)
 
     all_countries = set.union(*country_sets.values())

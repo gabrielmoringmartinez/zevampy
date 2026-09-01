@@ -1,10 +1,10 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import pandas as pd
-import os
-import pytest
+from copy import deepcopy
 
+import pandas as pd
+import pytest
 
 from zevampy.load_data_and_prepare_inputs import load_data_and_prepare_inputs
 from zevampy.load_data_and_prepare_inputs.ensure_clean_directory import ensure_clean_directory
@@ -40,7 +40,7 @@ test_config = {
     "tests/test_inputs_single_country",
     "tests/test_inputs_single_country_reduced_years"
 ])
-def test_model_runs_on_minimal_input(input_dir):
+def test_model_runs_on_minimal_input(input_dir, tmp_path):
     """
     Test that the full BEV stock modeling workflow runs successfully on minimal input datasets.
 
@@ -49,22 +49,34 @@ def test_model_runs_on_minimal_input(input_dir):
     2. Using a dataset for a single country with a reduced year range.
 
     For each case, the test:
-    - Clears the output directories.
+    - Creates isolated temporary output directories.
     - Loads data from the specified test input folder.
     - Runs CSP curve generation and BEV stock calculation.
     - Asserts that all output DataFrames are non-empty.
-    - Executes the model validation step to confirm it handles reduced input gracefully.
+    - Executes the model validation step to confirm it handles reduced input correctly.
 
-    This ensures the model runs end-to-end without errors, even when working with small or simplified datasets.
+    This ensures the model runs end-to-end without errors, even when working
+    with small or simplified datasets.
+
+    Args:
+        input_dir (str):
+            Path to the test-specific input dataset.
+
+        tmp_path (Path):
+            Temporary directory provided by pytest for isolated test outputs.
 
     Raises:
-        AssertionError: If any output DataFrame is unexpectedly empty.
+        AssertionError:
+            If any output DataFrame is unexpectedly empty.
     """
     # Clean output directories before running test
-    ensure_clean_directory('outputs')
-    ensure_clean_directory(os.path.join('outputs', 'figures'))
+    output_dir = tmp_path / "outputs"
+    config = deepcopy(test_config)
+    config["data"]["output_path"] = str(output_dir)
+    ensure_clean_directory(output_dir)
+    ensure_clean_directory(output_dir / "figures")
     # Use test-specific input folder
-    test_data, test_inputs = load_data_and_prepare_inputs(input_dir, config=test_config)
+    test_data, test_inputs = load_data_and_prepare_inputs(input_dir, config=config)
     test_csp_and_stock_calculated_data = calculate_and_plot_csps_and_stock(test_data, test_inputs)
     # Simple assertion — check result is not empty
     for key, value in test_csp_and_stock_calculated_data.items():

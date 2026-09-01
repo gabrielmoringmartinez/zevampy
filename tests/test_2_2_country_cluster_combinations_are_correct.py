@@ -1,29 +1,26 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
+from pathlib import Path
 import pandas as pd
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
 
 
 def test_country_cluster_combinations_are_correct():
     """
-       Verify that all (geo country, cluster) combinations in the registrations data
-       are valid according to the reference country-cluster labels.
+    Verify that all (geo country, cluster) combinations in the default
+    registrations data are valid according to the default country-cluster labels.
 
-       This test compares unique pairs of (geo country, cluster) from:
-       - '1_1_new_registrations_by_fuel_type_clusters.csv' (registrations data)
-       - '0_country_clusters.csv' (reference labels)
-
-       It asserts that every pair in the registrations file exists in the labels file.
-       If any pair is missing, the test fails and lists all invalid combinations.
-
-       Raises:
-           AssertionError: If any (geo country, cluster) pair in the registrations data
-                           is not found in the reference labels.
-       """
+    Raises:
+        AssertionError:
+            If any (geo country, cluster) pair in the registrations data
+            is not found in the reference labels.
+    """
     # File paths
-    registrations_file = os.path.join("inputs", "1_1_new_registrations_by_fuel_type_clusters.csv")
-    labels_file = os.path.join("inputs", "0_country_clusters.csv")
+    input_dir = Path("inputs")
+
+    registrations_file = input_dir / DEFAULT_INPUT_FILES["registration_shares"]
+    labels_file = input_dir / DEFAULT_INPUT_FILES["country_clusters"]
 
     # Load both CSVs
     registrations_df = pd.read_csv(registrations_file, delimiter=';', decimal=',')
@@ -44,5 +41,7 @@ def test_country_cluster_combinations_are_correct():
     if missing_pairs:
         missing_str = "\n".join([f"- {country}, cluster {cluster}" for country, cluster in sorted(missing_pairs)])
         raise AssertionError(
-            f"The following (geo country, cluster) combinations in '1_1_new_registrations_by_fuel_type_clusters' are incorrect based on '0_country_clusters.csv':\n{missing_str}"
+            "The following (geo country, cluster) combinations in "
+            f"'{registrations_file.name}' are not present in "
+            f"'{labels_file.name}':\n{missing_str}"
         )

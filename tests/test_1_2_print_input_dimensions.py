@@ -1,12 +1,18 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import os
-import pandas as pd
 from collections import defaultdict
+from pathlib import Path
+import pandas as pd
 
-INPUT_DIR = "inputs"
-dimension_columns = {"geo country", "powertrain", "cluster", "year", "time"}  # add more as needed
+INPUT_DIR = Path("inputs")
+DIMENSION_COLUMNS = {
+    "geo country",
+    "powertrain",
+    "cluster",
+    "year",
+    "time",
+}
 
 def list_dimensions_and_unique_values():
     """
@@ -23,37 +29,44 @@ def list_dimensions_and_unique_values():
        Returns:
            None: Outputs are printed directly to the console.
        """
-    files = [f for f in os.listdir(INPUT_DIR) if f.endswith(".csv")]
+    files = INPUT_DIR.glob("*.csv")
     dimension_values = defaultdict(lambda: defaultdict(set))
 
-    for file in files:
-        path = os.path.join(INPUT_DIR, file)
+    for path in files:
         try:
-            df = pd.read_csv(path, delimiter=';', decimal=',')
-            for col in df.columns:
-                col_clean = col.strip()
-                if col_clean in dimension_columns:
-                    unique_vals = df[col].dropna().astype(str).str.strip().unique()
-                    dimension_values[col_clean][file] = set(unique_vals)
-        except Exception as e:
-            print(f"⚠️ Could not read {file}: {e}")
+            df = pd.read_csv(
+                path,
+                delimiter=";",
+                decimal=",",
+            )
 
-    for dim, sources in dimension_values.items():
-        print(f"\n=== Dimension: {dim} ===")
+            for column in df.columns:
+                column_clean = column.strip()
+
+                if column_clean in DIMENSION_COLUMNS:
+                    unique_values = (
+                        df[column]
+                        .dropna()
+                        .astype(str)
+                        .str.strip()
+                        .unique()
+                    )
+
+                    dimension_values[column_clean][path.name] = set(unique_values)
+
+        except Exception as exc:
+            print(f"Could not read {path.name}: {exc}")
+
+    for dimension, sources in dimension_values.items():
+        print(f"\n=== Dimension: {dimension} ===")
+
         all_values = set()
-        for file, values in sources.items():
-            print(f"From {file}: {sorted(values)}")
+
+        for filename, values in sources.items():
+            print(f"From {filename}: {sorted(values)}")
             all_values |= values
-        print(f"Combined ({len(all_values)} unique): {sorted(all_values)}")
 
-def test_list_dimensions_and_unique_values():
-    """
-       Test wrapper to run `list_dimensions_and_unique_values()` function.
-
-       This test ensures that the dimension listing function executes without errors.
-       It does not perform assertions but can help verify data consistency during development.
-
-       Returns:
-           None
-       """
-    list_dimensions_and_unique_values()
+        print(
+            f"Combined ({len(all_values)} unique): "
+            f"{sorted(all_values)}"
+        )
