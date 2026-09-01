@@ -45,8 +45,8 @@ def load_data_and_prepare_inputs(input_path, config=None):
     geography_config = config.get("geography") or {}
 
     historical_csp_active = model_config.get("historical_csp", False)
-    historical_validation_active = model_config.get("historical_validation", True)
-    sensitivity_analysis_active = model_config.get("sensitivity_analysis", True)
+    historical_validation_active = model_config.get("historical_validation", False)
+    sensitivity_analysis_active = model_config.get("sensitivity_analysis", False)
     use_clusters_active = geography_config.get("use_clusters", True)
 
     powertrains = config.get("powertrains") if config else None

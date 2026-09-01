@@ -38,12 +38,23 @@ def load_config(path=None):
             },
             "geography": {
                 "countries": [],
+                "use_clusters": True,
+
             },
-            "powertrains": ["BEV"],
+            "powertrains": [],
             "model": {
-                "start_year": 1970,
-                "end_year": 2050,
-            },
+            "start_new_registration_year": 1970,
+            "first_stock_year": 2014,
+            "end_year": 2050,
+            "csp_reference_year": 2021,
+            "csp_available_years": 45,
+            "historical_validation": False,
+            "sensitivity_analysis": False,
+            "historical_csp": False,
+        },
+        "survival_rates": {
+            "grouping": ["geo country"],
+        },
         }
 
     with open(path, "r") as f:

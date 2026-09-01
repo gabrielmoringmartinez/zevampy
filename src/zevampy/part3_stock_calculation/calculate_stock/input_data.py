@@ -26,7 +26,7 @@ csp_data_ref_year = 2021
 # Number of years which are considered. The vehicle age reaches a maximum of f.example, 45 years
 csp_available_years = 45
 # If older historical data is not available, we set it to No. 2021 is considered actual data, non-historical
-historical_csp ='No'
+historical_csp = "False"
 # The paths for saving the stock values
 save_options_stock = {
     "stock_data_filename": "3_1_stock_data_including_vehicle_age.csv",

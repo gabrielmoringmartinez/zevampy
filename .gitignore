@@ -27,6 +27,7 @@ inputs/**
 # Ignore everything in the outputs folder
 outputs/*
 outputs2/
+examples/minimal_example/outputs/
 
 # Generated paper artifacts
 paper/paper.pdf
