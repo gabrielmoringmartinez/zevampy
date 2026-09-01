@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
+import logging
+
 from zevampy.part2_survival_rates.plot_survival_rates.plot_all_countries import plot_all_countries
 from zevampy.part3_stock_calculation.calculate_stock.calculate_stock import calculate_stock
 from zevampy.part5_sensitivity_analysis.country_adjectives import country_adjectives
@@ -15,6 +17,8 @@ from zevampy.part5_sensitivity_analysis.country_csp_modified.generate_columns_to
 from zevampy.part5_sensitivity_analysis.update_stock_shares import update_stock_shares
 
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
+
+logger = logging.getLogger(__name__)
 
 
 def do_sensitivity_analysis_with_modified_country_csps(registrations, stock_shares, survival_rates,
@@ -57,10 +61,8 @@ def do_sensitivity_analysis_with_modified_country_csps(registrations, stock_shar
     available_csp_countries = set(survival_rates[country_dim].unique())
     for country in plot_params[countries_selected_label]:
         if country not in available_csp_countries:
-            print(
-                f"Skipping sensitivity CSP replacement for '{country}' because "
-                "it is not available in the fitted CSP data."
-            )
+            logger.warning("Skipping sensitivity CSP replacement for '%s' because it is not available in the fitted"
+                           " CSP data.", country,)
             continue
 
         updated_survival_rates = replace_survival_rates_with_country_specific_csp(survival_rates, country)

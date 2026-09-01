@@ -30,4 +30,6 @@ def test_validate_inputs_cli():
         f"CLI input validation failed:\n{result.stderr}"
     )
 
-    assert "Input validation successful." in result.stdout
+    combined_output = result.stdout + result.stderr
+
+    assert "Input validation successful." in combined_output

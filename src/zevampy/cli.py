@@ -4,10 +4,32 @@
 # SPDX-License-Identifier: MIT
 
 import argparse
+import logging
 
 from zevampy.config import load_config
 from zevampy.load_data_and_prepare_inputs import load_data_and_prepare_inputs
 from zevampy.run_model import run_model
+
+logger = logging.getLogger("zevampy.cli")
+
+
+def configure_logging(log_level="INFO"):
+    """
+    Configure console logging for the ZEVAMPY command-line interface.
+
+    Parameters:
+        log_level (str):
+            Minimum logging level displayed in the terminal.
+    """
+    logging.basicConfig(
+        level=logging.WARNING,
+        format="%(levelname)s: %(message)s",
+    )
+
+    # Apply the requested level only to ZEVAMPY
+    logging.getLogger("zevampy").setLevel(
+        getattr(logging, log_level.upper())
+    )
 
 
 def validate_inputs(config_path=None, input_path=None, output_path=None):
@@ -43,12 +65,14 @@ def validate_inputs(config_path=None, input_path=None, output_path=None):
     data_config["input_path"] = input_path
     data_config["output_path"] = output_path
 
+    logger.info("Validating input data from '%s'.", input_path)
+
     load_data_and_prepare_inputs(
         input_path=input_path,
         config=config,
     )
 
-    print("Input validation successful.")
+    logger.info("Input validation successful.")
 
 
 def main():
@@ -74,6 +98,9 @@ def main():
         --validate-inputs : flag
             Validate input files and configuration, then exit without running
             the full model.
+        --log-level : str, optional
+            Set the logging level. Available values are DEBUG, INFO, WARNING,
+            ERROR, and CRITICAL. The default is INFO.
 
     Returns:
         None
@@ -106,7 +133,16 @@ def main():
         help="Validate input files and configuration without running the model",
     )
 
+    parser.add_argument(
+        "--log-level",
+        default="INFO",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        help="Set the logging level (default: INFO)",
+    )
+
     args = parser.parse_args()
+
+    configure_logging(args.log_level)
 
     if args.validate_inputs:
         validate_inputs(

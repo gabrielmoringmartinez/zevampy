@@ -3,9 +3,14 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
+import logging
+
 from zevampy.load_data_and_prepare_inputs.load_data import load_data
 from zevampy.load_data_and_prepare_inputs.prepare_inputs import prepare_inputs
 from zevampy.load_data_and_prepare_inputs.dimension_names import country_dim
+
+logger = logging.getLogger(__name__)
+
 
 def load_data_and_prepare_inputs(input_path, config=None):
     """
@@ -52,6 +57,11 @@ def load_data_and_prepare_inputs(input_path, config=None):
     data_config = config.get("data") or {}
     input_files = data_config.get("files", {})
 
+    logger.debug(
+        "Model options: historical_validation=%s, sensitivity_analysis=%s, " "historical_csp=%s, use_clusters=%s, survival_grouping=%s",
+        historical_validation_active, sensitivity_analysis_active, historical_csp_active, use_clusters_active,
+        survival_grouping, )
+
     data, max_year = load_data(
         input_path,
         historical_validation_active=historical_validation_active,
@@ -62,5 +72,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
         survival_grouping=survival_grouping,
         input_files=input_files,
     )
+
+    logger.debug("Loaded %d input datasets; projected registration data extend to %s.", len(data), max_year, )
     inputs = prepare_inputs(max_year, config=config)
     return data, inputs

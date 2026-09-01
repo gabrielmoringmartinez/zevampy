@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
+import logging
+
 from zevampy.part2_survival_rates.plot_survival_rates.plot_all_countries import plot_all_countries
 from zevampy.part3_stock_calculation.calculate_stock.calculate_stock import calculate_stock
 from zevampy.part5_sensitivity_analysis.country_adjectives import country_adjectives
@@ -13,6 +15,8 @@ from zevampy.part5_sensitivity_analysis.country_registrations_modified.replace_p
 from zevampy.part5_sensitivity_analysis.update_stock_shares import update_stock_shares
 
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
+
+logger = logging.getLogger(__name__)
 
 
 def do_sensitivity_analysis_with_modified_country_registrations(registrations, stock_shares, survival_rates,
@@ -67,10 +71,8 @@ def do_sensitivity_analysis_with_modified_country_registrations(registrations, s
     ]
 
     for country in missing_countries:
-        print(
-            f"Skipping registration sensitivity for '{country}' because it is not "
-            "available in the registration data."
-        )
+        logger.warning("Skipping registration sensitivity for '%s' because it is not available in the registration"
+                       " data.", country,)
     for country in valid_countries:
         updated_registrations = replace_powertrain_share_registrations_with_country(registrations, country, plot_params)
         stock_shares_are_valid = True
