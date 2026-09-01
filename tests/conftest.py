@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
+# SPDX-License-Identifier: MIT
+
+import matplotlib
+
+matplotlib.use("Agg")

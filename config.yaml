@@ -5,6 +5,18 @@ data:
   input_path: inputs
   output_path: outputs
 
+  files:
+    country_clusters: 0_country_clusters.csv
+    registration_shares: 1_1_new_registrations_by_fuel_type_clusters.csv
+    historical_registrations: 1_2_A_2_historical_new_registrations_data_passenger_cars.csv
+    projected_registrations: 1_3_new_registrations_projected.csv
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv
+    validation_registration_shares: 4_1_eafo_ev_new_registration_shares.csv
+    validation_stock_shares: 4_2_eafo_ev_stock_shares.csv
+    historical_csp_parameters: 5_1_oguchi_2008_survival_rate_parameters.csv
+    historical_survival_rates: 5_2_held_2016_survival_rates.csv
+
 model:
   start_new_registration_year: 1970
   first_stock_year: 2014

@@ -117,7 +117,28 @@ To run ZEVAMPY, users provide a set of CSV input files together with a YAML conf
 
 #### Required input datasets
 
-At the current stage, ZEVAMPY expects the following filenames inside the folder defined by `data.input_path` in `config.yaml`. The input-folder path can be modified, but the filenames are currently fixed.
+ZEVAMPY requires the input datasets described below. The filenames listed here are the default filenames provided with the repository. Users may use different filenames by defining them in the `data.files` section of `config.yaml`.
+
+For example:
+
+```yaml
+data:
+  input_path: inputs
+  output_path: outputs
+
+  files:
+    country_clusters: 0_country_clusters.csv
+    registration_shares: 1_1_new_registrations_by_fuel_type_clusters.csv
+    historical_registrations: 1_2_A_2_historical_new_registrations_data_passenger_cars.csv
+    projected_registrations: 1_3_new_registrations_projected.csv
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv
+    validation_registration_shares: 4_1_eafo_ev_new_registration_shares.csv
+    validation_stock_shares: 4_2_eafo_ev_stock_shares.csv
+    historical_csp_parameters: 5_1_oguchi_2008_survival_rate_parameters.csv
+    historical_survival_rates: 5_2_held_2016_survival_rates.csv
+```
+Only filenames that differ from the defaults need to be specified. Unspecified filenames automatically fall back to the default ZEVAMPY filenames.
 
 ##### Country clusters (optional)
 - `inputs/0_country_clusters.csv`: 
@@ -180,7 +201,8 @@ Defines the reference year associated with the stock-by-age dataset used for CSP
 
 For example, the configuration file `config.yaml` may define:
 ```yaml
-csp_reference_year: 2021
+model:
+  csp_reference_year: 2021
 ```
 However, some countries may only provide stock-by-age data for neighbouring years such as 2020 or 2022. This file specifies the actual stock-reference year used for each country or dataset during CSP estimation.
 
@@ -196,7 +218,7 @@ are optional and mainly used for:
 - sensitivity analysis,
 - and reproduction of the default European case study.
 
-These files are not required for running custom ZEVAMPY applications.
+These files are only required when the corresponding historical validation or sensitivity-analysis options are enabled. They are not required for a basic stock-model run when those options are disabled.
 
 ---
 
@@ -206,9 +228,9 @@ These files are not required for running custom ZEVAMPY applications.
 The configuration file acts as the main user interface of ZEVAMPY and controls the complete modelling workflow. It defines:
 - input and output paths
 - countries or regions
-  - If `countries` is left empty, all available countries found in the input datasets are used.
+  - If `countries` is left empty, ZEVAMPY uses its predefined default country set. Countries that are not available in the supplied input data are omitted. Custom countries that are not part of the default set must be explicitly listed in `geography.countries`.
 - powertrains
-  - If `powertrains` is left empty, all available powertrain categories found in the input datasets are used.
+  - If `powertrains` is left empty, ZEVAMPY uses its predefined default powertrain set. Powertrain categories that are not available in the supplied input data are omitted. Custom powertrain categories that are not part of the default set must be explicitly listed in `powertrains`.
 - projection horizon
 - Cumulative Survival Probability (CSP) settings
 - validation settings
@@ -297,7 +319,27 @@ Alternatively:
 ```bash
 python -m zevampy.cli --config config.yaml
 ```
----
+
+##### Validate inputs before running the model
+
+ZEVAMPY can validate the input datasets and configuration without running the complete modelling workflow:
+```bash
+zevampy --config config.yaml --validate-inputs
+```
+Alternatively:
+```bash
+python -m zevampy.cli --config config.yaml --validate-inputs
+```
+
+The validation checks the availability and consistency of the required input files and model configuration, including selected powertrains, survival-rate dimensions, and the registration history required for CSP estimation.
+
+If all checks are successful, ZEVAMPY reports:
+
+```text
+Input validation successful.
+```
+
+Input validation does not calculate vehicle stock, generate figures, perform historical model validation, or run sensitivity analyses.
 
 #### 🚀 Quick start example
 
@@ -332,13 +374,11 @@ On Linux/macOS/WSL:
 source venv/bin/activate
 ```
 #### 3. Install the package in editable mode
+Install ZEVAMPY together with the development testing dependencies:
 ```bash
-pip install -e .
+pip install -e ".[test]"
 ```
-If you keep a separate requirements file for development tools, install it as well:
-```bash
-pip install -r stock_model_requirements.txt
-```
+This installs ZEVAMPY in editable mode together with pytest and pytest-cov.
 #### 4. Run the model locally
 ```bash
 zevampy --config config.yaml
@@ -355,11 +395,12 @@ ZEVAMPY separates model logic from input datasets and configuration settings, al
 ZEVAMPY is designed to be reusable beyond the default European passenger-car case.
 
 Users can adapt:
-- Countries or regions by changing the geography.countries section in config.yaml
-- Powertrains by changing the powertrains list
-- Projection horizon by changing model.end_year
-- Input and output folders through the data section
-- Survival-rate grouping through survival_rates.grouping
+- Countries or regions through `geography.countries`
+- Powertrains through the `powertrains` list
+- Projection horizon through `model.end_year`
+- Input and output folders through the `data` section
+- Input filenames through `data.files`
+- Survival-rate grouping through `survival_rates.grouping`
 
 For example, to model country- and powertrain-specific survival rates:
 ```yaml
@@ -382,36 +423,27 @@ This makes it possible to extend ZEVAMPY to additional countries, powertrain cat
 [![CI](https://github.com/gabrielmoringmartinez/zevampy/actions/workflows/test.yml/badge.svg)](https://github.com/gabrielmoringmartinez/zevampy/actions/workflows/test.yml)
 [![codecov](https://codecov.io/github/gabrielmoringmartinez/zevampy/graph/badge.svg?token=Z1RUTSJLSY)](https://codecov.io/github/gabrielmoringmartinez/zevampy)
 
-This repository includes unit tests to ensure consistent and reliable behavior of ZEVAMPY.
+This repository includes automated tests to verify input-data consistency, model execution, output generation, and command-line functionality.
 
-To run all tests:
+Install the package together with the testing dependencies:
+```bash
+pip install -e ".[test]"
+```
+Run the complete test suite from the repository root with:
+```bash
+pytest
+```
+Pytest and coverage settings are defined in `pyproject.toml`. Coverage is measured for the zevampy package only.
+
+### Run a specific test
+
+A specific test file can be executed directly, for example:
 
 ```bash
-python run_tests.py
+pytest tests/test_5_validate_inputs_cli.py
 ```
-This will:
+The test suite uses temporary output directories where appropriate so that test-generated model results do not overwrite normal ZEVAMPY outputs.
 
-- Discover and execute all tests in the `tests/` folder using `pytest`
-- Print outputs to the terminal
-- Save generated model outputs in the `outputs/` folder
-- Exit with a status code indicating success or failure
-
-### Optional: Run a specific test
-
-To run an individual test, modify the `run_tests.py` script. For example:
-```
-# Uncomment and adapt one of the lines below in run_tests.py
-
-# Syntax:
-# sys.exit(pytest.main(["tests/test_file.py::test_function"]))
-
-# Example:
-# sys.exit(pytest.main(["tests/test_4_model_runs_on_minimal_input_single_country.py::test_model_runs_on_minimal_input"]))
-```
-**Note:** The tests assume the Python environment is already set up and all required dependencies are installed:
-```bash
-pip install -r stock_model_requirements.txt
-```
 ## 🤝 Acknowledgements
 
 Development of the Zero-Emission Vehicle Adoption Model in Python (ZEVAMPY) was funded through the NDC ASPECTS project, which received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No. 101003866.
