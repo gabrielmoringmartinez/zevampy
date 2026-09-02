@@ -14,8 +14,6 @@ data:
     stock_year: 2_2_A_1_stock_year.csv
     validation_registration_shares: 4_1_eafo_ev_new_registration_shares.csv
     validation_stock_shares: 4_2_eafo_ev_stock_shares.csv
-    historical_csp_parameters: 5_1_oguchi_2008_survival_rate_parameters.csv
-    historical_survival_rates: 5_2_held_2016_survival_rates.csv
 
 model:
   start_new_registration_year: 1970
@@ -25,8 +23,6 @@ model:
   csp_available_years: 45
   historical_validation: true
   validation_powertrain: BEV
-  sensitivity_analysis: false
-  historical_csp: false
 
 
 geography:
@@ -39,3 +35,4 @@ powertrains:
 survival_rates:
   grouping:
     - geo country
+  source: fitted

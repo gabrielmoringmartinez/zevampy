@@ -14,8 +14,6 @@ from zevampy.part3_stock_calculation.plot_stock.graph_inputs import config_bev_r
 from zevampy.part4_validate_model.graph_inputs import config_validation_step1, config_validation_step2, \
     validation_powertrain_default
 from zevampy.part4_validate_model.rmse_inputs import config_validation_rmse_step1, config_validation_rmse_step2
-from zevampy.part5_sensitivity_analysis.graph_inputs import config_sensitivity_1, config_sensitivity_2, \
-    config_sensitivity_3, config_sensitivity_4
 
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 import warnings
@@ -102,10 +100,6 @@ def prepare_inputs(simulation_end_year, config=None):
         config_validation_step2_label: config_validation_step2,
         config_validation_rmse_step1_label: config_validation_rmse_step1,
         config_validation_rmse_step2_label: config_validation_rmse_step2,
-        config_sensitivity_1_label: config_sensitivity_1,
-        config_sensitivity_2_label: config_sensitivity_2,
-        config_sensitivity_3_label: config_sensitivity_3,
-        config_sensitivity_4_label: config_sensitivity_4,
     }
     inputs = {
         **inputs_simulation,
@@ -118,20 +112,12 @@ def prepare_inputs(simulation_end_year, config=None):
         config_bev_reference_scenario_label,
         config_validation_step1_label,
         config_validation_step2_label,
-        config_sensitivity_1_label,
-        config_sensitivity_2_label,
-        config_sensitivity_3_label,
-        config_sensitivity_4_label,
     ]:
         inputs[plot_config_label][file_info_dim][folder_dim] = figures_path
 
     x_lim = tuple(simulation_stock_years)
     for plot_config_label in [
         config_bev_reference_scenario_label,
-        config_sensitivity_1_label,
-        config_sensitivity_2_label,
-        config_sensitivity_3_label,
-        config_sensitivity_4_label,
     ]:
         inputs[plot_config_label]["plot_params"]["x_lim"] = x_lim
 

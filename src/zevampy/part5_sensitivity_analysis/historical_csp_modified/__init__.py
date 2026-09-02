@@ -1,6 +1,0 @@
-"""Sensitivity analysis using historical country-specific CSP curves."""
-
-# SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
-# SPDX-License-Identifier: MIT
-
-from .do_sensitivity_analysis_with_historical_country_csps import do_sensitivity_analysis_with_historical_country_csps
