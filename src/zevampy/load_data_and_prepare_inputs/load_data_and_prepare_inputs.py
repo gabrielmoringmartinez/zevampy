@@ -46,6 +46,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
 
     historical_csp_active = model_config.get("historical_csp", False)
     historical_validation_active = model_config.get("historical_validation", False)
+    validation_powertrain = model_config.get("validation_powertrain", "BEV")
     sensitivity_analysis_active = model_config.get("sensitivity_analysis", False)
     use_clusters_active = geography_config.get("use_clusters", True)
 
@@ -65,6 +66,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
     data, max_year = load_data(
         input_path,
         historical_validation_active=historical_validation_active,
+        validation_powertrain=validation_powertrain,
         sensitivity_analysis_active=sensitivity_analysis_active,
         historical_csp_active=historical_csp_active,
         use_clusters_active=use_clusters_active,

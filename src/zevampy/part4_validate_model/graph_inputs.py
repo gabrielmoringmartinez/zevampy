@@ -28,6 +28,7 @@ AXIS_TITLE_FONT = 40
 X_AXIS_TITLE_VERTICAL_POSITION = 0.19
 Y_AXIS_TITLE_HORIZONTAL_POSITION = 0.07
 SHARE = True
+validation_powertrain_default = "BEV"
 
 file_info = {
     save_figure_dim: True,

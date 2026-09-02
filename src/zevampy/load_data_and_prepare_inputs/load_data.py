@@ -23,9 +23,9 @@ DEFAULT_INPUT_FILES = {
 }
 
 
-def load_data(input_dir, historical_validation_active=True, sensitivity_analysis_active=True,
-              historical_csp_active=True, use_clusters_active=True, powertrains=None, survival_grouping=None,
-              input_files=None):
+def load_data(input_dir, historical_validation_active=True, validation_powertrain="BEV",
+              sensitivity_analysis_active=True, historical_csp_active=True, use_clusters_active=True, powertrains=None,
+              survival_grouping=None, input_files=None):
     """
     Load datasets required for modeling vehicle stock shares and performing CSP-based simulations.
 
@@ -307,14 +307,41 @@ def load_data(input_dir, historical_validation_active=True, sensitivity_analysis
 
     # --- Optional: validation data ---
     if historical_validation_active:
-        data["actual_bev_registration_shares"] = pd.read_csv(
+        validation_registration_shares = pd.read_csv(
             input_dir / input_files["validation_registration_shares"],
-            sep=";", decimal=","
+            sep=";",
+            decimal=",",
         )
-        data["actual_bev_stock_shares"] = pd.read_csv(
+
+        validation_stock_shares = pd.read_csv(
             input_dir / input_files["validation_stock_shares"],
-            sep=";", decimal=","
+            sep=";",
+            decimal=",",
         )
+
+        available_registration_powertrains = set(
+            validation_registration_shares[powertrain_dim].dropna().unique()
+        )
+        available_stock_powertrains = set(
+            validation_stock_shares[powertrain_dim].dropna().unique()
+        )
+
+        if validation_powertrain not in available_registration_powertrains:
+            raise ValueError(
+                f"Validation powertrain '{validation_powertrain}' is not available "
+                "in the validation registration-share dataset.\n"
+                f"Available powertrains are: {sorted(available_registration_powertrains)}"
+            )
+
+        if validation_powertrain not in available_stock_powertrains:
+            raise ValueError(
+                f"Validation powertrain '{validation_powertrain}' is not available "
+                "in the validation stock-share dataset.\n"
+                f"Available powertrains are: {sorted(available_stock_powertrains)}"
+            )
+
+        data[validation_registration_shares_label] = validation_registration_shares
+        data[validation_stock_shares_label] = validation_stock_shares
 
     # --- Optional: sensitivity data ---
     if sensitivity_analysis_active and historical_csp_active:

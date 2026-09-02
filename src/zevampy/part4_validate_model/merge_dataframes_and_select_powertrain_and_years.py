@@ -8,7 +8,7 @@ import pandas as pd
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
-def merge_dataframes_and_select_powertrain_and_years(df1, df2, powertrain=["BEV"], years=(2014, 2023)):
+def merge_dataframes_and_select_powertrain_and_years(df1, df2, powertrain="BEV", years=(2014, 2023)):
     """
     Merge modelled and observed stock-share datasets.
 
@@ -22,8 +22,8 @@ def merge_dataframes_and_select_powertrain_and_years(df1, df2, powertrain=["BEV"
         df2 (pandas.DataFrame):
             DataFrame containing observed stock-share data.
 
-        powertrain (list[str], optional):
-            Powertrain categories included in the comparison.
+        powertrain (str or list[str], optional):
+            Powertrain category or categories included in the comparison.
 
         years (tuple[int, int], optional):
             Start and end years used for filtering.
@@ -32,11 +32,14 @@ def merge_dataframes_and_select_powertrain_and_years(df1, df2, powertrain=["BEV"
         pandas.DataFrame:
             Merged DataFrame containing modelled and observed stock-share data.
     """
+    # Accept either a single powertrain string or a list of powertrains.
+    powertrains = [powertrain] if isinstance(powertrain, str) else powertrain
+
     # Apply filtering conditions to both DataFrames
-    df1 = df1[df1[powertrain_dim].isin(powertrain)]
+    df1 = df1[df1[powertrain_dim].isin(powertrains)]
     df1 = df1[df1[stock_year_dim].between(years[0], years[1])]
 
-    df2 = df2[df2[powertrain_dim].isin(powertrain)]
+    df2 = df2[df2[powertrain_dim].isin(powertrains)]
     df2 = df2[df2[stock_year_dim].between(years[0], years[1])]
 
     # Identify the first three columns for the merge
@@ -53,3 +56,4 @@ def merge_dataframes_and_select_powertrain_and_years(df1, df2, powertrain=["BEV"
     merged_df = pd.merge(df1, df2, on=merge_columns, how='inner')
 
     return merged_df
+

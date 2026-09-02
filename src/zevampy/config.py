@@ -49,6 +49,7 @@ def load_config(path=None):
             "csp_reference_year": 2021,
             "csp_available_years": 45,
             "historical_validation": False,
+            "validation_powertrain": "BEV",
             "sensitivity_analysis": False,
             "historical_csp": False,
         },

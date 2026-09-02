@@ -11,7 +11,8 @@ from zevampy.part3_stock_calculation.calculate_stock.input_data import initial_s
     save_options_stock, csp_data_ref_year, csp_available_years, save_fitted_csp_values, initial_registration_year
 from zevampy.part2_survival_rates.plot_survival_rates.graph_inputs import config_all, config_group
 from zevampy.part3_stock_calculation.plot_stock.graph_inputs import config_bev_reference_scenario
-from zevampy.part4_validate_model.graph_inputs import config_validation_step1, config_validation_step2
+from zevampy.part4_validate_model.graph_inputs import config_validation_step1, config_validation_step2, \
+    validation_powertrain_default
 from zevampy.part4_validate_model.rmse_inputs import config_validation_rmse_step1, config_validation_rmse_step2
 from zevampy.part5_sensitivity_analysis.graph_inputs import config_sensitivity_1, config_sensitivity_2, \
     config_sensitivity_3, config_sensitivity_4
@@ -69,6 +70,7 @@ def prepare_inputs(simulation_end_year, config=None):
     csp_avail_years = model_config.get("csp_available_years", csp_available_years)
     historical_csp_active = model_config.get("historical_csp", historical_csp)
     historical_validation_active = model_config.get("historical_validation", historical_csp)
+    validation_powertrain = model_config.get("validation_powertrain", validation_powertrain_default)
     sensitivity_analysis_active =  model_config.get("sensitivity_analysis", historical_csp)
     survival_config = config.get("survival_rates", {})
     survival_grouping = survival_config.get("grouping", [country_dim])
@@ -80,6 +82,7 @@ def prepare_inputs(simulation_end_year, config=None):
         csp_available_years_label: csp_avail_years,
         historical_csp_label: historical_csp_active,
         historical_validation_label: historical_validation_active,
+        validation_powertrain_label: validation_powertrain,
         sensitivity_analysis_label: sensitivity_analysis_active,
         save_options_stock_label: save_options_stock,
         save_fitted_csp_values_label: save_fitted_csp_values,
@@ -163,5 +166,10 @@ def prepare_inputs(simulation_end_year, config=None):
             "vehicle stock levels are likely to be underestimated. The shorter "
             "the CSP time horizon, the stronger this bias becomes.",
             UserWarning
+        )
+    if historical_validation_active and validation_powertrain not in powertrains:
+        raise ValueError(
+            f"Validation powertrain '{validation_powertrain}' is not included "
+            f"in the selected model powertrains: {powertrains}"
         )
     return inputs

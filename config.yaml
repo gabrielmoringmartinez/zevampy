@@ -23,7 +23,8 @@ model:
   end_year: 2050
   csp_reference_year: 2021
   csp_available_years: 45
-  historical_validation: false
+  historical_validation: true
+  validation_powertrain: BEV
   sensitivity_analysis: false
   historical_csp: false
 
