@@ -64,7 +64,7 @@ def _prepare_plot_config(base_config, validation_powertrain, years, step):
         )
         config[file_info_dim][main_title_dim] = (
             f"validation_step_1_actual_{validation_powertrain.lower()}_registrations_"
-            "and_empirical_csp_curves"
+            "and_configured_csp_curves"
         )
     else:
         config[plot_params_dim][title_dim] = (
@@ -73,7 +73,7 @@ def _prepare_plot_config(base_config, validation_powertrain, years, step):
         )
         config[file_info_dim][main_title_dim] = (
             f"validation_step_2_modelled_{validation_powertrain.lower()}_registrations_"
-            "and_empirical_csp_curves"
+            "and_configured_csp_curves"
         )
 
     return config
@@ -126,12 +126,15 @@ def compare_model_and_actual_stock_results(data, calculated_data, inputs):
     registrations_with_actual_shares = update_registration_shares_with_actual_values(registrations,
                                                                                      actual_registration_shares,
                                                                                      validation_powertrain)
-    _, stock_shares_with_actual_registrations = calculate_stock(registrations_with_actual_shares, fitted_csp_values,
-                                                                inputs[simulation_stock_years_label],
-                                                                inputs[historical_csp_label],
-                                                                inputs[countries_selected_label],
-                                                                inputs[output_path_label],
-                                                                inputs[survival_grouping_label])
+    _, stock_shares_with_actual_registrations = calculate_stock(
+        registrations_with_actual_shares,
+        fitted_csp_values,
+        inputs[simulation_stock_years_label],
+        inputs[countries_selected_label],
+        inputs[output_path_label],
+        calculate_stock_shares=True,
+        survival_grouping=inputs[survival_grouping_label],
+    )
     years = _get_validation_years(stock_shares_with_actual_registrations,actual_stock_shares, validation_powertrain)
     # Validation Step 1: Compare updated stock shares
     validation_step1_df = merge_dataframes_and_select_powertrain_and_years(stock_shares_with_actual_registrations,
@@ -154,6 +157,7 @@ def compare_model_and_actual_stock_results(data, calculated_data, inputs):
     calculate_rmse(validation_step1_df, rmse_config_step1, inputs[output_path_label])
     calculate_rmse(validation_step2_df, rmse_config_step2, inputs[output_path_label])
     return
+
 
 
 

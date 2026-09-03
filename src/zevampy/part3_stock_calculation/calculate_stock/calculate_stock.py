@@ -18,8 +18,8 @@ from zevampy.part3_stock_calculation.calculate_stock.save_outputs import save_ou
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
-def calculate_stock(registrations, csp_values, stock_years, historical_csp,
-                    countries_selected, output_path, calculate_stock_shares, survival_grouping=None, save_options=None):
+def calculate_stock(registrations, csp_values, stock_years, countries_selected, output_path,
+                    calculate_stock_shares, survival_grouping=None, save_options=None):
     """
     Calculate vehicle stock values and stock shares.
 
@@ -36,10 +36,6 @@ def calculate_stock(registrations, csp_values, stock_years, historical_csp,
 
         stock_years (list[int]):
             Simulation start and end years.
-
-        historical_csp (str):
-            Flag indicating whether historical CSP calculations are
-            enabled.
 
         countries_selected (list[str]):
             Countries included in the simulation.
@@ -77,7 +73,7 @@ def calculate_stock(registrations, csp_values, stock_years, historical_csp,
     stock_data = cleanup_stock_data(stock_data, columns_to_drop)
     if calculate_stock_shares:
         stock_shares = compute_stock_shares(stock_data)
-        stock_shares = calculate_eu_share(stock_shares, historical_csp, countries_selected)
+        stock_shares = calculate_eu_share(stock_shares, countries_selected)
     else:
         stock_shares = None
     if save_options:

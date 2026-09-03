@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 import pandas as pd
+import numpy as np
 import warnings
 from pathlib import Path
 
@@ -18,301 +19,190 @@ DEFAULT_INPUT_FILES = {
     "stock_year": "2_2_A_1_stock_year.csv",
     "validation_registration_shares": "4_1_eafo_ev_new_registration_shares.csv",
     "validation_stock_shares": "4_2_eafo_ev_stock_shares.csv",
-    "historical_csp_parameters": "5_1_oguchi_2008_survival_rate_parameters.csv",
-    "historical_survival_rates": "5_2_held_2016_survival_rates.csv",
+}
+
+VALID_SURVIVAL_SOURCES = {
+    survival_source_stock_by_age_label,
+    survival_source_empirical_label,
+    survival_source_parameters_label,
 }
 
 
-def load_data(input_dir, historical_validation_active=True, validation_powertrain="BEV",
-              sensitivity_analysis_active=True, historical_csp_active=True, use_clusters_active=True, powertrains=None,
-              survival_grouping=None, input_files=None):
-    """
-    Load datasets required for modeling vehicle stock shares and performing CSP-based simulations.
-
-    This function reads input CSV files containing:
-    - Historical and projected vehicle registrations.
-    - Vehicle stock-by-age data.
-    - Country cluster information.
-    - Validation datasets.
-    - Historical CSP sensitivity datasets.
-
-    The function also validates:
-    - Required file availability.
-    - Powertrain consistency.
-    - Survival-rate grouping compatibility.
-    - Required stock-by-age dimensions.
-
-    Parameters:
-        input_dir (str):
-            Path to the directory containing input CSV files.
-
-        historical_validation_active (bool, optional):
-            Whether validation datasets should be loaded.
-
-        sensitivity_analysis_active (bool, optional):
-            Whether sensitivity-analysis datasets should be loaded.
-
-        historical_csp_active (bool, optional):
-            Whether historical CSP datasets should be loaded.
-
-        use_clusters_active (bool, optional):
-            Whether country clustering should be used.
-
-        powertrains (list[str] | None, optional):
-            Selected powertrain categories to include.
-
-        survival_grouping (list[str] | None, optional):
-            Dimensions used for survival-rate estimation.
-
-        input_files (dict[str, str] | None, optional):
-            Mapping of logical input dataset names to CSV filenames.
-            Unspecified filenames fall back to the default ZEVAMPY filenames.
-
-    Returns:
-        tuple:
-            - dict:
-                Dictionary containing loaded datasets as pandas DataFrames.
-            - int:
-                Maximum year found in the projected registrations dataset.
-    """
+def load_data(
+    input_dir,
+    historical_validation_active=False,
+    validation_powertrain="BEV",
+    use_clusters_active=True,
+    powertrains=None,
+    survival_grouping=None,
+    survival_source=survival_source_stock_by_age_label,
+    survival_source_file=None,
+    input_files=None,
+):
+    """Load and validate datasets required by the configured model workflow."""
     input_dir = Path(input_dir)
+    survival_grouping = survival_grouping or [country_dim]
 
-    input_files = {
-        **DEFAULT_INPUT_FILES,
-        **(input_files or {}),
-    }
-    # --- Check folder exists ---
+    if survival_source not in VALID_SURVIVAL_SOURCES:
+        raise ValueError(
+            f"Invalid survival_rates.source '{survival_source}'. "
+            f"Supported values are: {sorted(VALID_SURVIVAL_SOURCES)}"
+        )
+
+    input_files = {**DEFAULT_INPUT_FILES, **(input_files or {})}
+
     if not input_dir.exists():
         raise FileNotFoundError(
             f"Input directory '{input_dir}' does not exist.\n\n"
-            "Possible causes:\n"
-            "- The configured input path is incorrect.\n"
-            "- The input folder has not been created yet.\n\n"
-            "How to fix:\n"
-            "1) Create the input folder and add the required CSV files.\n"
-            "2) Or update 'data.input_path' in config.yaml.\n"
-            "3) Or pass the correct path via '--input'.\n"
+            "Create the input folder, update 'data.input_path' in config.yaml, "
+            "or pass the correct path via '--input'."
         )
 
-    # --- Required files ---
     required_model_files = [
         input_files["registration_shares"],
         input_files["historical_registrations"],
         input_files["projected_registrations"],
-        input_files["stock_by_age"],
-        input_files["stock_year"],
     ]
+    if survival_source == survival_source_stock_by_age_label:
+        required_model_files.extend([
+            input_files["stock_by_age"],
+            input_files["stock_year"],
+        ])
+
+    check_required_files(input_dir, required_model_files, "running the model")
 
     cluster_file = input_files["country_clusters"]
-
-    required_validation_files = [
-        input_files["validation_registration_shares"],
-        input_files["validation_stock_shares"],
-    ]
-
-    required_historical_csp_files = [
-        input_files["historical_csp_parameters"],
-        input_files["historical_survival_rates"],
-    ]
-
-    # --- Check files ---
-    check_required_files(input_dir, required_model_files, "running the model")
+    if use_clusters_active:
+        check_required_files(input_dir, [cluster_file], "country clustering")
+    elif (input_dir / cluster_file).exists():
+        warnings.warn(
+            f"'{cluster_file}' was found in '{input_dir}' but will not be used "
+            "because 'use_clusters' is set to False.",
+            UserWarning,
+        )
 
     if historical_validation_active:
         check_required_files(
             input_dir,
-            required_validation_files,
+            [
+                input_files["validation_registration_shares"],
+                input_files["validation_stock_shares"],
+            ],
             "validation against historical data",
             hint=(
                 "If validation data are not available or validation is not needed, "
-                "disable it in config.yaml by setting:\n\n"
-                "model:\n"
-                "  historical_validation: false"
+                "set model.historical_validation to false."
             ),
         )
 
-    if sensitivity_analysis_active and historical_csp_active:
-        check_required_files(
-            input_dir,
-            required_historical_csp_files,
-            "historical CSP sensitivity analysis",
-            hint=(
-                "If historical CSP sensitivity analysis is not needed, "
-                "disable it in config.yaml by setting:\n\n"
-                "model:\n"
-                "  historical_csp: false"
-            ),
-        )
-
-    if use_clusters_active:
-        check_required_files(input_dir, [cluster_file], "country clustering")
-    if not use_clusters_active and (input_dir / cluster_file).exists():
-        warnings.warn(
-            f"'{cluster_file}' was found in '{input_dir}' but will not be used "
-            "because 'use_clusters' is set to False.",
-            UserWarning
-        )
-
-    # --- Load always-needed data ---
-    if use_clusters_active:
-        clusters = pd.read_csv(input_dir / cluster_file, sep=";", decimal=",")
+    if survival_source != survival_source_stock_by_age_label:
+        if not survival_source_file:
+            raise ValueError(
+                f"survival_rates.file must be provided when survival_rates.source is '{survival_source}'."
+            )
+        source_path = Path(survival_source_file)
+        if not source_path.is_absolute():
+            source_path = input_dir / source_path
+        if not source_path.exists():
+            raise FileNotFoundError(
+                f"Alternative survival input file '{source_path}' does not exist."
+            )
     else:
-        clusters = None
-    registration_shares_by_cluster = pd.read_csv(
-        input_dir / input_files["registration_shares"],
-        sep=";", decimal=","
+        source_path = None
+
+    # Core registration inputs.
+    clusters = (
+        pd.read_csv(input_dir / cluster_file, sep=";", decimal=",")
+        if use_clusters_active
+        else None
     )
+    registration_shares_by_cluster = pd.read_csv(
+        input_dir / input_files["registration_shares"], sep=";", decimal=","
+    )
+
     if powertrains:
         validate_powertrains_in_data(
             registration_shares_by_cluster,
             powertrains,
-            "registration shares by cluster"
+            "registration shares by cluster",
         )
-
         registration_shares_by_cluster = add_rest_of_powertrains_from_selected_shares(
             registration_shares_by_cluster,
             powertrains,
             relative_sales_dim,
             "registration shares by cluster",
         )
+
     historical_registrations = pd.read_csv(
-        input_dir / input_files["historical_registrations"],
-        sep=";", decimal=","
+        input_dir / input_files["historical_registrations"], sep=";", decimal=","
     )
     registrations_projected = pd.read_csv(
-        input_dir / input_files["projected_registrations"],
-        sep=";", decimal=","
+        input_dir / input_files["projected_registrations"], sep=";", decimal=","
     )
-
-    max_year = registrations_projected["time"].max()
-
-    stock_by_age = pd.read_csv(
-        input_dir / input_files["stock_by_age"],
-        sep=";", decimal=","
-    )
-
-    if survival_grouping is None:
-        survival_grouping = [country_dim]
-
-    if survival_grouping == [country_dim] and powertrain_dim in stock_by_age.columns:
-        raise ValueError(
-            "Invalid stock-by-age input data.\n\n"
-            "The current configuration estimates survival rates only by country:\n"
-            "survival_rates:\n"
-            "  grouping:\n"
-            "    - geo country\n\n"
-            "However, the stock-by-age input file contains a 'powertrain' column.\n\n"
-            "How to fix:\n"
-            "- Remove the 'powertrain' column from the stock-by-age input file, and\n"
-            "- provide total stock by country and vehicle age only:\n"
-            "  geo country;vehicle age;number of registered vehicles\n\n"
-            "If you want country- and powertrain-specific survival rates, use:\n"
-            "survival_rates:\n"
-            "  grouping:\n"
-            "    - geo country\n"
-            "    - powertrain"
-        )
-
-    required_stock_columns = set(
-        survival_grouping + [age_dim, number_registered_vehicles_dim]
-    )
-
-    missing_columns = required_stock_columns - set(stock_by_age.columns)
-
-    if missing_columns:
-        raise ValueError(
-            "Invalid stock-by-age input data.\n\n"
-            "The current configuration requires survival rates to be estimated by:\n"
-            f"{survival_grouping}\n\n"
-            "However, the stock-by-age input file does not contain all required columns.\n\n"
-            f"Missing columns in 2_1 stock-by-age input file: {sorted(missing_columns)}\n\n"
-            "How to fix:\n"
-            "- If you want country-level survival rates only, use:\n"
-            "  survival_rates:\n"
-            "    grouping:\n"
-            "      - geo country\n\n"
-            "- If you want survival rates by country and powertrain, the 2_1 input file must contain:\n"
-            "  geo country;vehicle age;powertrain;number of registered vehicles\n\n"
-            "- If you later add vehicle size to the grouping, the 2_1 input file must also contain "
-            "a corresponding vehicle size column."
-        )
-
-    if powertrains and survival_grouping and powertrain_dim in survival_grouping:
-        stock_by_age = aggregate_stock_by_selected_powertrains(
-            stock_by_age,
-            powertrains,
-            "stock by age"
-        )
-
-    if powertrain_dim in survival_grouping:
-        registration_powertrains = set(
-            registration_shares_by_cluster[powertrain_dim].dropna().unique()
-        )
-        stock_powertrains = set(
-            stock_by_age[powertrain_dim].dropna().unique()
-        )
-
-        missing_stock_powertrains = registration_powertrains - stock_powertrains
-
-        if missing_stock_powertrains:
-            warnings.warn(
-                "Some powertrain categories exist in the registration shares but not in the "
-                "stock-by-age input data.\n\n"
-                f"Missing from stock-by-age data: {sorted(missing_stock_powertrains)}\n\n"
-                "Survival rates cannot be estimated for these categories, so stock will not "
-                "be calculated for them. Total stock by country may therefore be incomplete.",
-                UserWarning
-            )
-
-    if survival_grouping is None:
-        survival_grouping = [country_dim]
-
-    required_stock_columns = set(
-        survival_grouping + [age_dim, number_registered_vehicles_dim]
-    )
-
-    missing_columns = required_stock_columns - set(stock_by_age.columns)
-
-    if missing_columns:
-        raise ValueError(
-            "Invalid stock-by-age input data.\n\n"
-            f"Missing columns: {sorted(missing_columns)}\n\n"
-
-            f"Survival rates are configured to be estimated by: {survival_grouping}\n"
-            "However, the input data does not contain all required dimensions.\n\n"
-
-            "Note:\n"
-            "- Country-level survival rates can always be estimated.\n"
-            "- Additional detail (e.g. powertrain) requires disaggregated stock-by-age data.\n\n"
-
-            "How to fix:\n"
-            f"- Remove {sorted(missing_columns)} from the survival grouping in config.yaml\n"
-            "  OR\n"
-            f"- Provide stock-by-age data including: {sorted(required_stock_columns)}\n"
-        )
-
-    stock_year = pd.read_csv(
-        input_dir / input_files["stock_year"],
-        sep=";", decimal=","
-    )
+    max_year = registrations_projected[time_dim].max()
 
     data = {
-        "clusters": clusters,
-        "registration_shares_by_cluster": registration_shares_by_cluster,
-        "historical_registrations": historical_registrations,
-        "registrations_projected": registrations_projected,
-        "stock_by_age": stock_by_age,
-        "stock_year": stock_year,
+        clusters_label: clusters,
+        registration_shares_by_cluster_label: registration_shares_by_cluster,
+        historical_registrations_label: historical_registrations,
+        registrations_projected_label: registrations_projected,
     }
 
-    # --- Optional: validation data ---
+    # Survival assumptions are loaded according to the selected source.
+    if survival_source == survival_source_stock_by_age_label:
+        stock_by_age = pd.read_csv(
+            input_dir / input_files["stock_by_age"], sep=";", decimal=","
+        )
+        stock_year = pd.read_csv(
+            input_dir / input_files["stock_year"], sep=";", decimal=","
+        )
+        _validate_stock_by_age(stock_by_age, survival_grouping)
+
+        if powertrains and powertrain_dim in survival_grouping:
+            stock_by_age = aggregate_stock_by_selected_powertrains(
+                stock_by_age,
+                powertrains,
+                "stock by age",
+            )
+
+        _warn_if_survival_powertrains_missing(
+            registration_shares_by_cluster,
+            stock_by_age,
+            survival_grouping,
+            "stock-by-age input data",
+        )
+        data[stock_by_age_label] = stock_by_age
+        data[stock_year_label] = stock_year
+
+    elif survival_source == survival_source_empirical_label:
+        alternative_survival_rates = pd.read_csv(source_path, sep=";", decimal=",")
+        _validate_empirical_survival_rates(alternative_survival_rates, survival_grouping)
+        _warn_if_survival_powertrains_missing(
+            registration_shares_by_cluster,
+            alternative_survival_rates,
+            survival_grouping,
+            "alternative empirical survival-rate data",
+        )
+        data[alternative_survival_rates_label] = alternative_survival_rates
+
+    elif survival_source == survival_source_parameters_label:
+        alternative_csp_parameters = pd.read_csv(source_path, sep=";", decimal=",")
+        _validate_csp_parameters(alternative_csp_parameters, survival_grouping)
+        _warn_if_survival_powertrains_missing(
+            registration_shares_by_cluster,
+            alternative_csp_parameters,
+            survival_grouping,
+            "alternative CSP-parameter data",
+        )
+        data[alternative_csp_parameters_label] = alternative_csp_parameters
+
+    # Optional historical validation data.
     if historical_validation_active:
         validation_registration_shares = pd.read_csv(
             input_dir / input_files["validation_registration_shares"],
             sep=";",
             decimal=",",
         )
-
         validation_stock_shares = pd.read_csv(
             input_dir / input_files["validation_stock_shares"],
             sep=";",
@@ -325,14 +215,12 @@ def load_data(input_dir, historical_validation_active=True, validation_powertrai
         available_stock_powertrains = set(
             validation_stock_shares[powertrain_dim].dropna().unique()
         )
-
         if validation_powertrain not in available_registration_powertrains:
             raise ValueError(
                 f"Validation powertrain '{validation_powertrain}' is not available "
                 "in the validation registration-share dataset.\n"
                 f"Available powertrains are: {sorted(available_registration_powertrains)}"
             )
-
         if validation_powertrain not in available_stock_powertrains:
             raise ValueError(
                 f"Validation powertrain '{validation_powertrain}' is not available "
@@ -343,18 +231,110 @@ def load_data(input_dir, historical_validation_active=True, validation_powertrai
         data[validation_registration_shares_label] = validation_registration_shares
         data[validation_stock_shares_label] = validation_stock_shares
 
-    # --- Optional: sensitivity data ---
-    if sensitivity_analysis_active and historical_csp_active:
-        data["optimum_parameters_2008"] = pd.read_csv(
-            input_dir / input_files["historical_csp_parameters"],
-            sep=";", decimal=","
-        )
-        data["survival_rates_2016"] = pd.read_csv(
-            input_dir / input_files["historical_survival_rates"],
-            sep=";", decimal=","
+    return data, max_year
+
+
+def _validate_stock_by_age(stock_by_age, survival_grouping):
+    if survival_grouping == [country_dim] and powertrain_dim in stock_by_age.columns:
+        raise ValueError(
+            "Invalid stock-by-age input data: the configured survival grouping is country-only, "
+            "but the stock-by-age file contains a powertrain column. Remove the powertrain column "
+            "or include 'powertrain' in survival_rates.grouping."
         )
 
-    return data, max_year
+    required_columns = set(survival_grouping + [age_dim, number_registered_vehicles_dim])
+    missing_columns = required_columns - set(stock_by_age.columns)
+    if missing_columns:
+        raise ValueError(
+            "Invalid stock-by-age input data. "
+            f"Missing columns: {sorted(missing_columns)}. "
+            f"Required columns are: {sorted(required_columns)}."
+        )
+
+
+def _validate_empirical_survival_rates(survival_rates, survival_grouping):
+    required_columns = set(survival_grouping + [age_dim, survival_rate_dim])
+    missing_columns = required_columns - set(survival_rates.columns)
+    if missing_columns:
+        raise ValueError(
+            "Invalid alternative empirical survival-rate data. "
+            f"Missing columns: {sorted(missing_columns)}. "
+            f"Required columns are: {sorted(required_columns)}."
+        )
+    if survival_rates[survival_rate_dim].isna().any():
+        raise ValueError("Alternative empirical survival-rate data contain missing survival-rate values.")
+    if not pd.api.types.is_numeric_dtype(survival_rates[survival_rate_dim]):
+        raise ValueError("Alternative empirical survival rates must contain numeric values.")
+    if not np.isfinite(survival_rates[survival_rate_dim]).all():
+        raise ValueError("Alternative empirical survival rates must contain only finite values.")
+    if (survival_rates[survival_rate_dim] < 0).any():
+        raise ValueError("Alternative empirical survival rates must be non-negative.")
+
+
+def _validate_csp_parameters(parameters, survival_grouping):
+    required_columns = set(
+        survival_grouping + [gamma_weibull_dim, beta_weibull_dim, distribution_dim]
+    )
+    missing_columns = required_columns - set(parameters.columns)
+    if missing_columns:
+        raise ValueError(
+            "Invalid alternative CSP-parameter data. "
+            f"Missing columns: {sorted(missing_columns)}. "
+            f"Required columns are: {sorted(required_columns)}."
+        )
+
+    invalid_distributions = set(parameters[distribution_dim].dropna().unique()) - {
+        weibull_label,
+        weibull_gaussian_label,
+    }
+    if invalid_distributions:
+        raise ValueError(
+            f"Unknown CSP distribution labels: {sorted(invalid_distributions)}. "
+            f"Supported values are '{weibull_label}' and '{weibull_gaussian_label}'."
+        )
+
+    if parameters[gamma_weibull_dim].isna().any() or parameters[beta_weibull_dim].isna().any():
+        raise ValueError("Alternative CSP parameters require non-missing Weibull gamma and beta values.")
+    if (parameters[gamma_weibull_dim] <= 0).any() or (parameters[beta_weibull_dim] <= 0).any():
+        raise ValueError("Weibull gamma and beta parameters must be greater than zero.")
+
+    wg_rows = parameters[parameters[distribution_dim] == weibull_gaussian_label]
+    if not wg_rows.empty:
+        required_wg = [k_weibull_gaussian_dim, mu_weibull_gaussian_dim, sigma_weibull_gaussian_dim]
+        missing_wg_columns = [column for column in required_wg if column not in parameters.columns]
+        if missing_wg_columns:
+            raise ValueError(
+                "WG parameter rows require the following additional columns: "
+                f"{missing_wg_columns}."
+            )
+        if wg_rows[required_wg].isna().any().any():
+            raise ValueError("WG parameter rows require non-missing k, mu, and sigma values.")
+        if (wg_rows[sigma_weibull_gaussian_dim] <= 0).any():
+            raise ValueError("WG sigma parameters must be greater than zero.")
+
+    duplicated = parameters.duplicated(subset=survival_grouping, keep=False)
+    if duplicated.any():
+        duplicate_groups = parameters.loc[duplicated, survival_grouping].drop_duplicates().to_dict(orient="records")
+        raise ValueError(
+            "Alternative CSP-parameter data must contain exactly one row per survival group. "
+            f"Duplicate groups: {duplicate_groups}"
+        )
+
+
+def _warn_if_survival_powertrains_missing(registration_shares, survival_data, survival_grouping, dataset_name):
+    if powertrain_dim not in survival_grouping or powertrain_dim not in survival_data.columns:
+        return
+
+    registration_powertrains = set(registration_shares[powertrain_dim].dropna().unique())
+    survival_powertrains = set(survival_data[powertrain_dim].dropna().unique())
+    missing_powertrains = registration_powertrains - survival_powertrains
+    if missing_powertrains:
+        warnings.warn(
+            f"Some powertrain categories exist in the registration shares but not in {dataset_name}. "
+            f"Missing survival assumptions for: {sorted(missing_powertrains)}. "
+            "Absolute stock can still be calculated for available powertrains, but total stock shares may be incomplete.",
+            UserWarning,
+        )
 
 
 """

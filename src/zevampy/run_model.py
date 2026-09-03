@@ -19,9 +19,9 @@ logger = logging.getLogger(__name__)
 def run_model(config_path=None, input_path=None, output_path=None):
     """Run the full ZEVAMPY modeling workflow.
 
-    Load the model configuration, prepare input data, calculate empirical
-    survival rates and stock values, generate plots, optionally validate the
-    results against historical data, and optionally run sensitivity analyses.
+    Load the model configuration, prepare input data, obtain CSP curves from
+    the configured survival-rate source, calculate stock values, generate plots,
+    and optionally validate the results against historical data.
 
     Parameters:
         config_path (str, optional):

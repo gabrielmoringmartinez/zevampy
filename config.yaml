@@ -35,4 +35,5 @@ powertrains:
 survival_rates:
   grouping:
     - geo country
-  source: fitted
+  source: parameters
+  file: 5_1_oguchi_2008_survival_rate_parameters.csv

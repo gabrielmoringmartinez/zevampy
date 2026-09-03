@@ -40,8 +40,6 @@ weibull_plot_label = 'Weibull fit'
 weibull_gaussian_plot_label = 'WG fit'
 data_points_plot_label = 'data points'
 # Geographical Labels
-eu_9_label = 'EU-9'
-eu_26_plus_norway_label = 'EU-26+Norway'
 eu_27_plus_norway_label = 'EU-27+Norway'
 # Plot Dictionary Keys Labels/Dimensions
 plot_params_dim = 'plot_params'
@@ -85,9 +83,6 @@ fill_between_dim = "fill_between"
 number_of_decimals_dim = "number_of_decimals"
 num_rows_dim = "num_rows"
 num_columns_dim = "num_columns"
-country_csp_label = 'country csp'
-historical_csp_label = 'historical csp'
-increase_decrease_csp_label = 'increased or decreased csp'
 # CSV Input Data labels
 country_labels_label = "country_labels"
 clusters_label = "clusters"
@@ -100,17 +95,13 @@ stock_year_label = "stock_year"
 validation_registration_shares_label = "validation_registration_shares"
 validation_stock_shares_label = "validation_stock_shares"
 validation_powertrain_label = "validation_powertrain"
-optimum_parameters_2008_label = "optimum_parameters_2008"
-survival_rates_2016_label = "survival_rates_2016"
 # Python Input Labels
 countries_selected_label = "countries_selected"
 simulation_stock_years_label = "stock_years"
 initial_registration_year_label = "initial_registration_year"
 csp_data_ref_year_label = "csp_data_ref_year"
 csp_available_years_label = "csp_available_years"
-historical_csp_label = "historical_csp"
 historical_validation_label = "historical_validation"
-sensitivity_analysis_label = "sensitivity_analysis"
 save_options_stock_label = "save_options_stock"
 save_fitted_csp_values_label = "save_fitted_csp_values"
 distribution_bounds_label = "distribution_bounds"
@@ -122,10 +113,6 @@ config_validation_step1_label = "config_validation_step1"
 config_validation_step2_label = "config_validation_step2"
 config_validation_rmse_step1_label = "config_validation_rmse_step1"
 config_validation_rmse_step2_label = "config_validation_rmse_step2"
-config_sensitivity_1_label = "config_sensitivity_1"
-config_sensitivity_2_label = "config_sensitivity_2"
-config_sensitivity_3_label = "config_sensitivity_3"
-config_sensitivity_4_label = "config_sensitivity_4"
 # Output labels of Step2: calculate_and_plot_csps_and_stock.py
 registrations_label = "registrations"
 stock_values_label = "stock_values"
@@ -136,14 +123,17 @@ optimal_distribution_dict_label = 'optimal_distribution_dict'
 # File Output Name Labels
 stock_data_filename_label = 'stock_data_filename'
 stock_shares_filename_label = 'stock_shares_filename'
-# Sensitivity Analysis Input labels
+# Validation and runtime input labels
 powertrains_rmse_label = "powertrains"
 timeframes_rmse_label = "timeframes"
-countries_selected_label = "countries_selected"
 use_clusters_label = "use_clusters"
-years_selected_label = "years_selected"
-percentages_selected_label = "percentages_selected"
-powertrain_to_plot_label = "powertrain_to_plot"
-year_to_modify_registrations_label = "year_to_modify_registrations"
 output_path_label = "output_path"
 survival_grouping_label = "survival_grouping"
+# Survival-rate source labels
+survival_source_label = "survival_source"
+survival_source_file_label = "survival_source_file"
+alternative_survival_rates_label = "alternative_survival_rates"
+alternative_csp_parameters_label = "alternative_csp_parameters"
+survival_source_stock_by_age_label = "stock_by_age"
+survival_source_empirical_label = "empirical"
+survival_source_parameters_label = "parameters"
