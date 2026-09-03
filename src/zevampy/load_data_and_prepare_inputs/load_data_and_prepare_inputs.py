@@ -28,7 +28,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
     powertrains = config.get("powertrains") if config else None
     survival_grouping = survival_config.get("grouping", [country_dim])
     survival_source = survival_config.get("source", survival_source_stock_by_age_label)
-    survival_source_file = survival_config.get("file")
+    survival_files = survival_config.get("files") or {}
 
     data_config = config.get("data") or {}
     input_files = data_config.get("files", {})
@@ -51,7 +51,7 @@ def load_data_and_prepare_inputs(input_path, config=None):
         powertrains=powertrains,
         survival_grouping=survival_grouping,
         survival_source=survival_source,
-        survival_source_file=survival_source_file,
+        survival_files=survival_files,
         input_files=input_files,
     )
 
@@ -60,6 +60,5 @@ def load_data_and_prepare_inputs(input_path, config=None):
         len(data),
         max_year,
     )
-    inputs = prepare_inputs(max_year, config=config)
+    inputs = prepare_inputs(max_year, data=data, config=config)
     return data, inputs
-

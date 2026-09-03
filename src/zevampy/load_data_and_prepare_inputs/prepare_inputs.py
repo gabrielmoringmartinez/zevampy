@@ -15,10 +15,8 @@ from zevampy.part2_survival_rates.input_data import distribution_bounds
 from zevampy.part3_stock_calculation.calculate_stock.input_data import (
     initial_simulation_stock_year,
     save_options_stock,
-    csp_data_ref_year,
     csp_available_years,
     save_fitted_csp_values,
-    initial_registration_year,
 )
 from zevampy.part2_survival_rates.plot_survival_rates.graph_inputs import config_all, config_group
 from zevampy.part3_stock_calculation.plot_stock.graph_inputs import config_bev_reference_scenario
@@ -38,7 +36,7 @@ VALID_SURVIVAL_SOURCES = {
 }
 
 
-def prepare_inputs(simulation_end_year, config=None):
+def prepare_inputs(simulation_end_year, data, config=None):
     """Prepare simulation parameters and plot configuration settings."""
     config = config or {}
     data_config = config.get("data") or {}
@@ -49,18 +47,16 @@ def prepare_inputs(simulation_end_year, config=None):
 
     powertrains = config.get("powertrains") or default_powertrains
     initial_stock_year = model_config.get("first_stock_year", initial_simulation_stock_year)
-    initial_new_registrations_year = model_config.get("start_new_registration_year", initial_registration_year)
     end_year = model_config.get("end_year", simulation_end_year)
     simulation_stock_years = [initial_stock_year, end_year]
     countries = geography_config.get("countries") or eu_countries_and_norway
     use_clusters = geography_config.get("use_clusters", default_use_clusters)
-    csp_ref_year = model_config.get("csp_reference_year", csp_data_ref_year)
-    csp_avail_years = model_config.get("csp_available_years", csp_available_years)
+    csp_avail_years = survival_config.get("csp_available_years", csp_available_years)
     historical_validation_active = model_config.get("historical_validation", False)
     validation_powertrain = model_config.get("validation_powertrain", validation_powertrain_default)
     survival_grouping = survival_config.get("grouping", [country_dim])
     survival_source = survival_config.get("source", survival_source_stock_by_age_label)
-    survival_source_file = survival_config.get("file")
+    survival_files = survival_config.get("files") or {}
 
     if survival_source not in VALID_SURVIVAL_SOURCES:
         raise ValueError(
@@ -68,15 +64,37 @@ def prepare_inputs(simulation_end_year, config=None):
             f"Supported values are: {sorted(VALID_SURVIVAL_SOURCES)}"
         )
 
-    if survival_source != survival_source_stock_by_age_label and not survival_source_file:
-        raise ValueError(
-            f"survival_rates.file must be provided when survival_rates.source is '{survival_source}'."
+    _validate_survival_file_configuration(survival_source, survival_files)
+
+    if not isinstance(csp_avail_years, int) or csp_avail_years < 1:
+        raise ValueError("survival_rates.csp_available_years must be a positive integer.")
+
+    # The earliest registration cohort is derived from the first stock year
+    # and the CSP horizon. For stock-by-age inputs, an earlier stock reference
+    # year may require additional historical registration cohorts to estimate
+    # the empirical survival rates.
+    earliest_reference_year = initial_stock_year
+    if survival_source == survival_source_stock_by_age_label:
+        stock_year = data[stock_year_label]
+        earliest_stock_reference_year = int(
+            stock_year[stock_year_empirical_csp_data_dim].min()
         )
+        earliest_reference_year = min(
+            initial_stock_year,
+            earliest_stock_reference_year,
+        )
+
+    initial_new_registrations_year = earliest_reference_year - csp_avail_years + 1
+
+    _validate_historical_registration_coverage(
+        data[historical_registrations_label],
+        countries,
+        initial_new_registrations_year,
+    )
 
     inputs_simulation = {
         countries_selected_label: countries,
         simulation_stock_years_label: simulation_stock_years,
-        csp_data_ref_year_label: csp_ref_year,
         csp_available_years_label: csp_avail_years,
         historical_validation_label: historical_validation_active,
         validation_powertrain_label: validation_powertrain,
@@ -89,7 +107,6 @@ def prepare_inputs(simulation_end_year, config=None):
         output_path_label: outputs_config,
         survival_grouping_label: survival_grouping,
         survival_source_label: survival_source,
-        survival_source_file_label: survival_source_file,
     }
 
     inputs_plot_configuration = {
@@ -115,23 +132,6 @@ def prepare_inputs(simulation_end_year, config=None):
 
     inputs[config_bev_reference_scenario_label]["plot_params"]["x_lim"] = tuple(simulation_stock_years)
 
-    available_registration_history = (initial_stock_year - initial_new_registrations_year) + 1
-    if available_registration_history < csp_avail_years:
-        raise ValueError(
-            "Invalid model configuration: not enough historical registration data "
-            "to calculate stock accurately.\n\n"
-            f"start_new_registration_year = {initial_new_registrations_year}\n"
-            f"first_stock_year = {initial_stock_year}\n"
-            f"csp_available_years = {csp_avail_years}\n"
-            f"available history = {available_registration_history} years\n\n"
-            "Requirement:\n"
-            "(first_stock_year - start_new_registration_year) + 1 >= csp_available_years\n\n"
-            "How to fix:\n"
-            f"- Set first_stock_year >= {initial_new_registrations_year + csp_avail_years - 1}\n"
-            f"- OR provide older start_new_registration_year <= {initial_stock_year - csp_avail_years + 1}\n"
-            "- OR reduce csp_available_years (may reduce stock-estimation accuracy)."
-        )
-
     if csp_avail_years < 45:
         warnings.warn(
             "csp_available_years is lower than the typical value of 45 years. "
@@ -147,3 +147,48 @@ def prepare_inputs(simulation_end_year, config=None):
         )
 
     return inputs
+
+
+def _validate_survival_file_configuration(survival_source, survival_files):
+    if survival_source == survival_source_empirical_label and not survival_files.get("empirical"):
+        raise ValueError(
+            "survival_rates.files.empirical must be provided when "
+            "survival_rates.source is 'empirical'."
+        )
+    if survival_source == survival_source_parameters_label and not survival_files.get("parameters"):
+        raise ValueError(
+            "survival_rates.files.parameters must be provided when "
+            "survival_rates.source is 'parameters'."
+        )
+
+
+def _validate_historical_registration_coverage(
+    historical_registrations,
+    countries,
+    required_start_year,
+):
+    """Ensure every selected country has registrations back to the required cohort year."""
+    selected = historical_registrations[
+        historical_registrations[country_dim].isin(countries)
+    ]
+    earliest_years = selected.groupby(country_dim)[time_dim].min()
+
+    missing_countries = sorted(set(countries) - set(earliest_years.index))
+    if missing_countries:
+        raise ValueError(
+            "Historical registration data are missing for selected countries: "
+            f"{missing_countries}"
+        )
+
+    insufficient = earliest_years[earliest_years > required_start_year]
+    if not insufficient.empty:
+        details = ", ".join(
+            f"{country}: starts {int(year)}"
+            for country, year in insufficient.items()
+        )
+        raise ValueError(
+            "Historical registration data do not cover the full cohort horizon. "
+            f"The configured first stock year and CSP horizon require registrations "
+            f"from {required_start_year} onward. Insufficient coverage: {details}."
+        )
+

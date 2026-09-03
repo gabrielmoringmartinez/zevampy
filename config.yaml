@@ -10,30 +10,26 @@ data:
     registration_shares: 1_1_new_registrations_by_fuel_type_clusters.csv
     historical_registrations: 1_2_A_2_historical_new_registrations_data_passenger_cars.csv
     projected_registrations: 1_3_new_registrations_projected.csv
-    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
-    stock_year: 2_2_A_1_stock_year.csv
     validation_registration_shares: 4_1_eafo_ev_new_registration_shares.csv
     validation_stock_shares: 4_2_eafo_ev_stock_shares.csv
 
 model:
-  start_new_registration_year: 1970
   first_stock_year: 2014
   end_year: 2050
-  csp_reference_year: 2021
-  csp_available_years: 45
   historical_validation: true
   validation_powertrain: BEV
-
 
 geography:
   countries:
   use_clusters: true
 
-
 powertrains:
 
 survival_rates:
+  source: empirical
   grouping:
     - geo country
-  source: parameters
-  file: 5_1_oguchi_2008_survival_rate_parameters.csv
+  csp_available_years: 45
+  files:
+    empirical: 5_2_held_2016_survival_rates.csv
+    #stock_year: 2_2_A_1_stock_year.csv

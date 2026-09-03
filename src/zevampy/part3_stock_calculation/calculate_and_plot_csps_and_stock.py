@@ -30,7 +30,6 @@ def calculate_and_plot_csps_and_stock(data, inputs):
         data[registrations_projected_label],
         data[clusters_label],
         data[registration_shares_by_cluster_label],
-        inputs[csp_data_ref_year_label],
         inputs[simulation_stock_years_label],
         inputs[initial_registration_year_label],
         inputs[use_clusters_label],
@@ -53,6 +52,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             inputs[countries_selected_label],
             inputs[output_path_label],
             survival_grouping,
+            inputs[csp_available_years_label],
         )
         empirical_survival_rates = _prepare_empirical_survival_rates(
             empirical_survival_rates,

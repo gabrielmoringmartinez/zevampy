@@ -15,10 +15,13 @@ DEFAULT_INPUT_FILES = {
     "registration_shares": "1_1_new_registrations_by_fuel_type_clusters.csv",
     "historical_registrations": "1_2_A_2_historical_new_registrations_data_passenger_cars.csv",
     "projected_registrations": "1_3_new_registrations_projected.csv",
-    "stock_by_age": "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
-    "stock_year": "2_2_A_1_stock_year.csv",
     "validation_registration_shares": "4_1_eafo_ev_new_registration_shares.csv",
     "validation_stock_shares": "4_2_eafo_ev_stock_shares.csv",
+}
+
+DEFAULT_SURVIVAL_FILES = {
+    "stock_by_age": "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
+    "stock_year": "2_2_A_1_stock_year.csv",
 }
 
 VALID_SURVIVAL_SOURCES = {
@@ -36,7 +39,7 @@ def load_data(
     powertrains=None,
     survival_grouping=None,
     survival_source=survival_source_stock_by_age_label,
-    survival_source_file=None,
+    survival_files=None,
     input_files=None,
 ):
     """Load and validate datasets required by the configured model workflow."""
@@ -50,6 +53,7 @@ def load_data(
         )
 
     input_files = {**DEFAULT_INPUT_FILES, **(input_files or {})}
+    survival_files = survival_files or {}
 
     if not input_dir.exists():
         raise FileNotFoundError(
@@ -64,10 +68,16 @@ def load_data(
         input_files["projected_registrations"],
     ]
     if survival_source == survival_source_stock_by_age_label:
+        configured_survival_files = {
+            **DEFAULT_SURVIVAL_FILES,
+            **survival_files,
+        }
         required_model_files.extend([
-            input_files["stock_by_age"],
-            input_files["stock_year"],
+            configured_survival_files["stock_by_age"],
+            configured_survival_files["stock_year"],
         ])
+    else:
+        configured_survival_files = survival_files
 
     check_required_files(input_dir, required_model_files, "running the model")
 
@@ -95,18 +105,22 @@ def load_data(
             ),
         )
 
-    if survival_source != survival_source_stock_by_age_label:
-        if not survival_source_file:
+    if survival_source == survival_source_empirical_label:
+        source_file = configured_survival_files.get("empirical")
+        if not source_file:
             raise ValueError(
-                f"survival_rates.file must be provided when survival_rates.source is '{survival_source}'."
+                "survival_rates.files.empirical must be provided when "
+                "survival_rates.source is 'empirical'."
             )
-        source_path = Path(survival_source_file)
-        if not source_path.is_absolute():
-            source_path = input_dir / source_path
-        if not source_path.exists():
-            raise FileNotFoundError(
-                f"Alternative survival input file '{source_path}' does not exist."
+        source_path = _resolve_input_path(input_dir, source_file)
+    elif survival_source == survival_source_parameters_label:
+        source_file = configured_survival_files.get("parameters")
+        if not source_file:
+            raise ValueError(
+                "survival_rates.files.parameters must be provided when "
+                "survival_rates.source is 'parameters'."
             )
+        source_path = _resolve_input_path(input_dir, source_file)
     else:
         source_path = None
 
@@ -150,13 +164,14 @@ def load_data(
 
     # Survival assumptions are loaded according to the selected source.
     if survival_source == survival_source_stock_by_age_label:
-        stock_by_age = pd.read_csv(
-            input_dir / input_files["stock_by_age"], sep=";", decimal=","
+        stock_by_age = _read_csv(
+            _resolve_input_path(input_dir, configured_survival_files["stock_by_age"])
         )
-        stock_year = pd.read_csv(
-            input_dir / input_files["stock_year"], sep=";", decimal=","
+        stock_year = _read_csv(
+            _resolve_input_path(input_dir, configured_survival_files["stock_year"])
         )
         _validate_stock_by_age(stock_by_age, survival_grouping)
+        _validate_stock_year(stock_year)
 
         if powertrains and powertrain_dim in survival_grouping:
             stock_by_age = aggregate_stock_by_selected_powertrains(
@@ -175,7 +190,7 @@ def load_data(
         data[stock_year_label] = stock_year
 
     elif survival_source == survival_source_empirical_label:
-        alternative_survival_rates = pd.read_csv(source_path, sep=";", decimal=",")
+        alternative_survival_rates = _read_csv(source_path)
         _validate_empirical_survival_rates(alternative_survival_rates, survival_grouping)
         _warn_if_survival_powertrains_missing(
             registration_shares_by_cluster,
@@ -186,7 +201,7 @@ def load_data(
         data[alternative_survival_rates_label] = alternative_survival_rates
 
     elif survival_source == survival_source_parameters_label:
-        alternative_csp_parameters = pd.read_csv(source_path, sep=";", decimal=",")
+        alternative_csp_parameters = _read_csv(source_path)
         _validate_csp_parameters(alternative_csp_parameters, survival_grouping)
         _warn_if_survival_powertrains_missing(
             registration_shares_by_cluster,
@@ -232,6 +247,41 @@ def load_data(
         data[validation_stock_shares_label] = validation_stock_shares
 
     return data, max_year
+
+
+
+def _resolve_input_path(input_dir, file_name):
+    """Resolve an input file relative to the configured input directory."""
+    path = Path(file_name)
+    if not path.is_absolute():
+        path = input_dir / path
+    if not path.exists():
+        raise FileNotFoundError(f"Input file '{path}' does not exist.")
+    return path
+
+
+def _read_csv(file_path):
+    """Read either standard CSV or semicolon/decimal-comma input files."""
+    with open(file_path, "r", encoding="utf-8-sig") as stream:
+        header = stream.readline()
+
+    if ";" in header:
+        return pd.read_csv(file_path, sep=";", decimal=",")
+    return pd.read_csv(file_path)
+
+
+def _validate_stock_year(stock_year):
+    required_columns = {country_dim, stock_year_empirical_csp_data_dim}
+    missing_columns = required_columns - set(stock_year.columns)
+    if missing_columns:
+        raise ValueError(
+            "Invalid stock-year input data. "
+            f"Missing columns: {sorted(missing_columns)}. "
+            f"Required columns are: {sorted(required_columns)}."
+        )
+
+    if stock_year[stock_year_empirical_csp_data_dim].isna().any():
+        raise ValueError("Stock-year input data contain missing reference-year values.")
 
 
 def _validate_stock_by_age(stock_by_age, survival_grouping):

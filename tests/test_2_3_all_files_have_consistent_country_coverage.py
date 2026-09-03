@@ -3,7 +3,7 @@
 
 from pathlib import Path
 import pandas as pd
-from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES, DEFAULT_SURVIVAL_FILES
 
 
 INPUT_DIR = Path("inputs")
@@ -12,8 +12,8 @@ REFERENCE_FILE = INPUT_DIR / DEFAULT_INPUT_FILES["country_clusters"]
 
 FILES_TO_CHECK = {
     "historical registrations": DEFAULT_INPUT_FILES["historical_registrations"],
-    "stock by age": DEFAULT_INPUT_FILES["stock_by_age"],
-    "stock year": DEFAULT_INPUT_FILES["stock_year"],
+    "stock by age": DEFAULT_SURVIVAL_FILES["stock_by_age"],
+    "stock year": DEFAULT_SURVIVAL_FILES["stock_year"],
 }
 
 

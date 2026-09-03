@@ -11,9 +11,7 @@ def load_config(path=None):
     Load the model configuration from a YAML file.
 
     If no configuration file path is provided, a default configuration
-    dictionary is returned. The configuration contains default settings
-    for input/output paths, selected countries, powertrains, model years,
-    historical validation, and the survival-rate source.
+    dictionary is returned.
 
     Parameters:
         path (str, optional):
@@ -36,17 +34,19 @@ def load_config(path=None):
             },
             "powertrains": [],
             "model": {
-                "start_new_registration_year": 1970,
                 "first_stock_year": 2014,
                 "end_year": 2050,
-                "csp_reference_year": 2021,
-                "csp_available_years": 45,
                 "historical_validation": False,
                 "validation_powertrain": "BEV",
             },
             "survival_rates": {
-                "grouping": ["geo country"],
                 "source": "stock_by_age",
+                "grouping": ["geo country"],
+                "csp_available_years": 45,
+                "files": {
+                    "stock_by_age": "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv",
+                    "stock_year": "2_2_A_1_stock_year.csv",
+                },
             },
         }
 

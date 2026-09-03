@@ -11,12 +11,8 @@ eu_country_groups = {
     eu_27_plus_norway_label: eu_countries_and_norway,
 }
 
-# Initial year on which new registrations are considered for stock calculations.
-initial_registration_year = 1970
 # Initial year on which the stock is modelled.
 initial_simulation_stock_year = 2014
-# Reference year associated with the default empirical CSP data.
-csp_data_ref_year = 2021
 # Number of vehicle ages represented by the CSP curve.
 csp_available_years = 45
 # Output filenames for stock values and stock shares.

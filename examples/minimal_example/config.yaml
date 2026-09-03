@@ -15,15 +15,15 @@ powertrains:
   - Gasoline
 
 model:
-  start_new_registration_year: 1976
   first_stock_year: 2020
   end_year: 2040
-  csp_reference_year: 2021
-  csp_available_years: 45
   historical_validation: false
-  historical_csp: false
-  sensitivity_analysis: false
 
 survival_rates:
+  source: stock_by_age
   grouping:
     - geo country
+  csp_available_years: 45
+  files:
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv

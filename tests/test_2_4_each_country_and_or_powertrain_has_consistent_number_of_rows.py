@@ -3,7 +3,7 @@
 
 from pathlib import Path
 import pandas as pd
-from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES
+from zevampy.load_data_and_prepare_inputs.load_data import DEFAULT_INPUT_FILES, DEFAULT_SURVIVAL_FILES
 
 # Define files and their grouping columns
 INPUT_DIR = Path("inputs")
@@ -11,7 +11,7 @@ INPUT_DIR = Path("inputs")
 GROUPED_FILES = {
     DEFAULT_INPUT_FILES["country_clusters"]: ["geo country"],
     DEFAULT_INPUT_FILES["registration_shares"]: ["geo country", "powertrain"],
-    DEFAULT_INPUT_FILES["stock_by_age"]: ["geo country", "powertrain"],
+    DEFAULT_SURVIVAL_FILES["stock_by_age"]: ["geo country", "powertrain"],
 }
 
 
