@@ -14,7 +14,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 [![codecov](https://codecov.io/github/gabrielmoringmartinez/zevampy/graph/badge.svg?token=Z1RUTSJLSY)](https://codecov.io/github/gabrielmoringmartinez/zevampy)
 
 [![REUSE status](https://api.reuse.software/badge/github.com/gabrielmoringmartinez/zevampy)](https://api.reuse.software/info/github.com/gabrielmoringmartinez/zevampy)
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSES/MIT.txt)
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
 <a href="https://github.com/gabrielmoringmartinez/zevampy">
   <img src="https://raw.githubusercontent.com/gabrielmoringmartinez/zevampy/main/dlr_logo.png"
@@ -1165,11 +1165,13 @@ You can also find machine-readable citation metadata in the [CITATION.cff](https
 ## 📃 License
 
 [![REUSE status](https://api.reuse.software/badge/github.com/gabrielmoringmartinez/zevampy)](https://api.reuse.software/info/github.com/gabrielmoringmartinez/zevampy)
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSES/MIT.txt)
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-This project is REUSE compliant and licensed under multiple open licenses depending on content type:
+The ZEVAMPY software is licensed under the [MIT License](LICENSE). Other repository content, such as documentation, figures, and research datasets, may use different licenses as described below.
 
-- **Source code, tests, configuration files, and synthetic example/test data**: [MIT License](LICENSES/MIT.txt)
+This project is REUSE compliant and uses file-level licensing depending on content type:
+
+- **Source code, tests, configuration files, and synthetic example/test data**: [MIT License](LICENSE)
 - **Documentation and original figures**: [CC BY SA 4.0](LICENSES/CC-BY-SA-4.0.txt)
 - **Minor metadata**: [CC0-1.0](LICENSES/CC0-1.0.txt) where indicated
 - **Research input datasets**: Licensed individually according to their respective sources. See the file-level SPDX/REUSE metadata and [LICENSE.md](./LICENSE.md) for details.

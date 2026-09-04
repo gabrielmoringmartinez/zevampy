@@ -1,21 +1,22 @@
 # License Summary
 
-This project uses multiple licenses depending on the content type:
+The ZEVAMPY software is licensed under the [MIT License](LICENSE). Other repository content may use different licenses depending on content type, as described below.
+
 
 - **Source Code:**  
-  Licensed under the [MIT License](LICENSES/MIT.txt).
+  Licensed under the [MIT License](LICENSE).
 
 - **Tests, synthetic test fixtures, synthetic minimal example, and functional configuration files:**  
-  Licensed under the [MIT License](LICENSES/MIT.txt).
+  Licensed under the [MIT License](LICENSE).
 
 - **Documentation and original plots/figures:**  
-  Licensed under the [Creative Commons Attribution 4.0 International (CC BY SA 4.0)](LICENSES/CC-BY-SA-4.0.txt).
+  Licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY SA 4.0)](LICENSES/CC-BY-SA-4.0.txt).
 
 - **Minor/trivial metadata:**  
   Licensed under [CC0 1.0 Universal (CC0-1.0)](LICENSES/CC0-1.0.txt), where indicated.
 
 - **Research input datasets:**  
-  Research input datasets are licensed individually according to their provenance and applicable source terms. Refer to the file-level SPDX/REUSE metadata for the license applicable to each file.
+  Licensed individually according to their provenance and applicable source terms. Refer to the file-level SPDX/REUSE metadata for the license applicable to each file.
 
 ---
 
