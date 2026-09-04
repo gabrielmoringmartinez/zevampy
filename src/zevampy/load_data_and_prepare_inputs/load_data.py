@@ -42,7 +42,43 @@ def load_data(
     survival_files=None,
     input_files=None,
 ):
-    """Load and validate datasets required by the configured model workflow."""
+    """Load and validate datasets required by the configured model workflow.
+
+    Parameters:
+        input_dir (str or pathlib.Path):
+            Directory containing the model input files.
+        historical_validation_active (bool, optional):
+            If True, load and validate the historical validation datasets.
+        validation_powertrain (str, optional):
+            Powertrain used for historical stock-share validation.
+        use_clusters_active (bool, optional):
+            If True, load the country-cluster mapping and use cluster-based
+            registration shares.
+        powertrains (list[str] or None, optional):
+            Powertrains to model explicitly. ``Total`` must not be included because
+            it is generated internally from complete-market registrations.
+        survival_grouping (list[str] or None, optional):
+            Columns defining the survival-rate groups, for example country only or
+            country plus powertrain.
+        survival_source (str, optional):
+            Survival-rate source: ``stock_by_age``, ``empirical``, or ``parameters``.
+        survival_files (dict or None, optional):
+            Survival-source-specific input file mapping from the configuration.
+        input_files (dict or None, optional):
+            Optional overrides for the default core input filenames.
+
+    Returns:
+        tuple:
+            - dict: Loaded input datasets keyed by internal dataset labels.
+            - int: Maximum year available in the projected-registration input.
+
+    Raises:
+        FileNotFoundError:
+            If a required input directory or file is missing.
+        ValueError:
+            If the selected workflow, powertrains, survival inputs, or validation
+            inputs are inconsistent or invalid.
+    """
     input_dir = Path(input_dir)
     survival_grouping = survival_grouping or [country_dim]
 
@@ -245,7 +281,22 @@ def load_data(
 
 
 def _resolve_input_path(input_dir, file_name):
-    """Resolve an input file relative to the configured input directory."""
+    """Resolve an input file relative to the configured input directory.
+
+    Parameters:
+        input_dir (pathlib.Path):
+            Base input directory.
+        file_name (str or pathlib.Path):
+            Configured input filename or absolute path.
+
+    Returns:
+        pathlib.Path:
+            Existing resolved path to the input file.
+
+    Raises:
+        FileNotFoundError:
+            If the resolved path does not exist.
+    """
     path = Path(file_name)
     if not path.is_absolute():
         path = input_dir / path
@@ -255,7 +306,17 @@ def _resolve_input_path(input_dir, file_name):
 
 
 def _read_csv(file_path):
-    """Read either standard CSV or semicolon/decimal-comma input files."""
+    """Read a survival input file using the supported CSV conventions.
+
+    Parameters:
+        file_path (str or pathlib.Path):
+            Path to the CSV file.
+
+    Returns:
+        pandas.DataFrame:
+            Parsed table. Semicolon-separated files with decimal commas and
+            standard comma-separated files with decimal points are both supported.
+    """
     with open(file_path, "r", encoding="utf-8-sig") as stream:
         header = stream.readline()
 
@@ -268,8 +329,23 @@ def _get_stock_year_grouping(stock_year, survival_grouping):
     """Return the dimensions used to assign stock reference years.
 
     Stock reference years may be supplied either for the full survival group
-    (for example country + powertrain) or only by country. Country-only years
+    (for example country plus powertrain) or only by country. Country-only years
     are broadcast to every powertrain in that country.
+
+    Parameters:
+        stock_year (pandas.DataFrame):
+            Table containing stock reference years and their grouping columns.
+        survival_grouping (list[str]):
+            Configured dimensions defining one survival-rate group.
+
+    Returns:
+        list[str]:
+            Columns used to merge stock reference years with survival groups.
+
+    Raises:
+        ValueError:
+            If the stock-year table does not provide either the complete configured
+            grouping or a valid country-only grouping.
     """
     if all(dim in stock_year.columns for dim in survival_grouping):
         return list(survival_grouping)
@@ -290,6 +366,22 @@ def _get_stock_year_grouping(stock_year, survival_grouping):
 
 
 def _validate_stock_year(stock_year, stock_by_age, survival_grouping):
+    """Validate stock reference years for stock-by-age survival estimation.
+
+    Parameters:
+        stock_year (pandas.DataFrame):
+            Stock reference-year table.
+        stock_by_age (pandas.DataFrame):
+            Age-resolved stock data requiring reference years.
+        survival_grouping (list[str]):
+            Configured survival-rate grouping dimensions.
+
+    Raises:
+        ValueError:
+            If required columns or values are missing, reference years are not
+            numeric, duplicate reference years exist for a group, or a stock-by-age
+            group has no corresponding reference year.
+    """
     required_columns = {country_dim, stock_year_empirical_csp_data_dim}
     missing_columns = required_columns - set(stock_year.columns)
     if missing_columns:
@@ -335,6 +427,19 @@ def _validate_stock_year(stock_year, stock_by_age, survival_grouping):
 
 
 def _validate_stock_by_age(stock_by_age, survival_grouping):
+    """Validate the structure of age-resolved stock data.
+
+    Parameters:
+        stock_by_age (pandas.DataFrame):
+            Age-resolved stock table used to derive empirical survival rates.
+        survival_grouping (list[str]):
+            Configured dimensions defining survival-rate groups.
+
+    Raises:
+        ValueError:
+            If the table is incompatible with the configured grouping or required
+            grouping, vehicle-age, or stock-count columns are missing.
+    """
     if survival_grouping == [country_dim] and powertrain_dim in stock_by_age.columns:
         raise ValueError(
             "Invalid stock-by-age input data: the configured survival grouping is country-only, "
@@ -353,6 +458,23 @@ def _validate_stock_by_age(stock_by_age, survival_grouping):
 
 
 def _validate_empirical_survival_rates(survival_rates, survival_grouping):
+    """Validate user-supplied empirical survival-rate data.
+
+    Empirical values must be finite and non-negative. Values above one are allowed
+    because imports can cause an observed domestic stock cohort to exceed its
+    original domestic registrations.
+
+    Parameters:
+        survival_rates (pandas.DataFrame):
+            Empirical survival-rate table.
+        survival_grouping (list[str]):
+            Configured dimensions defining survival-rate groups.
+
+    Raises:
+        ValueError:
+            If required columns are missing or survival-rate values are missing,
+            non-numeric, non-finite, or negative.
+    """
     required_columns = set(survival_grouping + [age_dim, survival_rate_dim])
     missing_columns = required_columns - set(survival_rates.columns)
     if missing_columns:
@@ -372,6 +494,20 @@ def _validate_empirical_survival_rates(survival_rates, survival_grouping):
 
 
 def _validate_csp_parameters(parameters, survival_grouping):
+    """Validate user-supplied Weibull or WG CSP parameters.
+
+    Parameters:
+        parameters (pandas.DataFrame):
+            Parameter table containing one row per configured survival group.
+        survival_grouping (list[str]):
+            Configured dimensions defining survival-rate groups.
+
+    Raises:
+        ValueError:
+            If required columns or parameters are missing, distribution labels are
+            unsupported, parameter values are invalid, or duplicate survival groups
+            are supplied.
+    """
     required_columns = set(
         survival_grouping + [gamma_weibull_dim, beta_weibull_dim, distribution_dim]
     )
@@ -520,10 +656,23 @@ SHARE_TOLERANCE = 1e-6
 def validate_registration_shares(df, dataset_name):
     """Validate non-exhaustive powertrain registration-share inputs.
 
-    Registration-share inputs may contain only the technologies that a user
-    wants to model explicitly. Their shares therefore do not need to sum to
-    one. Total registrations are supplied independently and the complete fleet
-    is represented by the model-generated ``Total`` series.
+    Registration-share inputs may contain only the technologies modelled
+    explicitly. Their shares therefore do not need to sum to one because total
+    registrations are supplied independently and ``Total`` is generated by the
+    model. Shares within a time/cluster/country group may sum to less than one but
+    never to more than one.
+
+    Parameters:
+        df (pandas.DataFrame):
+            Registration-share input table.
+        dataset_name (str):
+            Human-readable dataset name used in validation messages.
+
+    Raises:
+        ValueError:
+            If required columns are missing, ``Total`` is supplied explicitly,
+            shares are invalid, grouping dimensions cannot be identified, or the
+            represented shares exceed one within a group.
     """
     required_columns = {powertrain_dim, relative_sales_dim}
     missing_columns = required_columns - set(df.columns)
@@ -566,15 +715,38 @@ def validate_registration_shares(df, dataset_name):
 
 
 def filter_selected_powertrains(df, selected_powertrains):
-    """Keep only explicitly selected technologies in registration-share data."""
+    """Filter registration-share data to explicitly selected technologies.
+
+    Parameters:
+        df (pandas.DataFrame):
+            Registration-share table containing a powertrain column.
+        selected_powertrains (list[str]):
+            Powertrains to retain.
+
+    Returns:
+        pandas.DataFrame:
+            Copy containing only the selected powertrain rows.
+    """
     return df[df[powertrain_dim].isin(selected_powertrains)].copy()
 
 
 def filter_powertrain_survival_groups(df, selected_powertrains):
-    """Keep selected powertrains plus the required ``Total`` survival group.
+    """Filter powertrain-specific survival data to required model groups.
 
-    Under powertrain-specific survival grouping, ``Total`` represents the
-    complete fleet and supplies the denominator used for stock shares.
+    The selected technologies are retained together with ``Total``. The ``Total``
+    survival group represents the complete fleet and supplies the denominator for
+    technology stock shares.
+
+    Parameters:
+        df (pandas.DataFrame):
+            Survival input containing a powertrain column.
+        selected_powertrains (list[str]):
+            Explicitly modelled powertrains.
+
+    Returns:
+        pandas.DataFrame:
+            Copy containing the selected technologies and ``Total``.
     """
     required_powertrains = set(selected_powertrains) | {total_powertrain_label}
     return df[df[powertrain_dim].isin(required_powertrains)].copy()
+

@@ -20,7 +20,28 @@ def calculate_empirical_survival_rates(
     survival_grouping,
     csp_available_years,
 ):
-    """Calculate empirical vehicle survival rates for the configured CSP horizon."""
+    """Calculate empirical survival rates from stock-by-age and registration cohorts.
+
+    Parameters:
+        stock (pandas.DataFrame):
+            Age-resolved vehicle stock data.
+        registrations (pandas.DataFrame):
+            Registration cohorts aligned with the configured survival grouping.
+        stock_year (pandas.DataFrame):
+            Reference year associated with each stock-by-age survival group.
+        countries_to_keep (list[str]):
+            Countries included in the model run.
+        output_path (str):
+            Directory where empirical survival-rate output is written.
+        survival_grouping (list[str]):
+            Dimensions defining each survival-rate group.
+        csp_available_years (int):
+            Maximum vehicle age retained for CSP estimation.
+
+    Returns:
+        pandas.DataFrame:
+            Empirical survival rates by configured survival group and vehicle age.
+    """
     stock = filter_vehicle_age(stock, max_age=csp_available_years)
     stock = stock[stock[country_dim].isin(countries_to_keep)]
 
@@ -34,6 +55,7 @@ def calculate_empirical_survival_rates(
     survival_rates = obtain_survival_rates(stock, registrations, survival_grouping)
     save_dataframes(survival_rates, output_path)
     return survival_rates
+
 
 
 

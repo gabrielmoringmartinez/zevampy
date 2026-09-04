@@ -18,11 +18,28 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
 def calculate_and_plot_csps_and_stock(data, inputs):
-    """Calculate registrations, CSP curves, stock values, and stock shares.
+    """Run the configured survival-rate and stock-calculation workflow.
 
-    Survival assumptions can originate from stock-by-age data, user-supplied
-    empirical survival rates, or user-supplied CSP parameters. All three
-    routes converge on the same stock-calculation workflow.
+    The workflow starts from modelled registrations and then either derives
+    empirical survival rates from stock-by-age data, fits supplied empirical rates,
+    or generates CSP curves from user-supplied parameters. All sources converge on
+    the same cohort stock calculation and total-fleet stock-share denominator.
+
+    Parameters:
+        data (dict):
+            Loaded datasets required by the configured survival source.
+        inputs (dict):
+            Prepared simulation, survival, output, and plotting settings.
+
+    Returns:
+        dict:
+            Registration results, empirical survival rates when applicable, stock
+            values, stock shares, fitted/selected CSP information, and CSP curves.
+
+    Raises:
+        ValueError:
+            If the configured survival source is unsupported or required survival
+            groups are missing.
     """
     registrations = calculate_registrations(
         data[historical_registrations_label],
@@ -192,6 +209,20 @@ def calculate_and_plot_csps_and_stock(data, inputs):
 
 
 def _prepare_registrations_for_survival(registrations, survival_grouping):
+    """Prepare registration cohorts for empirical survival-rate estimation.
+
+    Parameters:
+        registrations (pandas.DataFrame):
+            Modelled registrations including selected technologies and ``Total``.
+        survival_grouping (list[str]):
+            Configured survival-rate grouping dimensions.
+
+    Returns:
+        pandas.DataFrame:
+            Registration cohorts with the registration-count column expected by the
+            empirical survival-rate calculation. Country-only grouping uses
+            ``Total`` registrations; powertrain grouping retains each technology.
+    """
     if powertrain_dim in survival_grouping:
         return (
             registrations
@@ -206,6 +237,25 @@ def _prepare_registrations_for_survival(registrations, survival_grouping):
 
 
 def _filter_survival_groups(df, registrations, inputs):
+    """Filter survival assumptions to groups participating in the current run.
+
+    Parameters:
+        df (pandas.DataFrame):
+            Empirical survival-rate or parameter table.
+        registrations (pandas.DataFrame):
+            Modelled registration groups for the current run.
+        inputs (dict):
+            Prepared model settings, including selected countries and grouping.
+
+    Returns:
+        pandas.DataFrame:
+            Survival assumptions restricted to modelled countries and, when
+            applicable, modelled powertrains.
+
+    Raises:
+        ValueError:
+            If no survival assumptions remain after filtering.
+    """
     result = df[df[country_dim].isin(inputs[countries_selected_label])].copy()
     if powertrain_dim in inputs[survival_grouping_label] and powertrain_dim in result.columns:
         registration_powertrains = set(registrations[powertrain_dim].dropna().unique())
@@ -218,6 +268,27 @@ def _filter_survival_groups(df, registrations, inputs):
 
 
 def _prepare_empirical_survival_rates(survival_rates, registrations, inputs, require_complete_age_coverage):
+    """Filter and validate empirical survival rates for the configured CSP horizon.
+
+    Parameters:
+        survival_rates (pandas.DataFrame):
+            Empirical survival-rate table.
+        registrations (pandas.DataFrame):
+            Modelled registrations defining required survival groups.
+        inputs (dict):
+            Prepared model settings including countries, grouping, and CSP horizon.
+        require_complete_age_coverage (bool):
+            If True, require exactly one value for every age from 1 through the
+            configured CSP horizon in every survival group.
+
+    Returns:
+        pandas.DataFrame:
+            Filtered empirical survival rates within the configured age horizon.
+
+    Raises:
+        ValueError:
+            If no groups remain or complete age coverage is required but missing.
+    """
     survival_rates = _filter_survival_groups(survival_rates, registrations, inputs)
     csp_years = inputs[csp_available_years_label]
     survival_rates = survival_rates[survival_rates[age_dim] <= csp_years].copy()
@@ -242,6 +313,20 @@ def _prepare_empirical_survival_rates(survival_rates, registrations, inputs, req
 
 
 def _prepare_parameter_groups(parameters, registrations, inputs):
+    """Filter supplied CSP parameters to groups participating in the current run.
+
+    Parameters:
+        parameters (pandas.DataFrame):
+            Validated CSP parameter table.
+        registrations (pandas.DataFrame):
+            Modelled registrations defining the required survival groups.
+        inputs (dict):
+            Prepared model settings including countries and survival grouping.
+
+    Returns:
+        pandas.DataFrame:
+            Parameter rows retained for the current model run.
+    """
     return _filter_survival_groups(parameters, registrations, inputs)
 
 
@@ -251,12 +336,27 @@ def _validate_survival_group_coverage(
     survival_grouping,
     dataset_name,
 ):
-    """Require one survival assumption for every modelled survival group.
+    """Validate that every modelled survival group has an assumption.
 
     For country-level survival rates this requires every modelled country. For
-    country + powertrain survival rates it requires every modelled
-    country/powertrain combination. Missing groups are treated as an error
-    instead of silently producing incomplete fleet results.
+    country-plus-powertrain survival rates it requires every modelled
+    country/powertrain combination, including ``Total``. Missing groups are treated
+    as an error instead of silently producing incomplete fleet results.
+
+    Parameters:
+        survival_data (pandas.DataFrame):
+            Survival-rate or parameter input to validate.
+        registrations (pandas.DataFrame):
+            Modelled registrations defining required groups.
+        survival_grouping (list[str]):
+            Columns identifying one survival group.
+        dataset_name (str):
+            Human-readable name used in error messages.
+
+    Raises:
+        ValueError:
+            If one or more modelled survival groups are missing from the supplied
+            assumptions.
     """
     required_groups = registrations[survival_grouping].drop_duplicates()
     available_groups = survival_data[survival_grouping].drop_duplicates()

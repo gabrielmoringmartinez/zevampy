@@ -16,7 +16,19 @@ logger = logging.getLogger(__name__)
 
 
 def load_data_and_prepare_inputs(input_path, config=None):
-    """Load input datasets and prepare simulation input parameters."""
+    """Load model datasets and derive simulation input settings.
+
+    Parameters:
+        input_path (str or pathlib.Path):
+            Directory containing the configured model inputs.
+        config (dict or None, optional):
+            Parsed ZEVAMPY configuration. Defaults are used when omitted.
+
+    Returns:
+        tuple:
+            - dict: Loaded and validated input datasets.
+            - dict: Prepared simulation and plotting settings.
+    """
     config = config or {}
     model_config = config.get("model") or {}
     geography_config = config.get("geography") or {}
@@ -62,3 +74,4 @@ def load_data_and_prepare_inputs(input_path, config=None):
     )
     inputs = prepare_inputs(max_year, data=data, config=config)
     return data, inputs
+

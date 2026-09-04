@@ -15,11 +15,27 @@ def preprocess_historical_registrations(
     start_year,
     end_year,
 ):
-    """Combine historical and projected registrations for the model horizon.
+    """Combine historical and projected total registrations for the model horizon.
 
-    The first year present in the projected-registration dataset defines the
-    transition from observed historical registrations to projected values.
-    Historical values are therefore retained only for earlier years.
+    The first year in the projected-registration dataset defines the transition
+    from observed historical registrations to projected values. Historical values
+    are retained only for earlier years.
+
+    Parameters:
+        historical_registrations (pandas.DataFrame):
+            Observed total registrations by country and year.
+        registrations_projected (pandas.DataFrame):
+            Projected total registrations by country and year.
+        countries_to_keep (list[str]):
+            Countries retained in the combined dataset.
+        start_year (int):
+            Earliest registration year required by the model.
+        end_year (int):
+            Final registration year included in the model.
+
+    Returns:
+        pandas.DataFrame:
+            Combined and filtered total-registration time series.
     """
     first_projection_year = int(registrations_projected[time_dim].min())
 
@@ -48,4 +64,5 @@ def preprocess_historical_registrations(
         & (absolute_registrations[time_dim] <= end_year)
     ]
     return absolute_registrations
+
 

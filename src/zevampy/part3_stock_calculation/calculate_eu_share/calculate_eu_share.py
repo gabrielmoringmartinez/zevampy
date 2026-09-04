@@ -9,9 +9,20 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import eu_27_plus_norw
 
 
 def calculate_eu_share(stock_share, countries_selected):
-    """Add an EU-27+Norway aggregate when the complete country set is present."""
+    """Add an EU-27+Norway aggregate when the complete country set is present.
+
+    Parameters:
+        stock_share (pandas.DataFrame):
+            Country-level stock shares and stock values.
+        countries_selected (list[str]):
+            Countries included in the current model run.
+
+    Returns:
+        pandas.DataFrame:
+            Input stock-share table, with the EU-27+Norway aggregate appended when
+            all required countries are available.
+    """
     countries_selected = set(countries_selected)
     if set(eu_countries_and_norway).issubset(countries_selected):
         stock_share = add_eu_stock_share(stock_share, eu_27_plus_norway_label)
     return stock_share
-

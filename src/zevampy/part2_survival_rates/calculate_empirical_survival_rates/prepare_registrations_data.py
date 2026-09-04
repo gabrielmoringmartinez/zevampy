@@ -15,7 +15,19 @@ from zevampy.part2_survival_rates.calculate_empirical_survival_rates.filter_vehi
 
 
 def _get_stock_year_merge_columns(stock_year, survival_grouping):
-    """Determine whether reference years are group-specific or country-wide."""
+    """Determine how stock reference years should be merged with registrations.
+
+    Parameters:
+        stock_year (pandas.DataFrame):
+            Stock reference-year table.
+        survival_grouping (list[str]):
+            Configured survival-rate grouping dimensions.
+
+    Returns:
+        list[str]:
+            Full survival grouping when group-specific reference years are supplied,
+            otherwise country only.
+    """
     if all(dim in stock_year.columns for dim in survival_grouping):
         return list(survival_grouping)
     return [country_dim]
@@ -29,9 +41,29 @@ def prepare_registrations_data(
 ):
     """Align registration cohorts with the reference year of each survival group.
 
-    Reference years may be defined for the complete survival group (for
-    example ``geo country`` + ``powertrain``) or only by country. Country-only
-    reference years are applied to every powertrain in that country.
+    Reference years may be defined for the complete survival group, such as
+    country plus powertrain, or only by country. Country-only reference years are
+    applied to every powertrain in that country.
+
+    Parameters:
+        registrations (pandas.DataFrame):
+            Registration cohorts used to estimate empirical survival rates.
+        stock_year (pandas.DataFrame):
+            Reference year for each stock-by-age group.
+        survival_grouping (list[str]):
+            Configured dimensions defining survival groups.
+        max_age (int, optional):
+            Maximum vehicle age retained after cohort alignment.
+
+    Returns:
+        pandas.DataFrame:
+            Registrations with derived vehicle ages and applicable stock reference
+            years, filtered to the requested age horizon.
+
+    Raises:
+        ValueError:
+            If one or more registration groups cannot be assigned a stock reference
+            year.
     """
     merge_columns = _get_stock_year_merge_columns(stock_year, survival_grouping)
 
@@ -62,5 +94,6 @@ def prepare_registrations_data(
         + 1
     )
     return filter_vehicle_age(registrations, max_age=max_age)
+
 
 

@@ -37,7 +37,26 @@ VALID_SURVIVAL_SOURCES = {
 
 
 def prepare_inputs(simulation_end_year, data, config=None):
-    """Prepare simulation parameters and plot configuration settings."""
+    """Prepare simulation parameters and plotting configuration settings.
+
+    Parameters:
+        simulation_end_year (int):
+            Maximum year available in the projected-registration dataset.
+        data (dict):
+            Loaded model datasets used to derive configuration-dependent settings.
+        config (dict or None, optional):
+            Parsed ZEVAMPY configuration.
+
+    Returns:
+        dict:
+            Internal simulation, survival, validation, output, and plot settings.
+
+    Raises:
+        ValueError:
+            If the survival-source configuration is invalid, the CSP horizon is
+            invalid, historical registrations do not cover the required cohort
+            horizon, or the validation powertrain is not selected.
+    """
     config = config or {}
     data_config = config.get("data") or {}
     outputs_config = data_config.get("output_path", "outputs")
@@ -150,6 +169,19 @@ def prepare_inputs(simulation_end_year, data, config=None):
 
 
 def _validate_survival_file_configuration(survival_source, survival_files):
+    """Validate source-specific survival file settings.
+
+    Parameters:
+        survival_source (str):
+            Configured survival-rate source.
+        survival_files (dict):
+            Mapping of survival-source input file keys to filenames.
+
+    Raises:
+        ValueError:
+            If an empirical or parameter source is selected without its required
+            input filename.
+    """
     if survival_source == survival_source_empirical_label and not survival_files.get("empirical"):
         raise ValueError(
             "survival_rates.files.empirical must be provided when "
@@ -167,7 +199,22 @@ def _validate_historical_registration_coverage(
     countries,
     required_start_year,
 ):
-    """Ensure every selected country has registrations back to the required cohort year."""
+    """Validate historical registration coverage for all selected countries.
+
+    Parameters:
+        historical_registrations (pandas.DataFrame):
+            Historical total new registrations by country and year.
+        countries (list[str]):
+            Countries included in the model run.
+        required_start_year (int):
+            Earliest registration cohort needed for the configured stock year and
+            CSP horizon.
+
+    Raises:
+        ValueError:
+            If a selected country is absent or begins later than the required
+            registration cohort year.
+    """
     selected = historical_registrations[
         historical_registrations[country_dim].isin(countries)
     ]
@@ -191,4 +238,5 @@ def _validate_historical_registration_coverage(
             f"The configured first stock year and CSP horizon require registrations "
             f"from {required_start_year} onward. Insufficient coverage: {details}."
         )
+
 

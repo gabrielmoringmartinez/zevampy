@@ -14,16 +14,31 @@ def update_registration_shares_with_actual_values(
     actual_registration_shares,
     validation_powertrain,
 ):
-    """Replace one modelled powertrain share with observed values.
+    """Replace one modelled powertrain registration share with observed values.
 
-    The model-generated ``Total`` registration series always remains equal to
-    the independently supplied complete-market registrations.
+    The model-generated ``Total`` registration series remains equal to the
+    independently supplied complete-market registrations. For explicitly modelled
+    technologies, the baseline represented market share is preserved where
+    possible, supporting both exhaustive and intentionally partial powertrain
+    inputs.
 
-    For the explicitly modelled technologies, the baseline represented market
-    share is preserved where possible. This reproduces the former validation
-    behaviour when the explicit powertrains cover the full market, while also
-    supporting inputs whose selected technologies intentionally sum to less
-    than one.
+    Parameters:
+        registrations (pandas.DataFrame):
+            Modelled registrations including relative shares and ``Total`` rows.
+        actual_registration_shares (pandas.DataFrame):
+            Observed registration shares used in validation step 1.
+        validation_powertrain (str):
+            Powertrain whose modelled share is replaced with observed values.
+
+    Returns:
+        pandas.DataFrame:
+            Registration table updated with the observed validation trajectory.
+
+    Raises:
+        ValueError:
+            If validation data are missing, duplicated, outside valid share bounds,
+            incompatible with the modelled groups, or would require inconsistent
+            represented shares.
     """
     df = registrations.copy()
     actual = actual_registration_shares[

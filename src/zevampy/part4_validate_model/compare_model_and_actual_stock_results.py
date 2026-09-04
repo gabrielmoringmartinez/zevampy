@@ -19,6 +19,25 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
 def _get_validation_years(model_stock_shares, actual_stock_shares, validation_powertrain):
+    """Determine the overlapping modelled and observed validation period.
+
+    Parameters:
+        model_stock_shares (pandas.DataFrame):
+            Modelled stock shares by country, year, and powertrain.
+        actual_stock_shares (pandas.DataFrame):
+            Observed stock shares used for validation.
+        validation_powertrain (str):
+            Powertrain being validated.
+
+    Returns:
+        tuple[int, int]:
+            First and final year with overlapping modelled and observed data.
+
+    Raises:
+        ValueError:
+            If the validation powertrain is absent from either dataset or no
+            overlapping validation years exist.
+    """
     actual = actual_stock_shares[
         actual_stock_shares[powertrain_dim] == validation_powertrain
     ]
@@ -50,6 +69,23 @@ def _get_validation_years(model_stock_shares, actual_stock_shares, validation_po
 
 
 def _prepare_plot_config(base_config, validation_powertrain, years, step):
+    """Create the plot configuration for one historical validation step.
+
+    Parameters:
+        base_config (dict):
+            Base validation plot configuration.
+        validation_powertrain (str):
+            Powertrain being validated.
+        years (tuple[int, int]):
+            First and final validation year.
+        step (int):
+            Validation step number, either 1 or 2.
+
+    Returns:
+        dict:
+            Deep-copied plot configuration with validation-specific titles, axis
+            limits, ticks, and output name.
+    """
     config = deepcopy(base_config)
     start_year, end_year = years
 
@@ -80,6 +116,23 @@ def _prepare_plot_config(base_config, validation_powertrain, years, step):
 
 
 def _prepare_rmse_config(base_config, validation_powertrain, years, step):
+    """Create the RMSE configuration for one historical validation step.
+
+    Parameters:
+        base_config (dict):
+            Base RMSE configuration.
+        validation_powertrain (str):
+            Powertrain being validated.
+        years (tuple[int, int]):
+            First and final validation year.
+        step (int):
+            Validation step number, either 1 or 2.
+
+    Returns:
+        dict:
+            Deep-copied RMSE configuration restricted to the selected powertrain and
+            validation period.
+    """
     config = deepcopy(base_config)
     config[powertrains_rmse_label] = [[validation_powertrain]]
     config[timeframes_rmse_label] = [[years[0], years[1]]]
@@ -157,6 +210,18 @@ def compare_model_and_actual_stock_results(data, calculated_data, inputs):
     calculate_rmse(validation_step1_df, rmse_config_step1, inputs[output_path_label])
     calculate_rmse(validation_step2_df, rmse_config_step2, inputs[output_path_label])
     return
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

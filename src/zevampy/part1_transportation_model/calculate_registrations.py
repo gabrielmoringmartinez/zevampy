@@ -30,7 +30,33 @@ def calculate_registrations(
     use_clusters,
     output_path,
 ):
-    """Calculate and save vehicle registrations by powertrain."""
+    """Calculate vehicle registrations for selected technologies and the total market.
+
+    Parameters:
+        historical_registrations (pandas.DataFrame):
+            Historical total new registrations by country and year.
+        countries_selected (list[str]):
+            Countries included in the model run.
+        registrations_projected (pandas.DataFrame):
+            Projected total registrations by country and year.
+        clusters (pandas.DataFrame or None):
+            Country-cluster mapping used when cluster-based shares are enabled.
+        registration_shares_by_cluster (pandas.DataFrame):
+            Registration shares for explicitly modelled powertrains.
+        simulation_years (list[int]):
+            First and final stock-simulation years.
+        start_registrations_year (int):
+            Earliest registration cohort required by the CSP horizon.
+        use_clusters (bool):
+            Whether to map registration shares through country clusters.
+        output_path (str):
+            Directory where registration outputs are written.
+
+    Returns:
+        pandas.DataFrame:
+            Registrations by country, year, and powertrain, including the internally
+            generated ``Total`` rows.
+    """
     end_year = simulation_years[1]
     absolute_registrations = preprocess_historical_registrations(
         historical_registrations,
@@ -66,10 +92,21 @@ def calculate_registrations(
 def _append_total_registrations(registrations):
     """Append one complete-market ``Total`` row per country and year.
 
-    Total registrations are already known independently from the historical
-    and projected registration inputs. They are therefore not reconstructed by
-    summing selected powertrains, whose shares may intentionally cover only a
-    subset of the market.
+    Total registrations are known independently from the historical and projected
+    registration inputs and are therefore not reconstructed from selected
+    powertrains, whose shares may intentionally cover only part of the market.
+
+    Parameters:
+        registrations (pandas.DataFrame):
+            Registration table for explicitly modelled powertrains.
+
+    Returns:
+        pandas.DataFrame:
+            Registration table including one ``Total`` row for each country/year.
+
+    Raises:
+        ValueError:
+            If the reserved ``Total`` label is already present in the input.
     """
     if total_powertrain_label in set(registrations[powertrain_dim].dropna()):
         raise ValueError(

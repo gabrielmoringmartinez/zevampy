@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
+# SPDX-License-Identifier: MIT
+
 from pathlib import Path
 
 from zevampy.load_data_and_prepare_inputs.load_data import (

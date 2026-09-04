@@ -16,12 +16,26 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import (
 
 
 def compute_stock_shares(stock_df):
-    """Calculate powertrain stock shares against the complete ``Total`` fleet.
+    """Calculate technology stock shares against the independently modelled total fleet.
 
-    The total fleet is calculated independently from total new registrations
-    and the configured total/country survival curve. Selected technologies do
+    The ``Total`` stock series is calculated from complete-market registrations and
+    the configured total/country survival curve. Selected technologies therefore do
     not need to exhaustively partition the market and are never summed to
     reconstruct the denominator.
+
+    Parameters:
+        stock_df (pandas.DataFrame):
+            Cohort-level stock values containing selected powertrains and ``Total``.
+
+    Returns:
+        pandas.DataFrame:
+            Aggregated stock and stock share by country, stock year, and powertrain.
+            The ``Total`` row has a stock share of one.
+
+    Raises:
+        ValueError:
+            If ``Total`` stock is missing, zero, or negative for any modelled
+            country/year combination.
     """
     stock_grouped = (
         stock_df

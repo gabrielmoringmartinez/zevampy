@@ -21,7 +21,40 @@ def compute_csp_values_and_compute_stock(
     save_options=None,
     save_csp=False,
 ):
-    """Fit Weibull/WG CSP curves to empirical rates and calculate stock."""
+    """Fit Weibull/WG CSP curves to empirical rates and calculate vehicle stock.
+
+    Parameters:
+        survival_rates (pandas.DataFrame):
+            Empirical survival rates by configured group and vehicle age.
+        registrations (pandas.DataFrame):
+            Modelled registrations by country, year, and powertrain.
+        stock_years (list[int]):
+            First and final stock-simulation years.
+        bounds_distributions (dict):
+            Parameter bounds used during Weibull/WG fitting.
+        csp_available_years (int):
+            Number of vehicle ages represented by the fitted CSP curves.
+        countries_selected (list[str]):
+            Countries included in the model run.
+        survival_grouping (list[str]):
+            Dimensions identifying each survival group.
+        output_path (str, optional):
+            Directory used for generated outputs.
+        calculate_stock_shares (bool, optional):
+            If True, calculate stock shares against the modelled ``Total`` fleet.
+        save_options (bool or dict or None, optional):
+            Stock-output saving option passed to the stock calculation.
+        save_csp (bool, optional):
+            If True, save fitted CSP parameters and curves.
+
+    Returns:
+        tuple:
+            - pandas.DataFrame: Calculated stock values.
+            - pandas.DataFrame or None: Stock shares when enabled.
+            - pandas.DataFrame: Fitted CSP parameters.
+            - dict: Survival groups classified by selected distribution.
+            - pandas.DataFrame: Fitted CSP curves.
+    """
     optimum_parameters_wg, optimal_distribution_dict = calculate_csp_parameters(
         survival_rates,
         bounds_distributions,
@@ -54,3 +87,4 @@ def compute_csp_values_and_compute_stock(
         optimal_distribution_dict,
         fitted_csp_values,
     )
+

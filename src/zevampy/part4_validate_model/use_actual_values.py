@@ -12,7 +12,23 @@ def use_actual_values(
         keys=None,
         column_to_update=relative_sales_dim,
 ):
-    """Replace modelled values with observed values for matching rows."""
+    """Replace modelled values with observed values for matching keys.
+
+    Parameters:
+        df_model (pandas.DataFrame):
+            Modelled dataset to update.
+        df_actual (pandas.DataFrame):
+            Observed dataset containing replacement values.
+        keys (list[str] or None, optional):
+            Columns used to align modelled and observed rows. Defaults to country,
+            year, and powertrain.
+        column_to_update (str, optional):
+            Model column replaced by matching observed values.
+
+    Returns:
+        pandas.DataFrame:
+            Updated model dataframe with its original row structure restored.
+    """
     if keys is None:
         keys = [country_dim, time_dim, powertrain_dim]
 
@@ -28,3 +44,4 @@ def use_actual_values(
     df_model.update(df_actual[[column_to_update]])
     df_model.reset_index(inplace=True)
     return df_model
+

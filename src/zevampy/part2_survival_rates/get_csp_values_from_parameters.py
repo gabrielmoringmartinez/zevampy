@@ -20,12 +20,29 @@ def get_csp_values_from_parameters(
     output_path="outputs",
     save_options=False,
 ):
-    """Build fitted CSP curves from user-supplied Weibull or WG parameters.
+    """Generate CSP curves directly from user-supplied Weibull or WG parameters.
 
-    The parameter table must contain one row per survival group. Weibull rows
-    require gamma and beta. WG rows additionally require k, mu, and sigma.
-    R-squared values are not required because the parameters are supplied by
-    the user rather than fitted by ZEVAMPY.
+    The parameter table contains one row per survival group. Weibull rows require
+    gamma and beta; WG rows additionally require k, mu, and sigma. Fit-quality
+    metrics are not required because the parameters are supplied rather than
+    estimated in this workflow.
+
+    Parameters:
+        parameters (pandas.DataFrame):
+            Validated CSP parameter table.
+        csp_available_years (int):
+            Number of vehicle ages for which CSP values are generated.
+        survival_grouping (list[str]):
+            Dimensions identifying each survival group.
+        output_path (str, optional):
+            Directory where parameter and fitted-CSP outputs are written.
+        save_options (bool, optional):
+            If True, save the supplied parameters and generated CSP curves.
+
+    Returns:
+        tuple:
+            - pandas.DataFrame: Generated Weibull/WG CSP values by group and age.
+            - dict: Survival groups classified by selected distribution.
     """
     rows = []
 
