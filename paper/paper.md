@@ -73,5 +73,13 @@ These applications demonstrate the flexibility of ZEVAMPY for analysing vehicle 
 
 Development of ZEVAMPY was supported through the NDC ASPECTS project, which received funding from the European Union’s Horizon 2020 Research and Innovation Programme under grant agreement No. 101003866. Additional support was provided through the MoDa project of the German Aerospace Center (DLR).
 
+# AI usage disclosure
+
+OpenAI ChatGPT was used during the development and revision of ZEVAMPY as an assistive tool for selected software-engineering and writing tasks. For the software, ChatGPT was used to support code review, refactoring, debugging, test development, documentation, and the implementation of specific changes identified during the JOSS review process. The purpose of the software, its scientific methodology, modelling assumptions, original architecture, and initial implementation were developed by the author independently. All AI-assisted code changes were reviewed by the author, integrated selectively, and subsequently tested and validated against the expected model behaviour.
+
+The paper was written by the author. ChatGPT was used to improve wording, clarity, and structure of text drafted by the author, rather than to generate the scientific content or conclusions. All AI-assisted text was reviewed and edited by the author.
+
+The author retains full responsibility for the design, implementation, scientific content, validation, and conclusions presented in the software and paper.
+
 # References
 
