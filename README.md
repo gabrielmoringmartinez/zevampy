@@ -35,6 +35,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 - [Statement of need](#-statement-of-need)
 - [Recommended skills](#-recommended-skills)
 - [Installation](#-installation)
+- [Survival-rate input formats](#survival-rate-input-formats)
+- [CSP fitting: Weibull and WG](#csp-fitting-weibull-and-wg)
+- [Historical validation](#historical-validation)
 - [Testing](#-testing)
 - [Acknowledgements](#-acknowledgements)
 - [Authorship](#-authorship)
@@ -59,7 +62,7 @@ The repository includes a default European passenger-car application based on co
 
 Vehicle fleet models are used to explore how passenger-car fleets evolve under different technology, policy, and market assumptions. However, many existing tools are difficult to reproduce, not openly available, or tightly coupled to a specific dataset or case study.
 
-ZEVAMPY addresses this gap by providing a reusable and modular Python framework for vehicle stock modelling. It separates the modelling workflow into transparent components for data loading, survival-rate estimation, CSP fitting, stock calculation, validation, plotting, and sensitivity analysis. This structure allows users to adapt the framework to different countries, powertrain classifications, vehicle categories, and time horizons.
+ZEVAMPY addresses this gap by providing a reusable and modular Python framework for vehicle stock modelling. It separates the modelling workflow into transparent components for data loading, survival-rate estimation, CSP fitting, stock calculation, validation, and plotting. This structure allows users to adapt the framework to different countries, powertrain classifications, vehicle categories, time horizons, and alternative survival assumptions.
 
 
 **Core features**
@@ -77,7 +80,7 @@ ZEVAMPY addresses this gap by providing a reusable and modular Python framework 
   The model can be coupled with external transportation models or scenario datasets, enabling applications beyond the default European passenger-car case.
 
 - **Research-oriented analysis workflows:**  
-  The repository includes example workflows for validation, sensitivity analysis, and comparative scenario exploration based on alternative survival-rate and registration assumptions.
+  The framework supports historical validation and comparative scenario exploration based on alternative survival-rate and registration assumptions.
 
 **Contribution to the state of the art**
 
@@ -115,7 +118,7 @@ The package has primarily been developed and tested on Windows 10/11 using WSL2 
 
 To run ZEVAMPY, users provide a set of CSV input files together with a YAML configuration file describing the modelling setup.
 
-Input and output directories are configured through `data.input_path` and `data.output_path`. Input filenames are also configurable through `data.files`. The filenames listed below are therefore default filenames, not fixed requirements.
+Input and output directories are configured through `data.input_path` and `data.output_path`. Core and validation filenames are configurable through `data.files`, while survival-source-specific filenames are configured through `survival_rates.files`. The filenames listed below are therefore default filenames, not fixed requirements.
 
 #### Required input datasets
 
@@ -158,7 +161,7 @@ The default filename can be changed through `data.files.registration_shares`.
 
 Contains historical absolute new-vehicle registrations by country.
 
-The historical registration period must be sufficiently long to represent the configured CSP horizon. The relationship between registration history and `model.csp_available_years` is described in the Configuration reference.
+The historical registration period must be sufficiently long to represent the configured CSP horizon. The relationship between registration history and `survival_rates.csp_available_years` is described in the Configuration reference.
 
 The default filename can be changed through `data.files.historical_registrations`.
 
@@ -178,41 +181,32 @@ The default filename can be changed through `data.files.projected_registrations`
 - Logical input key: `stock_by_age`
 - Default filename: `2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv`
 
-Contains vehicle stock resolved by vehicle age and is used to estimate empirical cumulative survival probability (CSP) curves.
+Contains vehicle stock resolved by vehicle age and is used when `survival_rates.source: stock_by_age` to derive empirical survival rates before fitting CSP curves.
 
-For the default country-level survival-rate configuration, the dataset must contain at least:
+For the default country-level survival grouping, the dataset must contain at least:
 
 ```text
 geo country;vehicle age;number of registered vehicles
 ```
 
-Additional dimensions are required when survival rates are estimated at a more detailed level. For example, country- and powertrain-specific survival rates require:
+For country- and powertrain-specific survival rates, it must contain at least:
 
 ```text
-geo country;vehicle age;powertrain;number of registered vehicles
+geo country;powertrain;vehicle age;number of registered vehicles
 ```
 
-The required dimensions are determined by `survival_rates.grouping`.
+In the powertrain-specific case, the survival input also contains a `Total` group representing the complete fleet. `Total` is used to calculate the stock-share denominator independently from the explicitly modelled technologies.
 
-The default filename can be changed through `data.files.stock_by_age`.
+The filename can be changed through `survival_rates.files.stock_by_age`. This dataset is required only for the `stock_by_age` survival source.
 
-##### CSP stock reference year
+##### Stock reference year for stock-by-age data
 
 - Logical input key: `stock_year`
 - Default filename: `2_2_A_1_stock_year.csv`
 
-Defines the stock reference year associated with the stock-by-age data used for CSP estimation.
+Defines the observation year associated with the stock-by-age data used to derive empirical survival rates. A reference year can be provided once per country or, when using country- and powertrain-specific survival rates, separately for each country-powertrain group. Country-level reference years are applied to all powertrains in that country.
 
-The general CSP reference year can be configured through:
-
-```yaml
-model:
-  csp_reference_year: 2021
-```
-
-However, stock-by-age data for individual countries may originate from neighbouring years such as 2020 or 2022. The `stock_year` dataset identifies the actual stock reference year associated with each country or dataset.
-
-The default filename can be changed through `data.files.stock_year`.
+The filename can be changed through `survival_rates.files.stock_year`. This dataset is required only for the `stock_by_age` survival source. There is no separate `csp_reference_year` setting in the current configuration.
 
 ---
 
@@ -250,52 +244,11 @@ model:
 
 They are not required for a basic stock-model run when historical validation is disabled.
 
-#### Optional historical-CSP sensitivity datasets
-
-The historical-CSP sensitivity analysis is used to assess how assumptions about vehicle survival affect the projected vehicle stock.
-
-The empirical survival rates estimated from the current stock-by-age data can be compared with older CSP parameters reported in the literature or, where suitable data are available, with empirical survival rates estimated from an earlier stock reference year.
-
-This allows users to investigate how changes in vehicle survival and fleet turnover over time influence long-term stock projections. 
-
-The corresponding historical-CSP datasets are required only when the historical-CSP sensitivity analysis is enabled.
-
-##### Historical CSP parameters
-
-- Logical input key: `historical_csp_parameters`
-- Default filename: `5_1_oguchi_2008_survival_rate_parameters.csv`
-
-Contains historical CSP parameter values used by the historical-CSP sensitivity analysis.
-
-The default filename can be changed through `data.files.historical_csp_parameters`.
-
-##### Historical survival rates
-
-- Logical input key: `historical_survival_rates`
-- Default filename: `5_2_held_2016_survival_rates.csv`
-
-Contains historical survival-rate data used by the historical-CSP sensitivity analysis.
-
-The default filename can be changed through `data.files.historical_survival_rates`.
-
-These datasets are required when both the sensitivity-analysis workflow and its historical-CSP component are enabled:
-
-```yaml
-model:
-  sensitivity_analysis: true
-  historical_csp: true
-```
-
-They are not required for a basic ZEVAMPY run or for sensitivity analyses that do not use the historical-CSP component.
-
 ### Configuration file
-`config.yaml` is the main user-facing configuration file for ZEVAMPY. It controls input and output paths, selected countries and powertrains, simulation years, Cumulative Survival Probability (CSP) settings, optional validation and sensitivity-analysis workflows, and survival-rate grouping.
 
-A complete example configuration file is provided with the default ZEVAMPY example dataset.
+`config.yaml` is the main user-facing configuration file for ZEVAMPY. It controls input and output paths, selected countries and powertrains, simulation years, historical validation, and how survival assumptions are supplied and grouped.
 
-#### Configuration reference
-
-The main ZEVAMPY settings are defined in `config.yaml`.
+A complete configuration matching the current default workflow is:
 
 ```yaml
 data:
@@ -307,22 +260,14 @@ data:
     registration_shares: 1_1_new_registrations_by_fuel_type_clusters.csv
     historical_registrations: 1_2_A_2_historical_new_registrations_data_passenger_cars.csv
     projected_registrations: 1_3_new_registrations_projected.csv
-    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
-    stock_year: 2_2_A_1_stock_year.csv
     validation_registration_shares: 4_1_eafo_ev_new_registration_shares.csv
     validation_stock_shares: 4_2_eafo_ev_stock_shares.csv
-    historical_csp_parameters: 5_1_oguchi_2008_survival_rate_parameters.csv
-    historical_survival_rates: 5_2_held_2016_survival_rates.csv
 
 model:
-  start_new_registration_year: 1970
   first_stock_year: 2014
   end_year: 2050
-  csp_reference_year: 2021
-  csp_available_years: 45
   historical_validation: false
-  sensitivity_analysis: false
-  historical_csp: false
+  validation_powertrain: BEV
 
 geography:
   countries:
@@ -331,84 +276,69 @@ geography:
 powertrains:
 
 survival_rates:
+  source: stock_by_age
   grouping:
     - geo country
+  csp_available_years: 45
+  files:
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv
 ```
+
+#### Configuration reference
 
 ##### Data settings
 
 | Setting | Default | Description |
 |---|---|---|
-| `data.input_path` | `inputs` | Directory containing the CSV input datasets. The path can also be overridden from the command line using `--input`. |
-| `data.output_path` | `outputs` | Directory in which generated CSV files and figures are stored. The path can also be overridden from the command line using `--output`. |
-| `data.files` | ZEVAMPY default filenames | Maps each logical input dataset to its CSV filename. Users may override individual filenames. Entries that are omitted fall back to the corresponding default filename. |
+| `data.input_path` | `inputs` | Directory containing the CSV input datasets. It can also be overridden with the CLI option `--input`. |
+| `data.output_path` | `outputs` | Directory in which generated CSV files and figures are stored. It can also be overridden with `--output`. |
+| `data.files` | ZEVAMPY default filenames | Optional mapping from logical core/validation datasets to filenames. Individual entries may be overridden without redefining the complete mapping. |
 
-The following keys can be configured under `data.files`:
- - `country_clusters`
- - `registration_shares`
- - `historical_registrations`
- - `projected_registrations`
- - `stock_by_age`
- - `stock_year`
- - `validation_registration_shares`
- - `validation_stock_shares`
- - `historical_csp_parameters`
- - `historical_survival_rates`
- 
-Only filenames that differ from the defaults need to be specified. Unspecified filenames automatically fall back to the corresponding ZEVAMPY default filename.
-  
-##### Model years and CSP settings
+The configurable keys under `data.files` are:
+
+- `country_clusters`
+- `registration_shares`
+- `historical_registrations`
+- `projected_registrations`
+- `validation_registration_shares`
+- `validation_stock_shares`
+
+Survival-source files are not configured under `data.files`; they belong under `survival_rates.files`.
+
+##### Model settings
 
 | Setting | Default | Description |
 |---|---|---|
-| `model.start_new_registration_year` | `1970` | First year of historical new-registration data considered when reconstructing vehicle cohorts and calculating stock. Earlier start years provide information for older vehicle cohorts. |
-| `model.first_stock_year` | `2014` | First year for which vehicle stock is calculated and included in the model output. |
-| `model.end_year` | Last year available in projected registrations | Final year of the stock simulation. In the default European example this is explicitly set to `2050`. |
-| `model.csp_reference_year` | `2021` | Reference year associated with the empirical cumulative survival probability (CSP) data used for stock modelling. Country-specific stock reference years can be provided through the `stock_year` input dataset. |
-| `model.csp_available_years` | `45` | Number of vehicle-age years represented by the CSP curve and therefore the maximum survival horizon considered when calculating surviving vehicle cohorts. |
+| `model.first_stock_year` | `2014` | First stock year included in the simulation output. |
+| `model.end_year` | Last year available in projected registrations when omitted | Final year of the stock simulation. The repository configuration explicitly uses `2050`. |
+| `model.historical_validation` | `false` | Enables historical model validation. When enabled, both validation datasets under `data.files` are required. |
+| `model.validation_powertrain` | `BEV` | Powertrain whose historical registration and stock shares are evaluated when validation is enabled. It must be among the explicitly selected model powertrains. |
 
-The available registration history must be long enough to cover the configured CSP horizon. ZEVAMPY therefore requires:
-
-```text
-(first_stock_year - start_new_registration_year) + 1 >= csp_available_years 
-```
-
-For example, the default configuration uses registrations from 1970, starts the stock calculation in 2014, and represents 45 years of the CSP curve. 
-
-A value of approximately 45 years is recommended for passenger-car applications. If `csp_available_years` is set below 45, ZEVAMPY issues a warning because truncating the survival curve can omit older surviving vehicle cohorts and consequently underestimate absolute vehicle stock.
-
-##### Optional analysis settings
-
-| Setting | Default | Description |
-|---|---|---|
-| `model.historical_validation` | `false` | Enables comparison of modelled historical stock and stock shares with external historical validation data. Additional validation input datasets are required when enabled. |
-| `model.sensitivity_analysis` | `false` | Enables the optional sensitivity-analysis workflow. |
-| `model.historical_csp` | `false` | Enables the historical-CSP component of the sensitivity analysis. This option is relevant when `sensitivity_analysis` is enabled and requires the corresponding historical CSP input datasets. |
-
-These optional analyses are disabled in the basic configuration. Their required input datasets and generated outputs are described separately below.
+The start year of historical registrations is not configured manually. ZEVAMPY derives the earliest required cohort from `model.first_stock_year` and `survival_rates.csp_available_years`. For `stock_by_age`, an earlier stock reference year can extend the required registration history further backwards. ZEVAMPY raises an error if the selected countries do not have sufficient historical registration coverage.
 
 ##### Geography settings
 
 | Setting | Default | Description |
 |---|---|---|
-| `geography.countries` | EU-27 + Norway | Countries included in the simulation. If the list is empty, ZEVAMPY uses its predefined European country set. Countries that are not available in the supplied input data are omitted. Custom countries that are not part of the default set must be explicitly listed in `geography.countries`. |
-| `geography.use_clusters` | `true` | Determines whether the country-cluster mapping is used for projected powertrain registration shares. When enabled, the configured `country_clusters` input file is required. When disabled, an available cluster file is ignored. |
+| `geography.countries` | EU-27 + Norway | Countries included in the simulation. If left empty, ZEVAMPY uses its predefined EU-27 + Norway set. The required input and survival data must cover the selected/default countries; otherwise the model reports the missing coverage. |
+| `geography.use_clusters` | `true` | If `true`, registration shares are assigned through the configured country-cluster mapping. If `false`, the registration-share input must contain country-specific shares. |
 
 A custom country selection can be provided as:
+
 ```yaml
 geography:
   countries:
     - Germany
-    - France 
+    - France
   use_clusters: true
 ```
-
-If `countries` is left empty, the predefined default country set consists of the EU-27 countries and Norway.
 
 ##### Powertrain settings
 
 If `powertrains` is left empty, ZEVAMPY uses its predefined powertrain set:
-```text 
+
+```text
 BEV
 CNG
 Diesel
@@ -418,34 +348,75 @@ G-PHEV
 Gasoline
 LPG
 D-HEV
-``` 
+```
 
-A subset can be specified explicitly: 
+A subset can be selected explicitly:
+
 ```yaml
 powertrains:
   - BEV
   - Gasoline
-  - Diesel
 ```
-Selected powertrains must exist in the corresponding input data.
 
-When only a subset of the available powertrains is selected, the remaining registration shares are represented by the residual category `Rest of powertrains`. For stock-by-age data with powertrain-specific survival rates, non-selected powertrains are likewise aggregated into this residual category.
+The selected technologies are modelled individually. Their registration shares may sum to less than 1 because the total market is supplied independently through the historical and projected total-registration datasets. Non-selected technologies therefore do not need to be reconstructed as a residual category. They remain represented implicitly in the independently modelled complete fleet.
 
-Custom powertrain categories that are not part of the default set must be explicitly listed in `powertrains`.
+`Total` is a reserved model-generated powertrain label and must not be listed under `powertrains` or supplied in the registration-share input.
 
-##### Survival-rate grouping
+##### Survival-rate settings
 
-`survival_rates.grouping` defines the dimensions for which empirical survival rates and CSP curves are estimated.
+| Setting | Default | Description |
+|---|---|---|
+| `survival_rates.source` | `stock_by_age` | Defines how survival assumptions enter the model. Supported values are `stock_by_age`, `empirical`, and `parameters`. |
+| `survival_rates.grouping` | `[geo country]` | Dimensions defining one survival curve. The current examples support country-level and country-plus-powertrain grouping. |
+| `survival_rates.csp_available_years` | `45` | Number of vehicle-age years represented by the CSP and therefore the maximum cohort age included in stock calculation. Values below 45 trigger a warning because older surviving cohorts may be truncated. |
+| `survival_rates.files` | Source dependent | Maps survival-source-specific logical inputs to filenames. |
 
-The default configuration estimates one survival curve per country:
+The three survival sources are configured as follows.
+
+**Derive survival rates from stock-by-age data:**
 
 ```yaml
 survival_rates:
+  source: stock_by_age
   grouping:
     - geo country
+  csp_available_years: 45
+  files:
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv
 ```
 
-Country- and powertrain-specific survival rates can instead be estimated with:
+For `stock_by_age`, `stock_by_age` and `stock_year` have built-in default filenames and may be overridden under `survival_rates.files`.
+
+**Fit CSP curves from user-supplied empirical survival rates:**
+
+```yaml
+survival_rates:
+  source: empirical
+  grouping:
+    - geo country
+  csp_available_years: 45
+  files:
+    empirical: empirical_survival_rates.csv
+```
+
+For `empirical`, `survival_rates.files.empirical` is required.
+
+**Use previously fitted or externally supplied CSP parameters:**
+
+```yaml
+survival_rates:
+  source: parameters
+  grouping:
+    - geo country
+  csp_available_years: 45
+  files:
+    parameters: csp_parameters.csv
+```
+
+For `parameters`, `survival_rates.files.parameters` is required.
+
+Country- and powertrain-specific survival assumptions are selected by adding `powertrain` to the grouping:
 
 ```yaml
 survival_rates:
@@ -453,21 +424,472 @@ survival_rates:
     - geo country
     - powertrain
 ```
-Every dimension listed under `survival_rates.grouping` must also be available in the stock-by-age input dataset.
 
-For country-level survival rates, the stock-by-age input data must include at least:
+In this mode, survival inputs must contain separate assumptions for each explicitly modelled country-powertrain combination and for `Total`. The `Total` survival curve is used with total registrations to calculate the complete fleet stock, which forms the denominator of technology stock shares. Missing required survival groups cause a clear input/model validation error rather than an implicit fallback.
+
+---
+
+### Survival-rate input formats
+
+ZEVAMPY supports three alternative ways of supplying vehicle survival assumptions. All three sources ultimately provide cumulative survival probability (CSP) curves that are applied to registration cohorts in the stock calculation, but they differ in how much preprocessing and curve fitting ZEVAMPY performs internally.
+
+| `survival_rates.source` | User supplies | ZEVAMPY performs | `stock_year` required? |
+|---|---|---|---|
+| `stock_by_age` | Age-resolved vehicle stock and the corresponding stock reference year | Derives empirical survival rates, fits CSP curves, and calculates stock | Yes |
+| `empirical` | Empirical survival rates by vehicle age | Fits CSP curves and calculates stock | No |
+| `parameters` | Fitted Weibull or WG parameters | Generates CSP curves directly and calculates stock | No |
+
+Survival input files support both semicolon-separated CSV files with decimal commas and standard comma-separated CSV files with decimal points.
+
+#### Survival grouping
+
+`survival_rates.grouping` defines which observations share one survival curve.
+
+For one survival curve per country:
+
+```yaml
+survival_rates:
+  grouping:
+    - geo country
+```
+
+In this mode, the survival input contains no `powertrain` column. The country-specific CSP is applied to the independently modelled `Total` fleet and to each selected powertrain in that country.
+
+For separate curves by country and powertrain:
+
+```yaml
+survival_rates:
+  grouping:
+    - geo country
+    - powertrain
+```
+
+In this mode, the survival input must contain a `powertrain` column and must provide survival assumptions for every selected powertrain and for `Total`. `Total` is required because its CSP is applied to total registrations to calculate the complete fleet stock used as the denominator of technology stock shares.
+
+For example, if the model explicitly represents BEV and Gasoline, the required survival groups for one country are:
+
+```text
+Example Country / Total
+Example Country / BEV
+Example Country / Gasoline
+```
+
+`Total` is only used in survival inputs and model outputs. It must not be added to the registration-share input or to the `powertrains` list in `config.yaml`; total registrations are already supplied independently through the historical and projected total-registration datasets.
+
+#### `stock_by_age`: derive empirical survival rates from fleet stock
+
+With:
+
+```yaml
+survival_rates:
+  source: stock_by_age
+```
+
+ZEVAMPY derives empirical survival rates from age-resolved stock and historical registration cohorts before fitting the CSP curves.
+
+For country-level grouping, the stock-by-age file requires:
 
 ```text
 geo country;vehicle age;number of registered vehicles
+Example Country;1;3000000
+Example Country;2;2990000
+Example Country;3;2980000
 ```
 
-For country- and powertrain-specific survival rates, the stock-by-age input data must include at least:
+The corresponding stock-reference-year file requires:
 
 ```text
-geo country;vehicle age;powertrain;number of registered vehicles
+geo country;stock year of empirical csp data
+Example Country;2021
 ```
 
-If the configured grouping requires a dimension that is not available in the stock-by-age dataset, ZEVAMPY raises an input-validation error before the model calculation proceeds.
+For country-plus-powertrain grouping, the stock-by-age file contains one age profile for `Total` and for every explicitly modelled powertrain:
+
+```text
+geo country;powertrain;vehicle age;number of registered vehicles
+Example Country;Total;1;2999652
+Example Country;Total;2;2997215
+Example Country;BEV;1;198000
+Example Country;BEV;2;185000
+Example Country;Gasoline;1;2500000
+Example Country;Gasoline;2;2450000
+```
+
+Stock reference years may be supplied once per country and applied to every powertrain in that country:
+
+```text
+geo country;stock year of empirical csp data
+Example Country;2021
+```
+
+or separately for each country-powertrain survival group:
+
+```text
+geo country;powertrain;stock year of empirical csp data
+Example Country;Total;2021
+Example Country;BEV;2021
+Example Country;Gasoline;2021
+```
+
+Group-specific reference years are useful when age-resolved stock data for different technologies originate from different observation years.
+
+For each survival group, ZEVAMPY aligns stock age with the historical registration cohort according to:
+
+```text
+registration cohort year = stock reference year - vehicle age + 1
+```
+
+and calculates the empirical survival rate as:
+
+```text
+survival rate = registered vehicles in the stock of a certain vehicle age
+                ----------------------------------------------------------
+                new registrations of the corresponding year
+```
+
+With country-level grouping, total registrations are used for this calculation. With country-plus-powertrain grouping, each powertrain stock cohort is matched to registrations of the same powertrain, while `Total` is matched to total registrations.
+
+Only vehicle ages up to `survival_rates.csp_available_years` are used in the CSP workflow. The stock-by-age source does not require the input to contain exactly one observation for every age in the configured horizon, although sufficient observations are required for meaningful curve fitting.
+
+#### `empirical`: supply survival rates directly
+
+With:
+
+```yaml
+survival_rates:
+  source: empirical
+  files:
+    empirical: empirical_survival_rates.csv
+```
+
+ZEVAMPY skips the stock-by-age derivation step and fits CSP curves directly to user-supplied empirical survival rates.
+
+For country-level grouping, the required columns are:
+
+```text
+geo country;vehicle age;survival rate
+Example Country;1;1,0000
+Example Country;2;0,9967
+Example Country;3;0,9933
+...
+```
+
+For country-plus-powertrain grouping:
+
+```text
+geo country;powertrain;vehicle age;survival rate
+Example Country;Total;1;0,9999
+Example Country;Total;2;0,9991
+...
+Example Country;BEV;1;0,9990
+Example Country;BEV;2;0,9930
+...
+Example Country;Gasoline;1;0,9999
+Example Country;Gasoline;2;0,9995
+...
+```
+
+Each survival group must contain exactly one value for every integer vehicle age from `1` through `csp_available_years`.
+
+Empirical survival rates must be numeric, finite, and non-negative. Values greater than `1` are intentionally allowed. This can occur, for example, when imports cause the number of vehicles from a cohort present in a country's stock to exceed the number of originally newly registered vehicles domestically in that country.
+
+A separate stock-reference-year file is not required for this source because the empirical survival-by-age relationship has already been derived before it is supplied to ZEVAMPY.
+
+#### `parameters`: supply fitted CSP parameters
+
+With:
+
+```yaml
+survival_rates:
+  source: parameters
+  files:
+    parameters: csp_parameters.csv
+```
+
+ZEVAMPY skips both empirical survival-rate derivation and parameter fitting. It generates the CSP curves directly from the supplied distribution parameters and then performs the cohort stock calculation.
+
+For a Weibull curve, the required columns are:
+
+```text
+geo country;gamma (Weibull);beta (Weibull);distribution
+Example Country;21,13;2,99;Weibull
+```
+
+For country-plus-powertrain grouping, add the `powertrain` column and provide one row for each required survival group, including `Total`:
+
+```text
+geo country;powertrain;gamma (Weibull);beta (Weibull);distribution
+Example Country;Total;18,31;3,00;Weibull
+Example Country;BEV;10,27;3,00;Weibull
+Example Country;Gasoline;17,41;3,00;Weibull
+```
+
+The `distribution` column accepts `Weibull` or `WG`. All rows require `gamma (Weibull)` and `beta (Weibull)`. Rows using `WG` additionally require:
+
+```text
+k (Import-Gaussian)
+mu (Import-Gaussian)
+sigma (Import-Gaussian)
+```
+
+For example:
+
+```text
+geo country;gamma (Weibull);beta (Weibull);k (Import-Gaussian);mu (Import-Gaussian);sigma (Import-Gaussian);distribution
+Example Country;18,0;3,0;2,0;5,0;30,0;WG
+```
+
+`gamma (Weibull)` and `beta (Weibull)` must be greater than zero, and `sigma (Import-Gaussian)` must be greater than zero for WG rows. There must be exactly one parameter row per configured survival group.
+
+Parameter files produced by previous ZEVAMPY runs may also contain fit diagnostics such as R-squared values and additional output columns. These are allowed but are not required to regenerate CSP curves from the `parameters` source.
+
+A stock-reference-year file is not required for supplied parameters because the CSP is already expressed as a function of vehicle age.
+
+#### Choosing a survival source
+
+The three inputs represent alternative entry points into the same stock-turnover workflow:
+
+```text
+stock_by_age  -> empirical survival rates -> fitted CSP parameters -> CSP curves -> stock
+empirical     -----------------------------> fitted CSP parameters -> CSP curves -> stock
+parameters    -----------------------------------------------------> CSP curves -> stock
+```
+
+`stock_by_age` is appropriate when age-resolved fleet stock and historical registrations are available and the empirical survival relationship should be derived inside ZEVAMPY. `empirical` is useful when survival rates have already been estimated externally or in a previous analysis. `parameters` is useful for reproducing previously fitted survival assumptions, applying literature-based parameters, or running alternative survival scenarios without refitting the curves.
+
+### CSP fitting: Weibull and WG
+
+When `survival_rates.source` is `stock_by_age` or `empirical`, ZEVAMPY fits two candidate cumulative survival probability (CSP) curves to every configured survival group: a Weibull survival curve and a Weibull-Gaussian (`WG`) curve. The selected curve is then used in the cohort stock calculation. When `survival_rates.source: parameters` is used, no fitting or model selection is performed; ZEVAMPY applies the `distribution` and parameters supplied by the user.
+
+#### Weibull survival curve
+
+The Weibull CSP implemented in ZEVAMPY is:
+
+$$
+S_W(a)=\exp\left[-\left(\frac{a}{\gamma}\right)^\beta
+\left(\Gamma\left(1+\frac{1}{\beta}\right)\right)^\beta\right],
+$$
+
+where $a$ is vehicle age, $\gamma$ is the mean vehicle lifetime in the implemented parameterization, $\beta$ controls the shape of the survival curve, and $\Gamma(\cdot)$ is the gamma function.
+
+This parameterization differs slightly from the conventional Weibull scale-parameter notation: the gamma-function term is included so that `gamma (Weibull)` corresponds to the mean lifetime rather than the conventional Weibull scale parameter. Larger `gamma` values therefore shift fleet turnover toward older vehicle ages, while `beta` controls how gradually or sharply retirement occurs around the characteristic lifetime.
+
+#### Weibull-Gaussian (`WG`) curve
+
+Empirical cohort survival rates can deviate from a monotonically decreasing Weibull curve. In particular, imported used vehicles can increase the number of vehicles of a given cohort present in a country relative to the number originally registered there, so empirical survival rates may exceed 1. ZEVAMPY therefore also fits a Weibull-Gaussian curve:
+
+$$
+S_{WG}(a)=S_W(a)+\delta\exp\left[-\frac{1}{2}\left(\frac{a-\mu}{\sigma}\right)^2\right],
+$$
+
+with
+
+$$
+\delta=\frac{k}{\sqrt{2\pi}\sigma}.
+$$
+
+The Gaussian component provides an additional age-dependent contribution on top of the Weibull survival curve. Its parameters are:
+
+| Output column | Meaning |
+|---|---|
+| `k (Import-Gaussian)` | Scaling parameter controlling the overall magnitude of the Gaussian component. |
+| `mu (Import-Gaussian)` | Vehicle age at which the Gaussian component is centred. |
+| `sigma (Import-Gaussian)` | Standard deviation controlling the width of the Gaussian component across vehicle ages. |
+| `delta (Import-Gaussian)` | Derived peak amplitude, calculated as `k / (sqrt(2*pi) * sigma)`. It is reported as a diagnostic output and is not required when supplying WG parameters through `source: parameters`. |
+
+The Weibull parameters `gamma` and `beta` are fitted first. ZEVAMPY then holds those Weibull parameters fixed and optimizes the Gaussian parameters `k`, `mu`, and `sigma` for the WG candidate curve.
+
+#### Fit quality and distribution selection
+
+For both candidate curves, ZEVAMPY reports an R-squared value calculated as:
+
+$$
+R^2 = 1 - \frac{\sum_a (S_{model}(a)-S_{empirical}(a))^2}
+{\sum_a (S_{empirical}(a)-\overline{S}_{empirical})^2}.
+$$
+
+The relevant output columns are:
+
+| Output column | Meaning |
+|---|---|
+| `r squared (Weibull)` | Fit quality of the Weibull curve. |
+| `r squared (Weibull and Import-Gaussian)` | Fit quality of the WG curve. |
+| `distribution` | Curve selected for the stock calculation: `Weibull` or `WG`. |
+
+ZEVAMPY deliberately favours the simpler Weibull curve unless the WG fit provides a meaningful improvement. `WG` is selected only when its R-squared is at least `0.025` higher than the Weibull R-squared. Otherwise `Weibull` is retained:
+
+```text
+if R2_Weibull + 0.025 > R2_WG:
+    distribution = Weibull
+else:
+    distribution = WG
+```
+
+This threshold prevents the additional Gaussian component from being selected for only marginal improvements in fit.
+
+#### CSP fitting outputs
+
+When ZEVAMPY performs fitting, the main CSP outputs are:
+
+- `2_1_optimum_parameters_csp_curves.csv`: one row per survival group containing the fitted Weibull parameters, Gaussian parameters, both R-squared values, and the selected `distribution`.
+- `2_2_empirical_survival_rates.csv`: the empirical survival-rate observations used for fitting.
+- `2_3_fitted_CSP_curves.csv`: fitted CSP values by vehicle age for both candidate curves, together with the selected distribution for each survival group.
+
+The principal columns in `2_1_optimum_parameters_csp_curves.csv` are:
+
+| Column | Interpretation |
+|---|---|
+| `gamma (Weibull)` | Mean vehicle lifetime in years in the ZEVAMPY Weibull parameterization. |
+| `beta (Weibull)` | Weibull shape parameter. |
+| `r squared (Weibull)` | Weibull fit quality. |
+| `k (Import-Gaussian)` | Magnitude parameter of the Gaussian component. |
+| `mu (Import-Gaussian)` | Centre age of the Gaussian component. |
+| `sigma (Import-Gaussian)` | Width of the Gaussian component. |
+| `delta (Import-Gaussian)` | Derived peak amplitude of the Gaussian component. |
+| `r squared (Weibull and Import-Gaussian)` | WG fit quality. |
+| `distribution` | Distribution selected for the stock calculation. |
+
+`2_3_fitted_CSP_curves.csv` contains `survival rate Weibull` and `survival rate WG`. Both candidate curves are retained in the output for transparency, but the stock calculation uses only the curve identified by `distribution` for each survival group. If users supply Weibull-only parameters through `source: parameters`, WG values are not required and may be empty in this output.
+
+---
+
+### Historical validation
+
+Historical validation is an optional workflow for comparing modelled stock shares with observed historical stock shares before interpreting long-term projections. It is enabled through:
+
+```yaml
+model:
+  historical_validation: true
+  validation_powertrain: BEV
+```
+
+`validation_powertrain` selects the technology evaluated by the validation workflow. It can be changed, for example, to `FCEV` or another explicitly modelled powertrain when corresponding validation data are available. The selected validation powertrain must be included in the modelled `powertrains`.
+
+Historical validation is independent of the selected survival source. It can therefore be used with CSP curves derived from `stock_by_age`, fitted from `empirical` survival rates, or generated from supplied `parameters`.
+
+#### Required validation inputs
+
+When `model.historical_validation: true`, two additional datasets are required.
+
+**Observed registration shares** (`data.files.validation_registration_shares`) must contain:
+
+```text
+geo country;time;powertrain;relative sales
+Example Country;2018;BEV;0,020
+Example Country;2019;BEV;0,035
+Example Country;2020;BEV;0,060
+```
+
+**Observed stock shares** (`data.files.validation_stock_shares`) must contain:
+
+```text
+geo country;stock year;powertrain;share
+Example Country;2018;BEV;0,004
+Example Country;2019;BEV;0,007
+Example Country;2020;BEV;0,012
+```
+
+Shares are supplied as fractions between `0` and `1`. The files may contain several powertrains, but the validation workflow filters them to `model.validation_powertrain`.
+
+The validation period is determined automatically from the years for which modelled and observed stock-share data overlap for the selected powertrain.
+
+#### Validation Step 1: observed registrations and configured CSP curves
+
+The first validation step replaces the modelled registration share of the selected validation powertrain with its observed historical registration share. Absolute total registrations remain unchanged, and the model-generated `Total` registration series continues to represent the complete market.
+
+When other technologies are explicitly modelled, their shares are adjusted only as required to keep the represented registration shares internally consistent. The stock is then recalculated using the **same configured CSP curves** as in the normal model run.
+
+Conceptually:
+
+```text
+observed registration share of validation powertrain
+                         +
+             total registrations
+                         +
+             configured CSP curves
+                         |
+                         v
+              recalculated stock share
+                         |
+                         v
+             observed stock-share data
+```
+
+This comparison primarily evaluates the stock-turnover and survival assumptions conditional on the observed registration history. If the model cannot reproduce the observed stock development even when historical registration shares are supplied, the remaining discrepancy is associated mainly with the stock-turnover representation and its input assumptions rather than with the registration-share scenario.
+
+#### Validation Step 2: modelled registrations and configured CSP curves
+
+The second validation step compares the stock shares from the original model run directly with the observed stock shares. The original modelled registration trajectory is therefore retained.
+
+Conceptually:
+
+```text
+modelled registration trajectory
+              +
+      configured CSP curves
+              |
+              v
+      modelled stock share
+              |
+              v
+    observed stock-share data
+```
+
+This step evaluates the combined effect of the registration trajectory and the survival/stock-turnover assumptions. Comparing Step 1 with Step 2 therefore helps distinguish discrepancies related primarily to the registration trajectory from those that remain when observed registrations are used.
+
+#### Powertrain-specific survival rates
+
+Historical validation also supports:
+
+```yaml
+survival_rates:
+  grouping:
+    - geo country
+    - powertrain
+```
+
+In this case, the selected validation powertrain is recalculated using its dedicated CSP curve, while `Total` continues to use the dedicated total-fleet CSP. The observed stock share is consequently compared against:
+
+```text
+stock of validation powertrain / independently modelled Total stock
+```
+
+This preserves the same total-fleet denominator used in the normal stock-share calculation.
+
+#### RMSE and validation outputs
+
+For both validation steps, ZEVAMPY generates a comparison figure across countries and calculates the root mean squared error (RMSE) between modelled and observed stock shares:
+
+$$
+\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{t=1}^{n}\left(s_{t}^{\mathrm{model}}-s_{t}^{\mathrm{observed}}\right)^2},
+$$
+
+where $s_t$ is the stock share in validation year $t$. Because stock shares are represented as fractions, an RMSE of `0.01` corresponds to approximately one percentage point.
+
+For `validation_powertrain: BEV`, the RMSE outputs follow the pattern:
+
+```text
+4_1_rmse_validation_step_1_bev_all_countries.csv
+4_2_rmse_validation_step_2_bev_all_countries.csv
+```
+
+and the corresponding figures are written to the configured `outputs/figures/` directory, for example:
+
+```text
+validation_step_1_actual_bev_registrations_and_configured_csp_curves_all_countries.pdf
+validation_step_2_modelled_bev_registrations_and_configured_csp_curves_all_countries.pdf
+```
+
+The filenames are generated dynamically from `validation_powertrain` when another technology is selected.
+
+When historical validation is disabled:
+
+```yaml
+model:
+  historical_validation: false
+```
+
+the validation datasets are not required and no validation plots or RMSE files are generated.
 
 ---
 
@@ -503,11 +925,12 @@ my_zevampy_project/
 The `inputs` folder should contain the required CSV input files.
 #### 4. Configure the model
 Edit `config.yaml` to define the model setup, for example:
+
 ```yaml
 data:
   input_path: inputs
   output_path: outputs
-  
+
 geography:
   countries:
     - Germany
@@ -517,30 +940,24 @@ geography:
 powertrains:
   - BEV
   - Gasoline
-  - Diesel
 
 model:
-  start_new_registration_year: 1970
   first_stock_year: 2014
   end_year: 2050
-  csp_reference_year: 2021
-  csp_available_years: 45
   historical_validation: false
-  historical_csp: false
-  sensitivity_analysis: true
+  validation_powertrain: BEV
 
 survival_rates:
+  source: stock_by_age
   grouping:
     - geo country
+  csp_available_years: 45
+  files:
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv
 ```
-To estimate survival rates by both country and powertrain, use:
-```yaml
-survival_rates:
-  grouping:
-    - geo country
-    - powertrain
-```
-This requires stock-by-age input data that also contains a `powertrain` column.
+
+To estimate and apply survival rates separately by country and powertrain, add `powertrain` to `survival_rates.grouping`. The corresponding survival input must then contain the selected powertrains plus `Total` for the complete-fleet denominator.
 
 #### 5. Run ZEVAMPY
 ```bash
@@ -570,19 +987,16 @@ If all checks are successful, ZEVAMPY reports:
 Input validation successful.
 ```
 
-Input validation does not calculate vehicle stock, generate figures, perform historical model validation, or run sensitivity analyses.
+Input validation does not calculate vehicle stock, generate figures, or perform historical model validation.
 
-#### 🚀 Quick start example
+#### 🚀 Examples
 
-A minimal runnable example is available in:
+Two self-contained runnable examples are included in the repository:
 
-[`examples/minimal_example/`](https://github.com/gabrielmoringmartinez/zevampy/tree/main/examples/minimal_example)
+- [`examples/minimal_example/`](https://github.com/gabrielmoringmartinez/zevampy/tree/main/examples/minimal_example) demonstrates country-level survival rates shared by the complete fleet and the selected powertrains.
+- [`examples/minimal_example_powertrain_survival/`](https://github.com/gabrielmoringmartinez/zevampy/tree/main/examples/minimal_example_powertrain_survival) demonstrates separate survival rates for `Total`, BEV, and Gasoline, including the independently modelled complete-fleet denominator.
 
-You can download the example inputs and configuration files directly from the repository and run:
-
-```bash
-zevampy --config config.yaml
-```
+Each example contains ready-to-run configurations for all three supported survival sources: `stock_by_age`, `empirical`, and `parameters`. The README inside each example folder describes the inputs and commands in more detail.
 
 
 ### Installation for developers
@@ -758,3 +1172,4 @@ Follow the DLR Institute of Vehicle Concepts on LinkedIn for updates and publica
 [![LinkedIn](https://img.shields.io/badge/subscribe-white.svg?logo=data:image/svg%2bxml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYTIuMDYyIDIuMDYyIDAgMCAxLTIuMDYzLTIuMDY1IDIuMDY0IDIuMDY0IDAgMSAxIDIuMDYzIDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiIGZpbGw9IiMwQTY2QzIiLz48cGF0aCBzdHlsZT0iZmlsbDojZmZmO3N0cm9rZS13aWR0aDouMDIwOTI0MSIgZD0iTTQuOTE3IDcuMzc3YTIuMDUyIDIuMDUyIDAgMCAxLS4yNC0zLjk0OWMxLjEyNS0uMzg0IDIuMzM5LjI3NCAyLjY1IDEuNDM3LjA2OC4yNS4wNjguNzY3LjAwMSAxLjAxYTIuMDg5IDIuMDg5IDAgMCAxLTEuNjIgMS41MSAyLjMzNCAyLjMzNCAwIDAgMS0uNzktLjAwOHoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmZmO3N0cm9rZS13aWR0aDouMDIwOTI0MSIgZD0iTTQuOTE3IDcuMzc3YTIuMDU2IDIuMDU2IDAgMCAxLTEuNTItMi42NyAyLjA0NyAyLjA0NyAwIDAgMSAzLjQxOS0uNzU2Yy4yNC4yNTQuNDIuNTczLjUxMi45MDguMDY1LjI0LjA2NS43OCAwIDEuMDItLjA1MS4xODYtLjE5Ny41MDQtLjMuNjUyLS4wOS4xMzItLjMxLjM2Mi0uNDQzLjQ2NC0uNDYzLjM1Ny0xLjEuNTAzLTEuNjY4LjM4MlpNMy41NTcgMTQuNzJWOS4wMDhoMy41NTd2MTEuNDI0SDMuNTU3Wk05LjM1MyAxNC43MlY5LjAwOGgzLjQxMXYuNzg1YzAgLjYxNC4wMDUuNzg0LjAyNi43ODMuMDE0IDAgLjA3LS4wNzMuMTI0LS4xNjIuNTI0LS44NjUgMS41MDgtMS40NzggMi42NS0xLjY1LjI3NS0uMDQyIDEtLjA0NyAxLjMzMi0uMDA5Ljc5LjA5IDEuNDUxLjMxNiAxLjk0LjY2NC4yMi4xNTcuNTU3LjQ5My43MTQuNzEzLjQyLjU5Mi42OSAxLjQxMi44MDggMi40NjQuMDc0LjY2My4wODQgMS4yMTUuMDg1IDQuNTc4djMuMjU4aC0zLjUzNnYtMi45ODZjMC0yLjk3LS4wMS0zLjQ3NC0uMDc0LTMuOTA4LS4wOS0uNjA2LS4zMTQtMS4wODItLjYzNC0xLjM0Mi0uMzk1LS4zMjItMS4wMjktLjQzNy0xLjcwMy0uMzA5LS44NTguMTYzLTEuMzU1Ljc1LTEuNTIzIDEuNzk3LS4wNzYuNDcxLS4wODQuODQ1LS4wODQgMy44MzR2Mi45MTRIOS4zNTN6Ii8+PC9zdmc+)](https://www.linkedin.com/showcase/dlr-institut-fuer-fahrzeugkonzepte/posts/?feedView=all)
 
 [Back to top](#top)
+
