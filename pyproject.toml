@@ -11,7 +11,7 @@ version = "2.0.0"
 authors = [
   { name="Gabriel Möring-Martínez", email="gabriel.moeringmartinez@dlr.de" },
 ]
-description = "ZEVAMPY: Zero Emission Vehicle Adoption model in Python"
+description = "ZEVAMPY: A Python framework for vehicle stock turnover and powertrain adoption modelling"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
@@ -45,7 +45,7 @@ keywords = [
 [project.urls]
 Homepage = "https://github.com/gabrielmoringmartinez/zevampy"
 Issues = "https://github.com/gabrielmoringmartinez/zevampy/issues"
-Repository = "https://github.com/gabrielmoringmartinez/zevampy/zevampy.git"
+Repository = "https://github.com/gabrielmoringmartinez/zevampy.git"
 
 
 [tool.setuptools]

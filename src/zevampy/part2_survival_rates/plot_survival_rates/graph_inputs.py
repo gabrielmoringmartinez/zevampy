@@ -7,7 +7,7 @@ from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
 # Define your configuration dictionary
-TITLE = "Empirical cumulative survival probability (CSP) curves of year 2021"
+TITLE = "Empirical cumulative survival probability (CSP) curves"
 X_COLUMN = "vehicle age"
 X_LABEL = "Vehicle age"
 Y_LABEL = "Cumulative Survival Probability (CSP)"

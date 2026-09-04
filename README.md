@@ -21,7 +21,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
        align="right"
        height="120"
        width="120"
-       alt="EU-ZEVAM logo" />
+       alt="DLR logo" />
 </a>
 
 # 🚗 ZEVAMPY: Zero-Emission Vehicle Adoption Model in Python

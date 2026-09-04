@@ -4,7 +4,7 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
 
-cff-version: 2.0.0
+cff-version: 1.2.0
 title: "ZEVAMPY: A Python framework for vehicle stock turnover and zero-emission vehicle adoption modelling"
 message: >
   If you use this software, please cite it using the
@@ -32,5 +32,3 @@ keywords:
   - Python
 license: MIT
 version: "2.0.0"
-commit: 44cf21cb
-date-released: 2026-04-09
