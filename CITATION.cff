@@ -4,7 +4,7 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
 
-cff-version: 1.2.0
+cff-version: 2.0.0
 title: "ZEVAMPY: A Python framework for vehicle stock turnover and zero-emission vehicle adoption modelling"
 message: >
   If you use this software, please cite it using the
@@ -21,7 +21,7 @@ identifiers:
   - type: url
     value: https://github.com/gabrielmoringmartinez/zevampy
 abstract: >
-  ZEVAMPY is an open-source Python framework for modelling vehicle fleet evolution using empirical survival rates and new vehicle registration scenarios. The framework estimates cumulative survival probability (CSP) curves, calculates vehicle stock by powertrain, and projects future fleet composition over user-defined time horizons.
+  ZEVAMPY is an open-source Python framework for vehicle stock turnover modelling using configurable vehicle-registration scenarios and survival assumptions. The framework supports survival-rate derivation from stock-by-age data, directly supplied empirical survival rates, and fitted cumulative survival probability parameters. Survival assumptions can be defined by country or by country and powertrain, and are combined with historical and projected registrations to estimate vehicle stock and stock shares over user-defined projection horizons.
 keywords:
   - zero-emission vehicles
   - electric vehicles
@@ -31,6 +31,6 @@ keywords:
   - survival analysis
   - Python
 license: MIT
-version: "1.0.0"
+version: "2.0.0"
 commit: 44cf21cb
-date-released: 2025-07-24
+date-released: 2026-04-09
