@@ -185,9 +185,8 @@ def calculate_and_plot_csps_and_stock(data, inputs):
     stock_shares_are_valid = stock_shares is not None
     if not stock_shares_are_valid:
         warnings.warn(
-            "Stock shares will not be plotted because not all registration powertrains "
-            "have corresponding survival assumptions. Absolute stock is still available "
-            "for powertrains with survival assumptions.",
+            "Stock-share calculation is disabled for this run. "
+            "Absolute stock results remain available.",
             UserWarning,
         )
     else:

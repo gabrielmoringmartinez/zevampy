@@ -39,7 +39,7 @@ def validate_inputs(config_path=None, input_path=None, output_path=None):
     This function loads the model configuration and input datasets and executes
     the existing input and configuration validation checks. It does not clean
     output directories, calculate vehicle stock, generate figures, run
-    historical validation, or perform sensitivity analysis.
+    historical validation, or calculate model outputs.
 
     Parameters:
         config_path (str, optional):

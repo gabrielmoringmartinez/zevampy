@@ -645,8 +645,10 @@ def validate_powertrains_in_data(df, selected_powertrains, dataset_name):
     if unused_powertrains:
         warnings.warn(
             f"The following powertrains exist in {dataset_name} but are not selected "
-            f"and will be ignored: {sorted(unused_powertrains)}",
-            UserWarning
+            f"for explicit modelling and will be ignored as individual technologies: "
+            f"{sorted(unused_powertrains)}. They remain represented implicitly in the "
+            f"independently modelled Total fleet.",
+            UserWarning,
         )
 
 
