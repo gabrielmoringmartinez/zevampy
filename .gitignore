@@ -28,6 +28,7 @@ inputs/**
 outputs/*
 outputs2/
 examples/minimal_example/outputs/
+examples/minimal_example_powertrain_survival/outputs/
 
 # Generated paper artifacts
 paper/paper.pdf

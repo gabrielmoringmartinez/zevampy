@@ -373,3 +373,24 @@ def test_historical_validation_runs_with_powertrain_specific_parameters(tmp_path
     assert (output_dir / "4_1_rmse_validation_step_1_bev_all_countries.csv").is_file()
     assert (output_dir / "4_2_rmse_validation_step_2_bev_all_countries.csv").is_file()
 
+
+
+def test_stock_by_age_rejects_gapped_vehicle_ages(tmp_path):
+    """Stock-by-age fitting should reject missing ages within a survival group."""
+    input_dir = _create_powertrain_stock_inputs(tmp_path)
+    stock_path = input_dir / "2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv"
+    stock = pd.read_csv(stock_path, sep=";", decimal=",")
+    stock = stock[
+        ~((stock["powertrain"] == "BEV") & (stock["vehicle age"] == 4))
+    ]
+    stock.to_csv(stock_path, sep=";", decimal=",", index=False)
+
+    config = _base_config(input_dir, tmp_path / "gapped_age_outputs")
+
+    with pytest.raises(ValueError, match="consecutive integer vehicle age starting at 1"):
+        load_data_and_prepare_inputs(
+            config["data"]["input_path"],
+            config=config,
+        )
+
+

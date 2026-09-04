@@ -308,7 +308,10 @@ def _prepare_empirical_survival_rates(survival_rates, registrations, inputs, req
                 f"for every vehicle age from 1 to {csp_years} in each survival group. "
                 f"Incomplete groups: {incomplete_groups[:5]}"
             )
-    return survival_rates
+
+    return survival_rates.sort_values(
+        inputs[survival_grouping_label] + [age_dim]
+    ).reset_index(drop=True)
 
 
 def _prepare_parameter_groups(parameters, registrations, inputs):

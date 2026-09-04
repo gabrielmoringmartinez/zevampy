@@ -227,6 +227,7 @@ def load_data(
                     powertrains,
                 )
 
+        _validate_stock_by_age_age_sequence(stock_by_age, survival_grouping)
         _validate_stock_year(stock_year, stock_by_age, survival_grouping)
         data[stock_by_age_label] = stock_by_age
         data[stock_year_label] = stock_year
@@ -454,6 +455,54 @@ def _validate_stock_by_age(stock_by_age, survival_grouping):
             "Invalid stock-by-age input data. "
             f"Missing columns: {sorted(missing_columns)}. "
             f"Required columns are: {sorted(required_columns)}."
+        )
+
+
+def _validate_stock_by_age_age_sequence(stock_by_age, survival_grouping):
+    """Validate vehicle-age sequences used for stock-by-age CSP fitting.
+
+    Each survival group must contain exactly one observation for every consecutive
+    integer vehicle age starting at one. The sequence may end before the configured
+    CSP horizon; the available observations are used for fitting and the fitted CSP
+    is subsequently generated over the requested horizon.
+
+    Parameters:
+        stock_by_age (pandas.DataFrame):
+            Age-resolved stock data after filtering to the modelled survival groups.
+        survival_grouping (list[str]):
+            Configured dimensions defining survival-rate groups.
+
+    Raises:
+        ValueError:
+            If vehicle ages are missing, non-numeric, non-finite, non-integer,
+            duplicated, do not start at one, or contain gaps within a survival group.
+    """
+    ages = stock_by_age[age_dim]
+    if ages.isna().any():
+        raise ValueError("Stock-by-age input data contain missing vehicle-age values.")
+    if not pd.api.types.is_numeric_dtype(ages):
+        raise ValueError("Stock-by-age vehicle ages must contain numeric values.")
+    if not np.isfinite(ages).all():
+        raise ValueError("Stock-by-age vehicle ages must contain only finite values.")
+    if not np.equal(ages, np.floor(ages)).all():
+        raise ValueError("Stock-by-age vehicle ages must be integer values.")
+
+    invalid_groups = []
+    for group_values, group_df in stock_by_age.groupby(survival_grouping, dropna=False):
+        group_ages = group_df[age_dim].astype(int).tolist()
+        unique_ages = sorted(set(group_ages))
+        expected_ages = list(range(1, max(unique_ages) + 1)) if unique_ages else []
+
+        if len(group_ages) != len(unique_ages) or unique_ages != expected_ages:
+            if not isinstance(group_values, tuple):
+                group_values = (group_values,)
+            invalid_groups.append(dict(zip(survival_grouping, group_values)))
+
+    if invalid_groups:
+        raise ValueError(
+            "Stock-by-age input data must contain exactly one row for each "
+            "consecutive integer vehicle age starting at 1 in every survival group. "
+            f"Invalid groups: {invalid_groups[:10]}"
         )
 
 
@@ -751,4 +800,5 @@ def filter_powertrain_survival_groups(df, selected_powertrains):
     """
     required_powertrains = set(selected_powertrains) | {total_powertrain_label}
     return df[df[powertrain_dim].isin(required_powertrains)].copy()
+
 

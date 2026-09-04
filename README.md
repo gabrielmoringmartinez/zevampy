@@ -36,6 +36,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 - [Recommended skills](#-recommended-skills)
 - [Installation](#-installation)
 - [Survival-rate input formats](#survival-rate-input-formats)
+- [Model outputs](#model-outputs)
 - [CSP fitting: Weibull and WG](#csp-fitting-weibull-and-wg)
 - [Historical validation](#historical-validation)
 - [Testing](#-testing)
@@ -49,7 +50,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ZEVAMPY is an open-source Python framework for modelling vehicle fleet evolution using empirical survival rates and new vehicle registration scenarios. The framework estimates cumulative survival probability (CSP) curves, calculates vehicle stock by powertrain, and projects future fleet composition over user-defined time horizons.
 
-Although ZEVAMPY was originally developed and validated for European passenger-car fleets, it is designed to be reusable for other countries, powertrain categories, and projection periods when suitable stock and registration data are available. Survival rates can be estimated at different aggregation levels, including country-level, powertrain-level, or combined country–powertrain groupings.
+Although ZEVAMPY was originally developed and validated for European passenger-car fleets, it is designed to be reusable for other countries, powertrain categories, and projection periods when suitable stock and registration data are available. Survival rates can be estimated at different aggregation levels, including country-level or combined country–powertrain groupings.
 
 The repository includes a default European passenger-car application based on country-specific survival rates and registration scenarios for EU-27 countries and Norway. The methodological foundations draw on the transport-demand modelling framework presented in [Möring-Martínez et al., 2024](https://doi.org/10.1016/j.trd.2024.104372) and on the empirical survival-rate methodology described in [Held et al., 2021](https://doi.org/10.1186/s12544-020-00464-0). The framework has been applied to analyse future BEV fleet evolution in Europe in [Möring-Martínez et al., 2025](https://doi.org/10.1016/j.trd.2025.104945).
 
@@ -71,7 +72,7 @@ ZEVAMPY addresses this gap by providing a reusable and modular Python framework 
   Users can project vehicle fleet composition by powertrain using custom registration scenarios and user-defined projection periods.
 
 - **Empirical survival-rate estimation:**  
-  Survival rates can be estimated from stock and registration data at different years and aggregation levels, including country-level, powertrain-level, or combined country–powertrain groupings.
+  Survival rates can be estimated from stock and registration data at different years and aggregation levels, including country-level or combined country–powertrain groupings.
 
 - **CSP fitting and stock modelling:**  
   The framework fits cumulative survival probability curves and combines them with new registration data to estimate future vehicle stock.
@@ -549,7 +550,7 @@ survival rate = registered vehicles in the stock of a certain vehicle age
 
 With country-level grouping, total registrations are used for this calculation. With country-plus-powertrain grouping, each powertrain stock cohort is matched to registrations of the same powertrain, while `Total` is matched to total registrations.
 
-Only vehicle ages up to `survival_rates.csp_available_years` are used in the CSP workflow. The stock-by-age source does not require the input to contain exactly one observation for every age in the configured horizon, although sufficient observations are required for meaningful curve fitting.
+Only vehicle ages up to `survival_rates.csp_available_years` are used in the CSP workflow. Within each configured survival group, the stock-by-age input must contain exactly one row for each consecutive integer vehicle age starting at `1`. The available sequence may end before `csp_available_years`; ZEVAMPY uses the available observations for fitting and generates the fitted CSP curve over the configured horizon. Input rows are ordered internally by vehicle age before fitting.
 
 #### `empirical`: supply survival rates directly
 
@@ -656,6 +657,21 @@ parameters    -----------------------------------------------------> CSP curves 
 ```
 
 `stock_by_age` is appropriate when age-resolved fleet stock and historical registrations are available and the empirical survival relationship should be derived inside ZEVAMPY. `empirical` is useful when survival rates have already been estimated externally or in a previous analysis. `parameters` is useful for reproducing previously fitted survival assumptions, applying literature-based parameters, or running alternative survival scenarios without refitting the curves.
+
+### Model outputs
+
+A standard model run writes the main registration and stock results to the configured `data.output_path`. Generated CSV outputs use comma separators and decimal points.
+
+| Output file | Description |
+|---|---|
+| `1_1_absolute_registrations.csv` | Total new-vehicle registrations by country and year, combining historical and projected total-registration inputs over the modelled cohort period. |
+| `1_2_registrations_by_powertrain.csv` | Registrations of the explicitly modelled powertrains, calculated from total registrations and registration shares. It also contains the internally generated `Total` rows used for complete-fleet stock calculation. |
+| `3_1_stock_data_including_vehicle_age.csv` | Calculated vehicle stock by country, stock year, vehicle age, year of first registration, and powertrain, including `Total`. |
+| `3_2_stock_shares.csv` | Stock by country, stock year, and powertrain together with the corresponding share of the independently modelled `Total` fleet. `Total` therefore has a share of `1`. |
+
+Additional `2_*` files describe the empirical survival rates, fitted CSP parameters, and fitted CSP curves when the selected survival source performs fitting. These are documented in the next section. Optional historical-validation outputs use the `4_*` prefix and are documented under [Historical validation](#historical-validation).
+
+---
 
 ### CSP fitting: Weibull and WG
 
@@ -1172,4 +1188,3 @@ Follow the DLR Institute of Vehicle Concepts on LinkedIn for updates and publica
 [![LinkedIn](https://img.shields.io/badge/subscribe-white.svg?logo=data:image/svg%2bxml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYTIuMDYyIDIuMDYyIDAgMCAxLTIuMDYzLTIuMDY1IDIuMDY0IDIuMDY0IDAgMSAxIDIuMDYzIDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiIGZpbGw9IiMwQTY2QzIiLz48cGF0aCBzdHlsZT0iZmlsbDojZmZmO3N0cm9rZS13aWR0aDouMDIwOTI0MSIgZD0iTTQuOTE3IDcuMzc3YTIuMDUyIDIuMDUyIDAgMCAxLS4yNC0zLjk0OWMxLjEyNS0uMzg0IDIuMzM5LjI3NCAyLjY1IDEuNDM3LjA2OC4yNS4wNjguNzY3LjAwMSAxLjAxYTIuMDg5IDIuMDg5IDAgMCAxLTEuNjIgMS41MSAyLjMzNCAyLjMzNCAwIDAgMS0uNzktLjAwOHoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmZmO3N0cm9rZS13aWR0aDouMDIwOTI0MSIgZD0iTTQuOTE3IDcuMzc3YTIuMDU2IDIuMDU2IDAgMCAxLTEuNTItMi42NyAyLjA0NyAyLjA0NyAwIDAgMSAzLjQxOS0uNzU2Yy4yNC4yNTQuNDIuNTczLjUxMi45MDguMDY1LjI0LjA2NS43OCAwIDEuMDItLjA1MS4xODYtLjE5Ny41MDQtLjMuNjUyLS4wOS4xMzItLjMxLjM2Mi0uNDQzLjQ2NC0uNDYzLjM1Ny0xLjEuNTAzLTEuNjY4LjM4MlpNMy41NTcgMTQuNzJWOS4wMDhoMy41NTd2MTEuNDI0SDMuNTU3Wk05LjM1MyAxNC43MlY5LjAwOGgzLjQxMXYuNzg1YzAgLjYxNC4wMDUuNzg0LjAyNi43ODMuMDE0IDAgLjA3LS4wNzMuMTI0LS4xNjIuNTI0LS44NjUgMS41MDgtMS40NzggMi42NS0xLjY1LjI3NS0uMDQyIDEtLjA0NyAxLjMzMi0uMDA5Ljc5LjA5IDEuNDUxLjMxNiAxLjk0LjY2NC4yMi4xNTcuNTU3LjQ5My43MTQuNzEzLjQyLjU5Mi42OSAxLjQxMi44MDggMi40NjQuMDc0LjY2My4wODQgMS4yMTUuMDg1IDQuNTc4djMuMjU4aC0zLjUzNnYtMi45ODZjMC0yLjk3LS4wMS0zLjQ3NC0uMDc0LTMuOTA4LS4wOS0uNjA2LS4zMTQtMS4wODItLjYzNC0xLjM0Mi0uMzk1LS4zMjItMS4wMjktLjQzNy0xLjcwMy0uMzA5LS44NTguMTYzLTEuMzU1Ljc1LTEuNTIzIDEuNzk3LS4wNzYuNDcxLS4wODQuODQ1LS4wODQgMy44MzR2Mi45MTRIOS4zNTN6Ii8+PC9zdmc+)](https://www.linkedin.com/showcase/dlr-institut-fuer-fahrzeugkonzepte/posts/?feedView=all)
 
 [Back to top](#top)
-
