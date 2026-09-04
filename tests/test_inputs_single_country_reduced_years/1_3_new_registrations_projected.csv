@@ -1,10 +1,10 @@
 ﻿geo country;time;scenario;new vehicle registrations
-Example Country;2022;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2023;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2024;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2025;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2026;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2027;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2028;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2029;EU-27 CAM scenario proportionally distributed across each EU country;3000000
-Example Country;2030;EU-27 CAM scenario proportionally distributed across each EU country;3500000
+Example Country;2022;Illustrative registration scenario;3000000
+Example Country;2023;Illustrative registration scenario;3000000
+Example Country;2024;Illustrative registration scenario;3000000
+Example Country;2025;Illustrative registration scenario;3000000
+Example Country;2026;Illustrative registration scenario;3000000
+Example Country;2027;Illustrative registration scenario;3000000
+Example Country;2028;Illustrative registration scenario;3000000
+Example Country;2029;Illustrative registration scenario;3000000
+Example Country;2030;Illustrative registration scenario;3500000
