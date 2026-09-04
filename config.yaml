@@ -26,10 +26,10 @@ geography:
 powertrains:
 
 survival_rates:
-  source: empirical
+  source: stock_by_age
   grouping:
     - geo country
   csp_available_years: 45
   files:
-    empirical: 5_2_held_2016_survival_rates.csv
-    #stock_year: 2_2_A_1_stock_year.csv
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv

@@ -31,6 +31,12 @@ def plot_stock_shares(stock_shares, config_scenario, powertrains):
 
     for pt in stock_shares[powertrain_dim].unique():
 
+        # Total is retained in the tabular stock-share output as the
+        # denominator (share = 1), but plotting a flat 100% Total-share curve
+        # is not informative.
+        if pt == total_powertrain_label:
+            continue
+
         stock_subset = stock_shares[
             stock_shares[powertrain_dim] == pt
             ]
@@ -57,3 +63,4 @@ def plot_stock_shares(stock_shares, config_scenario, powertrains):
             columns_to_plot,
             None
         )
+

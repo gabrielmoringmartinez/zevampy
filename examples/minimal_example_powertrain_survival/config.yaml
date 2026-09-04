@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
+# SPDX-License-Identifier: MIT
+
+data:
+  input_path: inputs
+  output_path: outputs
+
+geography:
+  countries:
+    - Example Country
+  use_clusters: true
+
+powertrains:
+  - BEV
+  - Gasoline
+
+model:
+  first_stock_year: 2014
+  end_year: 2040
+  historical_validation: false
+
+survival_rates:
+  source: stock_by_age
+  grouping:
+    - geo country
+    - powertrain
+  csp_available_years: 45
+  files:
+    stock_by_age: 2_1_A_1_age_resolved_data_passenger_car_stock_fleet.csv
+    stock_year: 2_2_A_1_stock_year.csv

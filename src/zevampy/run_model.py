@@ -68,11 +68,9 @@ def run_model(config_path=None, input_path=None, output_path=None):
     csp_and_stock_calculated_data = calculate_and_plot_csps_and_stock(data, inputs)
 
     # Step 3: Compare model results with actual stock results
-    if inputs[historical_validation_label] and inputs[survival_grouping_label] == [country_dim]:
+    if inputs[historical_validation_label]:
         logger.info("Running historical model validation.")
         compare_model_and_actual_stock_results(data, csp_and_stock_calculated_data, inputs)
-    elif inputs[historical_validation_label]:
-        logger.info("Historical validation skipped because survival rates are not grouped only by country.")
     else:
         logger.debug("Historical validation is disabled.")
 
@@ -82,5 +80,7 @@ def run_model(config_path=None, input_path=None, output_path=None):
 # Execute the main function when the script is run
 if __name__ == "__main__":
     run_model(input_path="inputs", output_path="outputs")
+
+
 
 

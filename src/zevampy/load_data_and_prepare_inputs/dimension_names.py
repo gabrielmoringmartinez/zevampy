@@ -12,6 +12,7 @@ stock_year_empirical_csp_data_dim = 'stock year of empirical csp data'
 country_dim = 'geo country'
 cluster_dim = 'cluster'
 powertrain_dim = 'powertrain'
+total_powertrain_label = 'Total'
 new_registrations_dim = 'new vehicle registrations'
 share_dim = 'share'
 relative_sales_dim = 'relative sales'
@@ -135,4 +136,3 @@ alternative_csp_parameters_label = "alternative_csp_parameters"
 survival_source_stock_by_age_label = "stock_by_age"
 survival_source_empirical_label = "empirical"
 survival_source_parameters_label = "parameters"
-

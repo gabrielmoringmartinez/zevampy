@@ -27,11 +27,13 @@ def calculate_empirical_survival_rates(
     registrations = prepare_registrations_data(
         registrations,
         stock_year,
+        survival_grouping,
         max_age=csp_available_years,
     )
     registrations = registrations[registrations[country_dim].isin(countries_to_keep)]
     survival_rates = obtain_survival_rates(stock, registrations, survival_grouping)
     save_dataframes(survival_rates, output_path)
     return survival_rates
+
 
 

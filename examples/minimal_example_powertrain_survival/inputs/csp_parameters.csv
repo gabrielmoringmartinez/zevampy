@@ -1,0 +1,4 @@
+geo country;powertrain;gamma (Weibull);beta (Weibull);r squared (Weibull);k (Import-Gaussian);mu (Import-Gaussian);sigma (Import-Gaussian);delta (Import-Gaussian);r squared (Weibull and Import-Gaussian);distribution
+Example Country;Total;18,30607999;3;1;2;5;30;0,026596152;0,997006127;Weibull
+Example Country;BEV;10,26926438;3;1;2;5;30;0,026596152;0,996218926;Weibull
+Example Country;Gasoline;17,41310048;3;1;2;5;30;0,026596152;0,996997612;Weibull

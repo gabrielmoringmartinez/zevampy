@@ -134,17 +134,25 @@ def load_data(
         input_dir / input_files["registration_shares"], sep=";", decimal=","
     )
 
+    validate_registration_shares(
+        registration_shares_by_cluster,
+        "registration shares by cluster",
+    )
+
     if powertrains:
+        if total_powertrain_label in powertrains:
+            raise ValueError(
+                f"'{total_powertrain_label}' is generated automatically from total "
+                "registrations and must not be listed under 'powertrains'."
+            )
         validate_powertrains_in_data(
             registration_shares_by_cluster,
             powertrains,
             "registration shares by cluster",
         )
-        registration_shares_by_cluster = add_rest_of_powertrains_from_selected_shares(
+        registration_shares_by_cluster = filter_selected_powertrains(
             registration_shares_by_cluster,
             powertrains,
-            relative_sales_dim,
-            "registration shares by cluster",
         )
 
     historical_registrations = pd.read_csv(
@@ -171,44 +179,30 @@ def load_data(
             _resolve_input_path(input_dir, configured_survival_files["stock_year"])
         )
         _validate_stock_by_age(stock_by_age, survival_grouping)
-        _validate_stock_year(stock_year)
 
         if powertrains and powertrain_dim in survival_grouping:
-            stock_by_age = aggregate_stock_by_selected_powertrains(
+            stock_by_age = filter_powertrain_survival_groups(
                 stock_by_age,
                 powertrains,
-                "stock by age",
             )
+            if powertrain_dim in stock_year.columns:
+                stock_year = filter_powertrain_survival_groups(
+                    stock_year,
+                    powertrains,
+                )
 
-        _warn_if_survival_powertrains_missing(
-            registration_shares_by_cluster,
-            stock_by_age,
-            survival_grouping,
-            "stock-by-age input data",
-        )
+        _validate_stock_year(stock_year, stock_by_age, survival_grouping)
         data[stock_by_age_label] = stock_by_age
         data[stock_year_label] = stock_year
 
     elif survival_source == survival_source_empirical_label:
         alternative_survival_rates = _read_csv(source_path)
         _validate_empirical_survival_rates(alternative_survival_rates, survival_grouping)
-        _warn_if_survival_powertrains_missing(
-            registration_shares_by_cluster,
-            alternative_survival_rates,
-            survival_grouping,
-            "alternative empirical survival-rate data",
-        )
         data[alternative_survival_rates_label] = alternative_survival_rates
 
     elif survival_source == survival_source_parameters_label:
         alternative_csp_parameters = _read_csv(source_path)
         _validate_csp_parameters(alternative_csp_parameters, survival_grouping)
-        _warn_if_survival_powertrains_missing(
-            registration_shares_by_cluster,
-            alternative_csp_parameters,
-            survival_grouping,
-            "alternative CSP-parameter data",
-        )
         data[alternative_csp_parameters_label] = alternative_csp_parameters
 
     # Optional historical validation data.
@@ -270,18 +264,74 @@ def _read_csv(file_path):
     return pd.read_csv(file_path)
 
 
-def _validate_stock_year(stock_year):
+def _get_stock_year_grouping(stock_year, survival_grouping):
+    """Return the dimensions used to assign stock reference years.
+
+    Stock reference years may be supplied either for the full survival group
+    (for example country + powertrain) or only by country. Country-only years
+    are broadcast to every powertrain in that country.
+    """
+    if all(dim in stock_year.columns for dim in survival_grouping):
+        return list(survival_grouping)
+
+    if country_dim in stock_year.columns:
+        missing_group_dims = [
+            dim for dim in survival_grouping
+            if dim != country_dim and dim in stock_year.columns
+        ]
+        if not missing_group_dims:
+            return [country_dim]
+
+    raise ValueError(
+        "Invalid stock-year input data. Stock reference years must be provided "
+        f"either for every configured survival grouping dimension {survival_grouping} "
+        f"or by '{country_dim}' only."
+    )
+
+
+def _validate_stock_year(stock_year, stock_by_age, survival_grouping):
     required_columns = {country_dim, stock_year_empirical_csp_data_dim}
     missing_columns = required_columns - set(stock_year.columns)
     if missing_columns:
         raise ValueError(
             "Invalid stock-year input data. "
             f"Missing columns: {sorted(missing_columns)}. "
-            f"Required columns are: {sorted(required_columns)}."
+            f"Required columns include: {sorted(required_columns)}."
         )
 
     if stock_year[stock_year_empirical_csp_data_dim].isna().any():
         raise ValueError("Stock-year input data contain missing reference-year values.")
+
+    if not pd.api.types.is_numeric_dtype(stock_year[stock_year_empirical_csp_data_dim]):
+        raise ValueError("Stock reference years must contain numeric values.")
+
+    year_grouping = _get_stock_year_grouping(stock_year, survival_grouping)
+
+    duplicated = stock_year.duplicated(subset=year_grouping, keep=False)
+    if duplicated.any():
+        duplicate_groups = (
+            stock_year.loc[duplicated, year_grouping]
+            .drop_duplicates()
+            .to_dict(orient="records")
+        )
+        raise ValueError(
+            "Stock-year input data must contain exactly one reference year per "
+            f"stock-year group. Duplicate groups: {duplicate_groups[:10]}"
+        )
+
+    required_groups = stock_by_age[year_grouping].drop_duplicates()
+    available_groups = stock_year[year_grouping].drop_duplicates()
+    missing_groups = (
+        required_groups
+        .merge(available_groups, on=year_grouping, how="left", indicator=True)
+        .query("_merge == 'left_only'")
+        .drop(columns="_merge")
+    )
+    if not missing_groups.empty:
+        raise ValueError(
+            "Stock-year input data are missing reference years for stock-by-age "
+            f"groups: {missing_groups.head(10).to_dict(orient='records')}"
+        )
 
 
 def _validate_stock_by_age(stock_by_age, survival_grouping):
@@ -370,21 +420,6 @@ def _validate_csp_parameters(parameters, survival_grouping):
             f"Duplicate groups: {duplicate_groups}"
         )
 
-
-def _warn_if_survival_powertrains_missing(registration_shares, survival_data, survival_grouping, dataset_name):
-    if powertrain_dim not in survival_grouping or powertrain_dim not in survival_data.columns:
-        return
-
-    registration_powertrains = set(registration_shares[powertrain_dim].dropna().unique())
-    survival_powertrains = set(survival_data[powertrain_dim].dropna().unique())
-    missing_powertrains = registration_powertrains - survival_powertrains
-    if missing_powertrains:
-        warnings.warn(
-            f"Some powertrain categories exist in the registration shares but not in {dataset_name}. "
-            f"Missing survival assumptions for: {sorted(missing_powertrains)}. "
-            "Absolute stock can still be calculated for available powertrains, but total stock shares may be incomplete.",
-            UserWarning,
-        )
 
 
 """
@@ -479,153 +514,67 @@ def validate_powertrains_in_data(df, selected_powertrains, dataset_name):
         )
 
 
-REST_POWERTRAIN = "Rest of powertrains"
-SHARE_TOLERANCE = 1e-3
-
-"""
-Add a residual powertrain category from remaining shares.
-"""
+SHARE_TOLERANCE = 1e-6
 
 
-def add_rest_of_powertrains_from_selected_shares(
-        df,
-        selected_powertrains,
-        share_column,
-        dataset_name,
-):
+def validate_registration_shares(df, dataset_name):
+    """Validate non-exhaustive powertrain registration-share inputs.
+
+    Registration-share inputs may contain only the technologies that a user
+    wants to model explicitly. Their shares therefore do not need to sum to
+    one. Total registrations are supplied independently and the complete fleet
+    is represented by the model-generated ``Total`` series.
     """
-    Add a residual powertrain category from remaining shares.
-
-    The function keeps the selected powertrain categories and computes
-    an additional category representing the remaining share not covered
-    by the selected powertrains. The residual category is labeled
-    `REST_POWERTRAIN`.
-
-    Parameters:
-        df (pandas.DataFrame):
-            Input dataset containing powertrain shares.
-
-        selected_powertrains (list[str]):
-            Powertrain categories selected by the user.
-
-        share_column (str):
-            Name of the column containing share values.
-
-        dataset_name (str):
-            Name of the dataset used for error messages.
-
-    Returns:
-        pandas.DataFrame:
-            DataFrame containing the selected powertrains and the
-            additional residual powertrain category.
-
-    Raises:
-        ValueError:
-            If selected powertrains are missing from the dataset or if
-            selected shares exceed 1 for any group.
-    """
-    df = df.copy()
-    selected_powertrains = list(selected_powertrains)
-
-    available_powertrains = set(df[powertrain_dim].dropna().unique())
-    missing_powertrains = set(selected_powertrains) - available_powertrains
-
-    if missing_powertrains:
+    required_columns = {powertrain_dim, relative_sales_dim}
+    missing_columns = required_columns - set(df.columns)
+    if missing_columns:
         raise ValueError(
-            f"Invalid powertrain configuration for {dataset_name}.\n\n"
-            f"Selected powertrains not found in input data: {sorted(missing_powertrains)}\n"
-            f"Available powertrains are: {sorted(available_powertrains)}"
+            f"Invalid {dataset_name}. Missing columns: {sorted(missing_columns)}."
         )
 
-    selected_df = df[df[powertrain_dim].isin(selected_powertrains)].copy()
-
-    group_cols = [
-        col for col in selected_df.columns
-        if col not in [powertrain_dim, share_column]
-    ]
-
-    selected_sum = (
-        selected_df
-        .groupby(group_cols, as_index=False)[share_column]
-        .sum()
-        .rename(columns={share_column: "_selected_share_sum"})
-    )
-
-    rest_df = selected_sum.copy()
-    rest_df[powertrain_dim] = REST_POWERTRAIN
-    rest_df[share_column] = 1 - rest_df["_selected_share_sum"]
-
-    if (rest_df[share_column] < -SHARE_TOLERANCE).any():
+    if total_powertrain_label in set(df[powertrain_dim].dropna().astype(str)):
         raise ValueError(
-            f"Invalid shares in {dataset_name}.\n\n"
-            "Selected powertrain shares exceed 1 for at least one group."
+            f"'{total_powertrain_label}' is a reserved model-generated powertrain label. "
+            f"Do not add it to {dataset_name}; total registrations are read from the "
+            "historical/projected registration inputs."
         )
 
-    rest_df[share_column] = rest_df[share_column].clip(lower=0)
-    rest_df = rest_df[group_cols + [powertrain_dim, share_column]]
-
-    result = pd.concat([selected_df, rest_df], ignore_index=True)
-
-    return result
-
-
-"""
-Aggregate non-selected powertrains into a residual category.
-"""
-
-
-def aggregate_stock_by_selected_powertrains(df, selected_powertrains, dataset_name):
-    """
-    Aggregate non-selected powertrains into a residual category.
-
-    The function replaces all powertrains that are not explicitly selected
-    with the residual category `REST_POWERTRAIN`. The stock values of the
-    non-selected powertrains are then aggregated by summing the number of
-    registered vehicles across all remaining grouping dimensions.
-
-    Parameters:
-        df (pandas.DataFrame):
-            Input stock-by-age dataset containing powertrain categories.
-
-        selected_powertrains (list[str]):
-            Powertrain categories selected by the user.
-
-        dataset_name (str):
-            Name of the dataset used for error messages.
-
-    Returns:
-        pandas.DataFrame:
-            Aggregated DataFrame in which all non-selected powertrains are
-            combined into the residual category `REST_POWERTRAIN`.
-
-    Raises:
-        ValueError:
-            If selected powertrains are not found in the input dataset.
-    """
-    df = df.copy()
-    selected_powertrains = list(selected_powertrains)
-
-    available_powertrains = set(df[powertrain_dim].dropna().unique())
-    missing_powertrains = set(selected_powertrains) - available_powertrains
-
-    if missing_powertrains:
+    shares = pd.to_numeric(df[relative_sales_dim], errors="coerce")
+    if shares.isna().any() or not np.isfinite(shares).all():
+        raise ValueError(f"{dataset_name} must contain finite numeric registration shares.")
+    if (shares < -SHARE_TOLERANCE).any() or (shares > 1 + SHARE_TOLERANCE).any():
         raise ValueError(
-            f"Invalid powertrain configuration for {dataset_name}.\n\n"
-            f"Selected powertrains not found in input data: {sorted(missing_powertrains)}\n"
-            f"Available powertrains are: {sorted(available_powertrains)}"
+            f"Registration shares in {dataset_name} must be between 0 and 1."
         )
 
-    df[powertrain_dim] = df[powertrain_dim].where(
-        df[powertrain_dim].isin(selected_powertrains),
-        REST_POWERTRAIN
-    )
+    grouping_candidates = [time_dim, cluster_dim, country_dim]
+    grouping = [column for column in grouping_candidates if column in df.columns]
+    if not grouping:
+        raise ValueError(
+            f"Cannot validate {dataset_name}: no time/cluster/country grouping columns were found."
+        )
 
-    group_cols = [
-        col for col in df.columns
-        if col != number_registered_vehicles_dim
-    ]
+    share_sums = df.assign(**{relative_sales_dim: shares}).groupby(grouping)[relative_sales_dim].sum()
+    invalid = share_sums[share_sums > 1 + SHARE_TOLERANCE]
+    if not invalid.empty:
+        examples = invalid.head(10).to_dict()
+        raise ValueError(
+            f"Registration shares in {dataset_name} exceed 1 for some groups. "
+            f"Selected/available technologies may sum to less than 1, but never more than 1. "
+            f"Examples: {examples}"
+        )
 
-    return (
-        df.groupby(group_cols, as_index=False)[number_registered_vehicles_dim]
-        .sum()
-    )
+
+def filter_selected_powertrains(df, selected_powertrains):
+    """Keep only explicitly selected technologies in registration-share data."""
+    return df[df[powertrain_dim].isin(selected_powertrains)].copy()
+
+
+def filter_powertrain_survival_groups(df, selected_powertrains):
+    """Keep selected powertrains plus the required ``Total`` survival group.
+
+    Under powertrain-specific survival grouping, ``Total`` represents the
+    complete fleet and supplies the denominator used for stock shares.
+    """
+    required_powertrains = set(selected_powertrains) | {total_powertrain_label}
+    return df[df[powertrain_dim].isin(required_powertrains)].copy()

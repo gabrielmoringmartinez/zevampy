@@ -60,6 +60,12 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             inputs,
             require_complete_age_coverage=False,
         )
+        _validate_survival_group_coverage(
+            empirical_survival_rates,
+            registrations,
+            survival_grouping,
+            "stock-by-age survival data",
+        )
         results = compute_csp_values_and_compute_stock(
             empirical_survival_rates,
             registrations,
@@ -69,7 +75,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             inputs[countries_selected_label],
             survival_grouping,
             inputs[output_path_label],
-            _stock_shares_are_valid(registrations, empirical_survival_rates, survival_grouping),
+            True,
             inputs[save_options_stock_label],
             inputs[save_fitted_csp_values_label],
         )
@@ -80,6 +86,12 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             registrations,
             inputs,
             require_complete_age_coverage=True,
+        )
+        _validate_survival_group_coverage(
+            empirical_survival_rates,
+            registrations,
+            survival_grouping,
+            "alternative empirical survival-rate data",
         )
         if inputs[save_fitted_csp_values_label]:
             empirical_survival_rates.to_csv(
@@ -96,7 +108,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             inputs[countries_selected_label],
             survival_grouping,
             inputs[output_path_label],
-            _stock_shares_are_valid(registrations, empirical_survival_rates, survival_grouping),
+            True,
             inputs[save_options_stock_label],
             inputs[save_fitted_csp_values_label],
         )
@@ -107,6 +119,12 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             registrations,
             inputs,
         )
+        _validate_survival_group_coverage(
+            parameters,
+            registrations,
+            survival_grouping,
+            "alternative CSP-parameter data",
+        )
         fitted_csp_values, optimal_distribution_dict = get_csp_values_from_parameters(
             parameters,
             inputs[csp_available_years_label],
@@ -114,11 +132,7 @@ def calculate_and_plot_csps_and_stock(data, inputs):
             inputs[output_path_label],
             inputs[save_fitted_csp_values_label],
         )
-        stock_shares_are_valid = _stock_shares_are_valid(
-            registrations,
-            parameters,
-            survival_grouping,
-        )
+        stock_shares_are_valid = True
         stock_values, stock_shares = calculate_stock(
             registrations,
             fitted_csp_values,
@@ -185,9 +199,8 @@ def _prepare_registrations_for_survival(registrations, survival_grouping):
             .rename(columns={registrations_by_powertrain_dim: new_registrations_dim})
         )
     return (
-        registrations
-        .groupby([country_dim, time_dim], as_index=False)[registrations_by_powertrain_dim]
-        .sum()
+        registrations[registrations[powertrain_dim] == total_powertrain_label]
+        [[country_dim, time_dim, registrations_by_powertrain_dim]]
         .rename(columns={registrations_by_powertrain_dim: new_registrations_dim})
     )
 
@@ -232,9 +245,32 @@ def _prepare_parameter_groups(parameters, registrations, inputs):
     return _filter_survival_groups(parameters, registrations, inputs)
 
 
-def _stock_shares_are_valid(registrations, survival_data, survival_grouping):
-    if powertrain_dim not in survival_grouping:
-        return True
-    registration_powertrains = set(registrations[powertrain_dim].dropna().unique())
-    survival_powertrains = set(survival_data[powertrain_dim].dropna().unique())
-    return not (registration_powertrains - survival_powertrains)
+def _validate_survival_group_coverage(
+    survival_data,
+    registrations,
+    survival_grouping,
+    dataset_name,
+):
+    """Require one survival assumption for every modelled survival group.
+
+    For country-level survival rates this requires every modelled country. For
+    country + powertrain survival rates it requires every modelled
+    country/powertrain combination. Missing groups are treated as an error
+    instead of silently producing incomplete fleet results.
+    """
+    required_groups = registrations[survival_grouping].drop_duplicates()
+    available_groups = survival_data[survival_grouping].drop_duplicates()
+
+    missing_groups = (
+        required_groups
+        .merge(available_groups, on=survival_grouping, how="left", indicator=True)
+        .query("_merge == 'left_only'")
+        .drop(columns="_merge")
+    )
+
+    if not missing_groups.empty:
+        raise ValueError(
+            f"Missing survival assumptions in {dataset_name} for modelled groups: "
+            f"{missing_groups.head(20).to_dict(orient='records')}"
+        )
+

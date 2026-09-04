@@ -1,20 +1,29 @@
-"""Update registration shares using observed data for a selected powertrain."""
+"""Update modelled registration shares with observed validation values."""
 
 # SPDX-FileCopyrightText: 2025 German Aerospace Center, Gabriel Möring-Martínez
 # SPDX-License-Identifier: MIT
 
-import numpy as np
-
 from zevampy.load_data_and_prepare_inputs.dimension_names import *
 
 
-def update_registration_shares_with_actual_values(registrations, actual_registration_shares, validation_powertrain):
-    """Replace one powertrain's modelled registration share with observed values.
+SHARE_TOLERANCE = 1e-6
 
-    For every country-year combination for which an observed share is available,
-    the selected powertrain is replaced by the observed value. The remaining
-    modelled powertrain shares are rescaled proportionally so that all shares
-    continue to sum to one.
+
+def update_registration_shares_with_actual_values(
+    registrations,
+    actual_registration_shares,
+    validation_powertrain,
+):
+    """Replace one modelled powertrain share with observed values.
+
+    The model-generated ``Total`` registration series always remains equal to
+    the independently supplied complete-market registrations.
+
+    For the explicitly modelled technologies, the baseline represented market
+    share is preserved where possible. This reproduces the former validation
+    behaviour when the explicit powertrains cover the full market, while also
+    supporting inputs whose selected technologies intentionally sum to less
+    than one.
     """
     df = registrations.copy()
     actual = actual_registration_shares[
@@ -23,40 +32,40 @@ def update_registration_shares_with_actual_values(registrations, actual_registra
 
     if actual.empty:
         raise ValueError(
-            f"Validation powertrain '{validation_powertrain}' is not available "
-            "in the validation registration-share dataset."
+            f"Validation registration-share data do not contain the selected "
+            f"powertrain '{validation_powertrain}'."
         )
 
     required_columns = {country_dim, time_dim, powertrain_dim, relative_sales_dim}
     missing = required_columns - set(actual.columns)
     if missing:
-        raise ValueError("Validation registration-share data are missing required columns: " f"{sorted(missing)}")
+        raise ValueError(
+            "Validation registration-share data are missing required columns: "
+            f"{sorted(missing)}"
+        )
 
     duplicate_rows = actual.duplicated([country_dim, time_dim], keep=False)
     if duplicate_rows.any():
         raise ValueError(
-            f"Validation registration-share data contain more than one row for "
+            "Validation registration-share data contain multiple rows for "
             f"'{validation_powertrain}' for the same country and year."
         )
-
-    tolerance = 1e-12
 
     for _, row in actual.iterrows():
         country = row[country_dim]
         year = row[time_dim]
-        observed_share = row[relative_sales_dim]
+        observed_share = float(row[relative_sales_dim])
 
-        if observed_share < 0 or observed_share > 1:
+        if observed_share < -SHARE_TOLERANCE or observed_share > 1 + SHARE_TOLERANCE:
             raise ValueError(
-                f"Observed registration share for '{validation_powertrain}' must "
-                f"be between 0 and 1, but got {observed_share} for {country}, {year}."
+                f"Observed registration share for {validation_powertrain} must be between "
+                f"0 and 1. Got {observed_share} for {country}, {year}."
             )
 
         group_mask = (
             (df[country_dim] == country)
             & (df[time_dim] == year)
         )
-
         if not group_mask.any():
             continue
 
@@ -67,30 +76,51 @@ def update_registration_shares_with_actual_values(registrations, actual_registra
                 f"modelled registrations for {country}, {year}."
             )
 
-        other_mask = group_mask & (df[powertrain_dim] != validation_powertrain)
-        other_share_sum = df.loc[other_mask, relative_sales_dim].sum()
-        remaining_share = 1.0 - observed_share
+        explicit_mask = group_mask & (df[powertrain_dim] != total_powertrain_label)
+        other_mask = explicit_mask & (df[powertrain_dim] != validation_powertrain)
+
+        baseline_explicit_sum = df.loc[explicit_mask, relative_sales_dim].sum()
+        baseline_selected_share = df.loc[selected_mask, relative_sales_dim].iloc[0]
+        baseline_other_sum = baseline_explicit_sum - baseline_selected_share
 
         df.loc[selected_mask, relative_sales_dim] = observed_share
 
-        if other_mask.any():
-            if other_share_sum > tolerance:
-                scale_factor = remaining_share / other_share_sum
-                df.loc[other_mask, relative_sales_dim] *= scale_factor
-            elif remaining_share > tolerance:
-                raise ValueError(
-                    f"Cannot redistribute the remaining registration share for "
-                    f"{country}, {year}: all non-{validation_powertrain} modelled "
-                    "shares are zero."
+        if other_mask.any() and baseline_other_sum > SHARE_TOLERANCE:
+            if observed_share <= baseline_explicit_sum:
+                # Preserve the amount of the market that was explicitly
+                # represented before inserting the observed validation share.
+                target_other_sum = baseline_explicit_sum - observed_share
+            else:
+                # Let the observed technology use the unmodelled remainder
+                # first. Only shrink the other explicit technologies if the
+                # resulting represented market would otherwise exceed 100%.
+                target_other_sum = min(
+                    baseline_other_sum,
+                    max(0.0, 1.0 - observed_share),
                 )
-        elif not np.isclose(observed_share, 1.0):
-            raise ValueError(
-                f"Cannot set '{validation_powertrain}' to a share of {observed_share} "
-                f"for {country}, {year} because no other powertrains are available."
+
+            df.loc[other_mask, relative_sales_dim] *= (
+                target_other_sum / baseline_other_sum
             )
 
-    df[registrations_by_powertrain_dim] = (
-        df[new_registrations_dim] * df[relative_sales_dim]
-    )
+        explicit_share_sum = df.loc[explicit_mask, relative_sales_dim].sum()
+        if explicit_share_sum > 1 + SHARE_TOLERANCE:
+            raise ValueError(
+                "Observed validation share is inconsistent with the explicitly "
+                f"modelled powertrains for {country}, {year}: their shares sum to "
+                f"{explicit_share_sum:.6f}, which exceeds 1."
+            )
+
+        df.loc[explicit_mask, registrations_by_powertrain_dim] = (
+            df.loc[explicit_mask, new_registrations_dim]
+            * df.loc[explicit_mask, relative_sales_dim]
+        )
+
+    total_mask = df[powertrain_dim] == total_powertrain_label
+    df.loc[total_mask, relative_sales_dim] = 1.0
+    df.loc[total_mask, registrations_by_powertrain_dim] = df.loc[
+        total_mask, new_registrations_dim
+    ]
 
     return df
+

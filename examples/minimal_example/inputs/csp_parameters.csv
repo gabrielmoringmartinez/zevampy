@@ -1,0 +1,2 @@
+geo country;gamma (Weibull);beta (Weibull);r squared (Weibull);k (Import-Gaussian);mu (Import-Gaussian);sigma (Import-Gaussian);delta (Import-Gaussian);r squared (Weibull and Import-Gaussian);distribution
+Example Country;21,1268317;2,992886845;0,999710903;2;5;30;0,026596152;0,996162516;Weibull
